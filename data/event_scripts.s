@@ -1358,11 +1358,11 @@ Common_EventScript_PlayerHandedOverTheItem::
 
 @ The below and surf.inc could be split into some text/notices.inc
 gText_PokemartSign::
-	.string ""Selected items for your convenience!"\n"
+	.string "Selected items for your convenience!\n"
 	.string "POKEMON MART$"
 
 gText_PokemonCenterSign::
-	.string ""Rejuvenate your tired partners!"\n"
+	.string "Rejuvenate your tired partners!\n"
 	.string "POKEMON CENTER$"
 
 gText_MomOrDadMightLikeThisProgram::
