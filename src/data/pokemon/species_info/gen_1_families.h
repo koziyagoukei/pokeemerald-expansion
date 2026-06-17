@@ -9898,7 +9898,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "When two Graveler smash each other over\n"
             "dravite, their favorite food, they cause\n"
             "flashes of light and booming noises.\n"
-            "People call them "fireworks of the earth.""),
+            "People call them fireworks of the earth.""),
         .pokemonScale = 256,
         .pokemonOffset = 2,
         .trainerScale = 256,

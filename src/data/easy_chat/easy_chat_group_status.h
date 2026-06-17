@@ -535,7 +535,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_PKRS)] =
     {
-        .text = COMPOUND_STRING("{PK}RS"),
+        .text = COMPOUND_STRING("ポケルス"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_STICKY_HOLD),
         .enabled = TRUE,
     },
