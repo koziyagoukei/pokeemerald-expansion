@@ -32,6 +32,6 @@ EverGrandeCity_Text_EnteringPokemonLeague:
 
 EverGrandeCity_Text_CitySign:
 	.string "EVER GRANDE CITY\p"
-	.string ""The paradise of flowers, the sea,\n"
-	.string "and POKEMON."$"
+	.string "The paradise of flowers, the sea,\n"
+	.string "and POKEMON.$"
 

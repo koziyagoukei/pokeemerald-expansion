@@ -258,7 +258,7 @@ Route22_Text_EarlyRivalPostBattle::
 
 @ Translated in RB as "{RIVAL}: What? Why do I have 2 POKEMON? You should catch some more too!"
 Route22_Text_RivalShouldCatchSomeMons::
-	.string "{RIVAL}"なんだ?\n"
+	.string "{RIVAL}なんだ?\n"
 	.string "ポケモン 2ひきも\l"
 	.string "もってるの なぜか だって?\p"
 	.string "おまえも\n"
@@ -288,7 +288,7 @@ Route22_Text_LateRivalPostBattle::
 
 @ Translated in RB as "{RIVAL}: Hahaha! {PLAYER}! That's your best? You're nowhere near as good as me, pal! Go train some more! You loser!"
 Route22_Text_LateRivalVictory::
-	.string "{RIVAL}"ひゃははッ {PLAYER}ー!\n"
+	.string "{RIVAL}ひゃははッ {PLAYER}ー!\n"
 	.string "それで がんばってるのかよ!\l"
 	.string "おれの さいのうに くらべりゃ\l"
 	.string "{PLAYER}は まだまだ だな!\p"

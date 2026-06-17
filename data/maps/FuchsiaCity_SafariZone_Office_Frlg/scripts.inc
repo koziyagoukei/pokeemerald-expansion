@@ -19,7 +19,7 @@ FuchsiaCity_SafariZone_Office_EventScript_Worker4::
 
 FuchsiaCity_SafariZone_Office_Text_NicknamedWardenSlowpoke::
 	.string "We nicknamed the WARDEN\n"
-	.string ""SLOWPOKE."\p"
+	.string "SLOWPOKE.\p"
 	.string "You know, he has that vacant look\n"
 	.string "like a SLOWPOKE.$"
 

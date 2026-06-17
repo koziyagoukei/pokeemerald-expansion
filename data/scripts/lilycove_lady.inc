@@ -654,7 +654,7 @@ LilycoveCity_PokemonCenter_1F_Text_YourBagIsFilledUp:
 
 LilycoveCity_PokemonCenter_1F_Text_WrongTheCorrectAnswerIs:
 	.string "Hmm... Wrong!\n"
-	.string "The correct answer is "{STR_VAR_3}"!$"
+	.string "The correct answer is {STR_VAR_3}!$"
 
 LilycoveCity_PokemonCenter_1F_Text_IGetToKeepPrize:
 	.string "Too bad!\p"

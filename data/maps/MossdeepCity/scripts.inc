@@ -393,15 +393,15 @@ MossdeepCity_Text_ItsAWhiteRock:
 MossdeepCity_Text_GymSign:
 	.string "MOSSDEEP CITY POKEMON GYM\n"
 	.string "LEADERS: LIZA & TATE\p"
-	.string ""The mystic combination!"$"
+	.string "The mystic combination!$"
 
 MossdeepCity_Text_CitySign:
 	.string "MOSSDEEP CITY\n"
-	.string ""Our slogan: Cherish POKEMON!"$"
+	.string "Our slogan: Cherish POKEMON!$"
 
 MossdeepCity_Text_SpaceCenterSign:
 	.string "MOSSDEEP SPACE CENTER\n"
-	.string ""The closest place to space."$"
+	.string "The closest place to space.$"
 
 MossdeepCity_Text_ScottSomethingWrongWithTown:
 	.string "SCOTT: {PLAYER}{KUN}, feeling good?\n"

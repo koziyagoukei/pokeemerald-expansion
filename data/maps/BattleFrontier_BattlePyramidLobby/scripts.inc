@@ -554,7 +554,7 @@ BattleFrontier_BattlePyramidLobby_Text_ExplainBattlePyramid:
 	.string "If you fail in your challenge, any item\n"
 	.string "placed in the BATTLE BAG disappears.\p"
 	.string "If you want to interrupt your\n"
-	.string "challenge, you must select "REST"\l"
+	.string "challenge, you must select REST\l"
 	.string "and save the game.\p"
 	.string "If you don't save before interrupting,\n"
 	.string "you will be disqualified.$"

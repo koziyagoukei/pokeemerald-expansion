@@ -640,7 +640,7 @@ Route111_Text_RouteSignMauville:
 	.string "{DOWN_ARROW} MAUVILLE CITY$"
 
 Route111_Text_WinstrateHouseSign:
-	.string ""Our family's hearts beat as one!"\n"
+	.string "Our family's hearts beat as one!\n"
 	.string "THE WINSTRATE'S HOUSE$"
 
 Route111_Text_RouteSign112:
@@ -653,15 +653,15 @@ Route111_Text_RouteSign113:
 
 Route111_Text_OldLadysRestStopSign:
 	.string "OLD LADY'S REST STOP\n"
-	.string ""Come in and rest your tired bones."$"
+	.string "Come in and rest your tired bones.$"
 
 Route111_Text_TrainerTipsSpAtkSpDef:
 	.string "TRAINER TIPS\p"
 	.string "One of the indicators of a POKEMON's\n"
 	.string "powerfulness is SP. ATK. It stands for\l"
-	.string ""SPECIAL ATTACK."\p"
-	.string "Likewise, SP. DEF stands for "SPECIAL\n"
-	.string "DEFENSE."$"
+	.string "SPECIAL ATTACK.\p"
+	.string "Likewise, SP. DEF stands for SPECIAL\n"
+	.string "DEFENSE.$"
 
 Route111_Text_ShouldBeMirageTowerAroundHere:
 	.string "There should be a tower made of sand\n"
@@ -712,6 +712,6 @@ Route111_Text_MauvilleUncleToldMeToTakeRockSmash:
 
 Route111_Text_TrainerHillSign:
 	.string "{RIGHT_ARROW} TRAINER HILL ENTRANCE\p"
-	.string ""Scale the heights, you hot-blooded\n"
-	.string "TRAINERS!"$"
+	.string "Scale the heights, you hot-blooded\n"
+	.string "TRAINERS!$"
 

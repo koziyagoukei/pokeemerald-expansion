@@ -52,7 +52,7 @@ CeladonCity_DepartmentStore_3F_EventScript_Poster::
 CeladonCity_DepartmentStore_3F_Text_OTStandsForOriginalTrainer::
 	.string "Captured POKEMON are registered\n"
 	.string "with an ID No. and the OT.\p"
-	.string "OT stands for "Original TRAINER" -\n"
+	.string "OT stands for Original TRAINER -\n"
 	.string "the TRAINER that caught it first.$"
 
 CeladonCity_DepartmentStore_3F_Text_BuddyTradingKangaskhanForHaunter::

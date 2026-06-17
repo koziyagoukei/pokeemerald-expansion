@@ -756,8 +756,8 @@ MauvilleCity_GameCorner_Text_UpTo3CoinsCanBeUsed:
 
 MauvilleCity_GameCorner_Text_DifficultToStopOn7:
 	.string "It's very difficult to make it stop\n"
-	.string "right on "7."\p"
-	.string "If it stops on "7" during the REEL TIME\n"
+	.string "right on 7.\p"
+	.string "If it stops on 7 during the REEL TIME\n"
 	.string "bonus game, you'll receive extra COINS.$"
 
 MauvilleCity_GameCorner_Text_HeresSomeSlotsInfo:

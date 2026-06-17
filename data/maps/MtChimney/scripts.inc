@@ -620,8 +620,8 @@ MtChimney_Text_Grunt2Defeat:
 	.string "What do you mean I lost?$"
 
 MtChimney_Text_Grunt2PostBattle:
-	.string "Our BOSS says, "It will make everyone\n"
-	.string "happy."\p"
+	.string "Our BOSS says, It will make everyone\n"
+	.string "happy.\p"
 	.string "But why does everyone keep getting\n"
 	.string "in our way?$"
 

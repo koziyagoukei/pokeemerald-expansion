@@ -145,12 +145,12 @@ FortreeCity_Text_UsedDevonScopePokemonFled:
 
 FortreeCity_Text_CitySign:
 	.string "FORTREE CITY\n"
-	.string ""The treetop city that frolics with\l"
-	.string "nature."$"
+	.string "The treetop city that frolics with\l"
+	.string "nature.$"
 
 FortreeCity_Text_GymSign:
 	.string "FORTREE CITY POKEMON GYM\n"
 	.string "LEADER: WINONA\p"
-	.string ""The bird user taking flight into\n"
-	.string "the world."$"
+	.string "The bird user taking flight into\n"
+	.string "the world.$"
 

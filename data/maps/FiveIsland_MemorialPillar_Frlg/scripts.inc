@@ -133,7 +133,7 @@ FiveIsland_MemorialPillar_Text_ThisIsWhereIBuriedMyOnix::
 	.string "It was named TECTONIX...$"
 
 FiveIsland_MemorialPillar_Text_HereLiesTectonixLemonadeOffering::
-	.string ""Here lies TECTONIX" is engraved\n"
+	.string "Here lies TECTONIX is engraved\n"
 	.string "on a boulder.\p"
 	.string "There is a LEMONADE placed as an\n"
 	.string "offering in front of the grave.$"
@@ -177,6 +177,6 @@ FiveIsland_MemorialPillar_Text_ScrubScrubTectonix::
 FiveIsland_MemorialPillar_Text_HereLiesTectonix::
 	.string "Boulders and rocks are neatly piled\n"
 	.string "up as a cairn.\p"
-	.string ""Here lies TECTONIX" is engraved\n"
+	.string "Here lies TECTONIX is engraved\n"
 	.string "on a boulder.$"
 

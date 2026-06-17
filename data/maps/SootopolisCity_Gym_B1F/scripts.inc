@@ -146,14 +146,14 @@ SootopolisCity_Gym_B1F_Text_TiffanyPostBattle:
 
 SootopolisCity_Gym_B1F_Text_BethanyIntro:
 	.string "When I'm with my POKEMON, the time\n"
-	.string "flies by before you can say, "Oops!"$"
+	.string "flies by before you can say, Oops!$"
 
 SootopolisCity_Gym_B1F_Text_BethanyDefeat:
 	.string "Oops!$"
 
 SootopolisCity_Gym_B1F_Text_BethanyPostBattle:
 	.string "I wish I could forget about lost causes\n"
-	.string "before I can manage an "Oops!"$"
+	.string "before I can manage an Oops!$"
 
 SootopolisCity_Gym_B1F_Text_AnnikaIntro:
 	.string "I can battle with really rare POKEMON\n"

@@ -375,13 +375,13 @@ SlateportCity_OceanicMuseum_2F_Text_WantToRideSubmarine:
 	.string "I want to go for a ride!$"
 
 SlateportCity_OceanicMuseum_2F_Text_WaterQualitySample1:
-	.string ""WATER QUALITY SAMPLE 1," the\n"
+	.string "WATER QUALITY SAMPLE 1, the\n"
 	.string "label says.\p"
 	.string "The sea is all connected, but the\n"
 	.string "water seems to differ by region.$"
 
 SlateportCity_OceanicMuseum_2F_Text_WaterQualitySample2:
-	.string ""WATER QUALITY SAMPLE 2," the\n"
+	.string "WATER QUALITY SAMPLE 2, the\n"
 	.string "label says.\p"
 	.string "Does the saltiness of seawater differ\n"
 	.string "by region, too?$"
@@ -389,47 +389,47 @@ SlateportCity_OceanicMuseum_2F_Text_WaterQualitySample2:
 SlateportCity_OceanicMuseum_2F_Text_PressureExperiment:
 	.string "A rubber ball is expanding and\n"
 	.string "shrinking.\p"
-	.string ""In the sea, the weight of water itself\n"
+	.string "In the sea, the weight of water itself\n"
 	.string "exerts pressure.\p"
-	.string ""In shallow water, the pressure is not\n"
+	.string "In shallow water, the pressure is not\n"
 	.string "very heavy.\p"
-	.string ""However, in extremely deep water,\n"
+	.string "However, in extremely deep water,\n"
 	.string "the pressure can reach even tens of\l"
-	.string "thousands of tons on a small area."$"
+	.string "thousands of tons on a small area.$"
 
 SlateportCity_OceanicMuseum_2F_Text_HoennModel:
-	.string ""MODEL OF HOENN REGION"\p"
+	.string "MODEL OF HOENN REGION\p"
 	.string "It's a miniature diorama of the\n"
 	.string "HOENN region.\p"
 	.string "Where is LITTLEROOT TOWN on this?$"
 
 SlateportCity_OceanicMuseum_2F_Text_DeepSeawaterDisplay:
 	.string "It's a display on the flow of seawater.\p"
-	.string ""Near the bottom of the sea, water\n"
+	.string "Near the bottom of the sea, water\n"
 	.string "flows due to differences in such\l"
-	.string "factors as temperature and salinity."$"
+	.string "factors as temperature and salinity.$"
 
 SlateportCity_OceanicMuseum_2F_Text_SurfaceSeawaterDisplay:
 	.string "It's a display on the flow of seawater.\p"
-	.string ""Toward the surface, seawater flows\n"
-	.string "as currents driven by the winds."$"
+	.string "Toward the surface, seawater flows\n"
+	.string "as currents driven by the winds.$"
 
 SlateportCity_OceanicMuseum_2F_Text_SSTidalReplica:
-	.string ""THE FERRY S.S. TIDAL\p"
-	.string ""A scale replica of the ship under\n"
-	.string "construction at STERN'S SHIPYARD."$"
+	.string "THE FERRY S.S. TIDAL\p"
+	.string "A scale replica of the ship under\n"
+	.string "construction at STERN'S SHIPYARD.$"
 
 SlateportCity_OceanicMuseum_2F_Text_SubmarineReplica:
-	.string ""SUBMARINE EXPLORER 1\p"
-	.string ""A replica of the high-performance\n"
-	.string "ocean floor exploration submarine."$"
+	.string "SUBMARINE EXPLORER 1\p"
+	.string "A replica of the high-performance\n"
+	.string "ocean floor exploration submarine.$"
 
 SlateportCity_OceanicMuseum_2F_Text_SumbersibleReplica:
-	.string ""SUBMERSIBLE POD\p"
-	.string ""A replica of a compact, unmanned\n"
-	.string "pod for seafloor exploration."$"
+	.string "SUBMERSIBLE POD\p"
+	.string "A replica of a compact, unmanned\n"
+	.string "pod for seafloor exploration.$"
 
 SlateportCity_OceanicMuseum_2F_Text_SSAnneReplica:
-	.string ""S.S. ANNE\p"
-	.string ""A replica of the luxury liner that\n"
-	.string "circles the globe."$"
+	.string "S.S. ANNE\p"
+	.string "A replica of the luxury liner that\n"
+	.string "circles the globe.$"

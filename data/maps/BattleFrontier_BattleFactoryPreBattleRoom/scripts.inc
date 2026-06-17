@@ -642,8 +642,8 @@ BattleFrontier_BattleFactoryPreBattleRoom_Text_MessageFromHeadComeRightNow:
 	.string "Sorry to keep you waiting!\p"
 	.string "I have a message from this facility's\n"
 	.string "boss, the FACTORY HEAD.\p"
-	.string "He says, "We're going to do it!\n"
-	.string "Come here right now!"$"
+	.string "He says, We're going to do it!\n"
+	.string "Come here right now!$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_PreparedToFaceHead:
 	.string "The FACTORY HEAD is demanding you.\n"

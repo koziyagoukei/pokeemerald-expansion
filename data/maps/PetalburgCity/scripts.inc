@@ -733,11 +733,11 @@ PetalburgCity_Text_FullPartyExplanation:
 PetalburgCity_Text_GymSign:
 	.string "PETALBURG CITY POKEMON GYM\n"
 	.string "LEADER: NORMAN\l"
-	.string ""A man in pursuit of power!"$"
+	.string "A man in pursuit of power!$"
 
 PetalburgCity_Text_CitySign:
 	.string "PETALBURG CITY\n"
-	.string ""Where people mingle with nature."$"
+	.string "Where people mingle with nature.$"
 
 PetalburgCity_Text_WallyHouseSign:
 	.string "WALLY'S HOUSE$"

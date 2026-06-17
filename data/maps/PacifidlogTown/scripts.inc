@@ -49,6 +49,6 @@ PacifidlogTown_Text_SkyPillarTooScary:
 
 PacifidlogTown_Text_TownSign:
 	.string "PACIFIDLOG TOWN\p"
-	.string ""Where the morning sun smiles upon\n"
-	.string "the waters."$"
+	.string "Where the morning sun smiles upon\n"
+	.string "the waters.$"
 

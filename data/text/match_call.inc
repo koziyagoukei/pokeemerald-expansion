@@ -1313,7 +1313,7 @@ MatchCall_PersonalizedText59::
 	.string "the same way as BRAWLY?\p"
 	.string "You know, all sweaty or smelly,\n"
 	.string "and prone to calling people\l"
-	.string ""big wave," that sort of thing.\p"
+	.string "big wave, that sort of thing.\p"
 	.string "But, hey, this jealousy thing isn't\n"
 	.string "very seemly, is it?\p"
 	.string "Forget this chat ever happened,\n"

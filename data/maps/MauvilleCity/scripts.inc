@@ -632,20 +632,20 @@ MauvilleCity_Text_PokemonCanJumpYouOnBike:
 
 MauvilleCity_Text_CitySign:
 	.string "MAUVILLE CITY\n"
-	.string ""The bright and shiny city of fun!"$"
+	.string "The bright and shiny city of fun!$"
 
 MauvilleCity_Text_GymSign:
 	.string "MAUVILLE CITY POKEMON GYM\n"
 	.string "LEADER: WATTSON\l"
-	.string ""The cheerfully electrifying man!"$"
+	.string "The cheerfully electrifying man!$"
 
 MauvilleCity_Text_BikeShopSign:
-	.string ""Ride in gravel and shake up your\n"
-	.string "soul!"\l"
+	.string "Ride in gravel and shake up your\n"
+	.string "soul!\l"
 	.string "RYDEL'S CYCLES$"
 
 MauvilleCity_Text_GameCornerSign:
-	.string ""The play spot for all!"\n"
+	.string "The play spot for all!\n"
 	.string "MAUVILLE GAME CORNER$"
 
 MauvilleCity_Text_ExplainTV:

@@ -916,10 +916,10 @@ Route110_Text_CyclingRoadSign:
 	.string "SEASIDE CYCLING ROAD$"
 
 Route110_Text_AquaWasHere:
-	.string ""TEAM AQUA was here!"\p"
+	.string "TEAM AQUA was here!\p"
 	.string "Someone painted that onto this sign,\n"
 	.string "but then someone else painted over it.\p"
-	.string ""TEAM MAGMA rules!" is what it\n"
+	.string "TEAM MAGMA rules! is what it\n"
 	.string "says now.$"
 
 Route110_Text_Route103Sign:
@@ -946,8 +946,8 @@ Route110_Text_TrainerTipsRegisterItems:
 	.string "by pressing SELECT.$"
 
 Route110_Text_TrickHouseSign:
-	.string ""Three steps {RIGHT_ARROW} and two steps {UP_ARROW}\n"
-	.string "to reach the wondrous TRICK HOUSE."$"
+	.string "Three steps {RIGHT_ARROW} and two steps {UP_ARROW}\n"
+	.string "to reach the wondrous TRICK HOUSE.$"
 
 Route110_Text_BestRecord:
 	.string "THE BEST RECORD TO DATE...\p"

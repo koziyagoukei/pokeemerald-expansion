@@ -534,7 +534,7 @@ BattleFrontier_BattleArenaLobby_Text_ExplainBattleRules:
 	.string "until its battle's outcome is decided.$"
 
 BattleFrontier_BattleArenaLobby_Text_ExplainMindRules:
-	.string "The first judging factor is "Mind."\n"
+	.string "The first judging factor is Mind.\n"
 	.string "This factor evaluates how aggressive\l"
 	.string "the battlers were.\p"
 	.string "The judging is based on how often\n"
@@ -542,7 +542,7 @@ BattleFrontier_BattleArenaLobby_Text_ExplainMindRules:
 	.string "offensive moves.$"
 
 BattleFrontier_BattleArenaLobby_Text_ExplainSkillRules:
-	.string "The second judging factor is "Skill."\n"
+	.string "The second judging factor is Skill.\n"
 	.string "This factor evaluates how effectively\l"
 	.string "POKEMON moves were used.\p"
 	.string "If a move worked successfully,\n"
@@ -550,9 +550,9 @@ BattleFrontier_BattleArenaLobby_Text_ExplainSkillRules:
 	.string "If a move failed, the Skill rating\n"
 	.string "is lowered.\p"
 	.string "If it was an offensive move, the Skill\n"
-	.string "rating goes up if the move was "super\l"
-	.string "effective" and goes down if it was\l"
-	.string ""not very effective."\p"
+	.string "rating goes up if the move was super\l"
+	.string "effective and goes down if it was\l"
+	.string "not very effective.\p"
 	.string "The Skill rating will not go up for\n"
 	.string "moves such as PROTECT and DETECT.\p"
 	.string "If the opponent used PROTECT or\n"
@@ -561,7 +561,7 @@ BattleFrontier_BattleArenaLobby_Text_ExplainSkillRules:
 	.string "go down.$"
 
 BattleFrontier_BattleArenaLobby_Text_ExplainBodyRules:
-	.string "The third judging factor is "Body."\n"
+	.string "The third judging factor is Body.\n"
 	.string "This factor is based on how much HP\l"
 	.string "remained at the end of a battle.\p"
 	.string "The rating takes into account how much\n"

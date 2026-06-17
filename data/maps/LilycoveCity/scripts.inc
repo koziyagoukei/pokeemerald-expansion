@@ -650,7 +650,7 @@ LilycoveCity_Text_TeamAquaRenovatedCavern:
 	.string "but then that TEAM AQUA lot came\l"
 	.string "along and made their renovations.\p"
 	.string "They call themselves\n"
-	.string "the "nature-loving TEAM AQUA"!\p"
+	.string "the nature-loving TEAM AQUA!\p"
 	.string "But what they do and what they say\n"
 	.string "don't match at all!$"
 
@@ -663,39 +663,39 @@ LilycoveCity_Text_TeamAquaLotGoneForGood:
 
 LilycoveCity_Text_CitySign:
 	.string "LILYCOVE CITY\p"
-	.string ""Where the land ends and the\n"
-	.string "sea begins."$"
+	.string "Where the land ends and the\n"
+	.string "sea begins.$"
 
 LilycoveCity_Text_ContestHallSign:
 	.string "POKEMON CONTEST HALL\n"
-	.string ""The gathering place for TRAINERS!"$"
+	.string "The gathering place for TRAINERS!$"
 
 LilycoveCity_Text_MotelSign:
 	.string "COVE LILY MOTEL\p"
-	.string ""Remember us as COVE LILY of\n"
-	.string "LILYCOVE."$"
+	.string "Remember us as COVE LILY of\n"
+	.string "LILYCOVE.$"
 
 LilycoveCity_Text_MuseumSign:
 	.string "LILYCOVE MUSEUM\p"
-	.string ""POKEMON Masterpiece Collection\n"
-	.string "on exhibit!"$"
+	.string "POKEMON Masterpiece Collection\n"
+	.string "on exhibit!$"
 
 LilycoveCity_Text_MuseumSignPlayersExhibit:
 	.string "LILYCOVE MUSEUM\p"
-	.string ""{PLAYER}'s POKEMON Collection\n"
-	.string "on exhibit!"$"
+	.string "{PLAYER}'s POKEMON Collection\n"
+	.string "on exhibit!$"
 
 LilycoveCity_Text_HarborSignUnderConstruction:
 	.string "LILYCOVE CITY HARBOR\p"
-	.string ""The ferry S.S. TIDAL is under\n"
+	.string "The ferry S.S. TIDAL is under\n"
 	.string "construction in SLATEPORT CITY.\p"
-	.string ""Service is scheduled to begin\n"
-	.string "shortly."$"
+	.string "Service is scheduled to begin\n"
+	.string "shortly.$"
 
 LilycoveCity_Text_HarborSign:
 	.string "LILYCOVE CITY HARBOR\p"
-	.string ""Enjoy a delightful cruise on\n"
-	.string "the ferry S.S. TIDAL."$"
+	.string "Enjoy a delightful cruise on\n"
+	.string "the ferry S.S. TIDAL.$"
 
 LilycoveCity_Text_TrainerFanClubSign:
 	.string "POKEMON TRAINER FAN CLUB\p"
@@ -704,14 +704,14 @@ LilycoveCity_Text_TrainerFanClubSign:
 
 LilycoveCity_Text_DepartmentStoreSign:
 	.string "LILYCOVE DEPARTMENT STORE\p"
-	.string ""Overflowing with great merchandise\n"
+	.string "Overflowing with great merchandise\n"
 	.string "and excitement!\p"
-	.string ""A great place to find that something\n"
-	.string "you need!"$"
+	.string "A great place to find that something\n"
+	.string "you need!$"
 
 LilycoveCity_Text_MoveDeletersHouseSign:
 	.string "MOVE DELETER'S HOUSE\p"
-	.string ""Unwanted POKEMON moves deleted."$"
+	.string "Unwanted POKEMON moves deleted.$"
 
 LilycoveCity_Text_DoYouKnowAboutBerryBlender:
 	.string "Do you know about the machine\n"

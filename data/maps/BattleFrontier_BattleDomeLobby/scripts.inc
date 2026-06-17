@@ -670,7 +670,7 @@ BattleFrontier_BattleDomeLobby_Text_ExplainMatchupRules:
 
 BattleFrontier_BattleDomeLobby_Text_ExplainTourneyTree:
 	.string "The tournament chart, or as we call it,\n"
-	.string "the "Tree," is available for viewing\l"
+	.string "the Tree, is available for viewing\l"
 	.string "in the Waiting Room from any guide.\p"
 	.string "The Tournament Tree will provide\n"
 	.string "several kinds of data.\p"

@@ -83,13 +83,13 @@ FallarborTown_Text_HaveYouChallengedFlannery:
 
 FallarborTown_Text_BattleTentSign:
 	.string "BATTLE TENT FALLARBOR SITE\n"
-	.string ""May the Greatest Teams Gather!"$"
+	.string "May the Greatest Teams Gather!$"
 
 FallarborTown_Text_TownSign:
 	.string "FALLARBOR TOWN\n"
-	.string ""A farm community with small gardens."$"
+	.string "A farm community with small gardens.$"
 
 FallarborTown_Text_MoveTutorSign:
 	.string "MOVE TUTOR'S HOUSE\n"
-	.string ""New moves taught to POKEMON."$"
+	.string "New moves taught to POKEMON.$"
 

@@ -1054,7 +1054,7 @@ SlateportCity_Text_IllReadSignForYou:
 SlateportCity_Text_SaysSomethingLikeSeaIsEndless:
 	.string "Let's see...\p"
 	.string "Um... I think it says something like\n"
-	.string ""the life in the sea is endless."\p"
+	.string "the life in the sea is endless.\p"
 	.string "Yup, I'm pretty sure that's what\n"
 	.string "it says.$"
 
@@ -1197,58 +1197,58 @@ SlateportCity_Text_PleaseComeWithMe:
 
 SlateportCity_Text_BattleTentSign:
 	.string "BATTLE TENT SLATEPORT SITE\n"
-	.string ""Find it! The ultimate POKEMON!"$"
+	.string "Find it! The ultimate POKEMON!$"
 
 SlateportCity_Text_SternsShipyardWantedSign:
 	.string "STERN'S SHIPYARD\p"
-	.string ""Wanted: A sailor capable of sailing\n"
-	.string "in all currents."$"
+	.string "Wanted: A sailor capable of sailing\n"
+	.string "in all currents.$"
 
 SlateportCity_Text_SternsShipyardNearsCompletion:
 	.string "STERN'S SHIPYARD\p"
-	.string ""The ferry S.S. TIDAL nears\n"
+	.string "The ferry S.S. TIDAL nears\n"
 	.string "completion for serving the ports of\l"
-	.string "SLATEPORT and LILYCOVE."$"
+	.string "SLATEPORT and LILYCOVE.$"
 
 SlateportCity_Text_SternsShipyardFerryComplete:
 	.string "STERN'S SHIPYARD\p"
-	.string ""Boarding of the SLATEPORT-LILYCOVE\n"
+	.string "Boarding of the SLATEPORT-LILYCOVE\n"
 	.string "ferry S.S. TIDAL is handled at the\l"
-	.string "HARBOR."$"
+	.string "HARBOR.$"
 
 SlateportCity_Text_PokemonFanClubSign:
 	.string "POKEMON FAN CLUB\n"
-	.string ""Calling all fans of POKEMON!"$"
+	.string "Calling all fans of POKEMON!$"
 
 SlateportCity_Text_OceanicMuseumSign:
-	.string ""The endless sea sustains\n"
-	.string "all life."\p"
+	.string "The endless sea sustains\n"
+	.string "all life.\p"
 	.string "OCEANIC MUSEUM$"
 
 SlateportCity_Text_CitySign:
 	.string "SLATEPORT CITY\p"
-	.string ""The port where people and POKEMON\n"
-	.string "cross paths."$"
+	.string "The port where people and POKEMON\n"
+	.string "cross paths.$"
 
 SlateportCity_Text_MarketSign:
 	.string "SLATEPORT MARKET\n"
-	.string ""Unique items found nowhere else!"$"
+	.string "Unique items found nowhere else!$"
 
 SlateportCity_Text_HarborFerryUnderConstruction:
 	.string "SLATEPORT HARBOR\p"
-	.string ""The ferry S.S. TIDAL is under\n"
+	.string "The ferry S.S. TIDAL is under\n"
 	.string "construction in the SHIPYARD.\p"
-	.string ""Service is scheduled to begin\n"
-	.string "shortly."$"
+	.string "Service is scheduled to begin\n"
+	.string "shortly.$"
 
 SlateportCity_Text_HarborSign:
 	.string "SLATEPORT HARBOR\p"
-	.string ""Enjoy a delightful cruise on\n"
-	.string "the ferry S.S. TIDAL."$"
+	.string "Enjoy a delightful cruise on\n"
+	.string "the ferry S.S. TIDAL.$"
 
 SlateportCity_Text_NameRatersHouseSign:
 	.string "NAME RATER'S HOUSE\n"
-	.string ""POKEMON nicknames rated."$"
+	.string "POKEMON nicknames rated.$"
 
 SlateportCity_Text_ExplainBerries:
 	.string "If a wild POKEMON gets hurt, it heals\n"

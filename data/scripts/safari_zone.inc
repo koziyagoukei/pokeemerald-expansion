@@ -244,7 +244,7 @@ Route121_SafariZoneEntrance_Text_TrainerTip:
 	.string "them less likely to flee.$"
 
 SafariZone_Southwest_Text_RestHouseSign:
-	.string ""Relieve your tired feet."\n"
+	.string "Relieve your tired feet.\n"
 	.string "REST HOUSE$"
 
 SafariZone_RestHouse_Text_Youngster:

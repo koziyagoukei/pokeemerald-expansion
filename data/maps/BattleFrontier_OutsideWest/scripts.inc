@@ -381,7 +381,7 @@ BattleFrontier_OutsideWest_Text_BigGuySaidIllLendYouMons:
 	.string "I'm sure it'll be okay.\p"
 	.string "I think...\p"
 	.string "But remember that big scary guy?\n"
-	.string "He said, "I'll lend you POKEMON!"$"
+	.string "He said, I'll lend you POKEMON!$"
 
 BattleFrontier_OutsideWest_Text_WhosRaisingThoseRentalMons:
 	.string "That's the BATTLE FACTORY.\n"
@@ -465,8 +465,8 @@ BattleFrontier_OutsideWest_Text_MetOlderGirlAtPike:
 	.string "She had these eyes that were scary\n"
 	.string "in a real ornery way.\p"
 	.string "Crunch, munch...\p"
-	.string "She got all furious: "Will you quit\n"
-	.string "eating!" Then she whaled on me.\p"
+	.string "She got all furious: Will you quit\n"
+	.string "eating! Then she whaled on me.\p"
 	.string "It was a hair-raising kind of\n"
 	.string "scary experience, sure enough.\p"
 	.string "Crunch, munch...$"

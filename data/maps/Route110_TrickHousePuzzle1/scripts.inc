@@ -39,7 +39,7 @@ Route110_TrickHousePuzzle1_EventScript_Robin::
 Route110_TrickHousePuzzle1_Text_WroteSecretCodeLockOpened::
 	.string "{PLAYER} wrote down the secret code\n"
 	.string "on the door.\p"
-	.string ""TRICK MASTER is fabulous."\n"
+	.string "TRICK MASTER is fabulous.\n"
 	.string "... ... ... ... ... ... ... ...\p"
 	.string "The lock clicked open!$"
 

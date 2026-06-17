@@ -553,8 +553,8 @@ Route109_Text_ZigzagoonCry:
 
 Route109_Text_SeashoreHouseSign:
 	.string "SEASHORE HOUSE\p"
-	.string ""May hot battles rage on hot sands!\n"
-	.string "The place for hot TRAINERS!"$"
+	.string "May hot battles rage on hot sands!\n"
+	.string "The place for hot TRAINERS!$"
 
 Route109_Text_TrainerTipsSign:
 	.string "TRAINER TIPS\p"

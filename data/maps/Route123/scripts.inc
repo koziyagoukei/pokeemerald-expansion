@@ -191,7 +191,7 @@ Route123_Text_RouteSign:
 
 Route123_Text_RouteSignMtPyre:
 	.string "{UP_ARROW} MT. PYRE\n"
-	.string ""Forbidden to the faint of heart."$"
+	.string "Forbidden to the faint of heart.$"
 
 Route123_Text_BerryMastersHouse:
 	.string "BERRY MASTER'S HOUSE$"

@@ -937,10 +937,10 @@ LittlerootTown_Text_SwitchShoesWithRunningShoes:
 LittlerootTown_Text_ExplainRunningShoes:
 	.string "MOM: {PLAYER}, those shoes came with\n"
 	.string "instructions.\p"
-	.string ""Press the B Button while wearing these\n"
+	.string "Press the B Button while wearing these\n"
 	.string "RUNNING SHOES to run extra-fast!\p"
-	.string ""Slip on these RUNNING SHOES and race\n"
-	.string "in the great outdoors!"$"
+	.string "Slip on these RUNNING SHOES and race\n"
+	.string "in the great outdoors!$"
 
 LittlerootTown_Text_ComeHomeIfAnythingHappens:
 	.string "... ... ... ... ... ... ... ...\n"
@@ -992,7 +992,7 @@ LittlerootTown_Text_GoodLuckCatchingPokemon:
 
 LittlerootTown_Text_TownSign:
 	.string "LITTLEROOT TOWN\n"
-	.string ""A town that can't be shaded any hue."$"
+	.string "A town that can't be shaded any hue.$"
 
 LittlerootTown_Text_ProfBirchsLab:
 	.string "PROF. BIRCH'S POKEMON LAB$"

@@ -461,7 +461,7 @@ SaffronCity_PokemonTrainerFanClub_Text_BrocksMyHero::
 	.string "He's a man among men!\p"
 	.string "Heheh, I got my mom to do\n"
 	.string "something for me.\p"
-	.string "I got her to embroider "BROCK"\n"
+	.string "I got her to embroider BROCK\n"
 	.string "on my shorts!$"
 
 SaffronCity_PokemonTrainerFanClub_Text_BrocksFanToBitterEnd::

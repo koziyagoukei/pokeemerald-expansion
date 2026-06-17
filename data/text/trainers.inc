@@ -389,7 +389,7 @@ Route104_Text_CindyDefeat:
 	.string "Oh, my!$"
 
 Route104_Text_CindyPostBattle:
-	.string ""Hello" is the beginning of "good-bye."\n"
+	.string "Hello is the beginning of good-bye.\n"
 	.string "I hope we meet again.$"
 
 Route104_Text_CindyRegister1:
@@ -412,7 +412,7 @@ Route104_Text_CindyRematchDefeat:
 	.string "I did the best that I could...$"
 
 Route104_Text_CindyPostRematch:
-	.string ""Hello" is the beginning of "good-bye."\n"
+	.string "Hello is the beginning of good-bye.\n"
 	.string "I hope we meet again.$"
 
 Route104_Text_DarianIntro:
@@ -801,7 +801,7 @@ Route108_Text_CarolinaPostBattle:
 
 Route109_Text_DavidIntro:
 	.string "Hiyah! Look at my chiseled abs!\n"
-	.string "This is what you call "cut"!$"
+	.string "This is what you call cut!$"
 
 Route109_Text_DavidDefeated:
 	.string "Aiyah!\n"
@@ -1697,7 +1697,7 @@ Route113_Text_LungIntro:
 
 Route113_Text_LungDefeat:
 	.string "I'll use my ninjutsu on you...\n"
-	.string ""VOLCANIC ASH SWIRL CLOAK"!\p"
+	.string "VOLCANIC ASH SWIRL CLOAK!\p"
 	.string "...What?\n"
 	.string "It's already over?$"
 
@@ -1790,7 +1790,7 @@ Route114_Text_LennyIntro:
 	.string "Yodelayhihoo!\p"
 	.string "... ...\p"
 	.string "You're supposed to shout\n"
-	.string ""yodelayhihoo" since it doesn't\l"
+	.string "yodelayhihoo since it doesn't\l"
 	.string "echo here!$"
 
 Route114_Text_LennyDefeat:
@@ -1799,7 +1799,7 @@ Route114_Text_LennyDefeat:
 Route114_Text_LennyPostBattle:
 	.string "When I was a wee tyke, I believed there\n"
 	.string "was someone copying me and shouting\l"
-	.string "back, "Yodelayhihoo."$"
+	.string "back, Yodelayhihoo.$"
 
 Route114_Text_LucasIntro:
 	.string "If you're not prepared, you shouldn't\n"

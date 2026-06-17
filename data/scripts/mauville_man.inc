@@ -968,6 +968,6 @@ MauvilleCity_PokemonCenter_1F_Text_IveGotNothingNewToTeach:
 
 MauvilleCity_PokemonCenter_1F_Text_HaveYouHeardOfWord:
 	.string "Hey, have you heard about\n"
-	.string ""{STR_VAR_1}"?\p"
+	.string "{STR_VAR_1}?\p"
 	.string "What's it mean? Well...\n"
 	.string "Ask your daddy or mommy, okay?$"

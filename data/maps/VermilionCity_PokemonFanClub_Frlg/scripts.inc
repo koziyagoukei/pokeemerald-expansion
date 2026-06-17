@@ -130,7 +130,7 @@ VermilionCity_PokemonFanClub_Text_PikachuTwiceAsCute::
 VermilionCity_PokemonFanClub_Text_AdoreMySeel::
 	.string "I just adore my SEEL!\n"
 	.string "It's so lovable!\p"
-	.string "It squeals, "Kyuuuh," when I\n"
+	.string "It squeals, Kyuuuh, when I\n"
 	.string "hug it!$"
 
 VermilionCity_PokemonFanClub_Text_SeelFarMoreAttractive::

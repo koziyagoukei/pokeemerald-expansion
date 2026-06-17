@@ -99,7 +99,7 @@ RustboroCity_Flat1_2F_Text_HelloDoYouKnowFunnyPhrase:
 	.string "phrase you can tell me?$"
 
 RustboroCity_Flat1_2F_Text_BeenSayingXDoYouKnowBetterPhrase:
-	.string "I've been saying "{STR_VAR_1}"\n"
+	.string "I've been saying {STR_VAR_1}\n"
 	.string "to amuse her lately.\p"
 	.string "Do you know of a better word or\n"
 	.string "a phrase that might work?$"
@@ -137,7 +137,7 @@ RustboroCity_Flat1_2F_Text_ThinkOfMyOwnPhrase:
 	.string "Oh, so you don't know any good words.\n"
 	.string "I'd better think for myself, then.\p"
 	.string "Hmm...\n"
-	.string "How about "{STR_VAR_1}"?\l"
+	.string "How about {STR_VAR_1}?\l"
 	.string "Let's see if that will work.$"
 
 RustboroCity_Flat1_2F_Text_ShesNotSmilingAtAll2:
@@ -166,7 +166,7 @@ RustboroCity_Flat1_2F_Text_ThankYouIllGiveYouWallpaper:
 	.string "patterns for the BOXES in the PC\l"
 	.string "POKEMON Storage System.\p"
 	.string "In the wallpaper pattern menu,\n"
-	.string "select "FRIENDS."\p"
+	.string "select FRIENDS.\p"
 	.string "That will give you access to the new\n"
 	.string "wallpaper patterns.$"
 

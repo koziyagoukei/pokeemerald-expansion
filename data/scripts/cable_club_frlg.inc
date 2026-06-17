@@ -1445,7 +1445,7 @@ Text_DescribeWhichGame_Frlg::
 	.string "Which game should I describe?$"
 
 Text_PokemonJumpInfo_Frlg::
-	.string ""POKEMON JUMP"\p"
+	.string "POKEMON JUMP\p"
 	.string "Make your POKEMON skip the\n"
 	.string "VINE WHIP rope with the A Button.\p"
 	.string "Only mini POKEMON around 28 inches\n"
@@ -1458,7 +1458,7 @@ Text_PokemonJumpInfo_Frlg::
 	.string "jumps in time.$"
 
 Text_DodrioBerryPickingInfo_Frlg::
-	.string ""DODRIO BERRY-PICKING"\p"
+	.string "DODRIO BERRY-PICKING\p"
 	.string "Command DODRIO's three heads to\n"
 	.string "catch falling BERRIES.\p"
 	.string "Press right, up, or left on the\n"
@@ -1508,7 +1508,7 @@ EventScript_ExplainPokemonJumpRequirements_Frlg::
 	.string "kinds of POKEMON can enter?$"
 
 Text_ShortJumpingPokemonAllowed_Frlg::
-	.string ""POKEMON JUMP" is open to POKEMON\n"
+	.string "POKEMON JUMP is open to POKEMON\n"
 	.string "around 28 inches or less.\p"
 	.string "What you can't enter are those\n"
 	.string "POKEMON that can't jump.\p"
@@ -1517,7 +1517,7 @@ Text_ShortJumpingPokemonAllowed_Frlg::
 	.string "That's all you need to know.$"
 
 Text_OnlyDodrioAllowed_Frlg::
-	.string ""DODRIO BERRY-PICKING"...\n"
+	.string "DODRIO BERRY-PICKING...\n"
 	.string "Well, the name says it all.\p"
 	.string "You have to have a DODRIO to play\n"
 	.string "this game.$"
@@ -1565,19 +1565,19 @@ CableClub_Text_ChooseGroupLeaderOfTwo_Frlg::
 	.string "Please decide which of you two\n"
 	.string "will become the LEADER.\p"
 	.string "The other player must then choose\n"
-	.string ""JOIN GROUP."$"
+	.string "JOIN GROUP.$"
 
 CableClub_Text_ChooseGroupLeaderOfFour_Frlg::
 	.string "Please decide which of you four\n"
 	.string "will become the GROUP LEADER.\p"
 	.string "The other players must then choose\n"
-	.string ""JOIN GROUP."$"
+	.string "JOIN GROUP.$"
 
 CableClub_Text_ChooseGroupLeader_Frlg::
 	.string "Please decide which of you will\n"
 	.string "become the GROUP LEADER.\p"
 	.string "The other players must then choose\n"
-	.string ""JOIN GROUP."$"
+	.string "JOIN GROUP.$"
 
 CableClub_Text_WelcomeUnionRoomEnter_Frlg::
 	.string "Welcome to the POKEMON WIRELESS\n"

@@ -275,8 +275,8 @@ FiveIsland_RocketWarehouse_Text_Admin2PostBattle::
 FiveIsland_RocketWarehouse_Text_ReportWithGraphsAndText::
 	.string "A report with graphs and text is on\n"
 	.string "the PC monitor.\p"
-	.string ""The Influence of Magnetic Waves\n"
-	.string "on POKEMON Evolution"...\p"
+	.string "The Influence of Magnetic Waves\n"
+	.string "on POKEMON Evolution...\p"
 	.string "... ... ... ... ... ...\p"
 	.string "It's too difficult to understand...$"
 

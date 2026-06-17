@@ -1506,7 +1506,7 @@ PetalburgCity_Gym_Text_DoorAppearsLocked:
 	.string "right now...$"
 
 PetalburgCity_Gym_Text_EnterSpeedRoom:
-	.string ""SPEED ROOM," the sign says.\p"
+	.string "SPEED ROOM, the sign says.\p"
 	.string "Do you want to go through?$"
 
 @ Unused
@@ -1515,33 +1515,33 @@ PetalburgCity_Gym_Text_DoorAppearsLocked2:
 	.string "right now...$"
 
 PetalburgCity_Gym_Text_EnterAccuracyRoom:
-	.string ""ACCURACY ROOM," the sign says.\p"
+	.string "ACCURACY ROOM, the sign says.\p"
 	.string "Do you want to go through?$"
 
 PetalburgCity_Gym_Text_EnterConfusionRoom:
-	.string ""CONFUSION ROOM," the sign says.\p"
+	.string "CONFUSION ROOM, the sign says.\p"
 	.string "Do you want to go through?$"
 
 PetalburgCity_Gym_Text_EnterDefenseRoom:
-	.string ""DEFENSE ROOM," the sign says.\p"
+	.string "DEFENSE ROOM, the sign says.\p"
 	.string "Do you want to go through?$"
 
 PetalburgCity_Gym_Text_EnterRecoveryRoom:
-	.string ""RECOVERY ROOM," the sign says.\p"
+	.string "RECOVERY ROOM, the sign says.\p"
 	.string "Do you want to go through?$"
 
 PetalburgCity_Gym_Text_EnterStrengthRoom:
-	.string ""STRENGTH ROOM," the sign says.\p"
+	.string "STRENGTH ROOM, the sign says.\p"
 	.string "Do you want to go through?$"
 
 PetalburgCity_Gym_Text_EnterOHKORoom:
-	.string ""ONE-HIT KO ROOM," the sign says.\p"
+	.string "ONE-HIT KO ROOM, the sign says.\p"
 	.string "Do you want to go through?$"
 
 PetalburgCity_Gym_Text_EnterGymLeadersRoom:
-	.string ""GYM LEADER'S ROOM\p"
-	.string ""See for yourself what POKEMON await\n"
-	.string "you!" the sign says.\p"
+	.string "GYM LEADER'S ROOM\p"
+	.string "See for yourself what POKEMON await\n"
+	.string "you! the sign says.\p"
 	.string "Do you want to go through?$"
 
 PetalburgCity_Gym_Text_GymStatue:
