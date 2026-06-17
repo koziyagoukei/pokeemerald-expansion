@@ -208,6 +208,209 @@
 #define CHAR_NO            0x08
 #define CHAR_UNDERSCORE    0x09
 
+// 日本語拡張するよ
+// エンコードできるように: CHAR_EXTRA_SYMBOLの中に CHAR_JPを生やして管理するよ
+// 0x0Aから0x1Fは予備にするよ
+// 0x20-0x7F:ひらがなだよ。0x76から0x7Fは予備だよ。
+
+#define CHAR_JP_HIRA_SMALL_A     0x20 // ぁ
+#define CHAR_JP_HIRA_A           0x21 // あ
+#define CHAR_JP_HIRA_SMALL_I     0x22 // ぃ
+#define CHAR_JP_HIRA_I           0x23 // い
+#define CHAR_JP_HIRA_SMALL_U     0x24 // ぅ
+#define CHAR_JP_HIRA_U           0x25 // う
+#define CHAR_JP_HIRA_SMALL_E     0x26 // ぇ
+#define CHAR_JP_HIRA_E           0x27 // え
+#define CHAR_JP_HIRA_SMALL_O     0x28 // ぉ
+#define CHAR_JP_HIRA_O           0x29 // お
+
+#define CHAR_JP_HIRA_KA          0x2A // か
+#define CHAR_JP_HIRA_GA          0x2B // が
+#define CHAR_JP_HIRA_KI          0x2C // き
+#define CHAR_JP_HIRA_GI          0x2D // ぎ
+#define CHAR_JP_HIRA_KU          0x2E // く
+#define CHAR_JP_HIRA_GU          0x2F // ぐ
+#define CHAR_JP_HIRA_KE          0x30 // け
+#define CHAR_JP_HIRA_GE          0x31 // げ
+#define CHAR_JP_HIRA_KO          0x32 // こ
+#define CHAR_JP_HIRA_GO          0x33 // ご
+
+#define CHAR_JP_HIRA_SA          0x34 // さ
+#define CHAR_JP_HIRA_ZA          0x35 // ざ
+#define CHAR_JP_HIRA_SHI         0x36 // し
+#define CHAR_JP_HIRA_JI          0x37 // じ
+#define CHAR_JP_HIRA_SU          0x38 // す
+#define CHAR_JP_HIRA_ZU          0x39 // ず
+#define CHAR_JP_HIRA_SE          0x3A // せ
+#define CHAR_JP_HIRA_ZE          0x3B // ぜ
+#define CHAR_JP_HIRA_SO          0x3C // そ
+#define CHAR_JP_HIRA_ZO          0x3D // ぞ
+
+#define CHAR_JP_HIRA_TA          0x3E // た
+#define CHAR_JP_HIRA_DA          0x3F // だ
+#define CHAR_JP_HIRA_CHI         0x40 // ち
+#define CHAR_JP_HIRA_DI          0x41 // ぢ
+#define CHAR_JP_HIRA_SMALL_TSU   0x42 // っ
+#define CHAR_JP_HIRA_TSU         0x43 // つ
+#define CHAR_JP_HIRA_DU          0x44 // づ
+#define CHAR_JP_HIRA_TE          0x45 // て
+#define CHAR_JP_HIRA_DE          0x46 // で
+#define CHAR_JP_HIRA_TO          0x47 // と
+#define CHAR_JP_HIRA_DO          0x48 // ど
+
+#define CHAR_JP_HIRA_NA          0x49 // な
+#define CHAR_JP_HIRA_NI          0x4A // に
+#define CHAR_JP_HIRA_NU          0x4B // ぬ
+#define CHAR_JP_HIRA_NE          0x4C // ね
+#define CHAR_JP_HIRA_NO          0x4D // の
+
+#define CHAR_JP_HIRA_HA          0x4E // は
+#define CHAR_JP_HIRA_BA          0x4F // ば
+#define CHAR_JP_HIRA_PA          0x50 // ぱ
+#define CHAR_JP_HIRA_HI          0x51 // ひ
+#define CHAR_JP_HIRA_BI          0x52 // び
+#define CHAR_JP_HIRA_PI          0x53 // ぴ
+#define CHAR_JP_HIRA_FU          0x54 // ふ
+#define CHAR_JP_HIRA_BU          0x55 // ぶ
+#define CHAR_JP_HIRA_PU          0x56 // ぷ
+#define CHAR_JP_HIRA_HE          0x57 // へ
+#define CHAR_JP_HIRA_BE          0x58 // べ
+#define CHAR_JP_HIRA_PE          0x59 // ぺ
+#define CHAR_JP_HIRA_HO          0x5A // ほ
+#define CHAR_JP_HIRA_BO          0x5B // ぼ
+#define CHAR_JP_HIRA_PO          0x5C // ぽ
+
+#define CHAR_JP_HIRA_MA          0x5D // ま
+#define CHAR_JP_HIRA_MI          0x5E // み
+#define CHAR_JP_HIRA_MU          0x5F // む
+#define CHAR_JP_HIRA_ME          0x60 // め
+#define CHAR_JP_HIRA_MO          0x61 // も
+
+#define CHAR_JP_HIRA_SMALL_YA    0x62 // ゃ
+#define CHAR_JP_HIRA_YA          0x63 // や
+#define CHAR_JP_HIRA_SMALL_YU    0x64 // ゅ
+#define CHAR_JP_HIRA_YU          0x65 // ゆ
+#define CHAR_JP_HIRA_SMALL_YO    0x66 // ょ
+#define CHAR_JP_HIRA_YO          0x67 // よ
+
+#define CHAR_JP_HIRA_RA          0x68 // ら
+#define CHAR_JP_HIRA_RI          0x69 // り
+#define CHAR_JP_HIRA_RU          0x6A // る
+#define CHAR_JP_HIRA_RE          0x6B // れ
+#define CHAR_JP_HIRA_RO          0x6C // ろ
+
+#define CHAR_JP_HIRA_SMALL_WA    0x6D // ゎ
+#define CHAR_JP_HIRA_WA          0x6E // わ
+#define CHAR_JP_HIRA_WI          0x6F // ゐ
+#define CHAR_JP_HIRA_WE          0x70 // ゑ
+#define CHAR_JP_HIRA_WO          0x71 // を
+#define CHAR_JP_HIRA_N           0x72 // ん
+#define CHAR_JP_HIRA_VU          0x73 // ゔ
+#define CHAR_JP_HIRA_ITER        0x74 // ゝ
+#define CHAR_JP_HIRA_VOICED_ITER 0x75 // ゞ
+
+// 0x80-0xDF: カタカナだよ。0xDAから0xFFが空いてるよ。
+#define CHAR_JP_KATA_SMALL_A     0x80 // ァ
+#define CHAR_JP_KATA_A           0x81 // ア
+#define CHAR_JP_KATA_SMALL_I     0x82 // ィ
+#define CHAR_JP_KATA_I           0x83 // イ
+#define CHAR_JP_KATA_SMALL_U     0x84 // ゥ
+#define CHAR_JP_KATA_U           0x85 // ウ
+#define CHAR_JP_KATA_SMALL_E     0x86 // ェ
+#define CHAR_JP_KATA_E           0x87 // エ
+#define CHAR_JP_KATA_SMALL_O     0x88 // ォ
+#define CHAR_JP_KATA_O           0x89 // オ
+
+#define CHAR_JP_KATA_KA          0x8A // カ
+#define CHAR_JP_KATA_GA          0x8B // ガ
+#define CHAR_JP_KATA_KI          0x8C // キ
+#define CHAR_JP_KATA_GI          0x8D // ギ
+#define CHAR_JP_KATA_KU          0x8E // ク
+#define CHAR_JP_KATA_GU          0x8F // グ
+#define CHAR_JP_KATA_KE          0x90 // ケ
+#define CHAR_JP_KATA_GE          0x91 // ゲ
+#define CHAR_JP_KATA_KO          0x92 // コ
+#define CHAR_JP_KATA_GO          0x93 // ゴ
+
+#define CHAR_JP_KATA_SA          0x94 // サ
+#define CHAR_JP_KATA_ZA          0x95 // ザ
+#define CHAR_JP_KATA_SHI         0x96 // シ
+#define CHAR_JP_KATA_JI          0x97 // ジ
+#define CHAR_JP_KATA_SU          0x98 // ス
+#define CHAR_JP_KATA_ZU          0x99 // ズ
+#define CHAR_JP_KATA_SE          0x9A // セ
+#define CHAR_JP_KATA_ZE          0x9B // ゼ
+#define CHAR_JP_KATA_SO          0x9C // ソ
+#define CHAR_JP_KATA_ZO          0x9D // ゾ
+
+#define CHAR_JP_KATA_TA          0x9E // タ
+#define CHAR_JP_KATA_DA          0x9F // ダ
+#define CHAR_JP_KATA_CHI         0xA0 // チ
+#define CHAR_JP_KATA_DI          0xA1 // ヂ
+#define CHAR_JP_KATA_SMALL_TSU   0xA2 // ッ
+#define CHAR_JP_KATA_TSU         0xA3 // ツ
+#define CHAR_JP_KATA_DU          0xA4 // ヅ
+#define CHAR_JP_KATA_TE          0xA5 // テ
+#define CHAR_JP_KATA_DE          0xA6 // デ
+#define CHAR_JP_KATA_TO          0xA7 // ト
+#define CHAR_JP_KATA_DO          0xA8 // ド
+
+#define CHAR_JP_KATA_NA          0xA9 // ナ
+#define CHAR_JP_KATA_NI          0xAA // ニ
+#define CHAR_JP_KATA_NU          0xAB // ヌ
+#define CHAR_JP_KATA_NE          0xAC // ネ
+#define CHAR_JP_KATA_NO          0xAD // ノ
+
+#define CHAR_JP_KATA_HA          0xAE // ハ
+#define CHAR_JP_KATA_BA          0xAF // バ
+#define CHAR_JP_KATA_PA          0xB0 // パ
+#define CHAR_JP_KATA_HI          0xB1 // ヒ
+#define CHAR_JP_KATA_BI          0xB2 // ビ
+#define CHAR_JP_KATA_PI          0xB3 // ピ
+#define CHAR_JP_KATA_FU          0xB4 // フ
+#define CHAR_JP_KATA_BU          0xB5 // ブ
+#define CHAR_JP_KATA_PU          0xB6 // プ
+#define CHAR_JP_KATA_HE          0xB7 // ヘ
+#define CHAR_JP_KATA_BE          0xB8 // ベ
+#define CHAR_JP_KATA_PE          0xB9 // ペ
+#define CHAR_JP_KATA_HO          0xBA // ホ
+#define CHAR_JP_KATA_BO          0xBB // ボ
+#define CHAR_JP_KATA_PO          0xBC // ポ
+
+#define CHAR_JP_KATA_MA          0xBD // マ
+#define CHAR_JP_KATA_MI          0xBE // ミ
+#define CHAR_JP_KATA_MU          0xBF // ム
+#define CHAR_JP_KATA_ME          0xC0 // メ
+#define CHAR_JP_KATA_MO          0xC1 // モ
+
+#define CHAR_JP_KATA_SMALL_YA    0xC2 // ャ
+#define CHAR_JP_KATA_YA          0xC3 // ヤ
+#define CHAR_JP_KATA_SMALL_YU    0xC4 // ュ
+#define CHAR_JP_KATA_YU          0xC5 // ユ
+#define CHAR_JP_KATA_SMALL_YO    0xC6 // ョ
+#define CHAR_JP_KATA_YO          0xC7 // ヨ
+
+#define CHAR_JP_KATA_RA          0xC8 // ラ
+#define CHAR_JP_KATA_RI          0xC9 // リ
+#define CHAR_JP_KATA_RU          0xCA // ル
+#define CHAR_JP_KATA_RE          0xCB // レ
+#define CHAR_JP_KATA_RO          0xCC // ロ
+
+#define CHAR_JP_KATA_SMALL_WA    0xCD // ヮ
+#define CHAR_JP_KATA_WA          0xCE // ワ
+#define CHAR_JP_KATA_WI          0xCF // ヰ
+#define CHAR_JP_KATA_WE          0xD0 // ヱ
+#define CHAR_JP_KATA_WO          0xD1 // ヲ
+#define CHAR_JP_KATA_N           0xD2 // ン
+#define CHAR_JP_KATA_VU          0xD3 // ヴ
+#define CHAR_JP_KATA_KA_SMALL    0xD4 // ヵ
+#define CHAR_JP_KATA_KE_SMALL    0xD5 // ヶ
+#define CHAR_JP_KATA_ITER        0xD6 // ヽ
+#define CHAR_JP_KATA_VOICED_ITER 0xD7 // ヾ
+#define CHAR_JP_KATA_MIDDLE_DOT  0xD8 // ・
+#define CHAR_JP_KATA_LONG_SOUND  0xD9 // ー
+
+
 #define EXT_CTRL_CODE_COLOR                  0x01
 #define EXT_CTRL_CODE_HIGHLIGHT              0x02
 #define EXT_CTRL_CODE_SHADOW                 0x03
