@@ -1529,7 +1529,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .weight = 110,
         .description = COMPOUND_STRING(
             "The fire within the tuft on its head can\n"
-            "reach up to 600ºF. Very intelligent,\n"
+            "reach up to 600 degreesF. Very intelligent,\n"
             "it roasts berries before eating them.\n"
             "It likes to help people."),
         .pokemonScale = 422,
@@ -7749,7 +7749,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 4,
         .weight = 57,
         .description = COMPOUND_STRING(
-            "The temperature of their breath is -58ºF.\n"
+            "The temperature of their breath is -58 degreesF.\n"
             "They create snow crystals and make snow\n"
             "fall in the areas around them. Vanillite is\n"
             "treasured by households in warm regions."),
@@ -12899,7 +12899,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .weight = 630,
         .description = COMPOUND_STRING(
             "An example of what is known as a\n"
-            "form change". Tornadus has been\n"
+            "form change. Tornadus has been\n"
             "sighted crossing the ocean while in this\n"
             "form."),
         .pokemonScale = 268,
@@ -13296,7 +13296,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "The energy that comes pouring from its\n"
             "tail increases the nutrition in the soil,\n"
             "granting bountiful crops. It has been\n"
-            "hailed as The Guardian of the Fields.""),
+            "hailed as The Guardian of the Fields."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,

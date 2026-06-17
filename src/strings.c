@@ -626,12 +626,14 @@ const u8 gText_Beauty3[] = _("Beauty ");
 const u8 gText_Cuteness[] = _("Cuteness ");
 const u8 gText_Smartness[] = _("Smartness ");
 const u8 gText_Toughness[] = _("Toughness ");
-const u8 gText_SaveFailedCheckingBackup[] = _("Save failed. Checking the backup\nmemory... Please wait.\n{COLOR RED}"Time required: about 1 minute"");
+
+const u8 gText_SaveFailedCheckingBackup[] = _("Save failed. Checking the backup\nmemory... Please wait.\n{COLOR RED}Time required: about 1 minute");
 const u8 gText_BackupMemoryDamaged[] = _("The backup memory is damaged, or\nthe internal battery has run dry.\nYou can still play, but not save.");
-const u8 gText_GamePlayCannotBeContinued[] = _("{COLOR RED}"Game play cannot be continued.\nReturning to the title screen..."");
+const u8 gText_GamePlayCannotBeContinued[] = _("{COLOR RED}Game play cannot be continued.\nReturning to the title screen...");
 const u8 gText_CheckCompleted[] = _("Check completed.\nAttempting to save again.\nPlease wait.");
-const u8 gText_SaveCompleteGameCannotContinue[] = _("Save completed.\n{COLOR RED}"Game play cannot be continued.\nReturning to the title screen."");
-const u8 gText_SaveCompletePressA[] = _("Save completed.\n{COLOR RED}"Please press the A Button."");
+const u8 gText_SaveCompleteGameCannotContinue[] = _("Save completed.\n{COLOR RED}Game play cannot be continued.\nReturning to the title screen.");
+const u8 gText_SaveCompletePressA[] = _("Save completed.\n{COLOR RED}Please press the A Button.");
+
 const u8 gText_Ferry[] = _("FERRY");
 const u8 gText_SecretBase[] = _("SECRET BASE");
 const u8 gText_Hideout[] = _("HIDEOUT");

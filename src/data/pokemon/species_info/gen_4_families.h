@@ -5726,7 +5726,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "It lives a quiet life on mountains that\n"
             "are perpetually covered in snow. It hides\n"
             "itself by whipping up blizzards.\n"
-            "It is also known as "The Ice Monster."),
+            "It is also known as The Ice Monster."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 348,
