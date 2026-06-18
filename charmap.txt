@@ -166,9 +166,9 @@ TALL_PLUS   = FC 0C FB
 @ Japanese punctuation
 '　' = 00
 '！' = AB
-'?' = AC
+'？' = AC
 '。' = AD
-'。' = AD
+'．' = AD
 'ー' = AE
 '円' = B7
 
@@ -340,19 +340,11 @@ STRING = FD
 'ッ' = A0
 'ヴ' = F1
 
-STRING = FD
-
-UP_ARROW    = FF 00
-DOWN_ARROW  = FF 01
-LEFT_ARROW  = FF 02
-RIGHT_ARROW = FF 03
-'+'         = FF 04
-LV          = FF 05
-'=' = F9 DE
-'＝' = F9 DE
-';' = F9 DB
-'；' = F9 DB
-'_' = F9 D0
+@ Full-width variants of existing ASCII punctuation.
+'＋' = 2E
+'＝' = 35
+'；' = 36
+'＿' = AE
 
 @ string placeholders
 PLAYER         = FD 01
@@ -1147,7 +1139,6 @@ EMOJI_TIRED = F9 FB
 EMOJI_NEUTRAL = F9 FC
 EMOJI_SHOCKED = F9 FD
 EMOJI_BIGANGER = F9 FE
-EMOJI_DIZZYEGG = F9 FF
 
 '\l' = FA @ scroll up window text
 '\p' = FB @ new paragraph
