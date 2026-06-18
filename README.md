@@ -1,3 +1,16 @@
+#Pokeemerald-expansion日本語実装計画
+やぁ。日本語(ひらがな、カタカナ)が使えるようにがんばってるやつ。
+一旦はGBAで使われてれる範囲のひらがなとカタカナは使えるよ。
+ヴとかの既存では存在しない概念にはまだ対応してないよ。
+キーボード入力も対応まだだよ。
+テキスト表示させる時にUTFのひらがなカタカナ入れたら普通に表示されるようにしてるよ。
+
+後中身のテキストデータの翻訳はできてないよ。さいしょからはじめるでフォントのテストしてるよ。
+フォーク元のフォントでほぼ使ってないやんみたいな部分とか、日本語で作る時に要らんやろって部分のフォントは削ってあるよ。
+削った場所を使って頑張れば漢字も一部使えるんじゃないかな。
+
+まだ完全に日本語基盤蘇生が終わってるわけじゃないから、「ほーんおもろ」って眺める程度にしてね。
+
 # About `pokeemerald-expansion`
 
 ![Gif that shows debugging functionality that is unique to pokeemerald-expansion such as rerolling Trainer ID, Cheat Start, PC from Debug Menu, Debug PC Fill, Pokémon Sprite Visualizer, Debug Warp to Map, and Battle Debug Menu](https://github.com/user-attachments/assets/cf9dfbee-4c6b-4bca-8e0a-07f116ef891c) ![Gif that shows overworld functionality that is unique to pokeemerald-expansion such as indoor running, BW2 style map popups, overworld followers, DNA Splicers, Gen 1 style fishing, OW Item descriptions, Quick Run from Battle, Use Last Ball, Wild Double Battles, and Catch from EXP](https://github.com/user-attachments/assets/383af243-0904-4d41-bced-721492fbc48e) ![Gif that shows off a number of modern Pokémon battle mechanics happening in the pokeemerald-expansion engine: 2 vs 1 battles, modern Pokémon, items, moves, abilities, fully customizable opponents and partners, Trainer Slides, and generational gimmicks](https://github.com/user-attachments/assets/50c576bc-415e-4d66-a38f-ad712f3316be)
