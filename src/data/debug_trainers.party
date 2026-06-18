@@ -18,18 +18,20 @@ Pic: Brendan
 Gender: Male
 Music: Male
 
-Buffie (Wobbuffet)
-Brave Nature
+
+
+ヴィクトリア (Pheromosa) @	Fightinium Z
+Adamant Nature
 Level: 100
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Def / 6 SpA
-- Earthquake
-- Flamethrower
-- Celebrate
-- Celebrate
+- Close Combat
+- Poison Jab
+- Drill Run
+- Throat Chop
 
 === DEBUG_TRAINER_AI ===
-Name: Debugger
+Name: デバッグ
 AI: Smart Trainer
 Class: Rival
 Battle Type: Singles
