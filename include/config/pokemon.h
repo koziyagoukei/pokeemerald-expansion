@@ -53,14 +53,14 @@
 #define P_CRIES_ENABLED                  TRUE        // If TRUE, Pokemon will have cries. Disabling this saves around a LOT of ROM space (over 25%!), but instead we recommend disabling individual unused Pokemon families in include/config/species_enabled.h.
 #define P_LEGENDARY_PERFECT_IVS          GEN_LATEST  // Since Gen 6, Legendaries, Mythicals and Ultra Beasts found in the wild or given through gifts have at least 3 perfect IVs.
 #define P_EV_CAP                         GEN_LATEST  // Since Gen 6, the max EVs per stat is 252 instead of 255.
-#define P_SHOW_TERA_TYPE                 GEN_8       // Since Gen 9, the Tera Type is shown on the summary screen.
+#define P_SHOW_TERA_TYPE                 GEN_LATEST  // Since Gen 9, the Tera Type is shown on the summary screen.
 #define P_TM_LITERACY                    GEN_LATEST  // Since Gen 6, TM illiterate Pokemon can learn TMs that teach moves that are in their level-up learnsets.
-#define P_CAN_FORGET_HIDDEN_MOVE         FALSE       // If TRUE, Pokemon can forget any move, even if it is an HM.
+#define P_CAN_FORGET_HIDDEN_MOVE         TRUE        // If TRUE, Pokemon can forget any move, even if it is an HM.
 #define P_ASK_MOVE_CONFIRMATION          FALSE       // If FALSE, when a player decides not to learn a move, the game does not ask the player for confirmation.
 #define P_EGG_CYCLE_LENGTH               GEN_LATEST  // Since Gen 8, Egg cycles take half as many steps as before. Previous generations have some varied step counts around 255.
 #define P_ONLY_OBTAINABLE_SHINIES        FALSE       // If TRUE, Pokemon encountered in the Battle Pyramid or while catching is disabled won't be Shiny.
 #define P_NO_SHINIES_WITHOUT_POKEBALLS   FALSE       // If TRUE, Pokemon encountered when the player is out of Poke Balls won't be Shiny.
-#define P_SHOW_DYNAMIC_TYPES             FALSE       // If TRUE, all moves with dynamic type changes will be reflected as their current type in battle/summary screens instead of just select ones like in vanilla.
+#define P_SHOW_DYNAMIC_TYPES             TRUE        // If TRUE, all moves with dynamic type changes will be reflected as their current type in battle/summary screens instead of just select ones like in vanilla.
 #define P_BASE_HP_1_SHEDINJA_HANDLING    FALSE       // If TRUE, all species with 1 Base HP will have their handling match Shedinja's.
 
 // Learnset helper toggles
@@ -69,8 +69,8 @@
 // Flag settings
 // To use the following features in scripting, replace the 0s with the flag ID you're assigning it to.
 // Eg: Replace with FLAG_UNUSED_0x264 so you can use that flag to toggle the feature.
-#define P_FLAG_FORCE_SHINY               0  // If this flag is set, all wild and gift Pokemon will forced into being Shiny.
-#define P_FLAG_FORCE_NO_SHINY            0  // If this flag is set, all wild and gift Pokemon will forced into NOT being Shiny.
+#define P_FLAG_FORCE_SHINY               FLAG_EXPANSION_FORCE_SHINY     // If this flag is set, all wild and gift Pokemon will forced into being Shiny.
+#define P_FLAG_FORCE_NO_SHINY            FLAG_EXPANSION_FORCE_NO_SHINY  // If this flag is set, all wild and gift Pokemon will forced into NOT being Shiny.
 
 // Go here if you want to disable specific families of Pokemon.
 #include "config/species_enabled.h"

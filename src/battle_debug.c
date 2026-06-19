@@ -314,7 +314,7 @@ static const struct ListMenuItem sMainListItems[] =
     {COMPOUND_STRING("わざ"),        LIST_ITEM_MOVES},
     {sText_Ability,                   LIST_ITEM_ABILITY},
     {sText_HeldItem,                  LIST_ITEM_HELD_ITEM},
-    {COMPOUND_STRING("ピーピー"),           LIST_ITEM_PP},
+    {COMPOUND_STRING("PP"),           LIST_ITEM_PP},
     {COMPOUND_STRING("タイプ"),        LIST_ITEM_TYPES},
     {COMPOUND_STRING("ステータス"),        LIST_ITEM_STATS},
     {COMPOUND_STRING("ランク"),  LIST_ITEM_STAT_STAGES},
@@ -322,18 +322,18 @@ static const struct ListMenuItem sMainListItems[] =
     {COMPOUND_STRING("へんか"),    LIST_ITEM_VOLATILE},
     {COMPOUND_STRING("わな"),      LIST_ITEM_HAZARDS},
     {COMPOUND_STRING("サイドじょうたい"),  LIST_ITEM_SIDE_STATUS},
-    {COMPOUND_STRING("エーアイ"),           LIST_ITEM_AI},
-    {COMPOUND_STRING("エーアイてん ダメージ"),   LIST_ITEM_AI_MOVES_PTS},
-    {COMPOUND_STRING("エーアイじょうほう"),      LIST_ITEM_AI_INFO},
-    {COMPOUND_STRING("エーアイてもち"),     LIST_ITEM_AI_PARTY},
+    {COMPOUND_STRING("AI"),           LIST_ITEM_AI},
+    {COMPOUND_STRING("AIてん ダメージ"),   LIST_ITEM_AI_MOVES_PTS},
+    {COMPOUND_STRING("AIじょうほう"),      LIST_ITEM_AI_INFO},
+    {COMPOUND_STRING("AIてもち"),     LIST_ITEM_AI_PARTY},
     {COMPOUND_STRING("そのほか"),      LIST_ITEM_VARIOUS},
     {COMPOUND_STRING("すぐに かつ"),  LIST_ITEM_INSTANT_WIN},
 };
 
 static const struct ListMenuItem sStatsListItems[] =
 {
-    {COMPOUND_STRING("いまのエイチピー"), LIST_STAT_HP_CURRENT},
-    {COMPOUND_STRING("さいだいエイチピー"),     LIST_STAT_HP_MAX},
+    {COMPOUND_STRING("いまのHP"), LIST_STAT_HP_CURRENT},
+    {COMPOUND_STRING("さいだいHP"),     LIST_STAT_HP_MAX},
     {COMPOUND_STRING("こうげき"),     LIST_STAT_ATTACK},
     {COMPOUND_STRING("ぼうぎょ"),    LIST_STAT_DEFENSE},
     {COMPOUND_STRING("すばやさ"),      LIST_STAT_SPEED},
@@ -429,7 +429,7 @@ static const struct ListMenuItem sAIListItems[] =
     {COMPOUND_STRING("にげきひんし"),                LIST_AI_TRY_TO_2HKO},
     {COMPOUND_STRING("バトンタッチゆうせん"),          LIST_AI_PREFER_BATON_PASS},
     {COMPOUND_STRING("ダブルバトル"),              LIST_AI_DOUBLE_BATTLE},
-    {COMPOUND_STRING("エイチピーいしき"),                   LIST_AI_HP_AWARE},
+    {COMPOUND_STRING("HPいしき"),                   LIST_AI_HP_AWARE},
     {COMPOUND_STRING("つよいへんか"),            LIST_AI_POWERFUL_STATUS},
     {COMPOUND_STRING("てんねんむし"),             LIST_AI_NEGATE_UNAWARE},
     {COMPOUND_STRING("じばくよてい"),               LIST_AI_WILL_SUICIDE},
@@ -454,8 +454,8 @@ static const struct ListMenuItem sAIListItems[] =
 
 static const struct ListMenuItem sVariousListItems[] =
 {
-    {COMPOUND_STRING("エイチピーを みせる"),       VARIOUS_SHOW_HP},
-    {COMPOUND_STRING("みがわりエイチピー"), VARIOUS_SUBSTITUTE_HP},
+    {COMPOUND_STRING("HPを みせる"),       VARIOUS_SHOW_HP},
+    {COMPOUND_STRING("みがわりHP"), VARIOUS_SUBSTITUTE_HP},
     {COMPOUND_STRING("メロメロ"),       VARIOUS_IN_LOVE},
 };
 

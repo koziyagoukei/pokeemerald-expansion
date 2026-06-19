@@ -106,6 +106,7 @@ enum FlagsVarsDebugMenu
     DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_TRAINER_SEE,
     DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_CATCHING,
     DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_BAG_USE,
+    DEBUG_FLAGVAR_MENU_ITEM_EXPANSION_TEST_FLAGS_ON,
 };
 
 enum DebugBattleType
@@ -301,6 +302,7 @@ static void DebugAction_Party_ClearPokerus(u8 taskId);
 static void DebugAction_Party_ClearParty(u8 taskId);
 static void DebugAction_Party_SetParty(u8 taskId);
 static void DebugAction_Party_BattleSingle(u8 taskId);
+static void DebugGiveExpansionBattleItems(void);
 
 static void DebugAction_Trainers_ChooseFromMap(u8 taskId);
 static void DebugAction_Trainers_ChooseTrainer(u8 taskId, void *selection);
@@ -331,6 +333,7 @@ static void DebugAction_FlagsVars_TrainerSeeOnOff(u8 taskId);
 static void DebugAction_FlagsVars_BagUseOnOff(u8 taskId);
 static void DebugAction_FlagsVars_CatchingOnOff(u8 taskId);
 static void DebugAction_FlagsVars_RunningShoes(u8 taskId);
+static void DebugAction_FlagsVars_ExpansionTestFlagsOn(u8 taskId);
 
 static void DebugAction_Give_Item(u8 taskId);
 static void DebugAction_Give_Item_SelectId(u8 taskId);
@@ -588,7 +591,7 @@ static const struct DebugMenuOption sDebugMenu_Actions_Utilities[] =
     { COMPOUND_STRING("チートスタート"),       DebugAction_Util_CheatStart },
     { COMPOUND_STRING("きのみきのう..."),  DebugAction_OpenSubMenu, sDebugMenu_Actions_BerryFunctions },
     { COMPOUND_STRING("イーワラムカウンタ..."),   DebugAction_ExecuteScript, Debug_EventScript_EWRAMCounters },
-    { COMPOUND_STRING("つれあるきエヌピーシー..."),     DebugAction_OpenSubMenu, sDebugMenu_Actions_FollowerNPCMenu },
+    { COMPOUND_STRING("つれあるきNPC..."),     DebugAction_OpenSubMenu, sDebugMenu_Actions_FollowerNPCMenu },
     { COMPOUND_STRING("ミツルチュートリアル"),    DebugAction_ExecuteScript, Debug_EventScript_WallyTutorial },
     { COMPOUND_STRING("ダイゴマルチ"),      DebugAction_ExecuteScript, Debug_EventScript_Steven_Multi },
     { NULL }
@@ -726,6 +729,7 @@ static const struct DebugMenuOption sDebugMenu_Actions_Flags[] =
     [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_TRAINER_SEE]   = { COMPOUND_STRING("{STR_VAR_1}トレーナーしせんオフ"), DebugAction_ToggleFlag, DebugAction_FlagsVars_TrainerSeeOnOff },
     [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_CATCHING]      = { COMPOUND_STRING("{STR_VAR_1}つかまえるオフ"),    DebugAction_ToggleFlag, DebugAction_FlagsVars_CatchingOnOff },
     [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_BAG_USE]       = { COMPOUND_STRING("{STR_VAR_1}バッグしようオフ"),     DebugAction_ToggleFlag, DebugAction_FlagsVars_BagUseOnOff },
+    [DEBUG_FLAGVAR_MENU_ITEM_EXPANSION_TEST_FLAGS_ON] = { COMPOUND_STRING("Expansion test flags ON"), DebugAction_FlagsVars_ExpansionTestFlagsOn },
     { NULL }
 };
 
@@ -2608,6 +2612,13 @@ static void DebugAction_FlagsVars_CatchingOnOff(u8 taskId)
         PlaySE(SE_PC_LOGIN);
     FlagToggle(WE_FLAG_NO_CATCHING);
 #endif
+}
+
+static void DebugAction_FlagsVars_ExpansionTestFlagsOn(u8 taskId)
+{
+    (void)taskId;
+    SetExpansionTestFlags();
+    PlaySE(SE_PC_LOGIN);
 }
 
 // *******************************
@@ -4941,7 +4952,9 @@ const struct Trainer* GetDebugAiTrainer(void)
 static void DebugAction_Party_SetParty(u8 taskId)
 {
     ZeroPlayerPartyMons();
-    CreateNPCTrainerPartyFromTrainer(gParties[B_TRAINER_PLAYER], &sDebugTrainers[DIFFICULTY_NORMAL][DEBUG_TRAINER_PLAYER], TRUE, BATTLE_TYPE_TRAINER);
+    CreateNPCTrainerPartyFromTrainer(gParties[B_TRAINER_PLAYER], &sDebugTrainers[DIFFICULTY_NORMAL][DEBUG_TRAINER_PLAYER], FALSE, BATTLE_TYPE_TRAINER);
+    CalculatePlayerPartyCount();
+    DebugGiveExpansionBattleItems();
     ScriptContext_Enable();
     Debug_DestroyMenu_Full(taskId);
 }
@@ -4950,8 +4963,10 @@ static void DebugAction_Party_BattleSingle(u8 taskId)
 {
     ZeroPlayerPartyMons();
     ZeroEnemyPartyMons();
-    CreateNPCTrainerPartyFromTrainer(gParties[B_TRAINER_PLAYER], &sDebugTrainers[DIFFICULTY_NORMAL][DEBUG_TRAINER_PLAYER], TRUE, BATTLE_TYPE_TRAINER);
+    CreateNPCTrainerPartyFromTrainer(gParties[B_TRAINER_PLAYER], &sDebugTrainers[DIFFICULTY_NORMAL][DEBUG_TRAINER_PLAYER], FALSE, BATTLE_TYPE_TRAINER);
     CreateNPCTrainerPartyFromTrainer(gParties[B_TRAINER_OPPONENT_A], GetDebugAiTrainer(), FALSE, BATTLE_TYPE_TRAINER);
+    CalculatePlayerPartyCount();
+    DebugGiveExpansionBattleItems();
 
     gBattleTypeFlags = BATTLE_TYPE_TRAINER;
     if (sDebugTrainers[DIFFICULTY_NORMAL][DEBUG_TRAINER_AI].battleType == TRAINER_BATTLE_TYPE_DOUBLES)
@@ -4962,6 +4977,14 @@ static void DebugAction_Party_BattleSingle(u8 taskId)
     CalculateEnemyPartyCount();
     BattleSetup_StartTrainerBattle_Debug();
     Debug_DestroyMenu_Full(taskId);
+}
+
+static void DebugGiveExpansionBattleItems(void)
+{
+    if (!CheckBagHasItem(ITEM_TERA_ORB, 1))
+        AddBagItem(ITEM_TERA_ORB, 1);
+    if (!CheckBagHasItem(ITEM_DYNAMAX_BAND, 1))
+        AddBagItem(ITEM_DYNAMAX_BAND, 1);
 }
 
 void CheckEWRAMCounters(struct ScriptContext *ctx)

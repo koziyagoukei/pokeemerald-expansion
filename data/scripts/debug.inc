@@ -178,7 +178,7 @@ Debug_EventScript_Text_OffensiveEVs:
 	.string "こうげき: {STR_VAR_1}, とくこう: {STR_VAR_2}, すばやさ: {STR_VAR_3}$"
 
 Debug_EventScript_Text_DefensiveEVs:
-	.string "エイチピー: {STR_VAR_1}, ぼうぎょ: {STR_VAR_2}, とくぼう: {STR_VAR_3}$"
+	.string "HP: {STR_VAR_1}, ぼうぎょ: {STR_VAR_2}, とくぼう: {STR_VAR_3}$"
 
 Debug_EventScript_CheckIVs::
 	lockall
@@ -198,7 +198,7 @@ Debug_EventScript_Text_OffensiveIVs:
 	.string "こうげき: {STR_VAR_1}, とくこう: {STR_VAR_2}, すばやさ: {STR_VAR_3}$"
 
 Debug_EventScript_Text_DefensiveIVs:
-	.string "エイチピー: {STR_VAR_1}, ぼうぎょ: {STR_VAR_2}, とくぼう: {STR_VAR_3}$"
+	.string "HP: {STR_VAR_1}, ぼうぎょ: {STR_VAR_2}, とくぼう: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
 	release
@@ -819,7 +819,7 @@ Debug_EventScript_FakeRTCNotEnabled::
 	return
 
 Debug_EventScript_FakeRTCNotEnabled_Text_0:
-	.string "フェイクアールティーシーが\nオンではありません.コンフィグで\lオンに してください$"
+	.string "Fake RTCが\nオンではありません.コンフィグで\lオンに してください$"
 
 
 Debug_EventScript_TellTheTime_Text_0:

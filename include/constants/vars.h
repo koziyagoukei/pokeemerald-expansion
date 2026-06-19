@@ -249,6 +249,17 @@
 #define VAR_GIFT_UNUSED_6                                0x40E3 // Var is written to, but never read
 #define VAR_GIFT_UNUSED_7                                0x40E4 // var is written to, but never read
 #define VAR_UNUSED_0x40E5                                0x40E5 // Unused Var
+
+// Expansion feature test vars.
+// These aliases keep the original unused var IDs intact while making debug
+// menu values easier to identify.
+#define VAR_EXPANSION_DIFFICULTY                         VAR_UNUSED_0x404E
+#define VAR_EXPANSION_NO_BAG_USE                         VAR_UNUSED_0x4083
+#define VAR_EXPANSION_DEXNAV_SPECIES                     VAR_UNUSED_0x408B
+#define VAR_EXPANSION_DEXNAV_STEP_COUNTER                VAR_UNUSED_0x4091
+#define VAR_EXPANSION_LAST_REPEL_LURE_USED               VAR_UNUSED_0x409B
+#define VAR_EXPANSION_WILD_AI_FLAGS                      VAR_UNUSED_0x409D
+
 #define VAR_DAILY_SLOTS                                  0x40E6
 #define VAR_DAILY_WILDS                                  0x40E7
 #define VAR_DAILY_BLENDER                                0x40E8

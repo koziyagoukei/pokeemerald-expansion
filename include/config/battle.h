@@ -251,22 +251,22 @@
 #define B_FLAG_BADGE_BOOST_SPATK    FLAG_BADGE07_GET // If this flag is set and B_BADGE_BOOST == GEN_3, it will multiply the player's Pokemon's Sp. Atk by x1.1
 #define B_FLAG_BADGE_BOOST_SPDEF    FLAG_BADGE07_GET // If this flag is set and B_BADGE_BOOST == GEN_3, it will multiply the player's Pokemon's Sp. Def by x1.1
 // Other battle flags
-#define B_FLAG_INVERSE_BATTLE       0     // If this flag is set, the battle's type effectiveness are inversed. For example, fire is super effective against water.
-#define B_FLAG_AI_VS_AI_BATTLE      0     // If this flag is set, the player's mons will be controlled by the ai next battles.
-#define B_FLAG_DYNAMAX_BATTLE       0     // If this flag is set, the ability to Dynamax in battle is enabled for all trainers.
-#define B_FLAG_TERA_ORB_CHARGED     0     // If this flag is set, the Tera Orb is charged. It is automatically set upon healing and cleared upon Terastallizing once configured.
-#define B_FLAG_TERA_ORB_NO_COST     0     // If this flag is set, the Tera Orb does not use up its charge upon Terastallization. In S/V, this occurs after an event with Terapagos.
-#define B_FLAG_SLEEP_CLAUSE         0     // If this flag is set, sleep clause is enabled; if the player / AI has already put a Pokemon on the opponent's side to sleep and it is still sleeping, another one can't be put to sleep. AI requires AI_FLAG_CHECK_BAD_MOVE to understand.
-#define B_FLAG_NO_WHITEOUT          0     // If this flag is set, the player can not white out against Trainers. Please note that the party is not healed automatically!
+#define B_FLAG_INVERSE_BATTLE       FLAG_EXPANSION_INVERSE_BATTLE     // If this flag is set, the battle's type effectiveness are inversed. For example, fire is super effective against water.
+#define B_FLAG_AI_VS_AI_BATTLE      FLAG_EXPANSION_AI_VS_AI_BATTLE    // If this flag is set, the player's mons will be controlled by the ai next battles.
+#define B_FLAG_DYNAMAX_BATTLE       FLAG_EXPANSION_DYNAMAX_BATTLE     // If this flag is set, the ability to Dynamax in battle is enabled for all trainers.
+#define B_FLAG_TERA_ORB_CHARGED     FLAG_EXPANSION_TERA_ORB_CHARGED   // If this flag is set, the Tera Orb is charged. It is automatically set upon healing and cleared upon Terastallizing once configured.
+#define B_FLAG_TERA_ORB_NO_COST     FLAG_EXPANSION_TERA_ORB_NO_COST   // If this flag is set, the Tera Orb does not use up its charge upon Terastallization. In S/V, this occurs after an event with Terapagos.
+#define B_FLAG_SLEEP_CLAUSE         FLAG_EXPANSION_SLEEP_CLAUSE       // If this flag is set, sleep clause is enabled; if the player / AI has already put a Pokemon on the opponent's side to sleep and it is still sleeping, another one can't be put to sleep. AI requires AI_FLAG_CHECK_BAD_MOVE to understand.
+#define B_FLAG_NO_WHITEOUT          FLAG_EXPANSION_NO_WHITEOUT        // If this flag is set, the player can not white out against Trainers. Please note that the party is not healed automatically!
 
 // Var Settings
 // To use the following features, change the 0 for a var present in include/constants/vars.h, preferably an unused one.
 // Eg: You may rename VAR_UNUSED_0x404E to a descriptive name and use it below.
-#define B_VAR_WILD_AI_FLAGS         0     // If not 0, you can use this var to add to default wild AI flags. IMPORTANT: NOT usable with flags above (1 << 15)
+#define B_VAR_WILD_AI_FLAGS         VAR_EXPANSION_WILD_AI_FLAGS     // If not 0, you can use this var to add to default wild AI flags. IMPORTANT: NOT usable with flags above (1 << 15)
                                           // This var should never remain non-zero long enough for the player to save.
                                           // For better wild AI handling, edit GetWildAiFlags() in src/battle_ai_main.c
 
-#define B_VAR_DIFFICULTY            0     // If not 0, you can use this var to control which difficulty version of a Trainer is loaded. This should be manually set by the developer using Script_SetDifficulty AFTER NewGameInitData has run.
+#define B_VAR_DIFFICULTY            VAR_EXPANSION_DIFFICULTY     // If not 0, you can use this var to control which difficulty version of a Trainer is loaded. This should be manually set by the developer using Script_SetDifficulty AFTER NewGameInitData has run.
 
 // No bag settings
 #define NO_BAG_RESTRICTION       0
@@ -274,7 +274,7 @@
 #define NO_BAG_IN_BATTLE         2
 #define NO_BAG_INVALID_VALUE     3
 
-#define B_VAR_NO_BAG_USE         0     // If 1, the ability to use the bag in battle is disabled in trainer battles. If 2, it is also disabled in wild battles.
+#define B_VAR_NO_BAG_USE         VAR_EXPANSION_NO_BAG_USE     // If 1, the ability to use the bag in battle is disabled in trainer battles. If 2, it is also disabled in wild battles.
 
 // Sky Battles
 #define B_FLAG_SKY_BATTLE                 0     // If this flag has a value, the player will be able to engage in scripted Sky Battles.
@@ -312,7 +312,7 @@
 #define B_SECRET_POWER_ANIMATION    GEN_LATEST // Secret Power's animations change depending on terrain and generation.
 #define B_NATURE_POWER_MOVES        GEN_LATEST // Nature Power calls different moves depending on terrain and generation. See gBattleEnvironmentInfo.
 #define B_CAMOUFLAGE_TYPES          GEN_LATEST // Camouflage changes the user to different types depending on terrain and generation. See sTerrainToType.
-#define B_NEW_TERRAIN_BACKGROUNDS   FALSE      // If set to TRUE, uses new terrain backgrounds for Electric, Misty, Grassy and Psychic Terrain.
+#define B_NEW_TERRAIN_BACKGROUNDS   TRUE       // If set to TRUE, uses new terrain backgrounds for Electric, Misty, Grassy and Psychic Terrain.
 
 // Interface settings
 #define B_FAST_INTRO_PKMN_TEXT              TRUE  // If set to TRUE, battle intro texts print at the same time as animation of a Pokemon, as opposing to waiting for the animation to end.
@@ -326,10 +326,10 @@
 #define B_QUICK_MOVE_CURSOR_TO_RUN          FALSE // If set to TRUE, pushing B in the battle options against a wild encounter will move the cursor to the run option
 #define B_RUN_TRAINER_BATTLE                TRUE  // If set to TRUE, players can run from Trainer battles. This is treated as a whiteout.
 #define B_MOVE_DESCRIPTION_BUTTON           L_BUTTON // If set to a button other than B_LAST_USED_BALL_BUTTON, pressing this button will open the move description menu
-#define B_SHOW_USELESS_Z_MOVE_INFO          FALSE // If set to TRUE, Z-moves without additional effects like newer gen status moves will say "no additional effect"
+#define B_SHOW_USELESS_Z_MOVE_INFO          TRUE  // If set to TRUE, Z-moves without additional effects like newer gen status moves will say "no additional effect"
 #define B_ANIMATE_MON_AFTER_KO              TRUE // If set to TRUE, if a Pokemon on the opposite site faints, the non-fainted Pokemon will display a victory animation.
 #define B_ANIMATE_MON_AFTER_FAILED_POKEBALL TRUE  // If set to TRUE, if a Pokemon on the opposite side breaks out of a thrown Poke Ball, the wild Pokemon will display its animation.
-#define B_SHOW_DYNAMAX_MESSAGE              FALSE // If set to TRUE, an additional battle message is shown after completing Dynamaxing/Gigantamaxing.
+#define B_SHOW_DYNAMAX_MESSAGE              TRUE  // If set to TRUE, an additional battle message is shown after completing Dynamaxing/Gigantamaxing.
 #define B_HPBAR_COLOR_THRESHOLD             GEN_LATEST // In Gen 5+, HP bar color thresholds were changed to be based on the actual HP values instead of the pixel length of the HP bar, leading to more accurate HP bar colors.
 
 // Catching settings

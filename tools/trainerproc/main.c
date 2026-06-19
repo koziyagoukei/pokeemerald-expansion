@@ -2126,7 +2126,7 @@ static void fprint_trainers(const char *output_path, FILE *f, struct Parsed *par
             {
                 fprintf(f, "            .shouldUseDynamax = TRUE,\n");
             }
-            else if (pokemon->tera_type_line)
+            if (pokemon->tera_type_line)
             {
                 fprintf(f, "#line %d\n", pokemon->tera_type_line);
                 fprintf(f, "            .teraType = ");

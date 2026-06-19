@@ -148,6 +148,18 @@ void Sav2_ClearSetDefault(void)
     SetDefaultOptions();
 }
 
+void SetExpansionTestFlags(void)
+{
+    // Verification ROM convenience flags. Do not enable flags that disable
+    // normal play features or force shiny behavior here.
+    FlagSet(FLAG_EXPANSION_DYNAMAX_BATTLE);
+    FlagSet(FLAG_EXPANSION_TERA_ORB_CHARGED);
+    FlagSet(FLAG_EXPANSION_TERA_ORB_NO_COST);
+    FlagSet(FLAG_EXPANSION_EXP_SHARE);
+    FlagSet(FLAG_EXPANSION_DEXNAV_DISPLAY);
+    FlagSet(FLAG_EXPANSION_DEXNAV_DETECT);
+}
+
 void ResetMenuAndMonGlobals(void)
 {
     gDifferentSaveFile = FALSE;
@@ -234,6 +246,7 @@ void NewGameInitData(void)
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
+    SetExpansionTestFlags();
 }
 
 static void ResetMiniGamesRecords(void)
