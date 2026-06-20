@@ -1,3 +1,5 @@
+@ 未定義関係は後から実装しやすいように詳細横に置いてるよ
+
 ' '         = 00
 'À'         = 01
 'Á'         = 02
@@ -81,9 +83,11 @@ SUPER_RE    = A0
 '!'         = AB
 '?'         = AC
 '.'         = AD
+'．'         = AD
 '-'         = AE
 '_'         = AE @ For autogenerating strings based on label names. Not using {UNDERSCORE} on purpose due to how bad it looks.
 '·'         = AF
+'・'        = AF
 '…'         = B0
 '“'         = B1
 '”'         = B2
@@ -156,9 +160,20 @@ SUPER_RE    = A0
 'ä'         = F4
 'ö'         = F5
 'ü'         = F6
-EMOJI_DIZZYEGG = F7
+EMOJI_DIZZYEGG = F9 FF
 TALL_PLUS   = FC 0C FB
 '$'         = FF
+
+@ Japanese punctuation
+'　' = 00
+'！' = AB
+'？' = AC
+'。' = AD
+'ー' = AE
+'円' = B7
+
+STRING = FD
+
 
 @ Hiragana
 'あ' = 01
@@ -323,16 +338,18 @@ TALL_PLUS   = FC 0C FB
 'ペ' = 9E
 'ポ' = 9F
 'ッ' = A0
+'ヴ' = F1
+'『' = B1
+'』' = B2
+'「' = B3
+'」' = B4
 
-@ Japanese punctuation
-'　' = 00
-'！' = AB
-'？' = AC
-'。' = AD
-'ー' = AE
-'⋯' = B0
 
-STRING = FD
+@ Full-width variants of existing ASCII punctuation.
+'＋' = 2E
+'＝' = 35
+'；' = 36
+'＿' = AE
 
 @ string placeholders
 PLAYER         = FD 01

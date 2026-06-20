@@ -272,9 +272,15 @@
 
 // battle placeholders are located in battle_message.h
 
-// Hiragana from 0x1-0x50, Katakana from 0x51-0xA0.
-// This excludes Japanese punctuation, which end at 0xB0
-#define JAPANESE_CHAR_END 0xA0
+// Japanese charmap ranges used by the text printer to select Japanese fonts.
+#define JAPANESE_HIRAGANA_START 0x01
+#define JAPANESE_HIRAGANA_END   0x50
+#define JAPANESE_KATAKANA_START 0x51
+#define JAPANESE_KATAKANA_END   0xA0
+#define JAPANESE_FUNCTION_START 0xAB
+#define JAPANESE_FUNCTION_END   0xB0
+#define JAPANESE_CHAR_END       JAPANESE_KATAKANA_END
+#define JAPANESE_CHAR_VU        0xF1
 
 // Note that while all dot combinations are represented in
 // the Braille font, they are not all meaningful characters.
