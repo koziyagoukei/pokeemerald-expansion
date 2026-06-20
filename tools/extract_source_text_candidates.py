@@ -9,7 +9,14 @@ those source strings against an en_msg/ja-Hrkt_msg dump pair.
 Output CSV columns:
   file,line,symbol,kind,source_text,jp_candidate,action,reason,notes
 
-Typical usage from the repository root:
+Examples:
+  # Source strings only, no dump matching
+  python3 tools/extract_source_text_candidates.py \
+    --root /path/to/pokeemerald-expansion \
+    --out en_source_strings.csv \
+    --extract-only
+
+  # Source strings with dump-derived candidate column
   python3 tools/extract_source_text_candidates.py \
     --en en_msg.txt \
     --ja ja-Hrkt_msg.txt \
@@ -51,11 +58,6 @@ DEFAULT_TARGET_FILES = {
     "src/move_relearner.c",
 }
 
-# item_menu has several split files in expansion forks.
-def is_default_target_file(path: Path) -> bool:
-    s = path.as_posix()
-    return s in DEFAULT_TARGET_FILES or (s.startswith("src/item_menu") and s.endswith(".c"))
-
 UNSAFE_SYMBOL_RE = re.compile(
     r"(^\.?(name|trainerName|monName)$)|"
     r"(Healthbox|Gender|Color|Dashes|GameTime|Nickname|TrainerCardName|TrainerClass|FacilityClass|Class|Name)$|"
@@ -69,9 +71,8 @@ EXPLICIT_SYMBOL_BLACKLIST = {
     "gText_OpponentMon1Name",
 }
 
-# Symbols manually inspected and allowed even though they look fixed-length in C.
-# gText_123Dot also requires a C declaration change to pointer array if translated.
 MANUAL_SYMBOL_ALLOW = {
+    # Manually inspected fixed-length table. Requires C declaration change to pointer array if translated.
     "gText_123Dot",
 }
 
@@ -81,74 +82,36 @@ BRACKET_TAG_RE = re.compile(r"\[[A-Z0-9_]+(?: [A-Z0-9_ ]+)?\]")
 RAW_NULL_RE = re.compile(r"(^|[^A-Z0-9_])(NULL|NONE)([^A-Z0-9_]|$)")
 ONLY_TAGS_RE = re.compile(r"^(?:\s|\{[A-Z0-9_]+(?: [A-Z0-9_ ]+)?\})+$")
 UPPER_LABEL_RE = re.compile(r"^[A-Z0-9_ .:!?\-+/{}'’“”\"#$%&()*<>=@\[\]\\^`|~]+$")
-
-# Curly tag names known from source are safe. Unknown square-bracket tags are not.
 CURVY_TAG_RE = re.compile(r"\{([A-Z0-9_]+)(?: [A-Z0-9_ ]+)?\}")
 
 SEEDED_ALLOWED_TAGS = {
-    "JPN",
-    "ENG",
-    "AUTO",
-    "PLAYER",
-    "KUN",
-    "RIVAL",
-    "VERSION",
-    "STR_VAR_1",
-    "STR_VAR_2",
-    "STR_VAR_3",
-    "NO",
-    "PK",
-    "PKMN",
-    "POKE",
-    "POKEBLOCK",
-    "LV",
-    "A_BUTTON",
-    "B_BUTTON",
-    "L_BUTTON",
-    "R_BUTTON",
-    "START_BUTTON",
-    "SELECT_BUTTON",
-    "DPAD_UP",
-    "DPAD_DOWN",
-    "DPAD_LEFT",
-    "DPAD_RIGHT",
-    "DPAD_UPDOWN",
-    "DPAD_LEFTRIGHT",
-    "COLOR",
-    "HIGHLIGHT",
-    "SHADOW",
-    "BACKGROUND",
-    "ACCENT",
-    "PALETTE",
-    "FONT",
-    "DYNAMIC",
-    "PAUSE",
-    "CLEAR_TO",
-    "SHIFT_RIGHT",
-    "SHIFT_DOWN",
-    "PLAY_SE",
-    "PLAY_BGM",
-    "COLOR_HIGHLIGHT_SHADOW",
-    "TEXT_COLORS",
-    "SPEAKER",
-    "MIN_LETTER_SPACING",
-    "SKIP",
-    "CLEAR",
+    "JPN", "ENG", "AUTO", "PLAYER", "KUN", "RIVAL", "VERSION",
+    "STR_VAR_1", "STR_VAR_2", "STR_VAR_3",
+    "NO", "PK", "PKMN", "POKE", "POKEBLOCK", "LV",
+    "A_BUTTON", "B_BUTTON", "L_BUTTON", "R_BUTTON", "START_BUTTON", "SELECT_BUTTON",
+    "DPAD_UP", "DPAD_DOWN", "DPAD_LEFT", "DPAD_RIGHT", "DPAD_UPDOWN", "DPAD_LEFTRIGHT",
+    "COLOR", "HIGHLIGHT", "SHADOW", "BACKGROUND", "ACCENT", "PALETTE", "FONT", "DYNAMIC",
+    "PAUSE", "CLEAR_TO", "SHIFT_RIGHT", "SHIFT_DOWN", "PLAY_SE", "PLAY_BGM",
+    "COLOR_HIGHLIGHT_SHADOW", "TEXT_COLORS", "SPEAKER", "MIN_LETTER_SPACING", "SKIP", "CLEAR",
 }
 
 BUTTON_TAGS = (
-    "{A_BUTTON}",
-    "{B_BUTTON}",
-    "{START_BUTTON}",
-    "{SELECT_BUTTON}",
-    "{L_BUTTON}",
-    "{R_BUTTON}",
-    "{DPAD_",
+    "{A_BUTTON}", "{B_BUTTON}", "{START_BUTTON}", "{SELECT_BUTTON}", "{L_BUTTON}", "{R_BUTTON}", "{DPAD_",
 )
 
 
+def rel_path(path: Path, root: Path) -> str:
+    try:
+        return path.resolve().relative_to(root.resolve()).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
+def is_default_target_relpath(rel: str) -> bool:
+    return rel in DEFAULT_TARGET_FILES or (rel.startswith("src/item_menu") and rel.endswith(".c"))
+
+
 def normalize_text(text: str, allowed_tags: set[str] | None = None) -> str:
-    """Normalize source/dump text into the project-safe comparison form."""
     s = text.strip("\ufeff").rstrip("\n")
     s = s.replace("\\c", "\\p")
     s = s.replace("\\r", "\\n")
@@ -286,7 +249,7 @@ def find_symbol_before(text: str, start: int) -> str:
     return ""
 
 
-def extract_strings_from_file(path: Path, allowed_tags: set[str]) -> list[dict[str, str]]:
+def extract_strings_from_file(path: Path, root: Path, allowed_tags: set[str]) -> list[dict[str, str]]:
     text = path.read_text(encoding="utf-8", errors="replace")
     rows: list[dict[str, str]] = []
     call_re = re.compile(r'(_|COMPOUND_STRING)\s*\(\s*"', re.M)
@@ -302,7 +265,7 @@ def extract_strings_from_file(path: Path, allowed_tags: set[str]) -> list[dict[s
         symbol = find_symbol_before(text, match.start())
         rows.append(
             {
-                "file": path.as_posix(),
+                "file": rel_path(path, root),
                 "line": str(line_number(text, match.start())),
                 "symbol": symbol,
                 "kind": kind,
@@ -365,8 +328,11 @@ def classify(row: dict[str, str], unique_lookup: dict[str, str], duplicate_looku
     return jp, "replace", "unique_match"
 
 
-def discover_targets(root: Path) -> list[Path]:
-    return sorted(path for path in root.rglob("*.c") if is_default_target_file(path))
+def discover_targets(root: Path, all_c_files: bool) -> list[Path]:
+    paths = sorted(root.rglob("*.c"))
+    if all_c_files:
+        return paths
+    return [path for path in paths if is_default_target_relpath(rel_path(path, root))]
 
 
 def main() -> None:
@@ -375,45 +341,47 @@ def main() -> None:
     parser.add_argument("--en", default="en_msg.txt", help="English dump text file")
     parser.add_argument("--ja", default="ja-Hrkt_msg.txt", help="Japanese dump text file")
     parser.add_argument("--out", default="source_text_candidates.csv", help="Output CSV")
-    parser.add_argument("--all-c-files", action="store_true", help="Scan all src/**/*.c files instead of the default whitelist")
+    parser.add_argument("--all-c-files", action="store_true", help="Scan all *.c files under root instead of the default whitelist")
+    parser.add_argument("--extract-only", action="store_true", help="Only extract source strings; do not match en/ja dump files")
     args = parser.parse_args()
 
-    root = Path(args.root)
+    root = Path(args.root).resolve()
     en_path = Path(args.en)
     ja_path = Path(args.ja)
     out_path = Path(args.out)
 
-    source_files = sorted(root.rglob("*.c")) if args.all_c_files else discover_targets(root)
+    source_files = discover_targets(root, args.all_c_files)
     allowed_tags = collect_allowed_tags(source_files)
-    unique_lookup, duplicate_lookup = build_dump_lookup(en_path, ja_path, allowed_tags)
+
+    unique_lookup: dict[str, str] = {}
+    duplicate_lookup: dict[str, set[str]] = {}
+    if not args.extract_only:
+        unique_lookup, duplicate_lookup = build_dump_lookup(en_path, ja_path, allowed_tags)
 
     rows: list[dict[str, str]] = []
     for path in source_files:
-        rows.extend(extract_strings_from_file(path, allowed_tags))
+        rows.extend(extract_strings_from_file(path, root, allowed_tags))
 
     out_fields = [
-        "file",
-        "line",
-        "symbol",
-        "kind",
-        "source_text",
-        "jp_candidate",
-        "action",
-        "reason",
-        "notes",
+        "file", "line", "symbol", "kind", "source_text",
+        "jp_candidate", "action", "reason", "notes",
     ]
 
     counts: Counter[tuple[str, str]] = Counter()
     out_rows: list[dict[str, str]] = []
     for row in rows:
-        jp, action, reason = classify(row, unique_lookup, duplicate_lookup)
         notes: list[str] = []
         if row.get("symbol") in MANUAL_SYMBOL_ALLOW:
             notes.append("manual_fixed_array_ok_requires_c_decl_change")
-        if any(tag in jp for tag in BUTTON_TAGS):
-            notes.append("button_ui_review")
-        if re.search(r"\{(PLAYER|STR_VAR_[123]|B_[A-Z0-9_]+)\}(?!\{AUTO\}|\{JPN\})[ぁ-んァ-ヶー一-龯]", jp):
-            notes.append("variable_followed_by_jp_without_auto")
+
+        if args.extract_only:
+            jp, action, reason = "", "extract", "source_only"
+        else:
+            jp, action, reason = classify(row, unique_lookup, duplicate_lookup)
+            if any(tag in jp for tag in BUTTON_TAGS):
+                notes.append("button_ui_review")
+            if re.search(r"\{(PLAYER|STR_VAR_[123]|B_[A-Z0-9_]+)\}(?!\{AUTO\}|\{JPN\})[ぁ-んァ-ヶー一-龯]", jp):
+                notes.append("variable_followed_by_jp_without_auto")
 
         out = dict(row)
         out.update({"jp_candidate": jp, "action": action, "reason": reason, "notes": ";".join(notes)})
@@ -426,6 +394,7 @@ def main() -> None:
         writer.writerows(out_rows)
 
     print(f"wrote: {out_path}")
+    print(f"root: {root}")
     print(f"source files scanned: {len(source_files)}")
     print(f"source strings found: {len(out_rows)}")
     for (action, reason), count in sorted(counts.items()):
