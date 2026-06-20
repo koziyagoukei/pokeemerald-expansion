@@ -377,14 +377,15 @@ u8 *StringExpandPlaceholders(u8 *dest, const u8 *src)
 
             switch (c)
             {
-            case EXT_CTRL_CODE_RESET_FONT:
-            case EXT_CTRL_CODE_PAUSE_UNTIL_PRESS:
-            case EXT_CTRL_CODE_FILL_WINDOW:
-            case EXT_CTRL_CODE_JPN:
-            case EXT_CTRL_CODE_ENG:
-            case EXT_CTRL_CODE_PAUSE_MUSIC:
-            case EXT_CTRL_CODE_RESUME_MUSIC:
-                break;
+              case EXT_CTRL_CODE_RESET_FONT:
+              case EXT_CTRL_CODE_PAUSE_UNTIL_PRESS:
+              case EXT_CTRL_CODE_FILL_WINDOW:
+              case EXT_CTRL_CODE_JPN:
+              case EXT_CTRL_CODE_ENG:
+              case EXT_CTRL_CODE_AUTO:
+              case EXT_CTRL_CODE_PAUSE_MUSIC:
+              case EXT_CTRL_CODE_RESUME_MUSIC:
+            break;
             case EXT_CTRL_CODE_COLOR_HIGHLIGHT_SHADOW:
             case EXT_CTRL_CODE_TEXT_COLORS:
                 *dest++ = *src++;
@@ -449,8 +450,37 @@ static const u8 *ExpandPlaceholder_UnknownStringVar(void)
     return sUnknownStringVar;
 }
 
+static bool8 IsRawJapaneseName(const u8 *str)
+{
+    if (str == NULL || str[0] == EOS)
+        return FALSE;
+
+    return (str[0] >= JAPANESE_HIRAGANA_START && str[0] <= JAPANESE_HIRAGANA_END)
+        || (str[0] >= JAPANESE_KATAKANA_START && str[0] <= JAPANESE_KATAKANA_END)
+        || str[0] == JAPANESE_CHAR_VU;
+}
+
 static const u8 *ExpandPlaceholder_PlayerName(void)
 {
+    static u8 sExpandedPlayerName[PLAYER_NAME_LENGTH + 5];
+    u8 i;
+    u8 j = 0;
+
+    if (IsRawJapaneseName(gSaveBlock2Ptr->playerName))
+    {
+        sExpandedPlayerName[j++] = EXT_CTRL_CODE_BEGIN;
+        sExpandedPlayerName[j++] = EXT_CTRL_CODE_JPN;
+
+        for (i = 0; i < PLAYER_NAME_LENGTH && gSaveBlock2Ptr->playerName[i] != EOS; i++)
+            sExpandedPlayerName[j++] = gSaveBlock2Ptr->playerName[i];
+
+        sExpandedPlayerName[j++] = EXT_CTRL_CODE_BEGIN;
+        sExpandedPlayerName[j++] = EXT_CTRL_CODE_ENG;
+        sExpandedPlayerName[j] = EOS;
+
+        return sExpandedPlayerName;
+    }
+
     return gSaveBlock2Ptr->playerName;
 }
 
@@ -727,6 +757,7 @@ u8 GetExtCtrlCodeLength(u8 code)
         [EXT_CTRL_CODE_MIN_LETTER_SPACING]     = 2,
         [EXT_CTRL_CODE_JPN]                    = 1,
         [EXT_CTRL_CODE_ENG]                    = 1,
+        [EXT_CTRL_CODE_AUTO]                   = 1,
         [EXT_CTRL_CODE_PAUSE_MUSIC]            = 1,
         [EXT_CTRL_CODE_RESUME_MUSIC]           = 1,
         [EXT_CTRL_CODE_SPEAKER]                = 1,

@@ -288,10 +288,10 @@ Route22_Text_LateRivalPostBattle::
 
 @ Translated in RB as "{RIVAL}: Hahaha! {PLAYER}! That's your best? You're nowhere near as good as me, pal! Go train some more! You loser!"
 Route22_Text_LateRivalVictory::
-	.string "{RIVAL}“ひゃははッ　{PLAYER}ー！\n"
+	.string "{RIVAL}“ひゃははッ　{PLAYER}{JPN}ー！\n"
 	.string "それで　がんばってるのかよ！\l"
 	.string "おれの　さいのうに　くらべりゃ\l"
-	.string "{PLAYER}は　まだまだ　だな！\p"
+	.string "{PLAYER}{JPN}は　まだまだ　だな！\p"
 	.string "もっと　れんしゅう　こいよ！\n"
 	.string "あははーッ！$"
 

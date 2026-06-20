@@ -236,8 +236,8 @@ SaffronCity_Dojo_Text_YouWantHitmonchan::
 	.string "HITMONCHAN?$"
 
 SaffronCity_Dojo_Text_ReceivedMonFromKarateMaster2::
-	.string "{PLAYER}は　カラテ　だいおう　から\n"
-	.string "{STR_VAR_1}を　もらった！$"
+	.string "{PLAYER}{JPN}は　カラテ　だいおう　から\n"
+	.string "{STR_VAR_1}{JPN}を　もらった！$"
 
 SaffronCity_Dojo_Text_BetterNotGetGreedy::
 	.string "Better not get greedy…$"

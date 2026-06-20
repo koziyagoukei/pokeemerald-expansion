@@ -272,7 +272,7 @@ PokemonLeague_ChampionsRoom_Text_Defeat::
 PokemonLeague_ChampionsRoom_Text_Victory::
 	.string "はーはッ！\n"
 	.string "かった！　かった！　かった！\p"
-	.string "{PLAYER}に　まける　ような\n"
+	.string "{PLAYER}{JPN}に　まける　ような\n"
 	.string "おれさま　では　なーい！\p"
 	.string "ま！　ポケモンの\n"
 	.string "てんさい　{RIVAL}さま　あいてに\l"
