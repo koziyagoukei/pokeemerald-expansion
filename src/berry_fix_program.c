@@ -35,9 +35,9 @@ static int BerryFix_TrySetScene(int);
 static void BerryFix_SetScene(int);
 static void BerryFix_HideScene(void);
 
-static const u8 sText_BerryProgramUpdate[] = _("[NULL]");
-static const u8 sText_RubySapphire[] = _("[NULL]");
-static const u8 sText_Emerald[] = _("[NULL]");
+static const u8 sText_BerryProgramUpdate[] = _("Berry Program Update");
+static const u8 sText_RubySapphire[] = _("Ruby/Sapphire");
+static const u8 sText_Emerald[] = _("Emerald");
 static const u8 sText_BerryProgramWillBeUpdatedPressA[] = _("The Berry Program on your POKEMON\n"
                                                             "Ruby/Sapphire Game Pak will be updated.\n"
                                                             "{COLOR RED}{SHADOW LIGHT_RED}Press the A Button.");

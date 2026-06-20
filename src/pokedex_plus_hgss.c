@@ -128,15 +128,15 @@ extern const u16 gPokedexOrder_Weight[];
 
 static const u8 sText_No0000[] = _("0000");
 static const u8 sCaughtBall_Gfx[] = INCGFX_U8("graphics/pokedex/caught_ball.png", ".4bpp");
-static const u8 sText_TenDashes[] = _("[NULL]");
+static const u8 sText_TenDashes[] = _("----------");
 ALIGNED(4) static const u8 sExpandedPlaceholder_PokedexDescription[] = _("");
 static const u16 sSizeScreenSilhouette_Pal[] = INCGFX_U16("graphics/pokedex/size_silhouette.pal", ".gbapal");
 
 static const u8 sText_Stats_Buttons[] = _("{A_BUTTON}TOGGLE   {DPAD_UPDOWN}MOVES");
 static const u8 sText_Stats_Buttons_Decapped[] = _("{A_BUTTON}Toggle   {DPAD_UPDOWN}Moves");
-static const u8 sText_Stats_HP[] = _("ＨＰ");
+static const u8 sText_Stats_HP[] = _("HP");
 static const u8 sText_Stats_Attack[] = _("ATK");
-static const u8 sText_Stats_Defense[] = _("かきくけこ");
+static const u8 sText_Stats_Defense[] = _("DEF");
 static const u8 sText_Stats_Speed[] = _("SPE");
 static const u8 sText_Stats_SpAttack[] = _("SP.A");
 static const u8 sText_Stats_SpDefense[] = _("SP.D");
@@ -154,12 +154,12 @@ static const u8 sText_Stats_Gender_75[] = _("♀ 3/1 ♂");     //_("♀ 75 / 25
 static const u8 sText_Stats_Gender_87_5[] = _("♀ 7/1 ♂");
 static const u8 sText_Stats_Gender_100[] = _("♀");
 static const u8 sText_Stats_CatchRate[] = _("CATCH{0x5B}: ");
-static const u8 sText_Stats_CatchRate_Legend[] = _("でんせつ");
+static const u8 sText_Stats_CatchRate_Legend[] = _("LEGENDARY");
 static const u8 sText_Stats_CatchRate_VeryHard[] = _("VERY HARD");
 static const u8 sText_Stats_CatchRate_Difficult[] = _("DIFFICULT");
 static const u8 sText_Stats_CatchRate_Medium[] = _("MEDIUM");
-static const u8 sText_Stats_CatchRate_Relaxed[] = _("のんき");
-static const u8 sText_Stats_CatchRate_Easy[] = _("よゆう");
+static const u8 sText_Stats_CatchRate_Relaxed[] = _("RELAXED");
+static const u8 sText_Stats_CatchRate_Easy[] = _("EASY");
 static const u8 sText_Stats_ExpYield[] = _("EXP YIELD: ");
 static const u8 sText_Stats_EggCycles[] = _("HATCH STEPS:");
 static const u8 sText_Stats_EggCycles_VeryFast[] = _("{EMOJI_BOLT}{EMOJI_DIZZYEGG}");
@@ -176,30 +176,30 @@ static const u8 sText_Stats_MEDIUM_FAST[] = _("MED. FAST");
 static const u8 sText_Stats_ERRATIC[] = _("ERRATIC");
 static const u8 sText_Stats_FLUCTUATING[] = _("FLUCTUATING");
 static const u8 sText_Stats_MEDIUM_SLOW[] = _("MED. SLOW");
-static const u8 sText_Stats_FAST[] = _("はやい");
+static const u8 sText_Stats_FAST[] = _("FAST");
 static const u8 sText_Stats_SLOW[] = _("SLOW");
 static const u8 sText_Stats_ContestHeart[] = _("H");
-static const u8 sText_Stats_Minus[] = _("ー");
+static const u8 sText_Stats_Minus[] = _("-");
 static const u8 sText_Stats_eggGroup[] = _("EGG G1:");
 static const u8 sText_Stats_eggGroup_Groups[] = _("{STR_VAR_1}/{STR_VAR_2}");
 static const u8 sText_Stats_eggGroup_MONSTER[] = _("MONSTER");
 static const u8 sText_Stats_eggGroup_WATER_1[] = _("WATER {CIRCLE_1}");
-static const u8 sText_Stats_eggGroup_BUG[] = _("むし");
-static const u8 sText_Stats_eggGroup_FLYING[] = _("ひこう");
+static const u8 sText_Stats_eggGroup_BUG[] = _("BUG");
+static const u8 sText_Stats_eggGroup_FLYING[] = _("FLYING");
 static const u8 sText_Stats_eggGroup_FIELD[] = _("FIELD");
-static const u8 sText_Stats_eggGroup_FAIRY[] = _("ようせい");
-static const u8 sText_Stats_eggGroup_GRASS[] = _("くさ");
+static const u8 sText_Stats_eggGroup_FAIRY[] = _("FAIRY");
+static const u8 sText_Stats_eggGroup_GRASS[] = _("GRASS");
 static const u8 sText_Stats_eggGroup_HUMAN_LIKE[] = _("HUMANE");
 static const u8 sText_Stats_eggGroup_WATER_3[] = _("WATER {CIRCLE_3}");
 static const u8 sText_Stats_eggGroup_MINERAL[] = _("MINERAL");
 static const u8 sText_Stats_eggGroup_AMORPHOUS[] = _("AMORPHOUS");
 static const u8 sText_Stats_eggGroup_WATER_2[] = _("WATER {CIRCLE_2}");
-static const u8 sText_Stats_eggGroup_DITTO[] = _("メタモン");
-static const u8 sText_Stats_eggGroup_DRAGON[] = _("ドラゴン");
-static const u8 sText_Stats_eggGroup_NO_EGGS_DISCOVERED[] = _("ーーー");
-static const u8 sText_Stats_eggGroup_UNKNOWN[] = _("？？？");
+static const u8 sText_Stats_eggGroup_DITTO[] = _("DITTO");
+static const u8 sText_Stats_eggGroup_DRAGON[] = _("DRAGON");
+static const u8 sText_Stats_eggGroup_NO_EGGS_DISCOVERED[] = _("---");
+static const u8 sText_Stats_eggGroup_UNKNOWN[] = _("???");
 static const u8 sText_Dex_SEEN[] = _("SEEN");
-static const u8 sText_Dex_OWN[] = _("もって");
+static const u8 sText_Dex_OWN[] = _("OWN");
 
 static const u8 sText_EVO_Buttons[] = _("{DPAD_UPDOWN}EVOs  {A_BUTTON}CHECK");
 static const u8 sText_EVO_Buttons_Decapped[] = _("{DPAD_UPDOWN}Evos  {A_BUTTON}Check");
@@ -228,7 +228,7 @@ static const u8 sText_FORMS_Buttons_Decapped_PE[] = _("{A_BUTTON}Form Mode  {STA
 static const u8 sText_FORMS_Buttons_Submenu_PE[] = _("{DPAD_NONE}FORMs {A_BUTTON}CHECK {START_BUTTON}EVOs");
 static const u8 sText_FORMS_Buttons_Submenu_Decapped_PE[] = _("{DPAD_NONE}Forms {A_BUTTON}Check {START_BUTTON}Evos");
 static const u8 sText_FORMS_NONE[] = _("{STR_VAR_1} has no alternate forms.");
-static const u8 sText_PlusSymbol[] = _("[PLUS]");
+static const u8 sText_PlusSymbol[] = _("+");
 
 // static .rodata graphics
 
@@ -6564,7 +6564,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, enum Species species
             {
                 if (j == 0)
                 {
-                    StringAppend(gStringVar4, COMPOUND_STRING("[NULL]"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(", "));
                 }
 
                 enum EvolutionConditions condition = evolutions[i].params[j].condition;
@@ -6574,8 +6574,8 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, enum Species species
                 case IF_GENDER:
                     switch (evolutions[i].params[j].arg1)
                     {
-                    case MON_MALE:   StringAppend(gStringVar4, COMPOUND_STRING("だんせい"));   break;
-                    case MON_FEMALE: StringAppend(gStringVar4, COMPOUND_STRING("じょせい")); break;
+                    case MON_MALE:   StringAppend(gStringVar4, COMPOUND_STRING("Male"));   break;
+                    case MON_FEMALE: StringAppend(gStringVar4, COMPOUND_STRING("Female")); break;
                     }
                     break;
                 case IF_MIN_FRIENDSHIP:
@@ -6699,7 +6699,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, enum Species species
                     {
                     case REGION_NONE:
                     case REGIONS_COUNT:
-                        StringAppend(gStringVar4, COMPOUND_STRING("？？？"));
+                        StringAppend(gStringVar4, COMPOUND_STRING("???"));
                         break;
                     case REGION_KANTO: StringAppend(gStringVar4, COMPOUND_STRING("Kanto")); break;
                     case REGION_JOHTO: StringAppend(gStringVar4, COMPOUND_STRING("Johto")); break;
@@ -6745,7 +6745,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, enum Species species
                 case IF_USED_MOVE_X_TIMES:
                     StringAppend(gStringVar4, COMPOUND_STRING("use move "));
                     StringAppend(gStringVar4, GetMoveName(evolutions[i].params[j].arg1));
-                    StringAppend(gStringVar4, COMPOUND_STRING("　"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" "));
                     ConvertIntToDecimalStringN(gStringVar2, evolutions[i].params[j].arg2, STR_CONV_MODE_LEFT_ALIGN, 3);
                     StringAppend(gStringVar4, gStringVar2);
                     StringAppend(gStringVar4, COMPOUND_STRING(" times"));
@@ -6755,7 +6755,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, enum Species species
                     StringAppend(gStringVar4, COMPOUND_STRING("defeat "));
                     ConvertIntToDecimalStringN(gStringVar2, evolutions[i].params[j].arg3, STR_CONV_MODE_LEFT_ALIGN, 3);
                     StringAppend(gStringVar4, gStringVar2);
-                    StringAppend(gStringVar4, COMPOUND_STRING("　"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" "));
                     StringAppend(gStringVar4, GetSpeciesName(evolutions[i].params[j].arg1));
                     StringAppend(gStringVar4, COMPOUND_STRING(" that hold "));
                     CopyItemName(evolutions[i].params[j].arg2, gStringVar2);
@@ -6784,7 +6784,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, enum Species species
                 case IF_BAG_ITEM_COUNT:
                     ConvertIntToDecimalStringN(gStringVar2, evolutions[i].params[j].arg2, STR_CONV_MODE_LEFT_ALIGN, 3);
                     StringAppend(gStringVar4, gStringVar2);
-                    StringAppend(gStringVar4, COMPOUND_STRING("　"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" "));
                     CopyItemNameHandlePlural(evolutions[i].params[j].arg1, gStringVar2, evolutions[i].params[j].arg2);
                     StringAppend(gStringVar4, gStringVar2);
                     StringAppend(gStringVar4, COMPOUND_STRING(" in bag"));
@@ -6795,7 +6795,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, enum Species species
 
                 if (evolutions[i].params[j+1].condition != CONDITIONS_END)
                 {
-                    StringAppend(gStringVar4, COMPOUND_STRING("[NULL]"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(", "));
                 }
             }
         }
@@ -6807,7 +6807,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, enum Species species
 
         u32 fontHeight = GetFontAttribute(fontId, FONTATTR_MAX_LETTER_HEIGHT);
 
-        StringAppend(gStringVar4, COMPOUND_STRING("．"));
+        StringAppend(gStringVar4, COMPOUND_STRING("."));
         BreakStringAutomatic(gStringVar4, maxScreenWidth, MAX_EVO_METHOD_LINES, fontId, HIDE_SCROLL_PROMPT);
 
         PrintInfoScreenTextSmall(gStringVar4, fontId, base_x_offset, base_y + base_y_offset*(*depth_i) + numLines); //Print actual instructions

@@ -13,10 +13,16 @@ const u8 gRaticateAlolaPokedexText[] = _(
     "over food happen often.");
 
 const u8 gPichuPokedexText[] = _(
-    "でんきを　ためておく　ことが　まだ　ヘタ。\nびっくりすると　おもわず　ほうでんしてしまう。\nせいちょうすると　じょうずに　なっていく。");
+    "It is still inept at retaining electricity.\n"
+    "When it is startled, it discharges power\n"
+    "accidentally. It gets better at holding\n"
+    "power as it grows older.");
 
 const u8 gPikachuPokedexText[] = _(
-    "ほっぺたの　でんきぶくろに　でんきを　ためる。\nおもいっきり　ほうでんすると　かみなりに\nひってきする　でんきを　はなつ　ことが　できる。");
+    "It stores electricity in the electric sacs\n"
+    "on its cheeks. When it releases pent-up\n"
+    "energy in a burst, the electric power is\n"
+    "equal to a lightning bolt.");
 
 const u8 gMarowakAlolaPokedexText[] = _(
     "The cursed flames that light up the bone\n"

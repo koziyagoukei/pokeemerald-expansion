@@ -108,7 +108,7 @@ static const u32 sPokenavDeviceBgTilemap[] = INCGFX_U32("graphics/pokenav/device
 static const u16 sMatchCallBlueLightPal[] = INCGFX_U16("graphics/pokenav/blue_light.png", ".gbapal");
 static const u32 sMatchCallBlueLightTiles[] = INCGFX_U32("graphics/pokenav/blue_light.png", ".4bpp.smol");
 
-static const u8 gText_NoRibbonWinners[] = _("リボンを　もっている　ポケモンが　いません");
+static const u8 gText_NoRibbonWinners[] = _("There are no RIBBON winners.");
 
 static const struct BgTemplate sPokenavMainMenuBgTemplates[] = {
     {
@@ -271,8 +271,8 @@ static const u8 *const sPageDescriptions[] =
 {
     [POKENAV_MENUITEM_MAP]                     = COMPOUND_STRING("Check the map of the HOENN region"),
     [POKENAV_MENUITEM_CONDITION]               = COMPOUND_STRING("Check POKEMON in detail."),
-    [POKENAV_MENUITEM_MATCH_CALL]              = COMPOUND_STRING("とうろくした　ひとを　よびだします"),
-    [POKENAV_MENUITEM_RIBBONS]                 = COMPOUND_STRING("てにいれた　きねんリボンを　みます"),
+    [POKENAV_MENUITEM_MATCH_CALL]              = COMPOUND_STRING("Call a registered TRAINER."),
+    [POKENAV_MENUITEM_RIBBONS]                 = COMPOUND_STRING("Check obtained RIBBONS."),
     [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("Put away the POKeNAV."),
     [POKENAV_MENUITEM_CONDITION_PARTY]         = COMPOUND_STRING("Check party POKEMON in detail."),
     [POKENAV_MENUITEM_CONDITION_SEARCH]        = COMPOUND_STRING("Check all POKEMON in detail."),
@@ -282,7 +282,7 @@ static const u8 *const sPageDescriptions[] =
     [POKENAV_MENUITEM_CONDITION_SEARCH_CUTE]   = COMPOUND_STRING("Find cute POKEMON."),
     [POKENAV_MENUITEM_CONDITION_SEARCH_SMART]  = COMPOUND_STRING("Find smart POKEMON."),
     [POKENAV_MENUITEM_CONDITION_SEARCH_TOUGH]  = COMPOUND_STRING("Find tough POKEMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_CANCEL] = COMPOUND_STRING("コンディションの　メニューに　もどります")
+    [POKENAV_MENUITEM_CONDITION_SEARCH_CANCEL] = COMPOUND_STRING("Return to the CONDITION menu.")
 };
 
 static const u8 sOptionDescTextColors[]  = {TEXT_COLOR_GREEN, TEXT_COLOR_BLUE, TEXT_COLOR_LIGHT_GREEN};

@@ -3876,7 +3876,7 @@ static const u8 *GetLetterGrade(u32 stat)
     static const u8 gText_GradeD[] = _("D");
     static const u8 gText_GradeC[] = _("C");
     static const u8 gText_GradeB[] = _("B");
-    static const u8 gText_GradeA[] = _("でした");
+    static const u8 gText_GradeA[] = _("A");
     static const u8 gText_GradeS[] = _("S");
 
     if (stat <= 0)

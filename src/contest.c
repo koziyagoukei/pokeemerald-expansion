@@ -361,7 +361,7 @@ EWRAM_DATA u8 gCurContestWinnerSaveIdx = 0;
 COMMON_DATA rng_value_t gContestRngValue = {0};
 
 //Text
-const u8 gText_LinkStandby4[] = _("つうしん　たいきちゅう！");
+const u8 gText_LinkStandby4[] = _("Link standby!");
 
 const u8 gText_AppealNumWhichMoveWillBePlayed[] = _("Appeal no. {STR_VAR_1}!\nWhich move will be played?");
 const u8 gText_AppealNumButItCantParticipate[] = _("Appeal no. {STR_VAR_1}!\nBut it can't participate!");
@@ -677,57 +677,57 @@ const struct ContestCategory gContestCategoryInfo[CONTEST_CATEGORIES_COUNT + 1] 
 {
     [CONTEST_CATEGORY_COOL] =
     {
-        .name = COMPOUND_STRING("かっこいい"),
-        .condition = COMPOUND_STRING("かっこよ"),
-        .generic = COMPOUND_STRING("かっこいい　わざ"),
-        .negativeTrait = COMPOUND_STRING("モジモジ"),
+        .name = COMPOUND_STRING("COOL"),
+        .condition = COMPOUND_STRING("coolness"),
+        .generic = COMPOUND_STRING("COOL Move"),
+        .negativeTrait = COMPOUND_STRING("shyness"),
         .palette = 13,
         .tile = 0x4040,
     },
 
     [CONTEST_CATEGORY_BEAUTY] =
     {
-        .name = COMPOUND_STRING("うつくしい"),
-        .condition = COMPOUND_STRING("うつくし"),
-        .generic = COMPOUND_STRING("うつくしい　わざ"),
-        .negativeTrait = COMPOUND_STRING("ドキドキ"),
+        .name = COMPOUND_STRING("BEAUTY"),
+        .condition = COMPOUND_STRING("beauty"),
+        .generic = COMPOUND_STRING("BEAUTY Move"),
+        .negativeTrait = COMPOUND_STRING("anxiety"),
         .palette = 14,
         .tile = 0x4045,
     },
 
     [CONTEST_CATEGORY_CUTE] =
     {
-        .name = COMPOUND_STRING("かわいい"),
-        .condition = COMPOUND_STRING("かわい"),
-        .generic = COMPOUND_STRING("かわいい　わざ"),
-        .negativeTrait = COMPOUND_STRING("デレデレ"),
+        .name = COMPOUND_STRING("CUTE"),
+        .condition = COMPOUND_STRING("cuteness"),
+        .generic = COMPOUND_STRING("CUTE Move"),
+        .negativeTrait = COMPOUND_STRING("laziness"),
         .palette = 14,
         .tile = 0x404A,
     },
 
     [CONTEST_CATEGORY_SMART] =
     {
-        .name = COMPOUND_STRING("かしこそうな"),
-        .condition = COMPOUND_STRING("かしこ"),
-        .generic = COMPOUND_STRING("かしこい　わざ"),
-        .negativeTrait = COMPOUND_STRING("オロオロ"),
+        .name = COMPOUND_STRING("SMART"),
+        .condition = COMPOUND_STRING("smartness"),
+        .generic = COMPOUND_STRING("SMART Move"),
+        .negativeTrait = COMPOUND_STRING("hesitancy"),
         .palette = 15,
         .tile = 0x406A,
     },
 
     [CONTEST_CATEGORY_TOUGH] =
     {
-        .name = COMPOUND_STRING("たくましい"),
-        .condition = COMPOUND_STRING("たくまし"),
-        .generic = COMPOUND_STRING("たくましい　わざ"),
-        .negativeTrait = COMPOUND_STRING("ビクビク"),
+        .name = COMPOUND_STRING("TOUGH"),
+        .condition = COMPOUND_STRING("toughness"),
+        .generic = COMPOUND_STRING("TOUGH Move"),
+        .negativeTrait = COMPOUND_STRING("fear"),
         .palette = 13,
         .tile = 0x408A,
     },
 
     [CONTEST_CATEGORIES_COUNT] =
     {
-        .generic = COMPOUND_STRING("？？？"),
+        .generic = COMPOUND_STRING("???"),
     },
 };
 
@@ -5962,7 +5962,7 @@ static void ContestDebugPrintBitStrings(void)
     {
         for (i = 0; i < CONTESTANT_COUNT; i++)
         {
-            txtPtr = StringCopy(text1, COMPOUND_STRING("Ｃ．"));
+            txtPtr = StringCopy(text1, COMPOUND_STRING("C."));
             Contest_PrintTextToBg0WindowAt(gContestantTurnOrder[i], text1, 5, 1, FONT_NARROW);
             bits = gContestResources->tv[i].winnerFlags;
             for (j = 7; j > -1; j--) // Weird loop.
@@ -5983,7 +5983,7 @@ static void ContestDebugPrintBitStrings(void)
     {
         for (i = 0; i < CONTESTANT_COUNT; i++)
         {
-            StringCopy(text1, COMPOUND_STRING("Ｂ．"));
+            StringCopy(text1, COMPOUND_STRING("B."));
             bits = gContestResources->tv[i].loserFlags;
             txtPtr = &text1[2];
             for (j = 7; j > -1; j--) // Weird loop.

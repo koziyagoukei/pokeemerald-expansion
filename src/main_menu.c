@@ -256,8 +256,8 @@ static const u32 sBirchSpeechShadowGfx[] = INCGFX_U32("graphics/birch_speech/sha
 static const u32 sBirchSpeechBgMap[] = INCGFX_U32("graphics/birch_speech/map.bin", ".smolTM");
 static const u16 sBirchSpeechBgGradientPal[] = INCGFX_U16("graphics/birch_speech/bg2.pal", ".gbapal");
 
-static const u8 gText_SaveFileCorrupted[] = _("レポートが　せいかくに　かかれていないので\nそのまえのレポートを　よみます！");
-static const u8 gText_SaveFileErased[] = _("レポートの　ないようが　きえてしまった！");
+static const u8 gText_SaveFileCorrupted[] = _("The save file is corrupted. The\nprevious save file will be loaded.");
+static const u8 gText_SaveFileErased[] = _("The save file has been erased\ndue to corruption or damage.");
 static const u8 gJPText_No1MSubCircuit[] = _("1Mサブきばんが ささっていません!");
 static const u8 gText_BatteryRunDry[] = _("The internal battery has run dry.\nThe game can be played.\pHowever, clock-based events will\nno longer occur.");
 
@@ -267,9 +267,9 @@ static const u8 gText_MainMenuOption[] = _("せってい");
 static const u8 gText_MainMenuMysteryGift[] = _("ふしぎな おくりもの");
 static const u8 gText_MainMenuMysteryGift2[] = _("ふしぎな おくりもの");
 static const u8 gText_MainMenuMysteryEvents[] = _("ふしぎな できごと");
-static const u8 gText_WirelessNotConnected[] = _("ワイヤレスアダプタ　が\nつながっていません");
-static const u8 gText_MysteryGiftCantUse[] = _("ワイヤレスアダプタ　を　さしたまま\nふしぎなもらいもの　は　できません");
-static const u8 gText_MysteryEventsCantUse[] = _("ワイヤレスアダプタ　を　さしたまま\nふしぎなできごと　は　できません");
+static const u8 gText_WirelessNotConnected[] = _("The Wireless Adapter is not\nconnected.");
+static const u8 gText_MysteryGiftCantUse[] = _("MYSTERY GIFT can't be used while\nthe Wireless Adapter is attached.");
+static const u8 gText_MysteryEventsCantUse[] = _("MYSTERY EVENTS can't be used while\nthe Wireless Adapter is attached.");
 
 static const u8 gText_ContinueMenuPlayer[] = _("しゅじんこう");
 static const u8 gText_ContinueMenuTime[] = _("じかん");
@@ -478,49 +478,49 @@ static const struct MenuAction sMenuActions_Gender[] = {
 };
 
 static const u8 *const sMalePresetNames[] = {
-    COMPOUND_STRING("まみむめも"),
-    COMPOUND_STRING("ギョク"),
-    COMPOUND_STRING("ケイ"),
-    COMPOUND_STRING("シュウサク"),
-    COMPOUND_STRING("セイゴ"),
-    COMPOUND_STRING("ダイサク"),
-    COMPOUND_STRING("タカヒト"),
-    COMPOUND_STRING("タツヤ"),
-    COMPOUND_STRING("ダニエル"),
-    COMPOUND_STRING("テルキ"),
-    COMPOUND_STRING("トム"),
-    COMPOUND_STRING("トモヤ"),
-    COMPOUND_STRING("ヒトシ"),
-    COMPOUND_STRING("ヒロアキ"),
-    COMPOUND_STRING("ユキヒコ"),
-    COMPOUND_STRING("ラルド"),
-    COMPOUND_STRING("リクヤ"),
-    COMPOUND_STRING("リチャード"),
-    COMPOUND_STRING("リュウ"),
-    COMPOUND_STRING("リョウタ")
+    COMPOUND_STRING("STU"),
+    COMPOUND_STRING("MILTON"),
+    COMPOUND_STRING("TOM"),
+    COMPOUND_STRING("KENNY"),
+    COMPOUND_STRING("REID"),
+    COMPOUND_STRING("JUDE"),
+    COMPOUND_STRING("JAXSON"),
+    COMPOUND_STRING("EASTON"),
+    COMPOUND_STRING("WALKER"),
+    COMPOUND_STRING("TERU"),
+    COMPOUND_STRING("JOHNNY"),
+    COMPOUND_STRING("BRETT"),
+    COMPOUND_STRING("SETH"),
+    COMPOUND_STRING("TERRY"),
+    COMPOUND_STRING("CASEY"),
+    COMPOUND_STRING("DARREN"),
+    COMPOUND_STRING("LANDON"),
+    COMPOUND_STRING("COLLIN"),
+    COMPOUND_STRING("STANLEY"),
+    COMPOUND_STRING("QUINCY")
 };
 
 static const u8 *const sFemalePresetNames[] = {
-    COMPOUND_STRING("アイコ"),
-    COMPOUND_STRING("アヤナ"),
-    COMPOUND_STRING("アン"),
-    COMPOUND_STRING("エミィ"),
-    COMPOUND_STRING("カオリ"),
-    COMPOUND_STRING("カレン"),
-    COMPOUND_STRING("キョウコ"),
-    COMPOUND_STRING("サエ"),
-    COMPOUND_STRING("スイ"),
-    COMPOUND_STRING("ジュリ"),
-    COMPOUND_STRING("チエミ"),
-    COMPOUND_STRING("チヨコ"),
-    COMPOUND_STRING("テルコ"),
-    COMPOUND_STRING("ナナエ"),
-    COMPOUND_STRING("ヒナ"),
-    COMPOUND_STRING("マキコ"),
-    COMPOUND_STRING("ミサコ"),
-    COMPOUND_STRING("ムツミ"),
-    COMPOUND_STRING("モニカ"),
-    COMPOUND_STRING("ユウメ")
+    COMPOUND_STRING("KIMMY"),
+    COMPOUND_STRING("TIARA"),
+    COMPOUND_STRING("BELLA"),
+    COMPOUND_STRING("JAYLA"),
+    COMPOUND_STRING("ALLIE"),
+    COMPOUND_STRING("LIANNA"),
+    COMPOUND_STRING("SARA"),
+    COMPOUND_STRING("MONICA"),
+    COMPOUND_STRING("CAMILA"),
+    COMPOUND_STRING("AUBREE"),
+    COMPOUND_STRING("RUTHIE"),
+    COMPOUND_STRING("HAZEL"),
+    COMPOUND_STRING("NADINE"),
+    COMPOUND_STRING("TANJA"),
+    COMPOUND_STRING("YASMIN"),
+    COMPOUND_STRING("NICOLA"),
+    COMPOUND_STRING("LILLIE"),
+    COMPOUND_STRING("TERRA"),
+    COMPOUND_STRING("LUCY"),
+    COMPOUND_STRING("HALIE")
 };
 
 // The number of male vs. female names is assumed to be the same.

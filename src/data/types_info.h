@@ -128,7 +128,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     },
     [TYPE_POISON] =
     {
-        .name = _("[NULL]"),
+        .name = _("どく"),
         .generic = _("どくタイプの わざ"),
         .palette = 14,
         .zMove = MOVE_ACID_DOWNPOUR,
@@ -384,7 +384,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     },
     [TYPE_ICE] =
     {
-        .name = _("[NULL]"),
+        .name = _("こおり"),
         .generic = _("こおりタイプの わざ"),
         .palette = 14,
         .zMove = MOVE_SUBZERO_SLAMMER,

@@ -343,11 +343,11 @@ static const struct ListMenuItem sStatsListItems[] =
 
 static const struct ListMenuItem sStatus1ListItems[] =
 {
-    {COMPOUND_STRING("[NULL]"),         LIST_STATUS1_SLEEP},
-    {COMPOUND_STRING("[NULL]"),        LIST_STATUS1_POISON},
-    {COMPOUND_STRING("[NULL]"),          LIST_STATUS1_BURN},
-    {COMPOUND_STRING("[NULL]"),        LIST_STATUS1_FREEZE},
-    {COMPOUND_STRING("[NULL]"),     LIST_STATUS1_PARALYSIS},
+    {COMPOUND_STRING("ねむり"),         LIST_STATUS1_SLEEP},
+    {COMPOUND_STRING("どく"),        LIST_STATUS1_POISON},
+    {COMPOUND_STRING("やけど"),          LIST_STATUS1_BURN},
+    {COMPOUND_STRING("こおり"),        LIST_STATUS1_FREEZE},
+    {COMPOUND_STRING("まひ"),     LIST_STATUS1_PARALYSIS},
     {COMPOUND_STRING("もうどく"),  LIST_STATUS1_TOXIC_POISON},
     {COMPOUND_STRING("もうどくカウンタ"), LIST_STATUS1_TOXIC_COUNTER},
     {COMPOUND_STRING("しもやけ"),     LIST_STATUS1_FROSTBITE},
@@ -355,7 +355,7 @@ static const struct ListMenuItem sStatus1ListItems[] =
 
 static const struct ListMenuItem sVolatileStatusListItems[] =
 {
-    {COMPOUND_STRING("[NULL]"),          VOLATILE_CONFUSION},
+    {COMPOUND_STRING("こんらん"),          VOLATILE_CONFUSION},
     {COMPOUND_STRING("ひるみ"),           VOLATILE_FLINCHED},
     {COMPOUND_STRING("いちゃもん"),            VOLATILE_TORMENT},
     {COMPOUND_STRING("ふんじん"),             VOLATILE_POWDER},
@@ -456,7 +456,7 @@ static const struct ListMenuItem sVariousListItems[] =
 {
     {COMPOUND_STRING("HPを みせる"),       VARIOUS_SHOW_HP},
     {COMPOUND_STRING("みがわりHP"), VARIOUS_SUBSTITUTE_HP},
-    {COMPOUND_STRING("[NULL]"),       VARIOUS_IN_LOVE},
+    {COMPOUND_STRING("メロメロ"),       VARIOUS_IN_LOVE},
 };
 
 static const struct ListMenuItem sSecondaryListItems[] =
@@ -754,9 +754,9 @@ static void PutMovesPointsText(struct BattleDebugMenu *data)
                 AddTextPrinterParameterized(data->aiMovesWindowId, FONT_NORMAL, text, 84 + count * 54, (i * 15) + 15, 0, NULL);
 
             if ((chosenMoveIndex == i) && (gAiBattleData->chosenTarget[data->aiBattlerId] == j) && !(gAiLogicData->shouldSwitch & (1u << data->aiBattlerId)))
-                AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 103 + count * 54, (i * 15) + 15, sTextColorTable[COLORID_RED], 0, COMPOUND_STRING("／"));
+                AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 103 + count * 54, (i * 15) + 15, sTextColorTable[COLORID_RED], 0, COMPOUND_STRING("/"));
             else
-                AddTextPrinterParameterized(data->aiMovesWindowId, FONT_NORMAL, COMPOUND_STRING("／"), 103 + count * 54, (i * 15) + 15, 0, NULL);
+                AddTextPrinterParameterized(data->aiMovesWindowId, FONT_NORMAL, COMPOUND_STRING("/"), 103 + count * 54, (i * 15) + 15, 0, NULL);
 
             ConvertIntToDecimalStringN(text,
                                        AI_GetDamage(data->aiBattlerId, battlerDef, i, AI_ATTACKING, gAiLogicData),
@@ -2160,7 +2160,7 @@ static void UpdateMonData(struct BattleDebugMenu *data)
 
 static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
 {
-    [HOLD_EFFECT_NONE]             = COMPOUND_STRING("？？？？？？？？"),
+    [HOLD_EFFECT_NONE]             = COMPOUND_STRING("????????"),
     [HOLD_EFFECT_RESTORE_HP]       = COMPOUND_STRING("Restore Hp"),
     [HOLD_EFFECT_CURE_PAR]         = COMPOUND_STRING("Cure Par"),
     [HOLD_EFFECT_CURE_SLP]         = COMPOUND_STRING("Cure Slp"),

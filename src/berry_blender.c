@@ -254,41 +254,41 @@ static const u16 sEmpty_Pal[16 * 14] = {0};
 
 static const u8 sText_BerryBlenderStart[] = _("Starting up the BERRY BLENDER.\pPlease select a BERRY from your BAG\nto put in the BERRY BLENDER.\p");
 static const u8 sText_NewParagraph[] = _("\p");
-static const u8 sText_WasMade[] = _("　ができた！");
+static const u8 sText_WasMade[] = _(" was made!");
 
 static const u8 *const sBlenderOpponentsNames[] =
 {
-    [BLENDER_MISTER] = COMPOUND_STRING("おじさん"),
-    [BLENDER_LADDIE] = COMPOUND_STRING("おとこのこ"),
-    [BLENDER_LASSIE] = COMPOUND_STRING("おんなのこ"),
-    [BLENDER_MASTER] = COMPOUND_STRING("マスター"),
-    [BLENDER_DUDE]   = COMPOUND_STRING("ボーイ"),
-    [BLENDER_MISS]   = COMPOUND_STRING("さあ"),
+    [BLENDER_MISTER] = COMPOUND_STRING("MISTER"),
+    [BLENDER_LADDIE] = COMPOUND_STRING("LADDIE"),
+    [BLENDER_LASSIE] = COMPOUND_STRING("LASSIE"),
+    [BLENDER_MASTER] = COMPOUND_STRING("MASTER"),
+    [BLENDER_DUDE]   = COMPOUND_STRING("DUDE"),
+    [BLENDER_MISS]   = COMPOUND_STRING("MISS"),
 };
 
 static const u8 sText_CommunicationStandby[] = _("Communication standby...");
-static const u8 sText_WouldLikeToBlendAnotherBerry[] = _("もういちど　きのみを　まぜますか？\n　　　　");
+static const u8 sText_WouldLikeToBlendAnotherBerry[] = _("Would you like to blend another BERRY?");
 static const u8 sText_RunOutOfBerriesForBlending[] = _("You've run out of BERRIES for\nblending in the BERRY BLENDER.\p");
 static const u8 sText_YourPokeblockCaseIsFull[] = _("Your ポロック CASE is full.\p");
-static const u8 sText_HasNoBerriesToPut[] = _("は　きのみブレンダーに\nいれる　きのみがないようです");
+static const u8 sText_HasNoBerriesToPut[] = _(" has no BERRIES to put in\nthe BERRY BLENDER.");
 static const u8 sText_ApostropheSPokeblockCaseIsFull[] = _("'s ポロック CASE is full.\p");
-static const u8 sText_BlendingResults[] = _("まぜたけっか");
-static const u8 sText_SpaceBerry[] = _("のみ");
-static const u8 sText_Time[] = _("[NULL]");
-static const u8 sText_Min[] = _("ふん");
-static const u8 sText_Sec[] = _("びょう");
-static const u8 sText_MaximumSpeed[] = _("さいこうそくど");
-static const u8 sText_RPM[] = _("ｒｐｍ");
-static const u8 sText_Dot[] = _("．");
+static const u8 sText_BlendingResults[] = _("RESULTS OF BLENDING");
+static const u8 sText_SpaceBerry[] = _(" BERRY");
+static const u8 sText_Time[] = _("Time:");
+static const u8 sText_Min[] = _(" min. ");
+static const u8 sText_Sec[] = _(" sec.");
+static const u8 sText_MaximumSpeed[] = _("MAXIMUM SPEED");
+static const u8 sText_RPM[] = _(" RPM");
+static const u8 sText_Dot[] = _(".");
 static const u8 sText_NewLine[] = _("\n");
-static const u8 sText_Ranking[] = _("ランキング");
-static const u8 sText_TheLevelIs[] = _("レベル");
-static const u8 sText_TheFeelIs[] = _("で　なめらかさは");
-static const u8 sText_Dot2[] = _("．");
+static const u8 sText_Ranking[] = _("RANKING");
+static const u8 sText_TheLevelIs[] = _("The level is ");
+static const u8 sText_TheFeelIs[] = _(", and the feel is ");
+static const u8 sText_Dot2[] = _(".");
 
 static const u8 sText_SavingDontTurnOff2[] = _("SAVING...\nDON'T TURN OFF THE POWER.");
-static const u8 sText_BlenderMaxSpeedRecord[] = _("きのみブレンダー\nさいこうそくど　ランキング！");
-static const u8 sText_234Players[] = _("ふたり\nさんにん\nよにん");
+static const u8 sText_BlenderMaxSpeedRecord[] = _("BERRY BLENDER\nMAXIMUM SPEED RECORD!");
+static const u8 sText_234Players[] = _("2 PLAYERS\n3 PLAYERS\n4 PLAYERS");
 
 static const struct BgTemplate sBgTemplates[3] =
 {

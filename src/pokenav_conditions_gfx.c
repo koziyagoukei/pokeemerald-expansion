@@ -30,7 +30,7 @@ static const u32 sConditionGraphData_Gfx[] = INCGFX_U32("graphics/pokenav/condit
 static const u32 sConditionGraphData_Tilemap[] = INCGFX_U32("graphics/pokenav/condition/graph_data.bin", ".smolTM");
 static const u16 sMonMarkings_Pal[] = INCGFX_U16("graphics/pokenav/condition/mon_markings.pal", ".gbapal");
 
-static const u8 gText_Number2[] = _("ばんめ");
+static const u8 gText_Number2[] = _("No. ");
 
 static const struct BgTemplate sMenuBgTemplates[3] =
 {

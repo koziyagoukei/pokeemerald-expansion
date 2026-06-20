@@ -161,7 +161,7 @@ static const struct WindowTemplate sPokemonSpriteVisualizerWindowTemplate[] =
 //Lookup tables
 const u8 gBackAnimNames[][23 + 1] =
 {
-    [BACK_ANIM_NONE]                    = _("なし"),
+    [BACK_ANIM_NONE]                    = _("NONE"),
     [BACK_ANIM_H_VIBRATE]               = _("H VIBRATE"),
     [BACK_ANIM_H_SLIDE]                 = _("H SLIDE"),
     [BACK_ANIM_H_SPRING]                = _("H SPRING"),
@@ -501,8 +501,8 @@ static const struct SubmenuText sSubmenuText[] =
         .instructions = COMPOUND_STRING("{START_BUTTON} Shiny\n{B_BUTTON} Back  {A_BUTTON} Move BGs$"),
         .instructionsGender = COMPOUND_STRING("{START_BUTTON} Shiny\n{B_BUTTON} Back  {A_BUTTON} Move BGs$"),
 #else
-        .instructions = COMPOUND_STRING("円"),
-        .instructionsGender = COMPOUND_STRING("円"),
+        .instructions = COMPOUND_STRING("$"),
+        .instructionsGender = COMPOUND_STRING("$"),
 #endif
         .bottomLeft = COMPOUND_STRING("X coords:\nY coords:\nSize:"),
     },

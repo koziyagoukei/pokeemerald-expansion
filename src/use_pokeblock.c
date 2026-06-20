@@ -157,10 +157,10 @@ static void SpriteCB_MonPic(struct Sprite *);
 static void SpriteCB_Condition(struct Sprite *);
 
 static const u8 sText_GetsAPokeBlockQuestion[] = _(" gets a ポロック?");
-static const u8 sText_WasEnhanced[] = _("に　みがきが　かかった！");
-static const u8 sText_NothingChanged[] = _("なにも　かわらなかった！");
+static const u8 sText_WasEnhanced[] = _("was enhanced!");
+static const u8 sText_NothingChanged[] = _("Nothing changed!");
 static const u8 sText_WontEatAnymore[] = _("It won't eat anymore...");
-static const u8 sText_NatureSlash[] = _("せいかく／");
+static const u8 sText_NatureSlash[] = _("NATURE/");
 
 extern const u16 gConditionGraphData_Pal[];
 extern const u16 gConditionText_Pal[];

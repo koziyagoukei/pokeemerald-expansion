@@ -1,415 +1,415 @@
 const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     [EC_INDEX(EC_WORD_WILL)] =
     {
-        .text = COMPOUND_STRING("いたします"),
+        .text = COMPOUND_STRING("WILL"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_A),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WILL_BE_HERE)] =
     {
-        .text = COMPOUND_STRING("おります"),
+        .text = COMPOUND_STRING("WILL BE HERE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ABOUT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OR)] =
     {
-        .text = COMPOUND_STRING("か"),
+        .text = COMPOUND_STRING("OR"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_AFTER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TIMES)] =
     {
-        .text = COMPOUND_STRING("かい"),
+        .text = COMPOUND_STRING("TIMES"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ALL),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WONDER)] =
     {
-        .text = COMPOUND_STRING("かしら"),
+        .text = COMPOUND_STRING("WONDER"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_AN),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_IS_IT_QUES)] =
     {
-        .text = COMPOUND_STRING("かな？"),
+        .text = COMPOUND_STRING("IS IT?"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ANYWHERE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_BE)] =
     {
-        .text = COMPOUND_STRING("かも"),
+        .text = COMPOUND_STRING("BE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ARE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GIMME)] =
     {
-        .text = COMPOUND_STRING("くれ"),
+        .text = COMPOUND_STRING("GIMME"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_AS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_COULD)] =
     {
-        .text = COMPOUND_STRING("ございます"),
+        .text = COMPOUND_STRING("COULD"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_AT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_LIKELY_TO)] =
     {
-        .text = COMPOUND_STRING("しがち"),
+        .text = COMPOUND_STRING("LIKELY TO"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WOULD)] =
     {
-        .text = COMPOUND_STRING("します"),
+        .text = COMPOUND_STRING("WOULD"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BEFORE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_IS)] =
     {
-        .text = COMPOUND_STRING("じゃ"),
+        .text = COMPOUND_STRING("IS"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BELONGS_TO),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ISN_T_IT_QUES)] =
     {
-        .text = COMPOUND_STRING("じゃん"),
+        .text = COMPOUND_STRING("ISN'T IT?"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BETTER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_LET_S)] =
     {
-        .text = COMPOUND_STRING("しよう！"),
+        .text = COMPOUND_STRING("LET'S"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CAN),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OTHER)] =
     {
-        .text = COMPOUND_STRING("ぜ！"),
+        .text = COMPOUND_STRING("OTHER"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CAN_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ARE)] =
     {
-        .text = COMPOUND_STRING("ぞ！"),
+        .text = COMPOUND_STRING("ARE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_COULD),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WAS)] =
     {
-        .text = COMPOUND_STRING("た"),
+        .text = COMPOUND_STRING("WAS"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DID),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WERE)] =
     {
-        .text = COMPOUND_STRING("だ"),
+        .text = COMPOUND_STRING("WERE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DIDN_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_THOSE)] =
     {
-        .text = COMPOUND_STRING("だからね"),
+        .text = COMPOUND_STRING("THOSE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DO),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ISN_T)] =
     {
-        .text = COMPOUND_STRING("だぜ"),
+        .text = COMPOUND_STRING("ISN'T"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DOES),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WON_T)] =
     {
-        .text = COMPOUND_STRING("だった"),
+        .text = COMPOUND_STRING("WON'T"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DOESN_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_CAN_T)] =
     {
-        .text = COMPOUND_STRING("だね"),
+        .text = COMPOUND_STRING("CAN'T"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DON_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_CAN)] =
     {
-        .text = COMPOUND_STRING("だよ"),
+        .text = COMPOUND_STRING("CAN"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_EVER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DON_T)] =
     {
-        .text = COMPOUND_STRING("だよねー！"),
+        .text = COMPOUND_STRING("DON'T"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FOR),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DO)] =
     {
-        .text = COMPOUND_STRING("だわ"),
+        .text = COMPOUND_STRING("DO"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GIMME),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DOES)] =
     {
-        .text = COMPOUND_STRING("ッス"),
+        .text = COMPOUND_STRING("DOES"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HAVE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WHOM)] =
     {
-        .text = COMPOUND_STRING("ってかんじ"),
+        .text = COMPOUND_STRING("WHOM"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HAVEN_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WHICH)] =
     {
-        .text = COMPOUND_STRING("っぱなし"),
+        .text = COMPOUND_STRING("WHICH"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_IN),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WASN_T)] =
     {
-        .text = COMPOUND_STRING("つもり"),
+        .text = COMPOUND_STRING("WASN'T"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_IS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WEREN_T)] =
     {
-        .text = COMPOUND_STRING("ていない"),
+        .text = COMPOUND_STRING("WEREN'T"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_IS_IT_QUES),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_HAVE)] =
     {
-        .text = COMPOUND_STRING("もっている"),
+        .text = COMPOUND_STRING("HAVE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ISN_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_HAVEN_T)] =
     {
-        .text = COMPOUND_STRING("でーす！"),
+        .text = COMPOUND_STRING("HAVEN'T"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ISN_T_IT_QUES),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_A)] =
     {
-        .text = COMPOUND_STRING("でした"),
+        .text = COMPOUND_STRING("A"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_IT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_AN)] =
     {
-        .text = COMPOUND_STRING("でしょ？"),
+        .text = COMPOUND_STRING("AN"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LET_S),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_NOT)] =
     {
-        .text = COMPOUND_STRING("でしょー！"),
+        .text = COMPOUND_STRING("NOT"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LIKE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_THERE)] =
     {
-        .text = COMPOUND_STRING("です"),
+        .text = COMPOUND_STRING("THERE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LIKELY_TO),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OK_QUES)] =
     {
-        .text = COMPOUND_STRING("ですか？"),
+        .text = COMPOUND_STRING("OK?"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MAYBE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SO)] =
     {
-        .text = COMPOUND_STRING("ですよ"),
+        .text = COMPOUND_STRING("SO"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_NOT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_MAYBE)] =
     {
-        .text = COMPOUND_STRING("ですわ"),
+        .text = COMPOUND_STRING("MAYBE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OF),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ABOUT)] =
     {
-        .text = COMPOUND_STRING("どうなの？"),
+        .text = COMPOUND_STRING("ABOUT"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OFF),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OVER)] =
     {
-        .text = COMPOUND_STRING("どうよ？"),
+        .text = COMPOUND_STRING("OVER"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OK_QUES),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_IT)] =
     {
-        .text = COMPOUND_STRING("とかいって"),
+        .text = COMPOUND_STRING("IT"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ON),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ALL)] =
     {
-        .text = COMPOUND_STRING("なさい"),
+        .text = COMPOUND_STRING("ALL"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ONCE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_FOR)] =
     {
-        .text = COMPOUND_STRING("なの"),
+        .text = COMPOUND_STRING("FOR"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OR),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ON)] =
     {
-        .text = COMPOUND_STRING("なのか"),
+        .text = COMPOUND_STRING("ON"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OTHER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OFF)] =
     {
-        .text = COMPOUND_STRING("なのだ"),
+        .text = COMPOUND_STRING("OFF"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OUT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_AS)] =
     {
-        .text = COMPOUND_STRING("なのよ"),
+        .text = COMPOUND_STRING("AS"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OVER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TO)] =
     {
-        .text = COMPOUND_STRING("なんだね"),
+        .text = COMPOUND_STRING("TO"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SINCE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WITH)] =
     {
-        .text = COMPOUND_STRING("なんです"),
+        .text = COMPOUND_STRING("WITH"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SO),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_BETTER)] =
     {
-        .text = COMPOUND_STRING("なんてね"),
+        .text = COMPOUND_STRING("BETTER"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_THAN),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_EVER)] =
     {
-        .text = COMPOUND_STRING("ね"),
+        .text = COMPOUND_STRING("EVER"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_THERE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SINCE)] =
     {
-        .text = COMPOUND_STRING("ねー"),
+        .text = COMPOUND_STRING("SINCE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_THOSE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OF)] =
     {
-        .text = COMPOUND_STRING("の"),
+        .text = COMPOUND_STRING("OF"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TIMES),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_BELONGS_TO)] =
     {
-        .text = COMPOUND_STRING("の？"),
+        .text = COMPOUND_STRING("BELONGS TO"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TO),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_AT)] =
     {
-        .text = COMPOUND_STRING("ばっかり"),
+        .text = COMPOUND_STRING("AT"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TOO),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_IN)] =
     {
-        .text = COMPOUND_STRING("まーす！"),
+        .text = COMPOUND_STRING("IN"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WAS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OUT)] =
     {
-        .text = COMPOUND_STRING("ます"),
+        .text = COMPOUND_STRING("OUT"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WASN_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TOO)] =
     {
-        .text = COMPOUND_STRING("ますわ"),
+        .text = COMPOUND_STRING("TOO"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WERE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_LIKE)] =
     {
-        .text = COMPOUND_STRING("ません"),
+        .text = COMPOUND_STRING("LIKE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WEREN_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DID)] =
     {
-        .text = COMPOUND_STRING("みたいな"),
+        .text = COMPOUND_STRING("DID"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WHICH),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DIDN_T)] =
     {
-        .text = COMPOUND_STRING("もの"),
+        .text = COMPOUND_STRING("DIDN'T"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WHILE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DOESN_T)] =
     {
-        .text = COMPOUND_STRING("もん"),
+        .text = COMPOUND_STRING("DOESN'T"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WHOM),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WITHOUT)] =
     {
-        .text = COMPOUND_STRING("よ！"),
+        .text = COMPOUND_STRING("WITHOUT"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WILL),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_AFTER)] =
     {
-        .text = COMPOUND_STRING("よー"),
+        .text = COMPOUND_STRING("AFTER"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WILL_BE_HERE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_BEFORE)] =
     {
-        .text = COMPOUND_STRING("よーん"),
+        .text = COMPOUND_STRING("BEFORE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WITH),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WHILE)] =
     {
-        .text = COMPOUND_STRING("よね"),
+        .text = COMPOUND_STRING("WHILE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WITHOUT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_THAN)] =
     {
-        .text = COMPOUND_STRING("るよ"),
+        .text = COMPOUND_STRING("THAN"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WON_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ONCE)] =
     {
-        .text = COMPOUND_STRING("わけ"),
+        .text = COMPOUND_STRING("ONCE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WONDER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ANYWHERE)] =
     {
-        .text = COMPOUND_STRING("わよ！"),
+        .text = COMPOUND_STRING("ANYWHERE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WOULD),
         .enabled = TRUE,
     },

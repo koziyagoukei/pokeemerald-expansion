@@ -172,21 +172,21 @@ static u16 SampleResortGorgeousReward(void);
 static void Task_ShakeScreen(u8 taskId);
 static void Task_EndScreenShake(u8 taskId);
 
-static const u8 sText_BigGuy[] = _("おにいちゃん");
-static const u8 sText_BigGirl[] = _("おねえちゃん");
-static const u8 sText_Son[] = _("むすこ");
-static const u8 sText_Daughter[] = _("むすめ");
-static const u8 sText_99TimesPlus[] = _("９９かい　いじょう");
-static const u8 sText_1MinutePlus[] = _("１ぷん　いじょう");
-static const u8 sText_SpaceSeconds[] = _("びょう");
-static const u8 sText_SpaceTimes[] = _("かい");
+static const u8 sText_BigGuy[] = _("Big guy");
+static const u8 sText_BigGirl[] = _("Big girl");
+static const u8 sText_Son[] = _("son");
+static const u8 sText_Daughter[] = _("daughter");
+static const u8 sText_99TimesPlus[] = _("99 times +");
+static const u8 sText_1MinutePlus[] = _("1 minute +");
+static const u8 sText_SpaceSeconds[] = _(" seconds");
+static const u8 sText_SpaceTimes[] = _(" time(s)");
 
-static const u8 sText_Wallace[] = _("ミクリ");
-static const u8 sText_Steven[] = _("ダイゴ");
-static const u8 sText_Brawly[] = _("トウキ");
-static const u8 sText_Winona[] = _("ナギ");
-static const u8 sText_Phoebe[] = _("フヨウ");
-static const u8 sText_Glacia[] = _("プリム");
+static const u8 sText_Wallace[] = _("WALLACE");
+static const u8 sText_Steven[] = _("STEVEN");
+static const u8 sText_Brawly[] = _("BRAWLY");
+static const u8 sText_Winona[] = _("WINONA");
+static const u8 sText_Phoebe[] = _("PHOEBE");
+static const u8 sText_Glacia[] = _("GLACIA");
 
 void Special_ShowDiploma(void)
 {
@@ -2517,29 +2517,29 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     },
     [SCROLL_MULTI_GLASS_WORKSHOP_VENDOR] =
     {
-        COMPOUND_STRING("あおいビードロ"),
-        COMPOUND_STRING("きいろビードロ"),
-        COMPOUND_STRING("あかいビードロ"),
-        COMPOUND_STRING("しろいビードロ"),
-        COMPOUND_STRING("くろいビードロ"),
-        COMPOUND_STRING("きれいなイス"),
-        COMPOUND_STRING("きれいなつくえ"),
+        COMPOUND_STRING("BLUE FLUTE"),
+        COMPOUND_STRING("YELLOW FLUTE"),
+        COMPOUND_STRING("RED FLUTE"),
+        COMPOUND_STRING("WHITE FLUTE"),
+        COMPOUND_STRING("BLACK FLUTE"),
+        COMPOUND_STRING("PRETTY CHAIR"),
+        COMPOUND_STRING("PRETTY DESK"),
         gText_Exit
     },
     [SCROLL_MULTI_POKEMON_FAN_CLUB_RATER] =
     {
-        COMPOUND_STRING("　　０てん"),
-        COMPOUND_STRING("　１０てん"),
-        COMPOUND_STRING("　２０てん"),
-        COMPOUND_STRING("　３０てん"),
-        COMPOUND_STRING("　４０てん"),
-        COMPOUND_STRING("　５０てん"),
-        COMPOUND_STRING("　６０てん"),
-        COMPOUND_STRING("　７０てん"),
-        COMPOUND_STRING("　８０てん"),
-        COMPOUND_STRING("　９０てん"),
-        COMPOUND_STRING("１００てん"),
-        COMPOUND_STRING("　　？")
+        COMPOUND_STRING("0 pts"),
+        COMPOUND_STRING("10 pts"),
+        COMPOUND_STRING("20 pts"),
+        COMPOUND_STRING("30 pts"),
+        COMPOUND_STRING("40 pts"),
+        COMPOUND_STRING("50 pts"),
+        COMPOUND_STRING("60 pts"),
+        COMPOUND_STRING("70 pts"),
+        COMPOUND_STRING("80 pts"),
+        COMPOUND_STRING("90 pts"),
+        COMPOUND_STRING("100 pts"),
+        COMPOUND_STRING("?")
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_1] =
     {
@@ -5328,7 +5328,7 @@ static void Task_ElevatorShake(u8 taskId)
     }
 }
 
-static const u8 sText_NowOn[] = _("げんざいのフロア");
+static const u8 sText_NowOn[] = _("Now on:");
 
 void DrawElevatorCurrentFloorWindow(void)
 {

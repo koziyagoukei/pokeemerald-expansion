@@ -130,7 +130,7 @@ static void ReturnToPokeblockCaseOnField(void);
 static void CreateTossPokeblockYesNoMenu(u8);
 static void TossPokeblock(u8);
 
-static const u8 sText_StowCase[] = _("ケースをしまう");
+static const u8 sText_StowCase[] = _("Stow CASE.");
 static const u8 sText_LvVar1[] = _("{LV}{STR_VAR_1}");
 static const u8 sText_ThrowAwayVar1[] = _("Throw away this\n{STR_VAR_1}?");
 static const u8 sText_Var1ThrownAway[] = _("The {STR_VAR_1}\nwas thrown away.");
@@ -704,11 +704,11 @@ static void DrawPokeblockMenuTitleText(void)
     const u8 *itemName = GetItemName(ITEM_POKEBLOCK_CASE);
     PrintOnPokeblockWindow(WIN_TITLE, itemName, GetStringCenterAlignXOffset(FONT_NORMAL, itemName, 0x48));
 
-    PrintOnPokeblockWindow(WIN_SPICY,  COMPOUND_STRING("からい"),  0);
-    PrintOnPokeblockWindow(WIN_DRY,    COMPOUND_STRING("しぶい"),    0);
-    PrintOnPokeblockWindow(WIN_SWEET,  COMPOUND_STRING("あまい"),  0);
-    PrintOnPokeblockWindow(WIN_BITTER, COMPOUND_STRING("にがい"), 0);
-    PrintOnPokeblockWindow(WIN_SOUR,   COMPOUND_STRING("すっぱい"),   0);
+    PrintOnPokeblockWindow(WIN_SPICY,  COMPOUND_STRING("SPICY"),  0);
+    PrintOnPokeblockWindow(WIN_DRY,    COMPOUND_STRING("DRY"),    0);
+    PrintOnPokeblockWindow(WIN_SWEET,  COMPOUND_STRING("SWEET"),  0);
+    PrintOnPokeblockWindow(WIN_BITTER, COMPOUND_STRING("BITTER"), 0);
+    PrintOnPokeblockWindow(WIN_SOUR,   COMPOUND_STRING("SOUR"),   0);
 
     for (i = 0; i < WIN_ACTIONS_TALL; i++)
         PutWindowTilemap(i);

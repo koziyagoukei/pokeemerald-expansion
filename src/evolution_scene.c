@@ -78,7 +78,7 @@ static const u16 sUnusedPal3[]  = INCGFX_U16("graphics/evolution_scene/unused_3.
 static const u16 sUnusedPal4[] = INCGFX_U16("graphics/evolution_scene/unused_4.pal", ".gbapal");
 static const u16 sBgAnim_Pal[] = INCGFX_U16("graphics/evolution_scene/bg_anim.pal", ".gbapal");
 
-static const u8 sText_ShedinjaJapaneseName[] = _("[NULL]");
+static const u8 sText_ShedinjaJapaneseName[] = _("ヌケニン");
 
 // The below table is used by Task_UpdateBgPalette to control the speed at which the bg color updates.
 // The first two values are indexes into sBgAnim_PalIndexes (indirectly, via sBgAnimPal), and are

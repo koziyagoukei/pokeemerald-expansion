@@ -433,7 +433,7 @@ static const u8 sDebugText_True[] =          _("オン");
 static const u8 sDebugText_False[] =         _("オフ");
 static const u8 sDebugText_Colored_True[] =  _("{COLOR GREEN}オン");
 static const u8 sDebugText_Colored_False[] = _("{COLOR RED}オフ");
-static const u8 sDebugText_Dashes[] =        _("ーーー");
+static const u8 sDebugText_Dashes[] =        _("---");
 static const u8 sDebugText_Empty[] =         _("");
 static const u8 sDebugText_Continue[] =      _("つづける...");
 // Util Menu
@@ -1114,10 +1114,10 @@ static u32 Debug_GenerateListTrainerMenu(const struct DebugMenuOption *items)
             if (rematchTableId == -1)
             {
                 if (HasTrainerBeenFought(trainer1Id))
-                    StringCopy(gStringVar1, COMPOUND_STRING("ひとり"));
+                    StringCopy(gStringVar1, COMPOUND_STRING("1"));
                 else
                     StringCopy(gStringVar1, COMPOUND_STRING("0"));
-                StringCopy(gStringVar2, COMPOUND_STRING("ひとり"));
+                StringCopy(gStringVar2, COMPOUND_STRING("1"));
             }
             else
             {

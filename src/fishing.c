@@ -61,7 +61,7 @@ static u32 CalculateFishingTimeOfDayBoost(void);
     #define FISHING_SUPER_ROD_ODDS 50
 #endif
 
-static const u8 sText_OhABite[] = _("ひいてる　ひいてる！！");
+static const u8 sText_OhABite[] = _("Oh! A bite!");
 static const u8 sText_PokemonOnHook[] = _("A POKEMON's on the hook!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_NotEvenANibble[] = _("Not even a nibble...{PAUSE_UNTIL_PRESS}");
 static const u8 sText_ItGotAway[] = _("It got away...{PAUSE_UNTIL_PRESS}");
@@ -216,7 +216,7 @@ static bool32 Fishing_InitDots(struct Task *task)
 
 static bool32 Fishing_ShowDots(struct Task *task)
 {
-    const u8 dot[] = _("．");
+    const u8 dot[] = _(".");
 
     AlignFishingAnimationFrames();
     task->tFrameCounter++;

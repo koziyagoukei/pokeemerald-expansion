@@ -1200,7 +1200,7 @@ bool8 CloseMuseumFossilPic(void)
     return TRUE;
 }
 
-static const u8 sText_Other[] = _("ぜ！");
+static const u8 sText_Other[] = _("OTHER");
 
 void DrawSeagallopDestinationMenu(void)
 {
