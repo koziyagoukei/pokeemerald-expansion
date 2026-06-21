@@ -68,6 +68,9 @@ Workspace/
 *.smolTM
 __pycache__
 .map_version
+JP
 # TranslationEditor backups
 *.bak
 *.bak.*
+# JP ROM extracted assets
+JP/
