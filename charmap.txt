@@ -171,6 +171,7 @@ TALL_PLUS   = FC 0C FB
 '。' = AD
 'ー' = AE
 '円' = B7
+JPN_PLUS = FF 04
 
 STRING = FD
 
@@ -346,7 +347,6 @@ STRING = FD
 
 
 @ Full-width variants of existing ASCII punctuation.
-'＋' = 2E
 '＝' = 35
 '；' = 36
 '＿' = AE
