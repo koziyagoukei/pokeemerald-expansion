@@ -23,6 +23,9 @@
 #include "constants/pokemon.h"
 #include "constants/songs.h"
 #include "constants/species.h"
+#include "data.h"
+#include "item.h"
+#include "pokedex.h"
 
 #define FRONTIER_CREATOR_FONT FONT_NORMAL
 
@@ -71,6 +74,7 @@ static void Task_FrontierCreator_SelectEVs(u8 taskId);
 static void FrontierCreator_DestroyAndReturn(u8 taskId);
 static void FrontierCreator_CreateMonAndGive(void);
 static void FrontierCreator_InitDefaultData(void);
+static void FrontierCreator_DrawAbilityScreen(u8 taskId);
 
 static const struct WindowTemplate sFrontierCreatorWindowTemplate =
 {
@@ -102,6 +106,31 @@ static const u8 *const sFrontierCreatorStatNames[NUM_STATS] =
     COMPOUND_STRING("とくぼう"),
 };
 
+static const u8 *const sFrontierCreatorTypeNames[NUMBER_OF_MON_TYPES] =
+{
+    [TYPE_NONE] = COMPOUND_STRING("----"),
+    [TYPE_NORMAL] = COMPOUND_STRING("ノーマル"),
+    [TYPE_FIGHTING] = COMPOUND_STRING("かくとう"),
+    [TYPE_FLYING] = COMPOUND_STRING("ひこう"),
+    [TYPE_POISON] = COMPOUND_STRING("どく"),
+    [TYPE_GROUND] = COMPOUND_STRING("じめん"),
+    [TYPE_ROCK] = COMPOUND_STRING("いわ"),
+    [TYPE_BUG] = COMPOUND_STRING("むし"),
+    [TYPE_GHOST] = COMPOUND_STRING("ゴースト"),
+    [TYPE_STEEL] = COMPOUND_STRING("はがね"),
+    [TYPE_MYSTERY] = COMPOUND_STRING("----"),
+    [TYPE_FIRE] = COMPOUND_STRING("ほのお"),
+    [TYPE_WATER] = COMPOUND_STRING("みず"),
+    [TYPE_GRASS] = COMPOUND_STRING("くさ"),
+    [TYPE_ELECTRIC] = COMPOUND_STRING("でんき"),
+    [TYPE_PSYCHIC] = COMPOUND_STRING("エスパー"),
+    [TYPE_ICE] = COMPOUND_STRING("こおり"),
+    [TYPE_DRAGON] = COMPOUND_STRING("ドラゴン"),
+    [TYPE_DARK] = COMPOUND_STRING("あく"),
+    [TYPE_FAIRY] = COMPOUND_STRING("フェアリー"),
+    [TYPE_STELLAR] = COMPOUND_STRING("ステラ"),
+};
+
 static const u8 *const sFrontierCreatorNatureNames[NUM_NATURES + 1] =
 {
     COMPOUND_STRING("がんばりや"),
@@ -131,6 +160,17 @@ static const u8 *const sFrontierCreatorNatureNames[NUM_NATURES + 1] =
     COMPOUND_STRING("きまぐれ"),
     COMPOUND_STRING("ランダム"),
 };
+
+static const u8 *FrontierCreator_GetTypeName(u32 type)
+{
+    if (type >= NUMBER_OF_MON_TYPES)
+        return COMPOUND_STRING("----");
+
+    if (sFrontierCreatorTypeNames[type] == NULL)
+        return COMPOUND_STRING("----");
+
+    return sFrontierCreatorTypeNames[type];
+}
 
 static const u8 sFrontierCreatorText_Controls[] = _("{CLEAR_TO 90}\n{A_BUTTON}けってい {B_BUTTON}やめる");
 
@@ -245,33 +285,7 @@ static void FrontierCreator_DrawNatureScreen(u8 taskId)
     FrontierCreator_PrintWindow(windowId);
 }
 
-static void FrontierCreator_DrawNumberScreen(u8 windowId, const u8 *title, u32 value, u32 digit, u32 max)
-{
-    FrontierCreator_ClearWindow(windowId);
-
-    StringCopy(gStringVar4, title);
-    StringAppend(gStringVar4, COMPOUND_STRING("{CLEAR_TO 90}\n"));
-
-    StringAppend(gStringVar4, COMPOUND_STRING("あたい: "));
-    ConvertIntToDecimalStringN(gStringVar1, value, STR_CONV_MODE_LEADING_ZEROS, 4);
-    StringAppend(gStringVar4, gStringVar1);
-    StringAppend(gStringVar4, COMPOUND_STRING("{CLEAR_TO 90}\n"));
-
-    StringAppend(gStringVar4, COMPOUND_STRING("さいだい: "));
-    ConvertIntToDecimalStringN(gStringVar1, max, STR_CONV_MODE_LEADING_ZEROS, 4);
-    StringAppend(gStringVar4, gStringVar1);
-    StringAppend(gStringVar4, COMPOUND_STRING("{CLEAR_TO 90}\n"));
-
-    StringAppend(gStringVar4, COMPOUND_STRING("けた: "));
-    ConvertIntToDecimalStringN(gStringVar1, digit, STR_CONV_MODE_LEADING_ZEROS, 1);
-    StringAppend(gStringVar4, gStringVar1);
-    StringAppend(gStringVar4, COMPOUND_STRING("{CLEAR_TO 90}\n"));
-
-    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW}{DOWN_ARROW}へんこう {LEFT_ARROW}{RIGHT_ARROW}けた"));
-    StringAppend(gStringVar4, sFrontierCreatorText_Controls);
-
-    FrontierCreator_PrintWindow(windowId);
-}
+static void FrontierCreator_DrawTeraTypeScreen(u8 taskId);
 
 static void FrontierCreator_DrawBooleanScreen(u8 windowId, const u8 *title, bool32 value)
 {
@@ -411,6 +425,72 @@ static void FrontierCreator_DrawLevelScreen(u8 taskId)
     StringAppend(gStringVar4, COMPOUND_STRING("{CLEAR_TO 90}\n"));
 
     StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW}{DOWN_ARROW} 50/100"));
+    StringAppend(gStringVar4, sFrontierCreatorText_Controls);
+
+    FrontierCreator_PrintWindow(windowId);
+}
+
+static void FrontierCreator_DrawAbilityScreen(u8 taskId)
+{
+    u8 windowId = gTasks[taskId].tWindowId;
+    u8 slot = gTasks[taskId].tInput;
+    enum Ability ability = GetSpeciesAbility(sFrontierCreatorData->species, slot);
+
+    FrontierCreator_ClearWindow(windowId);
+
+    StringCopy(gStringVar4, COMPOUND_STRING("とくせいを えらぶ{CLEAR_TO 90}\n"));
+
+    StringAppend(gStringVar4, COMPOUND_STRING("スロット: "));
+    ConvertIntToDecimalStringN(gStringVar1, slot, STR_CONV_MODE_LEADING_ZEROS, 1);
+    StringAppend(gStringVar4, gStringVar1);
+    StringAppend(gStringVar4, COMPOUND_STRING("{CLEAR_TO 90}\n"));
+
+    StringAppend(gStringVar4, COMPOUND_STRING("とくせい: "));
+    if (ability == ABILITY_NONE)
+        StringAppend(gStringVar4, COMPOUND_STRING("----"));
+    else
+         StringAppend(gStringVar4, gAbilitiesInfo[ability].name);
+    StringAppend(gStringVar4, COMPOUND_STRING("{CLEAR_TO 90}\n"));
+
+    if (ability == ABILITY_NONE)
+        StringAppend(gStringVar4, COMPOUND_STRING("これは えらべません{CLEAR_TO 90}\n"));
+    else
+        StringAppend(gStringVar4, COMPOUND_STRING("このとくせいは OK{CLEAR_TO 90}\n"));
+
+    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW}{DOWN_ARROW}へんこう"));
+    StringAppend(gStringVar4, sFrontierCreatorText_Controls);
+
+    FrontierCreator_PrintWindow(windowId);
+}
+static void FrontierCreator_DrawTeraTypeScreen(u8 taskId)
+{
+    u8 windowId = gTasks[taskId].tWindowId;
+    u32 type = gTasks[taskId].tInput;
+
+    FrontierCreator_ClearWindow(windowId);
+
+    StringCopy(gStringVar4, COMPOUND_STRING("テラスタイプを えらぶ{CLEAR_TO 90}\n"));
+
+    StringAppend(gStringVar4, COMPOUND_STRING("No."));
+    ConvertIntToDecimalStringN(gStringVar1, type, STR_CONV_MODE_LEADING_ZEROS, 2);
+    StringAppend(gStringVar4, gStringVar1);
+    StringAppend(gStringVar4, COMPOUND_STRING("{CLEAR_TO 90}\n"));
+
+    StringAppend(gStringVar4, COMPOUND_STRING("タイプ: "));
+    StringAppend(gStringVar4, FrontierCreator_GetTypeName(type));
+    StringAppend(gStringVar4, COMPOUND_STRING("{CLEAR_TO 90}\n"));
+
+    if (type == TYPE_NONE || type == TYPE_MYSTERY)
+        StringAppend(gStringVar4, COMPOUND_STRING("これは えらべません{CLEAR_TO 90}\n"));
+    else
+        StringAppend(gStringVar4, COMPOUND_STRING("このタイプは OK{CLEAR_TO 90}\n"));
+
+    StringAppend(gStringVar4, COMPOUND_STRING("けた: "));
+    ConvertIntToDecimalStringN(gStringVar1, gTasks[taskId].tDigit, STR_CONV_MODE_LEADING_ZEROS, 1);
+    StringAppend(gStringVar4, gStringVar1);
+    StringAppend(gStringVar4, COMPOUND_STRING("{CLEAR_TO 90}\n"));
+
+    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW}{DOWN_ARROW}へんこう {LEFT_ARROW}{RIGHT_ARROW}けた"));
     StringAppend(gStringVar4, sFrontierCreatorText_Controls);
 
     FrontierCreator_PrintWindow(windowId);
@@ -663,13 +743,7 @@ static void Task_FrontierCreator_SelectNature(u8 taskId)
         gTasks[taskId].tInput = 0;
         gTasks[taskId].tDigit = 0;
 
-        FrontierCreator_DrawNumberScreen(
-            gTasks[taskId].tWindowId,
-            COMPOUND_STRING("とくせいスロットを えらぶ"),
-            gTasks[taskId].tInput,
-            gTasks[taskId].tDigit,
-            NUM_ABILITY_SLOTS - 1
-        );
+        FrontierCreator_DrawAbilityScreen(taskId);
         gTasks[taskId].func = Task_FrontierCreator_SelectAbility;
     }
     else if (JOY_NEW(B_BUTTON))
@@ -686,13 +760,7 @@ static void Task_FrontierCreator_SelectAbility(u8 taskId)
     {
         PlaySE(SE_SELECT);
         FrontierCreator_HandleNumericInput(taskId, 0, NUM_ABILITY_SLOTS - 1, FRONTIER_CREATOR_ABILITY_DIGITS);
-        FrontierCreator_DrawNumberScreen(
-            gTasks[taskId].tWindowId,
-            COMPOUND_STRING("とくせいスロットを えらぶ"),
-            gTasks[taskId].tInput,
-            gTasks[taskId].tDigit,
-            NUM_ABILITY_SLOTS - 1
-        );
+        FrontierCreator_DrawAbilityScreen(taskId);
     }
 
     if (JOY_NEW(A_BUTTON))
@@ -708,13 +776,7 @@ static void Task_FrontierCreator_SelectAbility(u8 taskId)
         gTasks[taskId].tInput = TYPE_NORMAL;
         gTasks[taskId].tDigit = 0;
 
-        FrontierCreator_DrawNumberScreen(
-            gTasks[taskId].tWindowId,
-            COMPOUND_STRING("テラスタイプを えらぶ"),
-            gTasks[taskId].tInput,
-            gTasks[taskId].tDigit,
-            NUMBER_OF_MON_TYPES - 1
-        );
+        FrontierCreator_DrawTeraTypeScreen(taskId);
         gTasks[taskId].func = Task_FrontierCreator_SelectTeraType;
     }
     else if (JOY_NEW(B_BUTTON))
@@ -731,13 +793,7 @@ static void Task_FrontierCreator_SelectTeraType(u8 taskId)
     {
         PlaySE(SE_SELECT);
         FrontierCreator_HandleNumericInput(taskId, 0, NUMBER_OF_MON_TYPES - 1, FRONTIER_CREATOR_TYPE_DIGITS);
-        FrontierCreator_DrawNumberScreen(
-            gTasks[taskId].tWindowId,
-            COMPOUND_STRING("テラスタイプを えらぶ"),
-            gTasks[taskId].tInput,
-            gTasks[taskId].tDigit,
-            NUMBER_OF_MON_TYPES - 1
-        );
+        FrontierCreator_DrawTeraTypeScreen(taskId);
     }
 
     if (JOY_NEW(A_BUTTON))
@@ -889,6 +945,56 @@ static void Task_FrontierCreator_SelectEVs(u8 taskId)
         FrontierCreator_DestroyAndReturn(taskId);
     }
 }
+
+static void FrontierHub_TryAddItem(enum Item itemId)
+{
+    if (itemId == ITEM_NONE)
+        return;
+
+    if (!CheckBagHasItem(itemId, 1) && CheckBagHasSpace(itemId, 1))
+        AddBagItem(itemId, 1);
+}
+
+static void FrontierHub_GiveAllKeyItems(void)
+{
+    enum Item itemId;
+
+    for (itemId = ITEM_NONE + 1; itemId < ITEMS_COUNT; itemId++)
+    {
+        if (GetItemPocket(itemId) == POCKET_KEY_ITEMS)
+            FrontierHub_TryAddItem(itemId);
+    }
+}
+
+void Special_SetupFrontierHubState(void)
+{
+    u32 i;
+    FlagSet(FLAG_BADGE01_GET);
+    FlagSet(FLAG_BADGE02_GET);
+    FlagSet(FLAG_BADGE03_GET);
+    FlagSet(FLAG_BADGE04_GET);
+    FlagSet(FLAG_BADGE05_GET);
+    FlagSet(FLAG_BADGE06_GET);
+    FlagSet(FLAG_BADGE07_GET);
+    FlagSet(FLAG_BADGE08_GET);
+
+    FlagSet(FLAG_SYS_GAME_CLEAR);
+    FlagSet(FLAG_SYS_FRONTIER_PASS);
+    FlagSet(FLAG_SYS_POKEDEX_GET);
+    FlagSet(FLAG_SYS_POKENAV_GET);
+    FlagSet(FLAG_SYS_B_DASH);
+    EnableNationalPokedex();
+
+    GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_BULBASAUR), FLAG_SET_SEEN);
+    GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_BULBASAUR), FLAG_SET_CAUGHT);
+
+    for (i = 0; i < ARRAY_COUNT(gBadgeFlags); i++)
+        FlagSet(gBadgeFlags[i]);
+
+FrontierHub_GiveAllKeyItems();
+}
+
+
 
 void Special_OpenFrontierPokemonCreator(void)
 {

@@ -1,5 +1,13 @@
 ultra_frontie_hub_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, UltraFrontieHub_OnTransition
 	.byte 0
+
+UltraFrontieHub_OnTransition:
+	goto_if_set FLAG_TEMP_1, UltraFrontieHub_OnTransition_Done
+	special Special_SetupFrontierHubState
+	setflag FLAG_TEMP_1
+UltraFrontieHub_OnTransition_Done:
+	end
 
 UltraFrontieHub_EventScript_FacilityWarpMenu::
 	lock
