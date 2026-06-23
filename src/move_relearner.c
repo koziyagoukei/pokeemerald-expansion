@@ -278,6 +278,19 @@ static void Task_MoveRelearner_LearnMove(u8 taskId);
 static void Task_MoveRelearner_Quit(u8 taskId);
 static void SortMovesAlphabetically(u16 *moves, u32 numMoves);
 static void QuickSortMoves(u16 *moves, s32 left, s32 right);
+static bool32 ShouldShowFrontierMove(enum Move move);
+static void CycleFrontierMoveFilter(void);
+
+enum FrontierMoveFilter
+{
+    FRONTIER_MOVE_FILTER_ALL,
+    FRONTIER_MOVE_FILTER_PHYSICAL,
+    FRONTIER_MOVE_FILTER_SPECIAL,
+    FRONTIER_MOVE_FILTER_STATUS,
+    FRONTIER_MOVE_FILTER_COUNT,
+};
+
+static u8 sFrontierMoveFilter = FRONTIER_MOVE_FILTER_ALL;
 
 static const struct RelearnType sRelearnTypes[MOVE_RELEARNER_COUNT] =
 {
@@ -416,6 +429,7 @@ void CB2_InitLearnMove(void)
     gTasks[sMoveRelearnerStruct->mainTask].tState = 0;
     gTasks[sMoveRelearnerStruct->mainTask].tPartyIndex = gSpecialVar_0x8004;
     gTasks[sMoveRelearnerStruct->mainTask].tMove = MOVE_NONE;
+    sFrontierMoveFilter = FRONTIER_MOVE_FILTER_ALL;
     if (gRelearnMode == RELEARN_MODE_PSS_PAGE_CONTEST_MOVES)
         gTasks[sMoveRelearnerStruct->mainTask].tCategory = CONTEST_INFO;
     else
@@ -617,6 +631,24 @@ static void Task_MoveRelearner_HandleInput(u8 taskId)
     s32 itemId = ListMenu_ProcessInput(sMoveRelearnerStruct->moveListMenuTask);
     ListMenuGetScrollAndRow(sMoveRelearnerStruct->moveListMenuTask, &sMoveRelearnerScrollState.listOffset, &sMoveRelearnerScrollState.listRow);
 
+    if (gMoveRelearnerState == MOVE_RELEARNER_FRONTIER_FULL_MOVES && JOY_NEW(SELECT_BUTTON))
+    {
+        PlaySE(SE_SELECT);
+
+        CycleFrontierMoveFilter();
+
+        sMoveRelearnerScrollState.listOffset = 0;
+        sMoveRelearnerScrollState.listRow = 0;
+
+        RemoveScrollArrows();
+        CreateLearnableMovesList();
+        RedrawListMenu(sMoveRelearnerStruct->moveListMenuTask);
+        ShowTeachMoveText();
+        AddScrollArrows();
+
+        return;
+    }
+
     switch (itemId)
     {
     case LIST_NOTHING_CHOSEN:
@@ -743,26 +775,35 @@ static void RemoveScrollArrows(void)
 static void CreateLearnableMovesList(void)
 {
     s32 i;
-
+    u16 shown = 0;
     struct BoxPokemon *boxmon = GetSelectedBoxMonFromPcOrParty();
 
     if (gRelearnMode == RELEARN_MODE_SCRIPT || sRelearnTypes[gMoveRelearnerState].isActive())
         sMoveRelearnerStruct->numMenuChoices = sRelearnTypes[gMoveRelearnerState].getMoves(boxmon, sMoveRelearnerStruct->movesToLearn);
 
-if (P_SORT_MOVES)
-    SortMovesAlphabetically(sMoveRelearnerStruct->movesToLearn, sMoveRelearnerStruct->numMenuChoices);
+    if (P_SORT_MOVES)
+        SortMovesAlphabetically(sMoveRelearnerStruct->movesToLearn, sMoveRelearnerStruct->numMenuChoices);
 
     for (i = 0; i < sMoveRelearnerStruct->numMenuChoices; i++)
     {
-        sMoveRelearnerStruct->menuItems[i].name = GetMoveName(sMoveRelearnerStruct->movesToLearn[i]);
-        sMoveRelearnerStruct->menuItems[i].id = sMoveRelearnerStruct->movesToLearn[i];
+        enum Move move = sMoveRelearnerStruct->movesToLearn[i];
+
+        if (!ShouldShowFrontierMove(move))
+            continue;
+
+        sMoveRelearnerStruct->menuItems[shown].name = GetMoveName(move);
+        sMoveRelearnerStruct->menuItems[shown].id = move;
+        shown++;
     }
 
     GetBoxMonData(boxmon, MON_DATA_NICKNAME, gStringVar1);
 
-    sMoveRelearnerStruct->menuItems[sMoveRelearnerStruct->numMenuChoices].name = gText_Cancel;
-    sMoveRelearnerStruct->menuItems[sMoveRelearnerStruct->numMenuChoices].id = LIST_CANCEL;
-    sMoveRelearnerStruct->numMenuChoices++;
+    sMoveRelearnerStruct->menuItems[shown].name = gText_Cancel;
+    sMoveRelearnerStruct->menuItems[shown].id = LIST_CANCEL;
+
+    shown++;
+
+    sMoveRelearnerStruct->numMenuChoices = shown;
     sMoveRelearnerStruct->numToShowAtOnce = LoadMoveRelearnerMovesList(sMoveRelearnerStruct->menuItems, sMoveRelearnerStruct->numMenuChoices);
 }
 
@@ -869,6 +910,33 @@ static bool32 IsTmAvailable(enum Item item)
     if (gRelearnMode == RELEARN_MODE_SCRIPT)
         return TRUE;
     return CheckBagHasItem(item, 1);
+}
+
+static bool32 ShouldShowFrontierMove(enum Move move)
+{
+    if (gMoveRelearnerState != MOVE_RELEARNER_FRONTIER_FULL_MOVES)
+        return TRUE;
+
+    switch (sFrontierMoveFilter)
+    {
+    case FRONTIER_MOVE_FILTER_PHYSICAL:
+        return GetBattleMoveCategory(move) == DAMAGE_CATEGORY_PHYSICAL;
+    case FRONTIER_MOVE_FILTER_SPECIAL:
+        return GetBattleMoveCategory(move) == DAMAGE_CATEGORY_SPECIAL;
+    case FRONTIER_MOVE_FILTER_STATUS:
+        return GetBattleMoveCategory(move) == DAMAGE_CATEGORY_STATUS;
+    case FRONTIER_MOVE_FILTER_ALL:
+    default:
+        return TRUE;
+    }
+}
+
+static void CycleFrontierMoveFilter(void)
+{
+    sFrontierMoveFilter++;
+
+    if (sFrontierMoveFilter >= FRONTIER_MOVE_FILTER_COUNT)
+        sFrontierMoveFilter = FRONTIER_MOVE_FILTER_ALL;
 }
 
 static u32 GetRelearnerLevelUpMoves(struct BoxPokemon *mon, u16 *moves)
