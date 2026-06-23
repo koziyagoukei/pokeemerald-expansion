@@ -3,7 +3,6 @@
   "name": "UndergroundPath_NorthSouthTunnel_Frlg",
   "layout": "LAYOUT_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL",
   "music": "MUS_RG_ROUTE1",
-  "region": "REGION_KANTO",
   "region_map_section": "MAPSEC_UNDERGROUND_PATH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -12,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [],
@@ -104,5 +102,7 @@
       "quantity": 1,
       "underfoot": false
     }
-  ]
+  ],
+  "floor_number": 0,
+  "region": "REGION_KANTO"
 }

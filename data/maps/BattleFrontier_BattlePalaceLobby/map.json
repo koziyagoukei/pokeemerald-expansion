@@ -3,7 +3,6 @@
   "name": "BattleFrontier_BattlePalaceLobby",
   "layout": "LAYOUT_BATTLE_FRONTIER_BATTLE_PALACE_LOBBY",
   "music": "MUS_B_PALACE",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_BATTLE_FRONTIER",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -101,8 +100,8 @@
       "x": 12,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_BATTLE_FRONTIER_OUTSIDE_EAST",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_ULTRA_FRONTIE_HUB",
+      "dest_warp_id": "ultra_hub"
     },
     {
       "x": 13,
@@ -145,5 +144,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "BattleFrontier_BattlePalaceLobby_EventScript_RulesBoard"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }

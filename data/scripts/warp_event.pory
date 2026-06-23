@@ -1,0 +1,21 @@
+UltraFrontieHub_EventScript_GoBattleTower::
+	lock
+	faceplayer
+	msgbox UltraFrontieHub_Text_GoBattleTower, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq UltraFrontieHub_EventScript_Cancel
+	closemessage
+	warp MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY, 255, 11, 8
+	waitstate
+	end
+
+UltraFrontieHub_EventScript_Cancel::
+	msgbox UltraFrontieHub_Text_Cancel, MSGBOX_DEFAULT
+	release
+	end
+
+UltraFrontieHub_Text_GoBattleTower::
+	.string "バトルタワーへ いきますか？$"
+
+UltraFrontieHub_Text_Cancel::
+	.string "またどうぞ。$"

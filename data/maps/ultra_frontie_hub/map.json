@@ -1,0 +1,76 @@
+{
+  "id": "MAP_ULTRA_FRONTIE_HUB",
+  "name": "ultra_frontie_hub",
+  "layout": "LAYOUT_ULTRA_FRONTIE_HUB",
+  "music": "MUS_B_PIKE",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MOM",
+      "x": 5,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "UltraFrontieHub_EventScript_FacilityWarpMenu",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LINK_RS_BRENDAN",
+      "x": 6,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "UltraFrontieHub_EventScript_FrontierPokemonCreator",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LINK_RS_MAY",
+      "x": 4,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "UltraFrontieHub_EventScript_StartFrontierMoveTutor",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "warp_id": "ultra_hub",
+      "x": 4,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_ULTRA_FRONTIE_HUB",
+      "dest_warp_id": "ultra_hub"
+    },
+    {
+      "x": 5,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_ULTRA_FRONTIE_HUB",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}
