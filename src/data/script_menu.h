@@ -1127,6 +1127,14 @@ static const struct MenuAction MultichoiceList_Exit[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_FrontierAiLevel[] =
+{
+    { COMPOUND_STRING("いつもの") },
+    { COMPOUND_STRING("むずかしい") },
+    { COMPOUND_STRING("さいきょう") },
+    { gText_Exit },
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -1294,6 +1302,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_HOF_VICTORIES_QUIT]                         = MULTICHOICE(sMultichoiceList_HOF_Victories_Quit),
     [MULTI_EGGS_VICTORIES_QUIT]                        = MULTICHOICE(sMultichoiceList_Eggs_Victories_Quit),
     [MULTI_HOF_EGGS_VICTORIES_QUIT]                    = MULTICHOICE(sMultichoiceList_HOF_Eggs_Victories_Quit),
+    [MULTI_FRONTIER_AI_LEVEL]                          = MULTICHOICE(MultichoiceList_FrontierAiLevel),
 };
 
 const u8 *const gStdStrings[] =

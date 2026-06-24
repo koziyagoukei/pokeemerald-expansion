@@ -169,8 +169,8 @@ enum
     MULTI_HOF_VICTORIES_QUIT,
     MULTI_EGGS_VICTORIES_QUIT,
     MULTI_HOF_EGGS_VICTORIES_QUIT,
+    MULTI_FRONTIER_AI_LEVEL,
 };
-
 #define MULTI_NONE 255
 
 // Lilycove SS Tidal Multichoice Selections

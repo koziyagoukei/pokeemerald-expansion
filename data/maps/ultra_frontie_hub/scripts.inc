@@ -146,3 +146,66 @@ UltraFrontieHub_EventScript_OpenFrontierPokemonCreator::
 
 UltraFrontieHub_Text_FrontierPokemonCreator::
 	.string "フロンティアようの\nポケモンを つくりますか？$"
+
+UltraFrontieHub_EventScript_FrontierItemGiver::
+	lock
+	faceplayer
+	msgbox UltraFrontieHub_Text_FrontierItemGiver, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq UltraFrontieHub_EventScript_OpenFrontierItemGiver
+	msgbox UltraFrontieHub_Text_Cancel, MSGBOX_DEFAULT
+	release
+	end
+
+UltraFrontieHub_EventScript_OpenFrontierItemGiver::
+	closemessage
+	special Special_OpenFrontierItemGiver
+	waitstate
+	release
+	end
+
+UltraFrontieHub_Text_FrontierItemGiver::
+	.string "フロンティアようの\nどうぐを もらいますか？$"
+
+UltraFrontieHub_EventScript_SetFrontierAi::
+	lock
+	faceplayer
+	msgbox UltraFrontieHub_Text_SetFrontierAi, MSGBOX_DEFAULT
+	multichoice 0, 0, MULTI_FRONTIER_AI_LEVEL, FALSE
+	switch VAR_RESULT
+	case 0, UltraFrontieHub_EventScript_SetFrontierAi_Normal
+	case 1, UltraFrontieHub_EventScript_SetFrontierAi_Hard
+	case 2, UltraFrontieHub_EventScript_SetFrontierAi_Strongest
+	msgbox UltraFrontieHub_Text_Cancel, MSGBOX_DEFAULT
+	release
+	end
+
+UltraFrontieHub_EventScript_SetFrontierAi_Normal::
+	special Special_SetFrontierAiNormal
+	msgbox UltraFrontieHub_Text_SetFrontierAi_NormalDone, MSGBOX_DEFAULT
+	release
+	end
+
+UltraFrontieHub_EventScript_SetFrontierAi_Hard::
+	special Special_SetFrontierAiHard
+	msgbox UltraFrontieHub_Text_SetFrontierAi_HardDone, MSGBOX_DEFAULT
+	release
+	end
+
+UltraFrontieHub_EventScript_SetFrontierAi_Strongest::
+	special Special_SetFrontierAiStrongest
+	msgbox UltraFrontieHub_Text_SetFrontierAi_StrongestDone, MSGBOX_DEFAULT
+	release
+	end
+
+UltraFrontieHub_Text_SetFrontierAi::
+	.string "フロンティアの AIを\nえらんでください。$"
+
+UltraFrontieHub_Text_SetFrontierAi_NormalDone::
+	.string "AIを いつものに\nしました。$"
+
+UltraFrontieHub_Text_SetFrontierAi_HardDone::
+	.string "AIを むずかしいに\nしました。$"
+
+UltraFrontieHub_Text_SetFrontierAi_StrongestDone::
+	.string "AIを さいきょうに\nしました。$"
