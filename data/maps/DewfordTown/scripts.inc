@@ -628,164 +628,152 @@ DewfordTown_EventScript_PhraseNotTrendyEnough::
 	end
 
 DewfordTown_Text_TinyIslandCommunity:
-	.string "DEWFORD is a tiny island community.\n"
-	.string "If something gets trendy here,\l"
-	.string "everyone picks up on it right away.$"
+	.string "ムロタウンって　ちいさな　しま　だから\n"
+	.string "なにかが　はやりだすと\l"
+	.string "みんな　すぐに　まねを　するのよね$"
 
 DewfordTown_Text_TownSign:
-	.string "DEWFORD TOWN\n"
-	.string "A tiny island in the blue sea.$"
+	.string "ここは　ムロ　タウン\n"
+	.string "あおい　うみに　うかぶ　ちいさな　しま$"
 
 DewfordTown_Text_GymSign:
-	.string "DEWFORD TOWN POKEMON GYM\n"
-	.string "LEADER: BRAWLY\l"
-	.string "A big wave in fighting!$"
+	.string "ムロ　タウン　ポケモンジム\n"
+	.string "リーダー　トウキ\l"
+	.string "かくとう　ビッグウェーブ!$"
 
 DewfordTown_Text_HallSign:
-	.string "DEWFORD HALL\n"
-	.string "Everyone's information exchange!$"
+	.string "「ムロの　しゅうかいじょ」\n"
+	.string "みんなの　じょうほう　こうかんの　ばしょ$"
 
 Route104_Text_LandedInDewfordDeliverLetter:
-	.string "MR. BRINEY: Ahoy!\n"
-	.string "We've hit land in DEWFORD.\p"
-	.string "I suppose you're off to deliver that\n"
-	.string "LETTER to, who was it now, STEVEN!$"
+	.string "ハギ『ほい!　ムロに　とうちゃく!\p"
+	.string "たしか　ダイゴとやらに\n"
+	.string "てがみを　とどけるんだったな!$"
 
 DewfordTown_Text_SetSailBackToPetalburg:
-	.string "MR. BRINEY: Have you delivered your\n"
-	.string "LETTER?\p"
-	.string "Or were you meaning to sail back to\n"
-	.string "PETALBURG?$"
+	.string "ハギ『てがみは　とどけたのかい?\p"
+	.string "それとも　トウカに　もどるのかね?$"
 
 DewfordTown_Text_PetalburgWereSettingSail2:
-	.string "MR. BRINEY: PETALBURG it is, then!\p"
-	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+	.string "ハギ『では　トウカに　もどると　しよう!\p"
+	.string "よっしゃ!　いくぞ　ピーコちゃん!$"
 
 DewfordTown_Text_GoDeliverIllBeWaiting:
-	.string "MR. BRINEY: Then you go on and deliver\n"
-	.string "the LETTER. I'll be waiting.$"
+	.string "ハギ『では　てがみを　とどけておいで\n"
+	.string "わしは　ここで　まっておるから$"
 
 DewfordTown_Text_BrineyLandedInDewford:
-	.string "MR. BRINEY: Ahoy!\n"
-	.string "We've hit land in DEWFORD!\p"
-	.string "You just go on and tell me whenever\n"
-	.string "you want to set sail again!$"
+	.string "ハギ『ほい!　ムロタウンに　とうちゃく!\p"
+	.string "ふねに　のりたくなったら\n"
+	.string "また　わしに　こえを　かけておくれ!$"
 
 DewfordTown_Text_WhereAreWeBound:
-	.string "MR. BRINEY: Ahoy!\n"
-	.string "For you, I'll go out to sea anytime!\p"
-	.string "Now, my friend, where are we bound?$"
+	.string "ハギ『やあ!　きみのため　なら\n"
+	.string "いつでも　ふねを　だそう!\p"
+	.string "きみが　いきたいのは　どこ　かな?$"
 
 DewfordTown_Text_PetalburgWereSettingSail:
-	.string "MR. BRINEY: PETALBURG, is it?\p"
-	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+	.string "ハギ『トウカシティ　か\p"
+	.string "よっしゃ!　いくぞ　ピーコちゃん!$"
 
 DewfordTown_Text_SlateportWereSettingSail:
-	.string "MR. BRINEY: SLATEPORT, is it?\p"
-	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+	.string "ハギ『カイナシティ　か\p"
+	.string "よっしゃ!　いくぞ　ピーコちゃん!$"
 
 DewfordTown_Text_JustTellMeWhenYouNeedToSetSail:
-	.string "MR. BRINEY: You just tell me whenever\n"
-	.string "you need to set sail again!$"
+	.string "ハギ『ふねに　のる　ひつようが　あるときは\n"
+	.string "いつでも　こえを　かけておくれ$"
 
 DewfordTown_Text_GettingItchToFish:
-	.string "This is a renowned fishing spot.\n"
-	.string "Are you getting the itch to fish?$"
+	.string "このへんは　つりの　めいしょ　なんだ\n"
+	.string "きみも　つりが　したくなった?$"
 
 DewfordTown_Text_GiveYouOneOfMyRods:
-	.string "I hear you, and I like what\n"
-	.string "you're saying!\p"
-	.string "I'll give you one of my fishing RODS.$"
+	.string "うんうん　うれしいな\n"
+	.string "わたしの　つりざお　わけてあげよう!$"
 
 DewfordTown_Text_ThrowInFishingAdvice:
-	.string "And, as an added bonus, I'll even throw\n"
-	.string "in a little fishing advice!\p"
-	.string "First, you want to face the water,\n"
-	.string "then use the ROD.\p"
-	.string "Focus your mind...\n"
-	.string "If you get a bite, pull on the ROD.\p"
-	.string "Sometimes you can snag something\n"
-	.string "immediately, but with bigger catches,\l"
-	.string "you need to time the pulls on your ROD\l"
-	.string "to haul them in.$"
+	.string "よーしっ　だいサービス!\n"
+	.string "つりの　コツも　せつめい　しておくよ!\p"
+	.string "まずは　すいめんに　むかって\n"
+	.string "つりざおを　つかう!\p"
+	.string "そして　きもちを　しゅうちゅう　させ……\n"
+	.string "ひいてる　ひいてる!!　となったら\l"
+	.string "すばやく　つりざおを　ひくんだ!\p"
+	.string "すぐに　ひきあげられる　ときも　あるけど\n"
+	.string "おおものは　なんども　タイミングを\l"
+	.string "あわせる　ひつようが　あるんだよ!$"
 
 DewfordTown_Text_ThatsTooBadThen:
-	.string "Oh, is that so?\n"
-	.string "That's too bad, then.$"
+	.string "あらら……\n"
+	.string "それは　ざんねん$"
 
 DewfordTown_Text_HowsYourFishing:
-	.string "Yo!\n"
-	.string "How's your fishing?$"
+	.string "よっ!\n"
+	.string "つりの　ちょうしは　どう?$"
 
 DewfordTown_Text_GreatHaulInSomeBigOnes:
-	.string "Is that right! That's great!\n"
-	.string "Haul in some big ones!$"
+	.string "そうか!　そりゃ　すごい!\n"
+	.string "おおものを　つりあげて　くれよ!$"
 
 DewfordTown_Text_FishingAdvice:
-	.string "Oh, hey, don't get down on yourself!\n"
-	.string "I'll give you a little fishing advice.\p"
-	.string "First, you want to face the water,\n"
-	.string "then use the ROD.\p"
-	.string "Focus your mind...\n"
-	.string "If you get a bite, pull the ROD.\p"
-	.string "Sometimes you can snag something\n"
-	.string "immediately, but with bigger catches,\l"
-	.string "you need to time the pulls on your ROD\l"
-	.string "to haul them in.$"
+	.string "なんだよ　ガッカリ　しないでよ!\n"
+	.string "つりの　コツを　おしえて　あげるから!\p"
+	.string "まずは　すいめんに　むかって\n"
+	.string "つりざおを　つかう!\p"
+	.string "そして　きもちを　しゅうちゅう　させ……\n"
+	.string "ひいてる　ひいてる!!　となったら\l"
+	.string "すばやく　つりざおを　ひくんだ!\p"
+	.string "すぐに　ひきあげられる　ときも　あるけど\n"
+	.string "おおものは　なんども　タイミングを\l"
+	.string "あわせる　ひつようが　あるんだよ!$"
 
 DewfordTown_Text_XIsTheBiggestHappeningThingRight:
-	.string "I like what's hip, happening, and trendy.\n"
-	.string "I'm always checking it out.\p"
-	.string "Listen, have you heard about this new\n"
-	.string "{STR_VAR_1}?\p"
-	.string "That's right!\n"
-	.string "Of course you know!\p"
-	.string "I mean, sheesh,\n"
-	.string "{STR_VAR_1}...\l"
-	.string "It's the hottest thing in cool!\p"
-	.string "Wherever you're from,\n"
-	.string "{STR_VAR_1}\l"
-	.string "is the biggest happening thing, right?$"
+	.string "ぼく　はやってる　ものが　すきで\n"
+	.string "いつも　チェック　してるんだ\p"
+	.string "ねぇ　『{STR_VAR_1}』って\n"
+	.string "しってるかい?\p"
+	.string "もちろん　しってるよね!\p"
+	.string "だって　いま\n"
+	.string "『{STR_VAR_1}』が\l"
+	.string "だいりゅうこう　してるからね!\p"
+	.string "きみの　まわりでも\n"
+	.string "『{STR_VAR_1}』が\l"
+	.string "はやってる　だろ?$"
 
 DewfordTown_Text_TellMeWhatsNewAndIn:
-	.string "Hunh?\n"
-	.string "It's not the hip and happening thing?\p"
-	.string "Well, hey, you have to tell me,\n"
-	.string "what's new and what's in?$"
+	.string "え?\n"
+	.string "はやって　ないの!?\p"
+	.string "じゃあ　いま　なにが　はやってるか\n"
+	.string "きかせてよ!$"
 
 DewfordTown_Text_OfCourseIKnowAboutThat:
-	.string "Hunh?\n"
-	.string "{STR_VAR_2}?\p"
-	.string "... ...\p"
-	.string "...Uh... Yeah! That's right!\n"
-	.string "Yeah, I knew that! Knew it all along!\p"
-	.string "Of course I know about that!\n"
-	.string "{STR_VAR_2}, right?\p"
-	.string "Yeah, that's it, it's there!\n"
-	.string "Isn't {STR_VAR_2}\l"
-	.string "the coolest, or what?\p"
-	.string "It's the hippest thing in hip.\n"
-	.string "You think I'd not know about it?\p"
-	.string "{STR_VAR_1}...\n"
-	.string "It's, like, so five minutes ago.\p"
-	.string "Now, {STR_VAR_2} is\n"
-	.string "what's vital and in tune with the times!$"
+	.string "え?　『{STR_VAR_2}』?\p"
+	.string "……\p"
+	.string "…あ!　あぁ!\n"
+	.string "しってる　しってるよ!\p"
+	.string "もっ　もちろん　しってるさ!\n"
+	.string "『{STR_VAR_2}』　だろ?\p"
+	.string "いいよね!\n"
+	.string "『{STR_VAR_2}』　って!\p"
+	.string "いま　すごく　はやってる　よね\n"
+	.string "ぼくが　しらないはず　ないじゃ　ないか!\p"
+	.string "『{STR_VAR_1}』　なんて\n"
+	.string "もう　じだいおくれ\p"
+	.string "いまは　『{STR_VAR_2}』の\n"
+	.string "じだい　だね!$"
 
 DewfordTown_Text_XHuhIThinkYIsCool:
-	.string "Hmm...\n"
-	.string "{STR_VAR_2}, huh?\p"
-	.string "But personally, I think\n"
-	.string "{STR_VAR_1}\l"
-	.string "is what's real in cool.$"
+	.string "ふーん\n"
+	.string "『{STR_VAR_2}』　か…\p"でも　ぼくは\n"
+	.string "『{STR_VAR_1}』　のほうが\l"
+	.string "いいと　おもうけどね$"
 
 DewfordTown_Text_HearOfAnyTrendsComeShareWithMe:
-	.string "Well, if you hear of any happening new\n"
-	.string "trends, come share them with me, okay?$"
+	.string "じゃあ　あたらしい　りゅうこうが　あったら\n"
+	.string "また　きかせて　くれよ!$"
 
 DewfordTown_Text_YeahDefinitionOfInRightNow:
-	.string "Yeah, absolutely right!\p"
-	.string "{STR_VAR_1} is the\n"
-	.string "definition of in right now.$"
+	.string "そうだろ!\p"
+	.string "やっぱり　いまは\n"
+	.string "『{STR_VAR_1}』　だよね!$"

@@ -283,177 +283,178 @@ DewfordTown_Gym_EventScript_GymStatue::
 	end
 
 DewfordTown_Gym_Text_GymGuideAdvice:
-	.string "Hey, how's it going, CHAMPION-\n"
-	.string "bound {PLAYER}?\p"
-	.string "DEWFORD's GYM LEADER BRAWLY commands\n"
-	.string "FIGHTING-type POKEMON.\p"
-	.string "Going against him with NORMAL-type\n"
-	.string "POKEMON is asking for trouble.\p"
-	.string "FIGHTING POKEMON will lay a serious\n"
-	.string "smack down on NORMAL POKEMON,\l"
-	.string "so be careful!\p"
-	.string "What's worse, the GYM is as dark as\n"
-	.string "the ocean floor.\p"
-	.string "But it will get brighter after defeating\n"
-	.string "the TRAINERS in your way.\p"
-	.string "Hey, okay, go for it!$"
+	.string "げんき　しとぉや!!\n"
+	.string "チャンピオンを　めざす　主!!\p"
+	.string "ムロタウン　ジムの　リーダー　トウキは\n"
+	.string "かくとうタイプ　ポケモンの　つかいてだ!\p"
+	.string "ノーマルタイプで　むかうと\n"
+	.string "きびしぃー　いちげきを　くらうから\l"
+	.string "きを　つけたほうが　いいぞ!\p"
+	.string "しかも!　この　ジムの　なかは\n"
+	.string "うみのそこ　みたいに　くらいんだ!\p"
+	.string "でも!　トレーナーを　ひとり　たおすごとに\n"
+	.string "だんだん　あかるく　なって　いくぞ!\p"
+	.string "じゃ　きばってこォー!!$"
 
 DewfordTown_Gym_Text_GymGuidePostVictory:
-	.string "Whoah! It's turned too bright in here!\p"
-	.string "Your future is bright, too!$"
+	.string "うおォ!　ずいぶん　あかるく　なったな!\p"
+	.string "きみの　みらいも　あかるいぞ!$"
 
 DewfordTown_Gym_Text_TakaoIntro:
-	.string "Might is right!\n"
-	.string "Come on!$"
+	.string "ちから　こそ　せいぎっ!\n"
+	.string "ドリャーッ!!$"
 
 DewfordTown_Gym_Text_TakaoDefeat:
-	.string "Not enough power...$"
+	.string "ちからぶそく　だった……!$"
 
 DewfordTown_Gym_Text_TakaoPostBattle:
-	.string "Your skill overcame my strength!\n"
-	.string "Your technique is commendable!$"
+	.string "じゅう　よく　ごうを　せいす!\n"
+	.string "みごとな　たたかいぶり　だった!$"
 
 DewfordTown_Gym_Text_JocelynIntro:
-	.string "There's no need for BRAWLY to be\n"
-	.string "involved!\p"
-	.string "I'll crush you!$"
+	.string "トウキさまと　たたかうまでも　ないわ!\n"
+	.string "わたしが　たおして　あげる!$"
 
 DewfordTown_Gym_Text_JocelynDefeat:
-	.string "But... How?\n"
-	.string "How could I lose so easily?$"
+	.string "まさか……\n"
+	.string "こんなに　かんたんに　やられるなんて$"
 
 DewfordTown_Gym_Text_JocelynPostBattle:
-	.string "I'm not going to waste this loss.\n"
-	.string "I'll use it to motivate me to train!\p"
-	.string "One day I'll become a GYM LEADER...\p"
-	.string "No, I'll become the POKEMON LEAGUE\n"
-	.string "CHAMPION!$"
+	.string "この　まけを　むだに　しないため\n"
+	.string "もっと　とっくん　する!\p"
+	.string "そして　いつかは　ジムリーダーに……\p"
+	.string "いえ　ポケモンリーグの\n"
+	.string "チャンピオンに　なるわよ!$"
 
 DewfordTown_Gym_Text_LauraIntro:
-	.string "Don't you dare brush me off!\n"
-	.string "It's not my fault if you cry!$"
+	.string "あたしを　あまく　みない　ことね!\n"
+	.string "ないても　しらないわよ!$"
 
 DewfordTown_Gym_Text_LauraDefeat:
-	.string "Waaaaaaah!\n"
-	.string "I lost!$"
+	.string "わぁーーーん!\n"
+	.string "まけたーーーっ!$"
 
 DewfordTown_Gym_Text_LauraPostBattle:
-	.string "I battle in the dark to make my heart\n"
-	.string "stronger.\p"
-	.string "But because it's so dark, I can never\n"
-	.string "see BRAWLY's face...$"
+	.string "くらやみの　なかで　たたかうことで\n"
+	.string "こころを　きたえるの\p"
+	.string "でも　まっくら　だから\n"
+	.string "トウキさまの　おかおを　みられない……$"
 
 DewfordTown_Gym_Text_LilithIntro:
-	.string "Ufufu...\n"
-	.string "Are you stumbling around in the dark?$"
+	.string "うふふ……!\n"
+	.string "くらくて　まよっているの　かな?$"
 
 DewfordTown_Gym_Text_LilithDefeat:
-	.string "Oh, you...\n"
-	.string "I don't want to know you!$"
+	.string "なによ　もう\n"
+	.string "しらない!$"
 
 DewfordTown_Gym_Text_LilithPostBattle:
-	.string "You deserve to stay lost and end up\n"
-	.string "back at the entrance again!$"
+	.string "あなた　なんて　このまま　まよって\n"
+	.string "いりぐちに　もどっちゃえば　いーのよ!$"
 
 DewfordTown_Gym_Text_BrendenIntro:
-	.string "I'll show you the gumption of\n"
-	.string "a sailing man!$"
+	.string "うみの　おとこの　いじを\n"
+	.string "みせつけて　やるぜぃ!$"
 
 DewfordTown_Gym_Text_BrendenDefeat:
-	.string "How'd this happen?\n"
-	.string "It's not like me to lose this way!$"
+	.string "どうしたぃ!\n"
+	.string "おれと　した　ことが……$"
 
 DewfordTown_Gym_Text_BrendenPostBattle:
-	.string "Oh, aye! You're worthy of seeing\n"
-	.string "our GYM LEADER.$"
+	.string "おう!　あんたなら\n"
+	.string "ジムリーダーに　いどむに　ふさわしいぜぃ!$"
 
 DewfordTown_Gym_Text_CristianIntro:
-	.string "If you mean to pass, it has to be\n"
-	.string "through me!$"
+	.string "ここを　とおる　なら\n"
+	.string "この　わしを　たおしてから　じゃ!$"
 
 DewfordTown_Gym_Text_CristianDefeat:
-	.string "Grrrrr!\n"
-	.string "Vastly overpowered!$"
+	.string "むうーん!\n"
+	.string "すごく　つよい……!$"
 
 DewfordTown_Gym_Text_CristianPostBattle:
-	.string "You win!\n"
-	.string "Go after that BADGE!$"
+	.string "わしの　まけじゃ!\n"
+	.string "がんばって　バッジ　とってこいよ!$"
 
 DewfordTown_Gym_Text_BrawlyIntro:
-	.string "I'm BRAWLY!\n"
-	.string "DEWFORD's GYM LEADER!\p"
-	.string "I've been churned in the rough waves\n"
-	.string "of these parts, and I've grown tough\l"
-	.string "in the pitch-black cave!\p"
-	.string "So you wanted to challenge me?\n"
-	.string "Let me see what you're made of!$"
+	.string "ボクは　ムロ　ポケモンジム\n"
+	.string "リーダーの　トウキ!\p"
+	.string "この　あたりの\n"
+	.string "はげしい　なみに　もまれ……\p"
+	.string "くらい　どうくつで\n"
+	.string "しゅぎょう　して　いるのさ!\p"
+	.string "ボクに　ちょうせん　しよう　という\n"
+	.string "キミの　じつりょく……\l"
+	.string "どれほどの　ものか　みせて　もらうよ!$"
 
 DewfordTown_Gym_Text_BrawlyDefeat:
-	.string "Whoah, wow! You made a much bigger\n"
-	.string "splash than I expected!\p"
-	.string "You swamped me!\p"
-	.string "Okay, you've got me.\n"
-	.string "Take this GYM BADGE!$"
+	.string "ううーん　よそう　していたより\n"
+	.string "キミは　ビッグウェーブ!\p"
+	.string "わかった!\n"
+	.string "この　バッジを　もっていきな!$"
 
 DewfordTown_Gym_Text_ReceivedKnuckleBadge:
-	.string "{PLAYER} received the KNUCKLE BADGE\n"
-	.string "from BRAWLY.$"
+	.string "{PLAYER}は　トウキから\n"
+	.string "ナックルバッジを　もらった!$"
 
 DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis:
-	.string "The KNUCKLE BADGE makes all POKEMON\n"
-	.string "up to Level 30, even those you get in\l"
-	.string "trades, obey without question.\p"
-	.string "And, you'll be able to use the HM move\n"
-	.string "FLASH outside of battle.\p"
-	.string "If you'd like, use this TECHNICAL\n"
-	.string "MACHINE, too.$"
+	.string "ナックルバッジには\n"
+	.string "レベル30までの　ポケモンなら\l"
+	.string "ひとから　もらった　ポケモンでも\l"
+	.string "すなおに　する　こうかが　ある!\p"
+	.string "それに　たたかって　いなくても\n"
+	.string "ひでんわざの　フラッシュを　つかえる!\p"
+	.string "この　わざマシン\n"
+	.string "よかったら　つかいな!$"
 
 DewfordTown_Gym_Text_ExplainBulkUp:
-	.string "That TM08 contains BULK UP.\p"
-	.string "It's a move that raises both ATTACK\n"
-	.string "and DEFENSE stats.\p"
-	.string "... ... ... ... ... ...$"
+	.string "その　わざマシン08　には\n"
+	.string "ビルドアップが　はいっている!\p"
+	.string "こうげきりょくと　ぼうぎょりょくを\n"
+	.string "あげる　わざ　なのさ!\p"
+	.string "……　……　……$"
 
 DewfordTown_Gym_Text_RegisteredBrawly:
-	.string "Registered GYM LEADER BRAWLY\n"
-	.string "in the POKeNAV.$"
+	.string "ジムリーダー　トウキを\n"
+	.string "ポケナビに　とうろく　した!$"
 
 DewfordTown_Gym_Text_BrawlyPostBattle:
-	.string "I can see your talent becoming a giant\n"
-	.string "wave to cause a storm of astonishment\l"
-	.string "among TRAINERS one day!$"
+	.string "キミの　さいのうは\n"
+	.string "いつのひか　おおきな　なみと　なって\p"
+	.string "ポケモン　トレーナーたちの　あいだに\n"
+	.string "おどろきの　あらしを　まきおこすだろう!$"
 
 DewfordTown_Gym_Text_GymStatue:
-	.string "DEWFORD TOWN POKEMON GYM$"
+	.string "ムロタウン　ポケモンジム$"
 
 DewfordTown_Gym_Text_GymStatueCertified:
-	.string "DEWFORD TOWN POKEMON GYM\p"
-	.string "BRAWLY'S CERTIFIED TRAINERS:\n"
+	.string "ムロタウン　ポケモンジム\p"
+	.string "トウキ　にんてい　トレーナー!\n"
 	.string "{PLAYER}$"
 
 DewfordTown_Gym_Text_BrawlyPreRematch:
-	.string "BRAWLY: A wave may draw back, but it\n"
-	.string "always returns to the shore.\p"
-	.string "A giant wave of a talent like you...\n"
-	.string "I knew you would return!\p"
-	.string "Show me how much higher\n"
-	.string "you've gone!$"
+	.string "トウキ『なみというのは　いちど　ひいても\n"
+	.string "いつか　かならず　はまべに　もどってくる\p"
+	.string "キミほどの　ビッグウェーブだ\n"
+	.string "きっと　また　くると　おもっていたよ!\p"
+	.string "さあ　どれほど　たかさを　ましたのか\n"
+	.string "ボクに　みせてくれ!$"
 
 DewfordTown_Gym_Text_BrawlyRematchDefeat:
-	.string "Wow!\n"
-	.string "Swamped again!$"
+	.string "わーおっ!\n"
+	.string "キミに　のみこまれそうだ!$"
 
 DewfordTown_Gym_Text_BrawlyPostRematch:
-	.string "BRAWLY: Battling is vast and it's deep.\n"
-	.string "You can't see the bottom.\l"
-	.string "It's just like the sea of HOENN!$"
+	.string "トウキ『やっぱり　ポケモン　しょうぶは\n"
+	.string "そこが　みえないほど　ふかく　ひろい!\l"
+	.string "まるで　ホウエンの　うみの　ようだね!$"
 
 DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons:
-	.string "BRAWLY: A wave may draw back, but it\n"
-	.string "always returns to the shore.\p"
-	.string "A giant wave of a talent like you...\n"
-	.string "I knew you would return!\p"
-	.string "Oh? You only have one POKEMON\n"
-	.string "that can battle.\p"
-	.string "I'm sorry, but I'd like you to come back\n"
-	.string "with at least two POKEMON.$"
+	.string "トウキ『なみというのは　いちど　ひいても\n"
+	.string "いつか　かならず　はまべに　もどってくる\p"
+	.string "キミほどの　ビッグウェーブだ\n"
+	.string "きっと　また　くると　おもっていたよ!\p"
+	.string "……あれ?　たたかえる　ポケモンを\n"
+	.string "1ひきしか　もっていないんだね\p"
+	.string "すまないけど　2ひき　いじょうの\n"
+	.string "ポケモンを　もって　また　きてくれよ$"
