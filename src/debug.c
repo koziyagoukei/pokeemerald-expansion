@@ -288,6 +288,7 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId);
 
 static void DebugAction_PCBag_Fill_PCBoxes_Fast(u8 taskId);
 static void DebugAction_PCBag_Fill_PCBoxes_Slow(u8 taskId);
+static void DebugAction_PCBag_Fill_PCBoxes_Generation(u8 taskId, const void *params);
 static void DebugAction_PCBag_Fill_PCItemStorage(u8 taskId);
 static void DebugAction_PCBag_Fill_PocketItems(u8 taskId);
 static void DebugAction_PCBag_Fill_PocketPokeBalls(u8 taskId);
@@ -601,6 +602,15 @@ static const struct DebugMenuOption sDebugMenu_Actions_PCBag_Fill[] =
 {
     { COMPOUND_STRING("{JPN}ボックスを すばやく うめる"),        DebugAction_PCBag_Fill_PCBoxes_Fast },
     { COMPOUND_STRING("{JPN}ボックスを ゆっくり うめる"), DebugAction_PCBag_Fill_PCBoxes_Slow },
+    { COMPOUND_STRING("{JPN}1せだいを ボックスへ"), DebugAction_PCBag_Fill_PCBoxes_Generation, (void *)0 },
+    { COMPOUND_STRING("{JPN}2せだいを ボックスへ"), DebugAction_PCBag_Fill_PCBoxes_Generation, (void *)1 },
+    { COMPOUND_STRING("{JPN}3せだいを ボックスへ"), DebugAction_PCBag_Fill_PCBoxes_Generation, (void *)2 },
+    { COMPOUND_STRING("{JPN}4せだいを ボックスへ"), DebugAction_PCBag_Fill_PCBoxes_Generation, (void *)3 },
+    { COMPOUND_STRING("{JPN}5せだいを ボックスへ"), DebugAction_PCBag_Fill_PCBoxes_Generation, (void *)4 },
+    { COMPOUND_STRING("{JPN}6せだいを ボックスへ"), DebugAction_PCBag_Fill_PCBoxes_Generation, (void *)5 },
+    { COMPOUND_STRING("{JPN}7せだいを ボックスへ"), DebugAction_PCBag_Fill_PCBoxes_Generation, (void *)6 },
+    { COMPOUND_STRING("{JPN}8せだいを ボックスへ"), DebugAction_PCBag_Fill_PCBoxes_Generation, (void *)7 },
+    { COMPOUND_STRING("{JPN}9せだいを ボックスへ"), DebugAction_PCBag_Fill_PCBoxes_Generation, (void *)8 },
     { COMPOUND_STRING("{JPN}パソコンどうぐを うめる") ,            DebugAction_PCBag_Fill_PCItemStorage },
     { COMPOUND_STRING("{JPN}どうぐポケットを うめる"),         DebugAction_PCBag_Fill_PocketItems },
     { COMPOUND_STRING("{JPN}ボールポケットを うめる"),    DebugAction_PCBag_Fill_PocketPokeBalls },
@@ -3735,6 +3745,24 @@ static void DebugAction_TimeMenu_ChangeWeekdays(u8 taskId)
 
 // *******************************
 // Actions PCBag
+struct DebugGenerationRange
+{
+    enum NationalDexOrder first;
+    enum NationalDexOrder last;
+};
+
+static const struct DebugGenerationRange sDebugGenerationRanges[] =
+{
+    { NATIONAL_DEX_BULBASAUR,   NATIONAL_DEX_MEW },
+    { NATIONAL_DEX_CHIKORITA,   NATIONAL_DEX_CELEBI },
+    { NATIONAL_DEX_TREECKO,     NATIONAL_DEX_DEOXYS },
+    { NATIONAL_DEX_TURTWIG,     NATIONAL_DEX_ARCEUS },
+    { NATIONAL_DEX_VICTINI,     NATIONAL_DEX_GENESECT },
+    { NATIONAL_DEX_CHESPIN,     NATIONAL_DEX_VOLCANION },
+    { NATIONAL_DEX_ROWLET,      NATIONAL_DEX_MELMETAL },
+    { NATIONAL_DEX_GROOKEY,     NATIONAL_DEX_ENAMORUS },
+    { NATIONAL_DEX_SPRIGATITO,  NATIONAL_DEX_PECHARUNT },
+};
 
 static enum Species GetNextSpecies(enum Species species)
 {
@@ -3807,6 +3835,59 @@ static void DebugAction_PCBag_Fill_PCBoxes_Slow(u8 taskId)
         PlayBGM(GetCurrentMapMusic());
 
     Debug_DestroyMenu_Full_Script(taskId, Debug_BoxFilledMessage);
+}
+
+static bool32 Debug_IsSpeciesInGeneration(enum Species species, const struct DebugGenerationRange *range)
+{
+    enum NationalDexOrder natDexNum = gSpeciesInfo[species].natDexNum;
+
+    return IsSpeciesEnabled(species)
+        && natDexNum >= range->first
+        && natDexNum <= range->last;
+}
+
+static void Debug_ClearPCBoxes(void)
+{
+    u32 boxId, boxPosition;
+
+    for (boxId = 0; boxId < TOTAL_BOXES_COUNT; boxId++)
+    {
+        for (boxPosition = 0; boxPosition < IN_BOX_COUNT; boxPosition++)
+            ZeroBoxMonAt(boxId, boxPosition);
+    }
+}
+
+static void DebugAction_PCBag_Fill_PCBoxes_Generation(u8 taskId, const void *params)
+{
+    u32 generation = (u32)params;
+    u32 boxId = 0;
+    u32 boxPosition = 0;
+    enum Species species;
+    struct BoxPokemon boxMon;
+    const struct DebugGenerationRange *range = &sDebugGenerationRanges[generation];
+
+    Debug_ClearPCBoxes();
+
+    for (species = SPECIES_BULBASAUR; species < NUM_SPECIES && boxId < TOTAL_BOXES_COUNT; species++)
+    {
+        if (!Debug_IsSpeciesInGeneration(species, range))
+            continue;
+
+        CreateBoxMon(&boxMon, species, 100, Random32(), OTID_STRUCT_PLAYER_ID);
+        SetBoxMonIVs(&boxMon, USE_RANDOM_IVS);
+        GiveBoxMonInitialMoveset(&boxMon);
+        SetBoxMonAt(boxId, boxPosition, &boxMon);
+
+        if (++boxPosition >= IN_BOX_COUNT)
+        {
+            boxPosition = 0;
+            boxId++;
+        }
+    }
+
+    FlagSet(FLAG_SYS_POKEMON_GET);
+    Debug_DestroyMenu_Full(taskId);
+    ScriptContext_Enable();
 }
 
 static void DebugAction_PCBag_Fill_PCItemStorage(u8 taskId)
