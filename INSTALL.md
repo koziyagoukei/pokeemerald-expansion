@@ -1,190 +1,599 @@
-〜書いてあるとおりにしても動かねぇよというあなたへ〜
+# Windows + WSL 環境でのビルド手順
 
-expansionの基盤であるpokeemeraldの方のインストール手順読んだ方が早いです。
-日本語で手順を書くのは余裕があったら書きます。
+この文書は、Windows 10 / Windows 11 上で WSL を使い、`pokeemerald` / `pokeemerald-expansion` 系プロジェクトをビルドするための日本語メモです。
 
-# Instructions
-Install instructions for each supported operating system can be found in their respective directories under `docs/install/`.
-Lines to those can be found under each heading.
-This file only contains a short introduction to each supported system.
-If you run into trouble, ask for help on Discord (see [README.md](README.md)).
+本家 `pret/pokeemerald` の `INSTALL.md` を参考にしていますが、本プロジェクト向けに内容を絞っています。
 
-After completing the install instructions for your OS, proceed to [Building pokeemerald-expansion](#building-pokeemerald-expansion).
+正確な最新情報は、必ず本家の `INSTALL.md` や、使用しているリポジトリの説明も確認してください。
 
-## Windows
-**Windows needs one of the systems to build the project**
+## 0. この文書について
 
-**A note of caution**: As Windows 7 and Windows 8 are officially unsupported by Microsoft, some maintainers are unwilling to maintain the Windows 7/8 instructions. Thus, these instructions may break in the future with fixes taking longer than fixes to the Windows 10/11 instructions.
+この文書では、以下の環境を想定しています。
 
-On Windows, the project can be built using the following systems:
-- WSL2, fastest
-- WSL1, 7 times slower than WSL2
-- Msys2, 20 times slower than WSL2
-- Cygwin, 30 timer slower than WSL2
-
-**NOTE**: Only WSL systems are recommended.
-
-[WSL Install instructions](docs/install/windows/WSL.md)
-
-[Msys2 Install instructions](docs/install/windows/MSYS2.md)
-
-[Cygwin Install instructions](docs/install/windows/CYGWIN.md)
-
-## Linux
-The project can be built on any Linux distribution.
-Distributions with instructions:
-- [Ubuntu](docs/install/linux/UBUNTU.md)
-- [Debian](docs/install/linux/DEBIAN.md)
-- [Arch Linux](docs/install/linux/ARCH_LINUX.md)
-- [NixOS](docs/install/linux/NIXOS.md)
-- [Fedora](docs/install/linux/FEDORA.md)
-
-Other distributions have to infer what to do from [general instructions](docs/install/linux/OTHERS.md).
-
-## Mac
-Some extra considerations exist to get the testing system working.
-
-[Mac instructions](docs/install/mac/MAC_OS.md)
-
-## ChromeOS
-Only tested on x86_64 based systems.
-
-[Chrome OS instructions](docs/install/chromeos/CHROME_OS.md)
-
-# Building pokeemerald-expansion
-Follow these steps to build `pokeemerald-expansion`.
-1. Navigate to the directory you want to keep the project in, be aware of any system specific limitations.
-2. Download `pokeemerald-expansion` with `git`
-
-    ```console
-    git clone https://github.com/rh-hideout/pokeemerald-expansion
-    ```
-3. Navigate to the newly downloaded project.
-
-    ```console
-    cd pokeemerald-expansion
-    ```
-4. Build the project.
-
-    ```console
-    make
-    ```
-5. If everything worked correctly, something very similar to this should be seen.
-
-    ```console
-    arm-none-eabi-ld: warning: ../../pokeemerald.elf has a LOAD segment with RWX permissions
-    Memory region         Used Size  Region Size  %age Used
-               EWRAM:      243354 B       256 KB     92.83%
-               IWRAM:       30492 B        32 KB     93.05%
-                 ROM:    26072244 B        32 MB     77.70%
-    cd build/modern && arm-none-eabi-ld  -T ../../ld_script_modern.ld --print-memory-usage -o ../../pokeemerald.elf <objs> <libs> | cat
-    tools/gbafix/gbafix pokeemerald.elf -t"POKEMON EMER" -cBPEE -m01 -r0 --silent
-    arm-none-eabi-objcopy -O binary pokeemerald.elf pokeemerald.gba
-    tools/gbafix/gbafix pokeemerald.gba -p --silent
-    ```
-    And the build ROM will be in the directory as `pokeemerald.gba`.
-
-# Building guidance
-
-## Parallel builds
-
-See [the GNU docs](https://www.gnu.org/software/make/manual/html_node/Parallel.html) and [this Stack Exchange thread](https://unix.stackexchange.com/questions/208568) for more information.
-
-To speed up building, first get the value of `nproc` by running the following command:
-```console
-nproc
-```
-Builds can then be sped up by running the following command:
-```console
-make -j<output of nproc>
-```
-Replace `<output of nproc>` with the number that the `nproc` command returned.
-
-`nproc` is not available on macOS. The alternative is `sysctl -n hw.ncpu` ([relevant Stack Overflow thread](https://stackoverflow.com/questions/1715580)).
-
-### Other toolchains
-
-To build using a toolchain other than devkitARM, override the `TOOLCHAIN` environment variable with the path to your toolchain, which must contain the subdirectory `bin`.
-```console
-make TOOLCHAIN="/path/to/toolchain/here
-```
-The following is an example:
-```console
-make TOOLCHAIN="/usr/local/arm-none-eabi"
-```
-To compile the `modern` target with this toolchain, the subdirectories `lib`, `include`, and `arm-none-eabi` must also be present.
-
-### Building with debug info
-
-To build **pokeemerald.elf** with debug symbols and debug-compatible optimization under a modern toolchain:
-```console
-make debug
+```text
+Windows 10 または Windows 11
+WSL / Ubuntu
+Git
+make
+arm-none-eabi 系ツールチェイン
+libpng
+agbcc
 ```
 
-# Choosing a branch
-**pokeemerald-expansion** has different branches that users can decide to use.
+この文書では、以下の環境については扱いません。
 
-## Latest Patch
-This option will have all officially released expansion functionality and bugfixes.
-
-## `master`
-The `master` branch has all of the functionality from "Latest Patch", as well as any bugfixes that have been discovered since that release.
-
-## `upcoming`
-The `master` branch has all of the functionality from "Latest Patch", as well as any functionality that has been added since that release.
-
-The bugfixes on `master` are occasionally merged into `upcoming`, but there is no official cadence.
-
-# Migrating from pokeemerald
-
-1. Set RHH as a git remote
-```console
-git remote add RHH https://github.com/rh-hideout/pokeemerald-expansion
+```text
+msys2
+Cygwin
+macOS
+Linux単体環境
 ```
 
-2. Pull your desired branch
-There are three different options to pull from.
-```console
-git pull RHH master # if you've chosen to use the upcoming branch, replace the word master with upcoming.
-# If you've chosen the latest patch, replace the word master with expansion
-# If you've chosen Latest Patch, replace the word master with expansion/1.11.0 where 1.11.0 is replaced with whatever the latest released version is.
+また、導入手順は環境やリポジトリの更新によって変わる場合があります。
+
+この文書は、Windows + WSL 環境での一例です。
+
+## 1. WSLをインストールする
+
+まず、WindowsにWSLを入れます。
+
+PowerShellを「管理者として実行」し、以下を実行します。
+
+```powershell
+wsl --install -d Ubuntu
 ```
 
-If you are not on the latest version of pret's pokeemerald, you should expect some merge conflicts that you'll need to resolve. Once complete, you'll be using **pokeemerald-expansion**.
+完了したら、Windowsを再起動します。
 
-# Updating pokeemerald-expansion
+再起動後、PowerShellで以下を実行し、UbuntuのWSLバージョンを確認します。
 
-1. Set RHH as a git remote
-```console
-git remote add RHH https://github.com/rh-hideout/pokeemerald-expansion
+```powershell
+wsl -l -v
 ```
 
-2. Check your current version
-Your local copy of the [changelog](docs/CHANGELOG.md) will be updated with the version your repo is on.
+WSL1で使う場合は、以下を実行します。
 
-3. Select a target version
-We recommend incrementally updating to the next version using the following order below.
-If you are on a version older than 1.6.2, you should target 1.6.2..
-    * 1.6.2
-    * 1.7.4
-    * 1.8.3
-    * 1.9.4
-    * 1.10.3
-
-For example, if your version is 1.7.0, you should update to 1.7.4.
-
-4. Pull the target version
-```console
-git pull RHH expansion/X.Y.Z # Replace X, Y and Z with the target version, such as `1.9.3`, `master`, or `upcoming`.
+```powershell
+wsl --set-version Ubuntu 1
 ```
 
-You may have merge conflicts that you need to resolve.
+環境によっては変換に時間がかかります。
 
-If you targeted a specific version that is not the latest version listed on the [tags](https://github.com/rh-hideout/pokeemerald-expansion/tags) page, you should repeat steps 3 and 4 until you are.
+すでにWSLを導入済みの場合は、この手順を飛ばしても構いません。
 
-# Useful additional tools
+## 2. Ubuntuを初期設定する
 
-* [porymap](https://github.com/huderlem/porymap) for viewing and editing maps
-* [porytiles](https://github.com/grunt-lucas/porytiles) for add new metatiles for maps
-* [poryscript](https://github.com/huderlem/poryscript) for scripting ([VS Code extension](https://marketplace.visualstudio.com/items?itemName=karathan.poryscript))
-* [Tilemap Studio](https://github.com/Rangi42/tilemap-studio) for viewing and editing tilemaps
+スタートメニューから `Ubuntu` を起動します。
+
+初回起動時に、Linux側のユーザー名とパスワードを作成します。
+
+パスワード入力中は画面に文字が表示されませんが、入力はされています。
+
+何も表示されないからといって「なにもしてないのにこわれた」と言わないでください。そういう仕様です。
+
+## 3. Ubuntuを更新する
+
+Ubuntuを開いた状態で、以下を実行します。
+
+```bash
+sudo apt update
+sudo apt upgrade
+```
+
+途中で確認が出た場合は、内容を確認して `Y` を入力します。
+
+## 4. 必要なパッケージを入れる
+
+ビルドに必要なパッケージをインストールします。
+
+```bash
+sudo apt install build-essential git libpng-dev binutils-arm-none-eabi gcc-arm-none-eabi
+```
+
+もし `apt` でうまくいかない場合は、以下のように `apt-get` を使ってください。
+
+```bash
+sudo apt-get install build-essential git libpng-dev binutils-arm-none-eabi gcc-arm-none-eabi
+```
+
+`gcc-arm-none-eabi` は環境によってインストール容量が大きくなる場合があります。
+
+ただし、`arm-none-eabi-gcc` が見つからない場合は必要になります。
+
+## 5. ARMツールチェインを確認する
+
+このプロジェクトのビルドには、GBA向けの ARM ツールチェインが必要です。
+
+このガイドでは、Windows + WSL / Ubuntu 環境で `arm-none-eabi` 系パッケージを使う例を扱います。
+
+一部の手順やプロジェクトでは、これに相当する環境を `devkitARM` と呼ぶことがあります。
+
+以下を実行して、コマンドが使えるか確認します。
+
+```bash
+arm-none-eabi-gcc --version
+arm-none-eabi-as --version
+arm-none-eabi-ld --version
+```
+
+`command not found` が出る場合は、以下をインストールしてください。
+
+```bash
+sudo apt install binutils-arm-none-eabi gcc-arm-none-eabi
+```
+
+## 6. 作業フォルダを作る
+
+この文書では、Windows側のデスクトップに `decomps` フォルダを作って作業する例で説明します。
+
+Windowsのエクスプローラーで、以下のようなフォルダを作成してください。
+
+```text
+C:\Users\<Windowsユーザー名>\Desktop\decomps
+```
+
+WSLから見ると、WindowsのCドライブは `/mnt/c/` にあります。
+
+Ubuntu上で、以下のように移動します。
+
+```bash
+cd /mnt/c/Users/<Windowsユーザー名>/Desktop/decomps
+```
+
+例:
+
+```bash
+cd /mnt/c/Users/Emerald/Desktop/decomps
+```
+
+パスに空白がある場合は、ダブルクォートで囲みます。
+
+```bash
+cd "/mnt/c/Users/<Windowsユーザー名>/Desktop/decomp folder"
+```
+
+ただし、トラブルを減らすため、作業フォルダ名には空白を入れない方が安全です。
+
+おすすめ:
+
+```text
+decomps
+pokeemerald-expansion
+```
+
+避けたい例:
+
+```text
+decomp folder
+pokemon hack project
+```
+
+## 7. リポジトリを取得する
+
+通常の `pokeemerald` を使う場合は、以下のように取得します。
+
+```bash
+git clone https://github.com/pret/pokeemerald.git
+cd pokeemerald
+```
+
+`pokeemerald-expansion` 系や、本プロジェクトのフォークを使う場合は、対象リポジトリのURLに置き換えてください。
+
+例:
+
+```bash
+git clone https://github.com/<ユーザー名>/<リポジトリ名>.git
+cd <リポジトリ名>
+```
+
+本プロジェクトを取得する場合の例:
+
+```bash
+git clone https://github.com/koziyagoukei/PokeEm-expansion-CanuseJP.git
+cd PokeEm-expansion-CanuseJP
+```
+
+## 8. agbccを用意する
+
+`pokeemerald` 系プロジェクトでは、GBA向けの古いCコンパイラである `agbcc` が必要になる場合があります。
+
+`agbcc` の導入方法は、使用しているプロジェクトや環境によって差が出ることがあります。
+
+この手順は一例です。
+
+うまくいかない場合は、本家 `pret/pokeemerald` の `INSTALL.md` や、使用しているリポジトリの説明を確認してください。
+
+### 8-1. 作業フォルダの構成
+
+この文書では、以下のような構成を想定します。
+
+```text
+decomps/
+  agbcc/
+  pokeemerald/
+```
+
+または、`pokeemerald-expansion` 系の場合は以下のようになります。
+
+```text
+decomps/
+  agbcc/
+  pokeemerald-expansion/
+```
+
+本プロジェクトの場合は、以下のようになります。
+
+```text
+decomps/
+  agbcc/
+  PokeEm-expansion-CanuseJP/
+```
+
+つまり、`agbcc` と `pokeemerald` / `pokeemerald-expansion` / 本プロジェクトを同じ階層に置きます。
+
+作業フォルダに移動します。
+
+```bash
+cd /mnt/c/Users/<Windowsユーザー名>/Desktop/decomps
+```
+
+### 8-2. agbccを取得する
+
+作業フォルダで、以下を実行します。
+
+```bash
+git clone https://github.com/pret/agbcc.git
+```
+
+取得後、以下のような構成になっていればOKです。
+
+```text
+decomps/
+  agbcc/
+  pokeemerald/
+```
+
+または:
+
+```text
+decomps/
+  agbcc/
+  PokeEm-expansion-CanuseJP/
+```
+
+### 8-3. agbccをビルドする
+
+`agbcc` フォルダに移動します。
+
+```bash
+cd agbcc
+```
+
+ビルドします。
+
+```bash
+./build.sh
+```
+
+環境によっては、実行権限がないと言われる場合があります。
+
+その場合は、以下を実行してからもう一度試してください。
+
+```bash
+chmod +x build.sh
+./build.sh
+```
+
+### 8-4. プロジェクト側へ戻る
+
+`agbcc` の準備が終わったら、プロジェクト側へ戻ります。
+
+`pokeemerald` の場合:
+
+```bash
+cd ../pokeemerald
+```
+
+`pokeemerald-expansion` の場合:
+
+```bash
+cd ../pokeemerald-expansion
+```
+
+本プロジェクトの場合:
+
+```bash
+cd ../PokeEm-expansion-CanuseJP
+```
+
+### 8-5. agbcc関連で失敗する場合
+
+`agbcc` 周りで失敗する場合、以下を確認してください。
+
+```text
+agbcc と pokeemerald 系プロジェクトが同じ階層にあるか
+agbcc/build.sh を実行したか
+build.sh に実行権限があるか
+WSL上で作業しているか
+WindowsのPowerShellやcmdではなく、Ubuntu側で実行しているか
+```
+
+想定する配置は以下です。
+
+```text
+decomps/
+  agbcc/
+  pokeemerald/
+```
+
+または:
+
+```text
+decomps/
+  agbcc/
+  PokeEm-expansion-CanuseJP/
+```
+
+ありがちな失敗例です。
+
+```text
+pokeemerald/
+  agbcc/
+```
+
+このように、`pokeemerald` フォルダの中に `agbcc` を入れてしまうと、プロジェクト側から見つからない場合があります。
+
+また、`agbcc` の導入手順はプロジェクト側の更新で変わる可能性があります。
+
+この手順で失敗する場合は、本家の `INSTALL.md` を確認してください。
+
+## 9. baserom.gbaを配置する
+
+ビルドには、元になるROMファイルが必要です。
+
+通常の `pokeemerald` 系プロジェクトでは、リポジトリのルートに以下の名前で配置します。
+
+```text
+baserom.gba
+```
+
+例:
+
+```text
+pokeemerald/
+  baserom.gba
+  Makefile
+  src/
+  data/
+```
+
+本プロジェクトの場合も、基本的にはリポジトリのルートに `baserom.gba` を配置します。
+
+例:
+
+```text
+PokeEm-expansion-CanuseJP/
+  baserom.gba
+  Makefile
+  src/
+  data/
+```
+
+ROMファイルそのものは配布しないでください。
+
+また、GitHubに誤ってコミットしないように注意してください。
+
+## 10. ビルドする
+
+リポジトリのルートで、以下を実行します。
+
+```bash
+make -j5
+```
+
+CPUに余裕がある場合は、数字を増やしても構いません。
+
+例:
+
+```bash
+make -j8
+```
+
+ビルドに成功すると、`.gba` ファイルが生成されます。
+
+## 11. よくあるエラー
+
+### `arm-none-eabi-gcc` が見つからない
+
+必要なパッケージが入っていない可能性があります。
+
+```bash
+sudo apt install binutils-arm-none-eabi gcc-arm-none-eabi
+```
+
+インストール後、以下を確認してください。
+
+```bash
+arm-none-eabi-gcc --version
+```
+
+### `png.h` が見つからない
+
+`libpng-dev` が入っていない可能性があります。
+
+```bash
+sudo apt install libpng-dev
+```
+
+### `baserom.gba` が見つからない
+
+ROMファイルの名前と場所を確認してください。
+
+プロジェクトのルートに、以下の名前で置かれている必要があります。
+
+```text
+baserom.gba
+```
+
+例:
+
+```text
+PokeEm-expansion-CanuseJP/
+  baserom.gba
+  Makefile
+```
+
+### `agbcc` が見つからない、またはビルドに失敗する
+
+`agbcc` の配置を確認してください。
+
+正しい例:
+
+```text
+decomps/
+  agbcc/
+  PokeEm-expansion-CanuseJP/
+```
+
+失敗しやすい例:
+
+```text
+PokeEm-expansion-CanuseJP/
+  agbcc/
+```
+
+また、`agbcc` 側で `build.sh` を実行しているか確認してください。
+
+```bash
+cd ../agbcc
+./build.sh
+```
+
+### パスに空白がある
+
+WSLでは、空白を含むパスはダブルクォートで囲む必要があります。
+
+```bash
+cd "/mnt/c/Users/<Windowsユーザー名>/Desktop/decomp folder"
+```
+
+ただし、トラブルを減らすため、作業フォルダ名には空白を入れない方が安全です。
+
+### Windows側で編集したファイルがWSLから見えない
+
+WSL上で作業している場合、Windows側のファイルは `/mnt/c/` 以下にあります。
+
+例:
+
+```text
+C:\Users\<Windowsユーザー名>\Desktop\decomps
+```
+
+は、WSLでは以下になります。
+
+```text
+/mnt/c/Users/<Windowsユーザー名>/Desktop/decomps
+```
+
+## 12. 日本語化プロジェクト向けの注意
+
+本プロジェクトでは、日本語表示のために `charmap` やフォント画像、テキストデータを変更している場合があります。
+
+そのため、翻訳作業中に以下のようなエラーが出ることがあります。
+
+```text
+unknown character U+....
+```
+
+これは、ソース内に `charmap` 未定義の文字が含まれている場合に発生します。
+
+特に混ざりやすい文字は以下です。
+
+```text
+全角スペース
+全角数字
+全角の波括弧 ｛ ｝
+全角英字
+未定義の記号
+```
+
+`{JPN}` や `{ENG}` などの制御コードは、必ず半角で書いてください。
+
+正しい例:
+
+```c
+COMPOUND_STRING("{JPN}バッグ")
+```
+
+誤った例:
+
+```c
+COMPOUND_STRING("｛JPN｝バッグ")
+```
+
+見た目は似ていますが、内部的には別文字です。
+
+コンパイラは空気を読んでくれません。
+
+## 13. ROMや公式素材をGitHubに上げない
+
+以下のようなファイルは、GitHubにコミットしないでください。
+
+```text
+baserom.gba
+*.gba
+*.sav
+*.srm
+公式ROMから直接抽出した素材
+```
+
+一応、初期状態では設定済みにしてありますが、必要に応じて `.gitignore` に追加してください。
+
+例:
+
+```gitignore
+baserom.gba
+*.gba
+*.sav
+*.srm
+JP/
+```
+
+ROM本体や公式素材をリポジトリに含めないように注意してください。
+
+## 14. うまくいったか確認する
+
+ビルド後、生成された `.gba` をエミュレータで起動して確認します。
+
+最低限、以下を確認してください。
+
+```text
+タイトル画面が表示される
+メニューが開ける
+戦闘に入れる
+日本語テキストが文字化けしていない
+セーブ・ロードできる
+```
+
+日本語化作業中は、ビルドが通っても表示が崩れる場合があります。
+
+その場合は、直近で変更したテキスト、フォント、`charmap` を確認してください。
+
+## 15. 補足
+
+この文書は、Windows + WSL 環境向けの簡易導入手順です。
+
+環境によっては、この手順だけではうまくいかない場合があります。
+
+その場合は、以下も確認してください。
+
+```text
+本家 pret/pokeemerald の INSTALL.md
+使用しているリポジトリの README
+使用しているリポジトリの INSTALL.md
+GitHub Issues
+```
+
+本プロジェクトは、`pokeemerald-expansion` 系の日本語対応を試すためのものです。
+
+完全な日本版エメラルドの再現ではなく、英語版ベースの decomp / expansion 環境で日本語表示や日本語テキストを扱いやすくすることを目的としています。
