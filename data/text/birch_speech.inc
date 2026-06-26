@@ -50,7 +50,7 @@ gText_Birch_YourePlayer::
 
 gText_Birch_AreYouReady::
 	.string "{JPN}よーし じゅんびは いいかい?\p"
-	.string これから きみ だけの ものがたりが\n"
+	.string "{JPN}これから きみ だけの ものがたりが\n"
 	.string "{JPN}はじまろうと している!\p"
 	.string "{JPN}ゆめと ぼうけんと であいに みちた\n"
 	.string "{JPN}ポケットモンスターの せかいへ\m"
