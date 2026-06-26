@@ -1043,7 +1043,7 @@ static const struct SpriteTemplate sSpriteTemplate_DisplayMon =
     .oam = &sOamData_DisplayMon,
 };
 
-static const u8 gText_PkmnIsSelected[] = _("{DYNAMIC 0} を せんたくしました");
+static const u8 gText_PkmnIsSelected[] = _("{DYNAMIC 0} を どうしますか?");
 
 static const struct StorageMessage sMessages[] =
 {
