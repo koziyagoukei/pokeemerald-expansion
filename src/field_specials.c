@@ -172,21 +172,21 @@ static u16 SampleResortGorgeousReward(void);
 static void Task_ShakeScreen(u8 taskId);
 static void Task_EndScreenShake(u8 taskId);
 
-static const u8 sText_BigGuy[] = _("Big guy");
-static const u8 sText_BigGirl[] = _("Big girl");
-static const u8 sText_Son[] = _("son");
-static const u8 sText_Daughter[] = _("daughter");
-static const u8 sText_99TimesPlus[] = _("99 times +");
-static const u8 sText_1MinutePlus[] = _("1 minute +");
-static const u8 sText_SpaceSeconds[] = _(" seconds");
-static const u8 sText_SpaceTimes[] = _(" time(s)");
+static const u8 sText_BigGuy[] = _("{JPN}おにいちゃん");
+static const u8 sText_BigGirl[] = _("{JPN}おねえちゃん");
+static const u8 sText_Son[] = _("{JPN}むすこ");
+static const u8 sText_Daughter[] = _("{JPN}むすめ");
+static const u8 sText_99TimesPlus[] = _("{JPN}99 じかん +");
+static const u8 sText_1MinutePlus[] = _("{JPN}1 ふん +");
+static const u8 sText_SpaceSeconds[] = _("{JPN} びょう");
+static const u8 sText_SpaceTimes[] = _("{JPN} じ");
 
-static const u8 sText_Wallace[] = _("WALLACE");
-static const u8 sText_Steven[] = _("STEVEN");
-static const u8 sText_Brawly[] = _("BRAWLY");
-static const u8 sText_Winona[] = _("WINONA");
-static const u8 sText_Phoebe[] = _("PHOEBE");
-static const u8 sText_Glacia[] = _("GLACIA");
+static const u8 sText_Wallace[] = _("{JPN}ミクリ");
+static const u8 sText_Steven[] = _("{JPN}ダイゴ");
+static const u8 sText_Brawly[] = _("{JPN}トウキ");
+static const u8 sText_Winona[] = _("{JPN}ナギ");
+static const u8 sText_Phoebe[] = _("{JPN}フヨウ");
+static const u8 sText_Glacia[] = _("{JPN}プリム");
 
 void Special_ShowDiploma(void)
 {
@@ -4580,7 +4580,7 @@ void EnterCode(void)
 
 void GetCodeFeedback(void)
 {
-    static const u8 sText_SampleCode[] = _("SampleCode");
+    static const u8 sText_SampleCode[] = _("サンプル");
     if (!StringCompare(gStringVar2, sText_SampleCode))
         gSpecialVar_Result = 1;
     else
@@ -5328,7 +5328,7 @@ static void Task_ElevatorShake(u8 taskId)
     }
 }
 
-static const u8 sText_NowOn[] = _("Now on:");
+static const u8 sText_NowOn[] = _("いま");
 
 void DrawElevatorCurrentFloorWindow(void)
 {
