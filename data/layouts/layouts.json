@@ -9327,8 +9327,8 @@
     {
       "id": "LAYOUT_ULTRA_FRONTIE_HUB",
       "name": "ultra_frontie_hub_Layout",
-      "width": 11,
-      "height": 15,
+      "width": 27,
+      "height": 22,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/ultra_frontie_hub/border.bin",

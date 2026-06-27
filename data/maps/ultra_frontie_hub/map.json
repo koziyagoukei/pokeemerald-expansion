@@ -2,7 +2,7 @@
   "id": "MAP_ULTRA_FRONTIE_HUB",
   "name": "ultra_frontie_hub",
   "layout": "LAYOUT_ULTRA_FRONTIE_HUB",
-  "music": "MUS_UNDERWATER",
+  "music": "MUS_VS_FRONTIER_BRAIN",
   "region_map_section": "MAPSEC_SPECIAL_AREA",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -16,10 +16,10 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MOM",
-      "x": 5,
-      "y": 2,
+      "x": 20,
+      "y": 9,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -29,10 +29,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LINK_RS_BRENDAN",
-      "x": 6,
-      "y": 2,
+      "x": 7,
+      "y": 6,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -43,9 +43,9 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_LINK_RS_MAY",
       "x": 4,
-      "y": 2,
+      "y": 6,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -56,7 +56,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_KIRLIA",
       "x": 7,
-      "y": 4,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -68,8 +68,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PIKACHU",
-      "x": 3,
-      "y": 4,
+      "x": 4,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -83,15 +83,15 @@
   "warp_events": [
     {
       "warp_id": "ultra_hub",
-      "x": 4,
-      "y": 14,
+      "x": 13,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_ULTRA_FRONTIE_HUB",
       "dest_warp_id": "ultra_hub"
     },
     {
-      "x": 5,
-      "y": 14,
+      "x": 14,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_ULTRA_FRONTIE_HUB",
       "dest_warp_id": "0"
