@@ -302,11 +302,15 @@ struct ContestGimmickStatus
     enum ContestGimmick moveGimmick;
     enum ContestGimmick usedGimmick;
     enum Species originalSpecies;
+    enum Move baseMove;
+    enum Move effectMove;
+    enum Move animMove;
     u16 heldItem;
     s16 extraAppeal;
     enum Type teraType;
     u8 dynamaxLevel;
     u8 dynamaxTurns;
+    u8 tabIconSpriteId;
     bool8 gmaxFactor:1;
     bool8 megaActive:1;
     bool8 ultraActive:1;
@@ -315,6 +319,7 @@ struct ContestGimmickStatus
     bool8 zUsed:1;
     bool8 stellarBoostUsed:1;
     bool8 jammedSinceLastAppeal:1;
+    bool8 showGimmickIntro:1;
 };
 
 struct ContestResources
@@ -365,6 +370,7 @@ extern s16 gContestMonTotalPoints[CONTESTANT_COUNT];
 extern s16 gContestMonAppealPointTotals[CONTESTANT_COUNT];
 extern s16 gContestMonRound2Points[CONTESTANT_COUNT];
 extern u8 gContestFinalStandings[CONTESTANT_COUNT];
+extern bool8 gContestMoveAnimInCutaway;
 extern u8 gContestMonPartyIndex;
 extern u8 gContestPlayerMonIndex;
 extern u8 gContestantTurnOrder[CONTESTANT_COUNT];

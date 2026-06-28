@@ -95,6 +95,13 @@
       "elevation": 0,
       "dest_map": "MAP_ULTRA_FRONTIE_HUB",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_LILYCOVE_CITY_CONTEST_LOBBY",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
