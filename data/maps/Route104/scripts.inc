@@ -1050,7 +1050,7 @@ Route104_Text_FlowerShopSellingSaplings:
 	.string "$"
 
 Route104_Text_MrBrineysCottage:
-	.string "{JPN}「ハギろうじんの　こや」$"
+	.string "{JPN}ハギろうじんのこや$"
 
 Route104_Text_RouteSignPetalburg:
 	.string "{JPN}ここは 104ばん どうろ\n{RIGHT_ARROW} トウカシティ"
@@ -1061,7 +1061,7 @@ Route104_Text_RouteSignRustboro:
 	.string "$"
 
 Route104_Text_PrettyPetalFlowShop:
-	.string "{JPN}「フラワーショップ　サン・トウカ」$"
+	.string "{JPN}フラワーショップサン・トウカ$"
 
 Route104_Text_TrainerTipsDoubleBattles:
 	.string "{JPN}おとくな けいじばん!!\pホウエンちほう には\nダブルバトルと いって 2たい2の\lポケモンしょうぶを いどんでくる\lトレーナーが います!\pダブルバトルでは ポケモンの リストの\nひだりと いちばん うえにいる\lポケモンが とびだして たたかうので\lリストの ならびには ようちゅうい!"
@@ -1075,7 +1075,7 @@ Route104_Text_TrainerTipsDoubleBattles:
 	.string "$"
 
 Route104_Text_MayWeShouldRegister:
-	.string "{JPN}ハルカ『あっ {PLAYER}{KUN}!\pデボンコーポレーションで ポケナビに\nエントリーコールを つけて もらったのね!\pじゃあ あたしたちも\nおたがいに よびだせる ように\lなまえを とうろく しておこうよ!"
+	.string "{JPN}ハルカあっ {PLAYER}{KUN}!\pデボンコーポレーションで ポケナビに\nエントリーコールを つけて もらったのね!\pじゃあ あたしたちも\nおたがいに よびだせる ように\lなまえを とうろく しておこうよ!"
 	.string ""
 	.string ""
 	.string ""
@@ -1087,7 +1087,7 @@ Route104_Text_RegisteredMay:
 	.string "$"
 
 Route104_Text_MayHowsYourPokedex:
-	.string "{JPN}ハルカ『ところで {PLAYER}{KUN}の\nポケモンずかんの ちょうしは どう?"
+	.string "{JPN}ハルカところで {PLAYER}{KUN}の\nポケモンずかんの ちょうしは どう?"
 	.string "$"
 
 Route104_Text_MayMinesDecentLetsBattle:
@@ -1095,18 +1095,18 @@ Route104_Text_MayMinesDecentLetsBattle:
 	.string "$"
 
 Route104_Text_MayHaventRaisedPokemon:
-	.string "{JPN}ハルカ『えー なんでよー\nあんまり ポケモン つかまえたり\lそだてたり してないのかな?\pそれじゃあ トレーナーとして\nまだまだ ね!"
+	.string "{JPN}ハルカえー なんでよー\nあんまり ポケモン つかまえたり\lそだてたり してないのかな?\pそれじゃあ トレーナーとして\nまだまだ ね!"
 	.string ""
 	.string ""
 	.string ""
 	.string "$"
 
 Route104_Text_MayLetsBattle:
-	.string "{JPN}ハルカ『どう? あたしと ここで\nちょっと しょうぶ してみる?"
+	.string "{JPN}ハルカどう? あたしと ここで\nちょっと しょうぶ してみる?"
 	.string "$"
 
 Route104_Text_MayIntro:
-	.string "{JPN}ハルカ『トレーナーに なった ばかりの\n{PLAYER}{KUN}には まけないよ!"
+	.string "{JPN}ハルカトレーナーに なった ばかりの\n{PLAYER}{KUN}には まけないよ!"
 	.string "$"
 
 Route104_Text_MayDefeat:
@@ -1114,7 +1114,7 @@ Route104_Text_MayDefeat:
 	.string "$"
 
 Route104_Text_MayPostBattle:
-	.string "{JPN}ハルカ『けっこう ポケモンの あつかい\nうまく なってきた みたいね!\pでも たたかわせる だけじゃなくて\nそこの ハギろうじん みたいに\lポケモンと なかよくする っていうのも\lだいじなこと なのよ!"
+	.string "{JPN}ハルカけっこう ポケモンの あつかい\nうまく なってきた みたいね!\pでも たたかわせる だけじゃなくて\nそこの ハギろうじん みたいに\lポケモンと なかよくする っていうのも\lだいじなこと なのよ!"
 	.string ""
 	.string ""
 	.string ""
@@ -1122,7 +1122,7 @@ Route104_Text_MayPostBattle:
 	.string "$"
 
 Route104_Text_BrendanWeShouldRegister:
-	.string "{JPN}ユウキ『おっ {PLAYER}!\pデボンコーポレーションで ポケナビに\nエントリーコールを つけて もらったな!\pじゃあ オレたち\nおたがいに よびだせる ように\lなまえを とうろく しておこうよ!"
+	.string "{JPN}ユウキおっ {PLAYER}!\pデボンコーポレーションで ポケナビに\nエントリーコールを つけて もらったな!\pじゃあ オレたち\nおたがいに よびだせる ように\lなまえを とうろく しておこうよ!"
 	.string ""
 	.string ""
 	.string ""
@@ -1134,7 +1134,7 @@ Route104_Text_RegisteredBrendan:
 	.string "$"
 
 Route104_Text_BrendanHowsYourPokedex:
-	.string "{JPN}ユウキ『ところで {PLAYER}の\nポケモンずかんは どう?\lちょっとは ページ うまったか?"
+	.string "{JPN}ユウキところで {PLAYER}の\nポケモンずかんは どう?\lちょっとは ページ うまったか?"
 	.string ""
 	.string "$"
 
@@ -1144,15 +1144,15 @@ Route104_Text_BrendanDoingGreatLetsBattle:
 	.string "$"
 
 Route104_Text_BrendanNoConfidence:
-	.string "{JPN}ユウキ『なんだよ\nもってる ポケモンに じしんが ないのか?"
+	.string "{JPN}ユウキなんだよ\nもってる ポケモンに じしんが ないのか?"
 	.string "$"
 
 Route104_Text_BrendanLetsBattle:
-	.string "{JPN}ユウキ『どうだい オレと ここで\nしょうぶ してみるか?"
+	.string "{JPN}ユウキどうだい オレと ここで\nしょうぶ してみるか?"
 	.string "$"
 
 Route104_Text_BrendanIntro:
-	.string "{JPN}ユウキ『トレーナーに なりたて だって\nてかげんは しないからな!"
+	.string "{JPN}ユウキトレーナーに なりたて だって\nてかげんは しないからな!"
 	.string "$"
 
 Route104_Text_BrendanDefeat:
@@ -1160,7 +1160,7 @@ Route104_Text_BrendanDefeat:
 	.string "$"
 
 Route104_Text_BrendanPostBattle:
-	.string "{JPN}ユウキ『けっこう ポケモンの あつかい\nうまく なってきたな!\pでも たたかわせる だけじゃなくて\nそこの ハギろうじん みたいに\lポケモンと なかよくする ってのも\lだいじなこと なんだぜ!"
+	.string "{JPN}ユウキけっこう ポケモンの あつかい\nうまく なってきたな!\pでも たたかわせる だけじゃなくて\nそこの ハギろうじん みたいに\lポケモンと なかよくする ってのも\lだいじなこと なんだぜ!"
 	.string ""
 	.string ""
 	.string ""

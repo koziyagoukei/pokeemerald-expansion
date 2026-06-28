@@ -742,7 +742,7 @@ PetalburgCity_Text_CitySign:
 	.string "$"
 
 PetalburgCity_Text_WallyHouseSign:
-	.string "{JPN}「ミツルの いえ」$"
+	.string "{JPN}ミツルの いえ$"
 
 PetalburgCity_Text_AreYouATrainer:
 	.string "{JPN}きみ! その いでたちは……\nポケモン トレーナーさん かい?"

@@ -4,7 +4,7 @@ gText_Birch_Welcome::
 	.string "{JPN}ようこそ!\p"
 	.string "{JPN}わたしの なまえは オダマキ!\p"
 	.string "{JPN}でも みんな からは\n"
-	.string "{JPN}「ポケモンはかせ」と よばれて いるよ!\p"
+	.string "{JPN}ポケモンはかせと よばれて いるよ!\p"
 
 gText_Birch_Pokemon::
 

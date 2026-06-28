@@ -366,7 +366,7 @@ PetalburgWoods_Text_ThatWasAwfullyClose:
 	.string "$"
 
 PetalburgWoods_Text_TeamAquaAfterSomethingInRustboro:
-	.string "{JPN}……そういえば さっき アクアだんは\n「カナズミにも ねらっている ものがある」\lとか いってたよね……?"
+	.string "{JPN}……そういえば さっき アクアだんは\nカナズミにも ねらっている ものがある\lとか いってたよね……?"
 	.string ""
 	.string "$"
 

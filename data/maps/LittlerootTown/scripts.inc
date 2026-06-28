@@ -905,7 +905,7 @@ LittlerootTown_EventScript_GiveRunningShoes::
 	return
 
 LittlerootTown_Text_OurNewHomeLetsGoInside:
-	.string "{JPN}ママ『{PLAYER} おつかれさま!\p"
+	.string "{JPN}ママ{PLAYER} おつかれさま!\p"
 	.string "{JPN}ながいあいだ トラックに ゆられて\n"
 	.string "{JPN}たいへん だったでしょ?\p"
 	.string "{JPN}ここが ミシロタウンよ!\p"
@@ -917,10 +917,10 @@ LittlerootTown_Text_OurNewHomeLetsGoInside:
 	.string "{JPN}さあ なかに はいりましょ!$"
 
 LittlerootTown_Text_WaitPlayer:
-	.string "{JPN}ママ『まって {PLAYER}!$"
+	.string "{JPN}ママまって {PLAYER}!$"
 
 LittlerootTown_Text_WearTheseRunningShoes:
-	.string "{JPN}ママ『{PLAYER}! {PLAYER}!\n"
+	.string "{JPN}ママ{PLAYER}! {PLAYER}!\n"
 	.string "{JPN}オダマキはかせに あいさつ した?\p"
 	.string "{JPN}あら! かわいい ポケモン!\n"
 	.string "{JPN}オダマキはかせ に いただいたのね\p"
@@ -937,13 +937,13 @@ LittlerootTown_Text_SwitchShoesWithRunningShoes:
 	.string "{JPN}はきかえた!$"
 
 LittlerootTown_Text_ExplainRunningShoes:
-	.string "{JPN}ママ『{PLAYER}!\n"
+	.string "{JPN}ママ{PLAYER}!\n"
 	.string "{JPN}これが せつめいしょ よ\p"
-	.string "{JPN}「ランニングシューズは\n"
+	.string "{JPN}ランニングシューズは\n"
 	.string "{JPN} Bボタンを おすことで いままでよりも\l"
 	.string "{JPN} はやく はしれるように なります!\p"
 	.string "{JPN} ランニングシューズを はいて\n"
-	.string "{JPN} おもいっきり そとを はしろう!」$"
+	.string "{JPN} おもいっきり そとを はしろう!$"
 
 LittlerootTown_Text_ComeHomeIfAnythingHappens:
 	.string "{JPN}…… …… ……\n"
@@ -999,16 +999,16 @@ LittlerootTown_Text_TownSign:
 	.string "{JPN}どんな いろにも そまらない まち$"
 
 LittlerootTown_Text_ProfBirchsLab:
-	.string "{JPN}「オダマキ ポケモン けんきゅうじょ」$"
+	.string "{JPN}オダマキ ポケモン けんきゅうじょ$"
 
 LittlerootTown_Text_PlayersHouse:
-	.string "{JPN}「{PLAYER}の いえ」$"
+	.string "{JPN}{PLAYER}の いえ$"
 
 LittlerootTown_Text_ProfBirchsHouse:
-	.string "{JPN}「オダマキ はかせの いえ」$"
+	.string "{JPN}オダマキ はかせの いえ$"
 
 LittlerootTown_Text_BirchSomethingToShowYouAtLab:
-	.string "{JPN}オダマキ『いやー {PLAYER}{KUN}!\n"
+	.string "{JPN}オダマキいやー {PLAYER}{KUN}!\n"
 	.string "{JPN}それにしても みごと だったね\p"
 	.string "{JPN}さいしょに きみを みたときから\n"
 	.string "{JPN}ただもの ではないと おもったけど\l"

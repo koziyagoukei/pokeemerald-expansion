@@ -1359,11 +1359,11 @@ Common_EventScript_PlayerHandedOverTheItem::
 @ The below and surf.inc could be split into some text/notices.inc
 gText_PokemartSign::
 	.string "{JPN}べんりなどうぐ いろいろ あります\n"
-	.string "{JPN}「フレンドリィショップ」$"
+	.string "{JPN}フレンドリィショップ$"
 
 gText_PokemonCenterSign::
 	.string "{JPN}つかれた ポケモンも ひとやすみ!\n"
-	.string "{JPN}「ポケモンセンター」$"
+	.string "{JPN}ポケモンセンター$"
 
 gText_MomOrDadMightLikeThisProgram::
 	.string "{JPN}{STR_VAR_1}が すきそうな ばんぐみをやってる!\n"
@@ -1425,7 +1425,7 @@ gText_MonsHealed::
 	.string "{JPN}それでは がんばってください!$"
 
 gText_HadQuiteAnExperienceTakeRest::
-	.string "{JPN}ママ『{PLAYER}!\n"
+	.string "{JPN}ママ{PLAYER}!\n"
 	.string "{JPN}おかえりなさい\p"
 	.string "{JPN}たいへん だったわね\p"
 	.string "{JPN}すこし やすんで いったら\n"
@@ -1433,7 +1433,7 @@ gText_HadQuiteAnExperienceTakeRest::
 	.string "{JPN}…… …… ……$"
 
 gText_MomExplainHPGetPotions::
-	.string "{JPN}ママ『あらあら!\n"
+	.string "{JPN}ママあらあら!\n"
 	.string "{JPN}あなたも ポケモンも\l"
 	.string "{JPN}げんき いっぱいね!\p"
 	.string "{JPN}さっき オダマキはかせから\n"
@@ -1455,9 +1455,9 @@ gText_RegisteredTrainerinPokeNav::
 	.string "{JPN}ポケナビに とうろく した!$"
 
 gText_ComeBackWithSecretPower::
-	.string "{JPN}「ひみつのちから」って\n"
+	.string "{JPN}ひみつのちからって\n"
 	.string "{JPN}わざマシン しってる?\p"
-	.string "{JPN}おれら わざマシン 「ひみつのちから」が\n"
+	.string "{JPN}おれら わざマシン ひみつのちからが\n"
 	.string "{JPN}だいすき なんだ\p"
 	.string "{JPN}おれらの メンバーが どこかで くれるから\n"
 	.string "{JPN}それを もらったら また おいで!\p"
@@ -1512,11 +1512,11 @@ gText_ThankYouForAccessingMysteryGift::
 
 gText_PlayerFoundOneTMHM::
 	.string "{JPN}{PLAYER}は {STR_VAR_1}\n"
-	.string "{JPN}「{STR_VAR_2}」を みつけた!$"
+	.string "{JPN}{STR_VAR_2}を みつけた!$"
 
 gText_PlayerFoundTMHMs::
 	.string "{JPN}{PLAYER}は {STR_VAR_1}\n"
-	.string "{JPN}「{STR_VAR_2}」を {STR_VAR_3}コ みつけた!$"
+	.string "{JPN}{STR_VAR_2}を {STR_VAR_3}コ みつけた!$"
 
 gText_Sudowoodo_Attacked::
 	.string "{JPN}おかしな きは\n"

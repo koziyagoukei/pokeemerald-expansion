@@ -212,7 +212,7 @@ RustboroCity_DevonCorp_3F_Text_MrStoneIHaveFavor:
 	.string "$"
 
 RustboroCity_DevonCorp_3F_Text_MrStoneWantYouToHaveThis:
-	.string "{JPN}ツワブキ『もちろん わしは\nすごーい しゃちょうで あるからな!\pただで おねがいすると いうような\nケチな まねは しないのだ!\pきみに こいつを プレゼントしよう!"
+	.string "{JPN}ツワブキもちろん わしは\nすごーい しゃちょうで あるからな!\pただで おねがいすると いうような\nケチな まねは しないのだ!\pきみに こいつを プレゼントしよう!"
 	.string ""
 	.string ""
 	.string ""
@@ -223,7 +223,7 @@ RustboroCity_DevonCorp_3F_Text_ReceivedPokenav:
 	.string "$"
 
 RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp:
-	.string "{JPN}ツワブキ『そいつは……\pポケモン ナビゲーター!\nりゃくして ポケナビ といってな\pぼうけんを する トレーナーの\nひつじゅひん なのだよ!\pそいつで ホウエンマップを みれば\nムロや カイナの ばしょ だって\lばっちり わかると いうものだ!\p……さいきんは アクアだの マグマだの\nといった あやしげな れんちゅうが\lあちこちで わるさを してるらしい\pまずは ひとやすみ していきなさい!"
+	.string "{JPN}ツワブキそいつは……\pポケモン ナビゲーター!\nりゃくして ポケナビ といってな\pぼうけんを する トレーナーの\nひつじゅひん なのだよ!\pそいつで ホウエンマップを みれば\nムロや カイナの ばしょ だって\lばっちり わかると いうものだ!\p……さいきんは アクアだの マグマだの\nといった あやしげな れんちゅうが\lあちこちで わるさを してるらしい\pまずは ひとやすみ していきなさい!"
 	.string ""
 	.string ""
 	.string ""
@@ -237,27 +237,27 @@ RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp:
 	.string "$"
 
 RustboroCity_DevonCorp_3F_Text_MrStoneGoWithCautionAndCare:
-	.string "{JPN}ツワブキ『それでは {PLAYER}{KUN}\nじゅうぶん きをつけて いくのだよ!"
+	.string "{JPN}ツワブキそれでは {PLAYER}{KUN}\nじゅうぶん きをつけて いくのだよ!"
 	.string "$"
 
 RustboroCity_DevonCorp_3F_Text_CountingOnYou:
-	.string "{JPN}ツワブキ『よろしく たのむよ!$"
+	.string "{JPN}ツワブキよろしく たのむよ!$"
 
 RustboroCity_DevonCorp_3F_Text_ThankYouForDeliveringLetter:
-	.string "{JPN}ツワブキ『てがみを とどけて くれたんだね\nいやいや ありがとう!\pこいつは おれい だよ\nトレーナーの きみに やくだつ はずだ!"
+	.string "{JPN}ツワブキてがみを とどけて くれたんだね\nいやいや ありがとう!\pこいつは おれい だよ\nトレーナーの きみに やくだつ はずだ!"
 	.string ""
 	.string ""
 	.string "$"
 
 RustboroCity_DevonCorp_3F_Text_ExplainExpShare:
-	.string "{JPN}ツワブキ『がくしゅうそうちを もたせた\nポケモンは しょうぶを しなくても\lけいけんちを わけて もらえる!\pよわい ポケモンを そだてるのに\nなかなか べんりな どうぐ なのだよ!"
+	.string "{JPN}ツワブキがくしゅうそうちを もたせた\nポケモンは しょうぶを しなくても\lけいけんちを わけて もらえる!\pよわい ポケモンを そだてるのに\nなかなか べんりな どうぐ なのだよ!"
 	.string ""
 	.string ""
 	.string ""
 	.string "$"
 
 RustboroCity_DevonCorp_3F_Text_NotFamiliarWithTrends:
-	.string "{JPN}ツワブキ『わたしは わかいころ から\nしごと ばかり だったから\lいまいち わからんのだが……\pわかものは やはり トレーナーとして\nポケモンリーグを めざす もの なのかね"
+	.string "{JPN}ツワブキわたしは わかいころ から\nしごと ばかり だったから\lいまいち わからんのだが……\pわかものは やはり トレーナーとして\nポケモンリーグを めざす もの なのかね"
 	.string ""
 	.string ""
 	.string ""

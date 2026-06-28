@@ -17,7 +17,7 @@ gText_PlayerSavedGame::
 
 gText_DifferentSaveFile::
 	.string "{JPN}ちゅうい!!\p"
-	.string "{JPN}『つづきから はじめる』で\n"
+	.string "{JPN}つづきから はじめるで\n"
 	.string "{JPN}ぼうけん していた レポートが\l"
 	.string "{JPN}かかれています!\p"
 	.string "{JPN}そちらで プレイしていた ぼうけんや\n"

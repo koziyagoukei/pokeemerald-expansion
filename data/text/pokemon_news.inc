@@ -1,7 +1,7 @@
 
 gPokeNewsTextSlateport_Upcoming::
 	.string "{JPN}こんにちは\n"
-	.string "{JPN}『ポケモン ニュース』の じかんです\p"
+	.string "{JPN}ポケモン ニュースの じかんです\p"
 	.string "{JPN}カイナシティの いちばの にんきもの\n"
 	.string "{JPN}がんばりやさんが あと {STR_VAR_1}にち したら\l"
 	.string "{JPN}ものすごく がんばるそうです!\p"
@@ -11,11 +11,11 @@ gPokeNewsTextSlateport_Upcoming::
 	.string "{JPN}きになる ひとは とうじつ\n"
 	.string "{JPN}カイナシティに いくと いいでしょうね\p"
 	.string "{JPN}いじょう\n"
-	.string "{JPN}『ポケモン ニュース』でした$"
+	.string "{JPN}ポケモン ニュースでした$"
 
 gPokeNewsTextSlateport_Ongoing::
 	.string "{JPN}こんにちは\n"
-	.string "{JPN}『ポケモン ニュース』の じかんです\p"
+	.string "{JPN}ポケモン ニュースの じかんです\p"
 	.string "{JPN}おまたせ しました!\p"
 	.string "{JPN}カイナシティの がんばりやさんが\n"
 	.string "{JPN}いちばで ものすごく がんばっています!\p"
@@ -25,11 +25,11 @@ gPokeNewsTextSlateport_Ongoing::
 	.string "{JPN}おもう ぞんぶん かいものを\l"
 	.string "{JPN}たのしんで みては いかがで しょうか?\p"
 	.string "{JPN}いじょう\n"
-	.string "{JPN}『ポケモン ニュース』でした$"
+	.string "{JPN}ポケモン ニュースでした$"
 
 gPokeNewsTextSlateport_Ending::
 	.string "{JPN}こんにちは\n"
-	.string "{JPN}『ポケモン ニュース』の じかんです\p"
+	.string "{JPN}ポケモン ニュースの じかんです\p"
 	.string "{JPN}おまたせ しました!\p"
 	.string "{JPN}カイナシティの がんばりやさんが\n"
 	.string "{JPN}いちばで ものすごく がんばっています!\p"
@@ -40,11 +40,11 @@ gPokeNewsTextSlateport_Ending::
 	.string "{JPN}あなたも カイナシティで かいものを\n"
 	.string "{JPN}たのしんでは いかがで しょうか?\p"
 	.string "{JPN}いじょう\n"
-	.string "{JPN}『ポケモン ニュース』でした$"
+	.string "{JPN}ポケモン ニュースでした$"
 
 gPokeNewsTextGameCorner_Upcoming::
 	.string "{JPN}こんにちは\n"
-	.string "{JPN}『ポケモン ニュース』の じかんです\p"
+	.string "{JPN}ポケモン ニュースの じかんです\p"
 	.string "{JPN}ついに きます!\n"
 	.string "{JPN}きて しまいます\p"
 	.string "{JPN}ゲームコーナーの サービスデーが\n"
@@ -52,11 +52,11 @@ gPokeNewsTextGameCorner_Upcoming::
 	.string "{JPN}ひごろ うんのない あなたも\n"
 	.string "{JPN}このひ だけは ラッキーに!\p"
 	.string "{JPN}いじょう\n"
-	.string "{JPN}『ポケモン ニュース』でした$"
+	.string "{JPN}ポケモン ニュースでした$"
 
 gPokeNewsTextGameCorner_Ongoing::
 	.string "{JPN}こんにちは\n"
-	.string "{JPN}『ポケモン ニュース』の じかんです\p"
+	.string "{JPN}ポケモン ニュースの じかんです\p"
 	.string "{JPN}ついに きた!\n"
 	.string "{JPN}きて しまいました!\p"
 	.string "{JPN}ゲームコーナーの サービスデーが\n"
@@ -66,11 +66,11 @@ gPokeNewsTextGameCorner_Ongoing::
 	.string "{JPN}さあ はやく\n"
 	.string "{JPN}キンセツシティに いそぎましょう!\p"
 	.string "{JPN}いじょう\n"
-	.string "{JPN}『ポケモン ニュース』でした$"
+	.string "{JPN}ポケモン ニュースでした$"
 
 gPokeNewsTextGameCorner_Ending::
 	.string "{JPN}こんにちは\n"
-	.string "{JPN}『ポケモン ニュース』の じかんです\p"
+	.string "{JPN}ポケモン ニュースの じかんです\p"
 	.string "{JPN}ついに きた!\n"
 	.string "{JPN}きて しまいました!\p"
 	.string "{JPN}ゲームコーナーの サービスデーが\n"
@@ -80,11 +80,11 @@ gPokeNewsTextGameCorner_Ending::
 	.string "{JPN}さあ! おわりが ちかく なってきました\n"
 	.string "{JPN}はやく キンセツシティに いそぎましょう!\p"
 	.string "{JPN}いじょう\n"
-	.string "{JPN}『ポケモン ニュース』でした$"
+	.string "{JPN}ポケモン ニュースでした$"
 
 gPokeNewsTextLilycove_Upcoming::
 	.string "{JPN}こんにちは\n"
-	.string "{JPN}『ポケモン ニュース』の じかんです\p"
+	.string "{JPN}ポケモン ニュースの じかんです\p"
 	.string "{JPN}ミナモシティの デパートから\n"
 	.string "{JPN}ステキな ニュースが はいってきました\p"
 	.string "{JPN}あと {STR_VAR_1}にちしたら デパートで\n"
@@ -92,11 +92,11 @@ gPokeNewsTextLilycove_Upcoming::
 	.string "{JPN}あなたの ほしかった あんなものや\n"
 	.string "{JPN}こんなものが みつかるかも しれません\p"
 	.string "{JPN}いじょう\n"
-	.string "{JPN}『ポケモン ニュース』でした$"
+	.string "{JPN}ポケモン ニュースでした$"
 
 gPokeNewsTextLilycove_Ongoing::
 	.string "{JPN}こんにちは\n"
-	.string "{JPN}『ポケモン ニュース』の じかんです\p"
+	.string "{JPN}ポケモン ニュースの じかんです\p"
 	.string "{JPN}おまたせ しました!\p"
 	.string "{JPN}きょう ついに ミナモ デパートで\n"
 	.string "{JPN}ほりだしものいちが かいさい されました\p"
@@ -105,11 +105,11 @@ gPokeNewsTextLilycove_Ongoing::
 	.string "{JPN}うんめいの であいが\n"
 	.string "{JPN}まってるかも しれませんよ!\p"
 	.string "{JPN}いじょう\n"
-	.string "{JPN}『ポケモン ニュース』でした$"
+	.string "{JPN}ポケモン ニュースでした$"
 
 gPokeNewsTextLilycove_Ending::
 	.string "{JPN}こんにちは\n"
-	.string "{JPN}『ポケモン ニュース』の じかんです\p"
+	.string "{JPN}ポケモン ニュースの じかんです\p"
 	.string "{JPN}おまたせ しました!\p"
 	.string "{JPN}きょう ついに ミナモ デパートで\n"
 	.string "{JPN}ほりだしものいちが かいさい されました\p"
@@ -118,11 +118,11 @@ gPokeNewsTextLilycove_Ending::
 	.string "{JPN}うんめいの であいが\n"
 	.string "{JPN}まってるかも しれませんよ!\p"
 	.string "{JPN}いじょう\n"
-	.string "{JPN}『ポケモン ニュース』でした$"
+	.string "{JPN}ポケモン ニュースでした$"
 
 gPokeNewsTextBlendMaster_Upcoming::
 	.string "{JPN}こんにちは\n"
-	.string "{JPN}『ポケモン ニュース』の じかんです\p"
+	.string "{JPN}ポケモン ニュースの じかんです\p"
 	.string "{JPN}ポロックを つくっている みなさんへ\n"
 	.string "{JPN}ビッグニュースが はいって きました!\p"
 	.string "{JPN}あの でんせつの ブレンドめいじんが\n"
@@ -136,11 +136,11 @@ gPokeNewsTextBlendMaster_Upcoming::
 	.string "{JPN}めいじんの テクニックを みたい かたは\l"
 	.string "{JPN}きのみを いっぱい あつめて おきましょう!\p"
 	.string "{JPN}いじょう\n"
-	.string "{JPN}『ポケモン ニュース』でした$"
+	.string "{JPN}ポケモン ニュースでした$"
 
 gPokeNewsTextBlendMaster_Ongoing::
 	.string "{JPN}こんにちは\n"
-	.string "{JPN}『ポケモン ニュース』の じかんです\p"
+	.string "{JPN}ポケモン ニュースの じかんです\p"
 	.string "{JPN}ポロックを つくっている みなさんへ\n"
 	.string "{JPN}ビッグニュースが はいって きました!\p"
 	.string "{JPN}あの でんせつの ブレンドめいじんが\n"
@@ -151,11 +151,11 @@ gPokeNewsTextBlendMaster_Ongoing::
 	.string "{JPN}めいじんの テクニックを みたい かたは\l"
 	.string "{JPN}ミナモシティへ いきましょう!\p"
 	.string "{JPN}いじょう\n"
-	.string "{JPN}『ポケモン ニュース』でした$"
+	.string "{JPN}ポケモン ニュースでした$"
 
 gPokeNewsTextBlendMaster_Ending::
 	.string "{JPN}こんにちは\n"
-	.string "{JPN}『ポケモン ニュース』の じかんです\p"
+	.string "{JPN}ポケモン ニュースの じかんです\p"
 	.string "{JPN}すごい! すごすぎます!!\p"
 	.string "{JPN}きのみブレンダーが ものすごい スピードで\n"
 	.string "{JPN}まわっています!\p"
@@ -164,4 +164,4 @@ gPokeNewsTextBlendMaster_Ending::
 	.string "{JPN}もうすぐ めいじんは かえってしまいます!\l"
 	.string "{JPN}いますぐ ミナモシティに いきましょう!\p"
 	.string "{JPN}いじょう\n"
-	.string "{JPN}『ポケモン ニュース』でした$"
+	.string "{JPN}ポケモン ニュースでした$"

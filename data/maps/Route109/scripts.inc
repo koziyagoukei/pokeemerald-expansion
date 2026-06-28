@@ -477,25 +477,25 @@ Route109_EventScript_Elijah::
 	end
 
 DewfordTown_Text_BrineyLandedInSlateportDeliverGoods:
-	.string "{JPN}ハギ『ほい! カイナに とうちゃく!\pたしか クスノキさんに\nデボンのにもつを とどけるんだったな!$"
+	.string "{JPN}ハギほい! カイナに とうちゃく!\pたしか クスノキさんに\nデボンのにもつを とどけるんだったな!$"
 
 Route109_Text_BrineySailToDewfordQuestion:
-	.string "{JPN}ハギ『にもつを とどけないのかい?\pそれとも ムロに もどるのかね?$"
+	.string "{JPN}ハギにもつを とどけないのかい?\pそれとも ムロに もどるのかね?$"
 
 Route109_Text_BrineyDewfordItIs:
-	.string "{JPN}ハギ『ムロタウン か\pよっしゃ! いくぞ ピーコちゃん!$"
+	.string "{JPN}ハギムロタウン か\pよっしゃ! いくぞ ピーコちゃん!$"
 
 Route109_Text_BrineyDeliverDevonGoods:
-	.string "{JPN}ハギ『では にもつを とどけておいで\nわしは ここに いるから$"
+	.string "{JPN}ハギでは にもつを とどけておいで\nわしは ここに いるから$"
 
 DewfordTown_Text_BrineyLandedInSlateport:
-	.string "{JPN}ハギ『ほい! カイナに とうちゃく!\pふねに のりたくなったら\nまた わしに こえを かけておくれ!$"
+	.string "{JPN}ハギほい! カイナに とうちゃく!\pふねに のりたくなったら\nまた わしに こえを かけておくれ!$"
 
 Route109_Text_BrineyWhereAreWeBound:
-	.string "{JPN}ハギ『やあ! きみのため なら\nいつでも ふねを だそう!\pきみが いきたいのは どこ かな?$"
+	.string "{JPN}ハギやあ! きみのため なら\nいつでも ふねを だそう!\pきみが いきたいのは どこ かな?$"
 
 Route109_Text_BrineyTellMeWhenYouNeedToSail:
-	.string "{JPN}ハギ『ふねに のる ひつようが あるときは\nいつでも こえを かけておくれ$"
+	.string "{JPN}ハギふねに のる ひつようが あるときは\nいつでも こえを かけておくれ$"
 
 Route109_Text_ChillAtMyPapasSpot:
 	.string "{JPN}あつい トレーナーさんも\nあつくない トレーナーさんも\lおとうさんの おみせに よってってー!$"
@@ -516,10 +516,10 @@ Route109_Text_ZigzagoonPicksUpLitter:
 	.string "{JPN}この あたりの うみは きれいだがな\pそれでも たまに こうして すてられた\nゴミを ジグザグマに あつめてもらうよ\pよごれた みずは あめと なって\nかわに ながれこみ のみみずと なる……\pうみを よごすと\nけっきょく じぶんらが こまるからの$"
 
 Route109_Text_ZigzagoonCry:
-	.string "{JPN}ジグザグマ『ぐぐ?$"
+	.string "{JPN}ジグザグマぐぐ?$"
 
 Route109_Text_SeashoreHouseSign:
-	.string "{JPN}「うみの いえ」\pすなはま といえば ポケモンしょうぶ!\nあつい トレーナー ここに つどえ!$"
+	.string "{JPN}うみの いえ\pすなはま といえば ポケモンしょうぶ!\nあつい トレーナー ここに つどえ!$"
 
 Route109_Text_TrainerTipsSign:
 	.string "{JPN}おとくな けいじばん!!\pポケモンの レベルが おなじ でも\nつよさまで おなじとは かぎりません!\pそれに トレーナーが そだてた\nポケモンの ほうが つよくなると\lいわれて います!$"

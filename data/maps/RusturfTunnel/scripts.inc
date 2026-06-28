@@ -422,7 +422,7 @@ RusturfTunnel_Text_ComeAndGetSome:
 	.string "{JPN}くるのか?\nくるなら こいよ!$"
 
 RusturfTunnel_Text_Peeko:
-	.string "{JPN}ピーコちゃん『ピ ピひょー!$"
+	.string "{JPN}ピーコちゃんピ ピひょー!$"
 
 RusturfTunnel_Text_GruntIntro:
 	.string "{JPN}えーい くっそー!\pうばった ポケモンは\nなんの やくにも たたないし\pいいところへ にげこめたと おもったのに\nこの トンネル いきどまり じゃねーか!\pやい! おまえ!\nおれと しょうぶ するんだな!?$"
@@ -437,7 +437,7 @@ RusturfTunnel_Text_PeekoGladToSeeYouSafe:
 	.string "{JPN}ピーコちゃん! ぶじで よかった!$"
 
 RusturfTunnel_Text_ThankYouLetsGoHomePeeko:
-	.string "{JPN}あんたは ピーコちゃんの\nいのちの おんじん じゃよ!\pわしは ハギと いうのじゃが\nきみは……?\p…… …… ……\n…… …… ……\pそうか {PLAYER}{KUN}と いうのか!\nほんとうに ありがとうよ!\pこれからさき こまった ことが あったら\nえんりょなく わしに いっとくれ!\pいつもは トウカのもりの ちかくに ある\nはまべの こやに いるからの!\pさあ ピーコちゃん\nわしらの おうちに かえろうな!\pピーコちゃん『ピひょーっ!!$"
+	.string "{JPN}あんたは ピーコちゃんの\nいのちの おんじん じゃよ!\pわしは ハギと いうのじゃが\nきみは……?\p…… …… ……\n…… …… ……\pそうか {PLAYER}{KUN}と いうのか!\nほんとうに ありがとうよ!\pこれからさき こまった ことが あったら\nえんりょなく わしに いっとくれ!\pいつもは トウカのもりの ちかくに ある\nはまべの こやに いるからの!\pさあ ピーコちゃん\nわしらの おうちに かえろうな!\pピーコちゃんピひょーっ!!$"
 
 RusturfTunnel_Text_WhyCantTheyKeepDigging:
 	.string "{JPN}……\pどうして これいじょう ほれない……\nこの いわが かたすぎるのか?\pこのさきの シダケタウンという ところに\nあいする かのじょが いるのに……\pカナズミと シダケを トンネルで むすべば\nまいにち かのじょに あいに いける\pそれなのに……\nおれは どうすれば いいんだ……$"
@@ -452,7 +452,7 @@ RusturfTunnel_Text_ExplainStrength:
 	.string "{JPN}そいつには かいりきが はいっている\nちからもちの ポケモンに おぼえさせれば\lおおきな いわを うごかせるよ$"
 
 RusturfTunnel_Text_WandaReunion:
-	.string "{JPN}ミチルさん!\nこれから いつでも あえます!\pミチル『よかった…… です\pさあ わたしの いえで\nゆっくり やすんで ください$"
+	.string "{JPN}ミチルさん!\nこれから いつでも あえます!\pミチルよかった…… です\pさあ わたしの いえで\nゆっくり やすんで ください$"
 
 RusturfTunnel_Text_BoyfriendOnOtherSideOfRock:
 	.string "{JPN}この いわの むこうに……\nわたしの かれが いるの\pかれ…… わたしに あうため だけに\nトンネルを ほってるわけ じゃないわ\pみんなの ために\nてを きずつけながらも がんばってるの$"
