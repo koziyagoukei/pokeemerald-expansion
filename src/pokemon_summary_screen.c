@@ -3612,8 +3612,8 @@ static void PrintMonTrainerMemo(void)
     PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_MEMO), gStringVar4, 0, 1, 0, 0);
 }
 
-static const u8 sText_NatureSuffixNa[] = _("な せいかく");
-static const u8 sText_NatureSuffixPlain[] = _(" せいかく");
+static const u8 sText_NatureSuffixNa[] = _("な ");
+static const u8 sText_NatureSuffixPlain[] = _(" ");
 
 static bool32 SummaryNatureUsesPlainSuffix(u8 nature)
 {
