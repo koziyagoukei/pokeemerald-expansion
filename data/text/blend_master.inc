@@ -1,11 +1,11 @@
 BerryBlender_Text_BlendWithTheBlendMaster:
-	.string "{JPN}めいじん『いかにも!\n"
+	.string "{JPN}めいじんいかにも!\n"
 	.string "{JPN}わしが ブレンドめいじん じゃ!\p"
 	.string "{JPN}いっしょに まわして\n"
 	.string "{JPN}わしの すごい わざを みるがよい$"
 
 BerryBlender_Text_SeeMyMasteryInAction:
-	.string "{JPN}めいじん『ふむむむっ! おぬし\n"
+	.string "{JPN}めいじんふむむむっ! おぬし\n"
 	.string "{JPN}わしの すごい わざを みたいのじゃな?$"
 
 BerryBlender_Text_TooBusyNowIsee:

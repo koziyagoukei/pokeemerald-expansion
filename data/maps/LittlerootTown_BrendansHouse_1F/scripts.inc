@@ -284,7 +284,7 @@ LittlerootTown_BrendansHouse_1F_Movement_BrendanGoUpstairs2:
 	step_end
 
 PlayersHouse_1F_Text_IsntItNiceInHere:
-	.string "{JPN}ママ『ほら {PLAYER}!\n"
+	.string "{JPN}ママほら {PLAYER}!\n"
 	.string "{JPN}おうちの なかも すてき でしょ!$"
 
 PlayersHouse_1F_Text_MoversPokemonGoSetClock:
@@ -298,23 +298,23 @@ PlayersHouse_1F_Text_MoversPokemonGoSetClock:
 	.string "{JPN}じかんを あわせて おきなさいよ$"
 
 PlayersHouse_1F_Text_ArentYouInterestedInRoom:
-	.string "{JPN}ママ『{PLAYER}\p"
+	.string "{JPN}ママ{PLAYER}\p"
 	.string "{JPN}じぶんの へやを みてこないの?$"
 
 PlayersHouse_1F_Text_GoSetTheClock:
-	.string "{JPN}ママ『{PLAYER}\p"
+	.string "{JPN}ママ{PLAYER}\p"
 	.string "{JPN}おへやの とけい あわせてきて$"
 
 PlayersHouse_1F_Text_OhComeQuickly:
-	.string "{JPN}ママ『……あ! {PLAYER}! {PLAYER}!\n"
+	.string "{JPN}ママ……あ! {PLAYER}! {PLAYER}!\n"
 	.string "{JPN}はやく こっちに いらっしゃい!$"
 
 PlayersHouse_1F_Text_MaybeDadWillBeOn:
-	.string "{JPN}ママ『トウカの ジムが うつってるわ\n"
+	.string "{JPN}ママトウカの ジムが うつってるわ\n"
 	.string "{JPN}パパが でるかもよ!!$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim:
-	.string "{JPN}ママ『あらら…… おわっちゃった\p"
+	.string "{JPN}ママあらら…… おわっちゃった\p"
 	.string "{JPN}パパが でてたみたい だったのに ざんねんね$"
 
 PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
@@ -325,21 +325,21 @@ PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
 	.string "{JPN}きちんと あいさつ してくると いいわ!$"
 
 PlayersHouse_1F_Text_SeeYouHoney:
-	.string "{JPN}ママ『いってらっしゃい!$"
+	.string "{JPN}ママいってらっしゃい!$"
 
 PlayersHouse_1F_Text_DidYouMeetProfBirch:
-	.string "{JPN}ママ『オダマキはかせ には あえたの?$"
+	.string "{JPN}ママオダマキはかせ には あえたの?$"
 
 PlayersHouse_1F_Text_YouShouldRestABit:
-	.string "{JPN}ママ『どう? {PLAYER}\n"
+	.string "{JPN}ママどう? {PLAYER}\n"
 	.string "{JPN}すこし つかれたんじゃ ないかしら?\p"
 	.string "{JPN}おうちで やすんでいくと いいわ$"
 
 PlayersHouse_1F_Text_TakeCareHoney:
-	.string "{JPN}ママ『じゃあ きをつけてね!$"
+	.string "{JPN}ママじゃあ きをつけてね!$"
 
 PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom:
-	.string "{JPN}ママ『あら\n"
+	.string "{JPN}ママあら\n"
 	.string "{JPN}その バッジ パパから もらったの!?\p"
 	.string "{JPN}じゃあ ママも これ あげようかな$"
 
@@ -349,7 +349,7 @@ PlayersHouse_1F_Text_DontPushYourselfTooHard:
 	.string "{JPN}じゃあ がんばってね!$"
 
 PlayersHouse_1F_Text_IsThatAPokenav:
-	.string "{JPN}ママ『なあに それ? ポケナビ?\n"
+	.string "{JPN}ママなあに それ? ポケナビ?\n"
 	.string "{JPN}デボンの ひとから いただいたの?\p"
 	.string "{JPN}じゃあ ママの ことも\n"
 	.string "{JPN}とうろくして もらっちゃおうかな!\p"
@@ -366,7 +366,7 @@ PlayersHouse_1F_Text_Vigoroth2:
 	.string "{JPN}ふごっ ふご ふご……$"
 
 PlayersHouse_1F_Text_ReportFromPetalburgGym:
-	.string "{JPN}インタビュアー『…… いじょう\n"
+	.string "{JPN}インタビュアー…… いじょう\n"
 	.string "{JPN}トウカジムの まえ からでした!$"
 
 PlayersHouse_1F_Text_TheresAMovieOnTV:
@@ -378,14 +378,14 @@ PlayersHouse_1F_Text_TheresAMovieOnTV:
 PlayersHouse_1F_Text_RunningShoesManual:
 	.string "{JPN}ランニングシューズの\n"
 	.string "{JPN}せつめいしょが ある!\p"
-	.string "{JPN}「ランニングシューズは\n"
+	.string "{JPN}ランニングシューズは\n"
 	.string "{JPN} Bボタンを おすことで いままでよりも\l"
 	.string "{JPN} はやく はしれるように なります!\p"
 	.string "{JPN} ランニングシューズを はいて\n"
-	.string "{JPN} おもいっきり そとを はしろう!」$"
+	.string "{JPN} おもいっきり そとを はしろう!$"
 
 PlayersHouse_1F_Text_TicketFromBrineyCameForYou:
-	.string "{JPN}パパ『ん?\n"
+	.string "{JPN}パパん?\n"
 	.string "{JPN}{PLAYER}じゃ ないか!\p"
 	.string "{JPN}ひさしぶりに かおを みたが\n"
 	.string "{JPN}どこか たくましくなった……\l"
@@ -395,7 +395,7 @@ PlayersHouse_1F_Text_TicketFromBrineyCameForYou:
 	.string "{JPN}おまえあてに なにか とどいていたぞ!$"
 
 PlayersHouse_1F_Text_PortsInSlateportLilycove:
-	.string "{JPN}パパ『ふねのチケットか……\p"
+	.string "{JPN}パパふねのチケットか……\p"
 	.string "{JPN}ふねに のるなら カイナか ミナモに\n"
 	.string "{JPN}ふねのりばが あったよな$"
 
@@ -406,13 +406,13 @@ PlayersHouse_1F_Text_BetterGetBackToGym:
 	.string "{JPN}いえのこと たのんだよ$"
 
 PlayersHouse_1F_Text_DadShouldStayLonger:
-	.string "{JPN}ママ『パパったら\n"
+	.string "{JPN}ママパパったら\n"
 	.string "{JPN}ひさしぶりに かえって きたのに\l"
 	.string "{JPN}ポケモンの はなし ばっかり!\p"
 	.string "{JPN}もっと ゆっくり すれば いいのにね!$"
 
 PlayersHouse_1F_Text_IsThatABreakingStory:
-	.string "{JPN}ママ『なにかの ニュース かしら?$"
+	.string "{JPN}ママなにかの ニュース かしら?$"
 
 PlayersHouse_1F_Text_LatiEmergencyNewsFlash:
 	.string "{JPN}りんじ ニュース です\p"
@@ -425,10 +425,10 @@ PlayersHouse_1F_Text_LatiEmergencyNewsFlash:
 	.string "{JPN}えいがを おたのしみ ください$"
 
 PlayersHouse_1F_Text_WhatColorDidTheySay:
-	.string "{JPN}ママ『ねえ ねえ {PLAYER}\n"
+	.string "{JPN}ママねえ ねえ {PLAYER}\n"
 	.string "{JPN}いまの ニュース\l"
 	.string "{JPN}なにいろの ポケモンって いってたの?$"
 
 PlayersHouse_1F_Text_StillUnknownPokemon:
-	.string "{JPN}ママ『へえー まだまだ\n"
+	.string "{JPN}ママへえー まだまだ\n"
 	.string "{JPN}しられていない ポケモンは いるのねえ$"

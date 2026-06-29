@@ -3613,10 +3613,33 @@ static void PrintMonTrainerMemo(void)
     PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_MEMO), gStringVar4, 0, 1, 0, 0);
 }
 
+static const u8 sText_NatureSuffixNa[] = _("な ");
+static const u8 sText_NatureSuffixPlain[] = _(" ");
+
+static bool32 SummaryNatureUsesPlainSuffix(u8 nature)
+{
+    switch (nature)
+    {
+    case NATURE_BOLD:   // ずぶとい
+    case NATURE_GENTLE: // おとなしい
+        return TRUE;
+    default:
+        return FALSE;
+    }
+}
+
 static void BufferNatureString(void)
 {
     struct PokemonSummaryScreenData *sumStruct = sMonSummaryScreen;
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gNaturesInfo[sumStruct->summary.nature].name);
+
+    StringCopy(gStringVar3, gNaturesInfo[sumStruct->summary.nature].name);
+
+    if (SummaryNatureUsesPlainSuffix(sumStruct->summary.nature))
+        StringAppend(gStringVar3, sText_NatureSuffixPlain);
+    else
+        StringAppend(gStringVar3, sText_NatureSuffixNa);
+
+    DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gStringVar3);
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(5, gText_EmptyString5);
 }
 

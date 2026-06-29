@@ -316,158 +316,150 @@ PetalburgWoods_EventScript_JamesRematch::
 	end
 
 PetalburgWoods_Text_NotAOneToBeFound:
-	.string "Hmmm...\n"
-	.string "Not a one to be found...$"
+	.string "{JPN}いないなあ……$"
 
 PetalburgWoods_Text_HaveYouSeenShroomish:
-	.string "Hello, have you seen any POKEMON\n"
-	.string "called SHROOMISH around here?\p"
-	.string "I really love that POKEMON.$"
+	.string "{JPN}ねえ きみきみ このあたりで\nキノココって ポケモン みなかった?\pおじさん あの ポケモン すき なのよね"
+	.string ""
+	.string "$"
 
 PetalburgWoods_Text_IWasGoingToAmbushYou:
-	.string "I was going to ambush you, but you\n"
-	.string "had to dawdle in PETALBURG WOODS\l"
-	.string "forever, didn't you?\p"
-	.string "I got sick of waiting, so here I am!$"
+	.string "{JPN}まちぶせ していたのに\nいつまでも トウカのもりで うろうろと……\pまちくたびれたから きてやったぞ!"
+	.string ""
+	.string "$"
 
 PetalburgWoods_Text_HandOverThosePapers:
-	.string "You! DEVON RESEARCHER!\p"
-	.string "Hand over those papers!$"
+	.string "{JPN}やい! デボンの けんきゅういん!\pその しょるいを こっちに よこしやがれ!"
+	.string "$"
 
 PetalburgWoods_Text_YouHaveToHelpMe:
-	.string "Aiyeeeh!\p"
-	.string "You're a POKEMON TRAINER, aren't you?\n"
-	.string "You've got to help me, please!$"
+	.string "{JPN}ひやー!\pきみ ポケモントレーナー だよね\nおじさんを たすけてよぉ"
+	.string ""
+	.string "$"
 
 PetalburgWoods_Text_NoOneCrossesTeamAqua:
-	.string "Hunh? What do you think you're doing?\n"
-	.string "What, you're going to protect him?\p"
-	.string "No one who crosses TEAM AQUA\n"
-	.string "gets any mercy, not even a kid!\p"
-	.string "Come on and battle me!$"
+	.string "{JPN}……ん? なんだ おまえ?\nそいつを かばおう ってのか?\pアクアだんの じゃまを する やつは\nこどもでも ようしゃ しねえ!\lしょうぶ しやがれ!"
+	.string ""
+	.string ""
+	.string ""
+	.string "$"
 
 PetalburgWoods_Text_YoureKiddingMe:
-	.string "You're kidding me! You're tough!$"
+	.string "{JPN}……つ つよい じゃねーか!$"
 
 PetalburgWoods_Text_YouveGotSomeNerve:
-	.string "Grrr... You've got some nerve\n"
-	.string "meddling with TEAM AQUA!\l"
-	.string "Come on and battle me again!\p"
-	.string "I wish I could say that, but I'm out of\n"
-	.string "POKEMON...\p"
-	.string "And, hey, we of TEAM AQUA are also\n"
-	.string "after something in RUSTBORO.\p"
-	.string "I'll let you go today!$"
+	.string "{JPN}むむむ…… アクアだんの\nじゃまを するとは なんて やつ!\lもう いっかい しょうぶ しろ!\p……と いいたい ところ だが\nもう てもちの ポケモンは いない\pそれに カナズミ シティにも アクアだんが\nねらっている ものが あるからな!\pきょうは これぐらいに しといてやらぁ!"
+	.string ""
+	.string ""
+	.string ""
+	.string ""
+	.string ""
+	.string ""
+	.string "$"
 
 PetalburgWoods_Text_ThatWasAwfullyClose:
-	.string "Whew...\n"
-	.string "That was awfully close!\p"
-	.string "Thanks to you, he didn't rob me of\n"
-	.string "these important papers.\p"
-	.string "I know, I'll give you a GREAT BALL as\n"
-	.string "my thanks!$"
+	.string "{JPN}……ふぅ\nあぶない ところ だった!\pきみの おかげで だいじな しょるいを\nうばわれないで すんだよ!\p……そうだ! おれいに\nスーパーボールを あげちゃおう!"
+	.string ""
+	.string ""
+	.string ""
+	.string ""
+	.string "$"
 
 PetalburgWoods_Text_TeamAquaAfterSomethingInRustboro:
-	.string "Didn't that TEAM AQUA thug say\n"
-	.string "they were after something in\l"
-	.string "RUSTBORO, too?$"
+	.string "{JPN}……そういえば さっき アクアだんは\nカナズミにも ねらっている ものがある\lとか いってたよね……?"
+	.string ""
+	.string "$"
 
 PetalburgWoods_Text_ICantBeWastingTime:
-	.string "Uh-oh! It's a crisis!\n"
-	.string "I can't be wasting time!$"
+	.string "{JPN}たいへんだ!!\nこうしちゃ いられない!"
+	.string "$"
 
 PetalburgWoods_Text_YoureLoadedWithItems:
-	.string "You're loaded with items.\n"
-	.string "I can't give you this GREAT BALL.$"
+	.string "{JPN}どうぐ いっぱいで\nスーパーボール あげられないね"
+	.string "$"
 
 PetalburgWoods_Text_GoBugPokemonTeam:
-	.string "I caught a whole bunch of POKEMON!\p"
-	.string "Go, go, go!\n"
-	.string "My BUG POKEMON team!$"
+	.string "{JPN}ポケモン いっぱい つかまえた!\pそら いけ!\nぼくの むしポケモン チーム!"
+	.string ""
+	.string "$"
 
 PetalburgWoods_Text_ICouldntWin:
-	.string "I have all these POKEMON,\n"
-	.string "but I couldn't win...$"
+	.string "{JPN}こんなに ポケモン いるのに\nかてなかったのか……"
+	.string "$"
 
 PetalburgWoods_Text_ImOutOfPokeBalls:
-	.string "I caught a bunch of POKEMON.\n"
-	.string "Now I'm out of POKe BALLS.$"
+	.string "{JPN}たくさん ポケモン つかまえたら\nモンスターボール なくなっちゃったよ"
+	.string "$"
 
 PetalburgWoods_Text_InstantlyPopularWithBugPokemon:
-	.string "If you take BUG POKEMON to school,\n"
-	.string "you get to be instantly popular!$"
+	.string "{JPN}むしポケモンを がっこうに もっていくと\nそれだけで にんきもの だろ!?"
+	.string "$"
 
 PetalburgWoods_Text_CantBePopularIfILose:
-	.string "I can't be popular if I lose.$"
+	.string "{JPN}まけると にんきものに なれないや$"
 
 PetalburgWoods_Text_PeopleRespectYou:
-	.string "If you have a big BUG POKEMON,\n"
-	.string "people respect you for it.$"
+	.string "{JPN}でかい むしポケモン もってると\nそれだけで そんけー されるだろ!?"
+	.string "$"
 
 PetalburgWoods_Text_IWantRematch1:
-	.string "I want a rematch when my BUG\n"
-	.string "POKEMON grow up!\p"
-	.string "I'm registering you in my POKeNAV!$"
+	.string "{JPN}むしポケモン そだったら また しょうぶだ!\nポケナビに とうろく するぞ"
+	.string "$"
 
 PetalburgWoods_Text_IWantRematch2:
-	.string "I want a rematch when my BUG \n"
-	.string "POKEMON grow up!\p"
-	.string "I'm registering you in my POKeNAV!$"
+	.string "{JPN}むしポケモン そだったら また しょうぶだ!\nポケナビに とうろく するぞ"
+	.string "$"
 
 PetalburgWoods_Text_MyPokemonHaveGrown:
-	.string "My BUG POKEMON have grown.\n"
-	.string "I'll be popular again.$"
+	.string "{JPN}ぼくの むしポケモン そだったぞ!\nこれで また にんきもの だぜ!"
+	.string "$"
 
 PetalburgWoods_Text_CantBePopularIfLose:
-	.string "I can't be popular if I lose.$"
+	.string "{JPN}まけると にんきものに なれないや$"
 
 PetalburgWoods_Text_IveBeenTrainingHard:
-	.string "You get to be popular if you have\n"
-	.string "strong POKEMON, right?\l"
-	.string "So, I've been training hard.$"
+	.string "{JPN}つよい ポケモン もってると\nにんきものに なれるだろ?\lだから がんばって そだててるのさ!"
+	.string ""
+	.string "$"
 
 PetalburgWoods_Text_StayOutOfTallGrass:
-	.string "Yo, there!\n"
-	.string "Your POKEMON doing okay?\p"
-	.string "If your POKEMON are weak and you want\n"
-	.string "to avoid battles, you should stay out\l"
-	.string "of tall grass.$"
+	.string "{JPN}よお! おまえの ポケモン げんき?\pてもちの ポケモンが よわっていて\nたたかわせたく ないときは なるべく\lくさむらを よけて あるくと いいよ!"
+	.string ""
+	.string ""
+	.string "$"
 
 PetalburgWoods_Text_HiddenItemsExplanation:
-	.string "Sometimes, there are things on the\n"
-	.string "ground even if you can't see them.\p"
-	.string "That's why I always check where I'm\n"
-	.string "walking.$"
+	.string "{JPN}みえて いなくても\nどうぐが おちてることが あるから\lあしもとを しらべて いるんだ!"
+	.string ""
+	.string "$"
 
 PetalburgWoods_Text_TryUsingThisItem:
-	.string "Oh, neat!\n"
-	.string "That's the BADGE from RUSTBORO GYM!\p"
-	.string "You must be a TRAINER.\n"
-	.string "You should try using this item.$"
+	.string "{JPN}それって カナズミの ジムバッジ!\pあなた トレーナーなのね\nこの どうぐ つかってみたら どうかしら?"
+	.string ""
+	.string "$"
 
 PetalburgWoods_Text_MiracleSeedExplanation:
-	.string "It's a MIRACLE SEED.\n"
-	.string "If a POKEMON holds that item, its\l"
-	.string "GRASS-type moves become stronger.\p"
-	.string "Besides MIRACLE SEED, I think there are\n"
-	.string "other convenient items for POKEMON\l"
-	.string "to hold.$"
+	.string "{JPN}きせきのタネを\nポケモンに もたせてあげると くさタイプの\lわざの いりょくが あがるのよ\pきせきのタネの ほかにも\nポケモンに もたせると べんりな\lどうぐが あるらしいわね"
+	.string ""
+	.string ""
+	.string ""
+	.string ""
+	.string "$"
 
 PetalburgWoods_Text_TrainerTipsExperience:
-	.string "TRAINER TIPS\p"
-	.string "Any POKEMON that appears even once\n"
-	.string "in a battle is awarded EXP Points.\p"
-	.string "To raise a weak POKEMON, put it at the\n"
-	.string "left of the team list.\p"
-	.string "As soon as a battle starts, switch it\n"
-	.string "out. It will earn EXP Points without\l"
-	.string "being exposed to any harm.$"
+	.string "{JPN}おとくな けいじばん!!\pしょうぶの とき\nいちど でも かおをだした ポケモンは\lけいけんちが もらえます!\pよわい ポケモンを リストの ひだりにして\nしょうぶのとき すぐに こうたい!\lこれで よわい ポケモンも そだちます!"
+	.string ""
+	.string ""
+	.string ""
+	.string ""
+	.string ""
+	.string "$"
 
 PetalburgWoods_Text_TrainerTipsPP:
-	.string "TRAINER TIPS\p"
-	.string "In addition to Hit Points (HP), POKEMON\n"
-	.string "have Power Points (PP) that are used to\l"
-	.string "make moves during battle.\p"
-	.string "If a POKEMON runs out of PP, it must be\n"
-	.string "taken to a POKEMON CENTER.$"
+	.string "{JPN}おとくな けいじばん!!\pポケモンには ヒットポイントの ほかに\nわざを くりだす ちからの もと\lパワーポイント というものが あります\pわざの パワーポイントが なくなったときも\nポケモンセンターに いきましょう!"
+	.string ""
+	.string ""
+	.string ""
+	.string ""
+	.string "$"
 

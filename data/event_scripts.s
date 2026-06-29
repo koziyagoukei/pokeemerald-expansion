@@ -1358,171 +1358,176 @@ Common_EventScript_PlayerHandedOverTheItem::
 
 @ The below and surf.inc could be split into some text/notices.inc
 gText_PokemartSign::
-	.string "Selected items for your convenience!\n"
-	.string "POKEMON MART$"
+	.string "{JPN}べんりなどうぐ いろいろ あります\n"
+	.string "{JPN}フレンドリィショップ$"
 
 gText_PokemonCenterSign::
-	.string "Rejuvenate your tired partners!\n"
-	.string "POKEMON CENTER$"
+	.string "{JPN}つかれた ポケモンも ひとやすみ!\n"
+	.string "{JPN}ポケモンセンター$"
 
 gText_MomOrDadMightLikeThisProgram::
-	.string "{STR_VAR_1} might like this program.\n"
-	.string "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...\p"
-	.string "Better get going!$"
+	.string "{JPN}{STR_VAR_1}が すきそうな ばんぐみをやってる!\n"
+	.string "{JPN}…………………………………………………\pさきを いそがなきゃ!$"
 
 gText_WhichFloorWouldYouLike::
-	.string "Welcome to LILYCOVE DEPARTMENT STORE.\p"
-	.string "Which floor would you like?$"
+	.string "{JPN}ミナモ デパートへ ようこそ!\p"
+	.string "{JPN}なんかいへ いきますか?$"
 
 gText_SandstormIsVicious::
-	.string "The sandstorm is vicious.\n"
-	.string "It's impossible to keep going.$"
+	.string "{JPN}さばくの すなあらしが ひどくて\n"
+	.string "{JPN}さきに すすめない!$"
 
 gText_SelectWithoutRegisteredItem::
-	.string "An item in the BAG can be\n"
-	.string "registered to SELECT for easy use.$"
+	.string "{JPN}バッグに いれてある どうぐを\nべんりボタンに とうろく できます$"
 
 gText_PokemonTrainerSchoolEmail::
-	.string "There's an e-mail from POKEMON TRAINER\n"
-	.string "SCHOOL.\p"
-	.string "... ... ... ... ... ...\p"
-	.string "A POKEMON may learn up to four moves.\p"
-	.string "A TRAINER's expertise is tested on the\n"
-	.string "move sets chosen for POKEMON.\p"
-	.string "... ... ... ... ... ...$"
+	.string "{JPN}パソコンに\nポケモン トレーナー こうざの\l"
+	.string "{JPN}メールが きている!\p"
+	.string "{JPN}…… …… ……\p"
+	.string "{JPN}ポケモンが おぼえられる わざは 4つ!\p"
+	.string "{JPN}どんな わざを おぼえさせるかで\n"
+	.string "{JPN}トレーナーの じつりょくが とわれます!\p"
+	.string "{JPN}…… …… ……$"
 
 gText_PlayerHouseBootPC::
-	.string "{PLAYER} booted up the PC.$"
+	.string "{JPN}{PLAYER}は パソコンの\nスイッチを いれた!$"
 
 gText_PokeblockLinkCanceled::
-	.string "The link was canceled.$"
+	.string "{JPN}つうしんは キャンセルされました$"
 
 gText_UnusedNicknameReceivedPokemon::
-	.string "Want to give a nickname to\n"
-	.string "the {STR_VAR_2} you received?$"
+	.string "{JPN}もらった {STR_VAR_2}に\n"
+	.string "{JPN}ニックネームを つけますか?$"
 
 gText_PlayerWhitedOut::
-	.string "{PLAYER} is out of usable\n"
-	.string "POKEMON!\p{PLAYER} whited out!$"
+	.string "{JPN}{PLAYER}の てもとには\n"
+	.string "{JPN}たたかえるポケモンが もういない!\p"
+	.string "{JPN}{PLAYER}は\n"
+	.string "{JPN}めのまえが まっくらに なった!$"
 
 gText_FirstShouldRestoreMonsHealth::
-	.string "First, you should restore your\n"
-	.string "POKEMON to full health.$"
+	.string "{JPN}まずは ポケモンを\n"
+	.string "{JPN}かいふく させましょう$"
 
 gText_MonsHealedShouldBuyPotions::
-	.string "Your POKEMON have been healed\n"
-	.string "to perfect health.\p"
-	.string "If your POKEMON's energy, HP,\n"
-	.string "is down, please come see us.\p"
-	.string "If you're planning to go far in the\n"
-	.string "field, you should buy some POTIONS\l"
-	.string "at the POKEMON MART.\p"
-	.string "We hope you excel!$"
+	.string "{JPN}みんな げんきに なりましたよ!\p"
+	.string "{JPN}ポケモンの たいりょく HPが\n"
+	.string "{JPN}なくなってきたら\l"
+	.string "{JPN}こまめに ここに きてくださいね\p"
+	.string "{JPN}とおく おでかけに なるときは\n"
+	.string "{JPN}フレンドリィショップで\l"
+	.string "{JPN}キズぐすりを かっておくのが\l"
+	.string "{JPN}おすすめです\p"
+	.string "{JPN}それでは がんばってください!$"
 
 gText_MonsHealed::
-	.string "Your POKEMON have been healed\n"
-	.string "to perfect health.\p"
-	.string "We hope you excel!$"
+	.string "{JPN}みんな げんきに なりましたよ!\p"
+	.string "{JPN}それでは がんばってください!$"
 
 gText_HadQuiteAnExperienceTakeRest::
-	.string "MOM: {PLAYER}!\n"
-	.string "Welcome home.\p"
-	.string "It sounds like you had quite\n"
-	.string "an experience.\p"
-	.string "Maybe you should take a quick\n"
-	.string "rest.$"
+	.string "{JPN}ママ{PLAYER}!\n"
+	.string "{JPN}おかえりなさい\p"
+	.string "{JPN}たいへん だったわね\p"
+	.string "{JPN}すこし やすんで いったら\n"
+	.string "{JPN}どうかしら……?\l"
+	.string "{JPN}…… …… ……$"
 
 gText_MomExplainHPGetPotions::
-	.string "MOM: Oh, good! You and your\n"
-	.string "POKEMON are looking great.\p"
-	.string "I just heard from {STR_VAR_1}.\p"
-	.string "He said that POKEMON's energy is\n"
-	.string "measured in HP.\p"
-	.string "If your POKEMON lose their HP,\n"
-	.string "you can restore them at any\l"
-	.string "POKEMON CENTER.\p"
-	.string "If you're going to travel far away,\n"
-	.string "the smart TRAINER stocks up on\l"
-	.string "POTIONS at the POKEMON MART.\p"
-	.string "Make me proud, honey!\p"
-	.string "Take care!$"
+	.string "{JPN}ママあらあら!\n"
+	.string "{JPN}あなたも ポケモンも\l"
+	.string "{JPN}げんき いっぱいね!\p"
+	.string "{JPN}さっき オダマキはかせから\n"
+	.string "{JPN}きいたんだけど……\p"
+	.string "{JPN}ポケモンの たいりょく HPが\n"
+	.string "{JPN}なくなってきたら\p"
+	.string "{JPN}こまめに ポケモンセンターで\n"
+	.string "{JPN}かいふく させるか\p"
+	.string "{JPN}とおくに ぼうけんするときは\n"
+	.string "{JPN}フレンドリィショップで\l"
+	.string "{JPN}キズぐすりを かっておくのが\l"
+	.string "{JPN}きほん らしいわよ\p"
+	.string "{JPN}それじゃ おうえん しているわ!\p"
+	.string "{JPN}きを つけて!\n"
+	.string "{JPN}いってらっしゃい!$"
 
 gText_RegisteredTrainerinPokeNav::
-	.string "Registered {STR_VAR_1} {STR_VAR_2}\n"
-	.string "in the POKeNAV.$"
+	.string "{JPN}{STR_VAR_1}の {STR_VAR_2}を\n"
+	.string "{JPN}ポケナビに とうろく した!$"
 
 gText_ComeBackWithSecretPower::
-	.string "Do you know the TM SECRET POWER?\p"
-	.string "Our group, we love the TM SECRET\n"
-	.string "POWER.\p"
-	.string "One of our members will give it to you.\n"
-	.string "Come back and show me if you get it.\p"
-	.string "We'll accept you as a member and sell\n"
-	.string "you good stuff in secrecy.$"
+	.string "{JPN}ひみつのちからって\n"
+	.string "{JPN}わざマシン しってる?\p"
+	.string "{JPN}おれら わざマシン ひみつのちからが\n"
+	.string "{JPN}だいすき なんだ\p"
+	.string "{JPN}おれらの メンバーが どこかで くれるから\n"
+	.string "{JPN}それを もらったら また おいで!\p"
+	.string "{JPN}きみも メンバーとして\n"
+	.string "{JPN}ひみつで いいものを うってあげるよ$"
 
 gText_PokerusExplanation::
-	.string "Your POKEMON may be infected with\n"
-	.string "POKeRUS.\p"
-	.string "Little is known about the POKeRUS\n"
-	.string "except that they are microscopic life-\l"
-	.string "forms that attach to POKEMON.\p"
-	.string "While infected, POKEMON are said to\n"
-	.string "grow exceptionally well.$"
+	.string "{JPN}おあずかりした ポケモンに\n"
+	.string "{JPN}ポケルスが ついて いるようです\p"
+	.string "{JPN}くわしいことは わかって いないのですが\n"
+	.string "{JPN}ポケルスと いうのは ポケモンに くっつく\l"
+	.string "{JPN}ちいさな せいめいたいで\l"
+	.string "{JPN}これが ついている あいだ\l"
+	.string "{JPN}ポケモンが よく そだつ みたいです$"
 
 	.include "data/text/surf.inc"
 
 gText_DoorOpenedFarAway::
-	.string "It sounded as if a door opened\n"
-	.string "somewhere far away.$"
+	.string "{JPN}どこか とおくの とびらが\n"
+	.string "{JPN}ひらいたような おとだ……$"
 
 gText_BigHoleInTheWall::
-	.string "There is a big hole in the wall.$"
+	.string "{JPN}かべに おおきな あなが あいている!$"
 
 gText_SorryWirelessClubAdjustments::
-	.string "I'm terribly sorry.\n"
-	.string "The POKEMON WIRELESS CLUB is\l"
-	.string "undergoing adjustments now.$"
+	.string "{JPN}もうしわけ ございません\n"
+	.string "{JPN}ポケモン ワイヤレス クラブは\l"
+	.string "{JPN}ただいま ちょうせいちゅう です$"
 
 gText_UndergoingAdjustments::
-	.string "It appears to be undergoing\n"
-	.string "adjustments...$"
+	.string "{JPN}ちょうせいちゅうの ようだ$"
 
 @ Unused
 gText_SorryTradeCenterInspections::
-	.string "I'm terribly sorry. The TRADE CENTER\n"
-	.string "is undergoing inspections.$"
+	.string "{JPN}もうしわけ ございません\n"
+	.string "{JPN}ただいま こちらの トレードセンターは\l"
+	.string "{JPN}てんけんちゅう です$"
 
 @ Unused
 gText_SorryRecordCornerPreparation::
-	.string "I'm terribly sorry. The RECORD CORNER\n"
-	.string "is under preparation.$"
+	.string "{JPN}もうしわけ ございません\n"
+	.string "{JPN}ただいま こちらの レコードコーナーは\l"
+	.string "{JPN}じゅんびちゅう です$"
 
 gText_PlayerHandedOverTheItem::
-	.string "{PLAYER} handed over the\n"
-	.string "{STR_VAR_1}.$"
+	.string "{JPN}{PLAYER}は\n"
+	.string "{JPN}{STR_VAR_1}を わたした!$"
 
 gText_ThankYouForAccessingMysteryGift::
-	.string "Thank you for accessing the\n"
-	.string "MYSTERY GIFT System.$"
+	.string "{JPN}ふしぎな おくりものを ごりよう\n"
+	.string "{JPN}いただき ありがとう ございます!$"
 
 gText_PlayerFoundOneTMHM::
-	.string "{PLAYER} found one {STR_VAR_1}\n"
-	.string "{STR_VAR_2}!$"
+	.string "{JPN}{PLAYER}は {STR_VAR_1}\n"
+	.string "{JPN}{STR_VAR_2}を みつけた!$"
 
 gText_PlayerFoundTMHMs::
-	.string "{PLAYER} found {STR_VAR_3} {STR_VAR_1}\n"
-	.string "{STR_VAR_2}!$"
+	.string "{JPN}{PLAYER}は {STR_VAR_1}\n"
+	.string "{JPN}{STR_VAR_2}を {STR_VAR_3}コ みつけた!$"
 
 gText_Sudowoodo_Attacked::
-	.string "The weird tree doesn't like the\n"
-	.string "WAILMER PAIL!\p"
-	.string "The weird tree attacked!$"
+	.string "{JPN}おかしな きは\n"
+	.string "{JPN}ホエルコじょうろを いやがっている!\p"
+	.string "{JPN}おかしな きが おそいかかってきた!$"
 
 gText_LegendaryFlewAway::
-	.string "The {STR_VAR_1} flew away!$"
+	.string "{JPN}{STR_VAR_1}は\nどこかへ とびさって いった!$"
 
 gText_WantWhichFloor::
-	.string "Which floor do you want?$"
+	.string "なんかいへ いきますか?$"
 
 	.include "data/text/pc_transfer.inc"
 	.include "data/text/questionnaire.inc"
@@ -1653,7 +1658,7 @@ Text_MonFlewAway::
 
 @ Call for legendary bird trio
 Text_Gyaoo::
-	.string "Gyaoo!$"
+	.string "{JPN}ギャーオ!$"
 
 EventScript_BrailleCursorWaitButton::
 	special BrailleCursorToggle

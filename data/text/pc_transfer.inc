@@ -1,6 +1,6 @@
 gText_PkmnTransferredSomeonesPC::
 	.string "{JPN}{STR_VAR_2}は だれかのパソコンの\n"
-	.string "{JPN}ボックス『{STR_VAR_1}』に\l"
+	.string "{JPN}ボックス{STR_VAR_1}に\l"
 	.string "{JPN}てんそう された!$"
 
 gText_PkmnTransferredLanettesPC::
@@ -10,15 +10,15 @@ gText_PkmnTransferredLanettesPC::
 #else
 	.string "{JPN}マユミのパソコンの\n"
 #endif
-	.string "{JPN}ボックス『{STR_VAR_1} 』に\l"
+	.string "{JPN}ボックス{STR_VAR_1} に\l"
 	.string "{JPN}てんそう された!$"
 
 gText_PkmnTransferredSomeonesPCBoxFull::
 	.string "{JPN}だれかのパソコンの\n"
-	.string "{JPN}ボックス『{STR_VAR_3}』が\l"
+	.string "{JPN}ボックス{STR_VAR_3}が\l"
 	.string "{JPN}いっぱいだ!!\p"
 	.string "{JPN}{STR_VAR_2}は\n"
-	.string "{JPN}ボックス『{STR_VAR_1}』に\l"
+	.string "{JPN}ボックス{STR_VAR_1}に\l"
 	.string "{JPN}てんそう された!$"
 
 gText_PkmnTransferredLanettesPCBoxFull::
@@ -27,15 +27,15 @@ gText_PkmnTransferredLanettesPCBoxFull::
 #else
 	.string "{JPN}マユミのパソコンの\n"
 #endif
-	.string "{JPN}ボックス『{STR_VAR_3}』が\n"
+	.string "{JPN}ボックス{STR_VAR_3}が\n"
 	.string "{JPN}いっぱいだ!!"
 	.string "{JPN}{STR_VAR_2}は\n"
-	.string "{JPN}ボックス『{STR_VAR_1}』に\l"
+	.string "{JPN}ボックス{STR_VAR_1}に\l"
 	.string "{JPN}てんそう された!$"
 
 gText_PkmnSentToPCAfterCatch::
 	.string "{JPN}{STR_VAR_2}は {B_PC_CREATOR_NAME}のパソコンの\n"
-	.string "{JPN}ボックス『{STR_VAR_1}』に\l"
+	.string "{JPN}ボックス{STR_VAR_1}に\l"
 	.string "{JPN}てんそう された!$"
 
 gText_PlayerObtainedTheMon::

@@ -4672,6 +4672,18 @@ BattleScript_ProtosynthesisActivates::
 	waitmessage B_WAIT_TIME_MED
 	return
 
+BattleScript_OrichalcumPulseActivates::
+        call BattleScript_AbilityPopUp
+        printstring STRINGID_ORICHALCUMPULSEACTIVATES
+        waitmessage B_WAIT_TIME_LONG
+        return
+
+BattleScript_HadronEngineActivates::
+        call BattleScript_AbilityPopUp
+        printstring STRINGID_HADRONENGINEACTIVATES
+        waitmessage B_WAIT_TIME_LONG
+        return
+
 BattleScript_QuarkDriveActivates::
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_ELECTRICTERRAINACTIVATEDABILITY
