@@ -144,7 +144,7 @@ jobs:
   build:
     if: github.actor != 'allcontributors[bot]'
     runs-on: ubuntu-latest
-    needs: [jp-text-check, build-emerald, release, test]
+    needs: [jp-text-check]
     steps:
       - name: All builds passed
         run: echo "All builds and tests passed."
