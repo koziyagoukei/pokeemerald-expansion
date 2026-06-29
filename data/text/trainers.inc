@@ -83,77 +83,77 @@ Route103_Text_DaisyPostBattle:
 	.string "{JPN}かおりは こころと からだを いやすのです$"
 
 Route103_Text_AmyIntro:
-	.string "{JPN}クミあたしは クミ!\n"
+	.string "{JPN}クミ『あたしは クミ!\n"
 	.string "{JPN}こっちは いもうとの ルミ!\l"
 	.string "{JPN}ふたりで いっしょに たたかうのよ!$"
 
 Route103_Text_AmyDefeated:
-	.string "{JPN}クミまけっちゃったよぉ……$"
+	.string "{JPN}クミ『まけっちゃったよぉ……$"
 
 Route103_Text_AmyPostBattle:
-	.string "{JPN}クミふたりを あいてに するのって\n"
+	.string "{JPN}クミ『ふたりを あいてに するのって\n"
 	.string "{JPN}いろんな ことを かんがえるよね!$"
 
 Route103_Text_AmyNotEnoughPokemon:
-	.string "{JPN}クミあら?\n"
+	.string "{JPN}クミ『あら?\n"
 	.string "{JPN}ポケモン 1ひきしか つれてないんだね!\l"
 	.string "{JPN}それじゃあ あたしたちと たたかえないわ!$"
 
 Route103_Text_LivIntro:
-	.string "{JPN}ルミあたしたちは ふたりで ひとり\n"
+	.string "{JPN}ルミ『あたしたちは ふたりで ひとり\n"
 	.string "{JPN}いっしょに たたかうんだよ!$"
 
 Route103_Text_LivDefeated:
-	.string "{JPN}ルミまけちゃったよぉ おねえちゃぁん……$"
+	.string "{JPN}ルミ『まけちゃったよぉ おねえちゃぁん……$"
 
 Route103_Text_LivPostBattle:
-	.string "{JPN}ルミおねえちゃんと あたしは\n"
+	.string "{JPN}ルミ『おねえちゃんと あたしは\n"
 	.string "{JPN}いきが ぴったり あってるのに……\p"
 	.string "{JPN}まけちゃったよぉ……$"
 
 Route103_Text_AmyLivRegister:
-	.string "{JPN}ルミあたしたち ほんとは\n"
+	.string "{JPN}ルミ『あたしたち ほんとは\n"
 	.string "{JPN}もっと つよいんだもん……\l"
 	.string "{JPN}ほんとうだから! こんど みせるから!$"
 
 Route103_Text_LivNotEnoughPokemon:
-	.string "{JPN}ルミあたしたちと たたかいたいなら\n"
+	.string "{JPN}ルミ『あたしたちと たたかいたいなら\n"
 	.string "{JPN}ポケモンを 2ひき つれてないと ダメよ!\l"
 	.string "{JPN}じゃないと しょうぶに ならないんだから!$"
 
 Route103_Text_AmyRematchIntro:
-	.string "{JPN}クミあたしは クミ!\n"
+	.string "{JPN}クミ『あたしは クミ!\n"
 	.string "{JPN}こっちは いもうとの ルミ!\l"
 	.string "{JPN}ふたりで いっしょに たたかうのよ!$"
 
 Route103_Text_AmyRematchDefeated:
-	.string "{JPN}クミくやしい……\n"
+	.string "{JPN}クミ『くやしい……\n"
 	.string "{JPN}また かてなかったよぉ……$"
 
 Route103_Text_AmyRematchPostBattle:
-	.string "{JPN}クミふたりを あいてに するのって\n"
+	.string "{JPN}クミ『ふたりを あいてに するのって\n"
 	.string "{JPN}いろんな ことを かんがえるよね!$"
 
 Route103_Text_AmyRematchNotEnoughPokemon:
-	.string "{JPN}クミあら?\n"
+	.string "{JPN}クミ『あら?\n"
 	.string "{JPN}ポケモン 1ひきしか つれてないんだね!\l"
 	.string "{JPN}それじゃあ あたしたちと たたかえないわ!$"
 
 Route103_Text_LivRematchIntro:
-	.string "{JPN}ルミあたしたちは ふたりで ひとり\n"
+	.string "{JPN}ルミ『あたしたちは ふたりで ひとり\n"
 	.string "{JPN}いつも いっしょに たたかうんだよ!$"
 
 Route103_Text_LivRematchDefeated:
-	.string "{JPN}ルミまた まけちゃったよぉ\n"
+	.string "{JPN}ルミ『また まけちゃったよぉ\n"
 	.string "{JPN}おねえちゃぁん……$"
 
 Route103_Text_LivRematchPostBattle:
-	.string "{JPN}ルミおねえちゃんと あたしは\n"
+	.string "{JPN}ルミ『おねえちゃんと あたしは\n"
 	.string "{JPN}いきが ぴったり あってるのに……\p"
 	.string "{JPN}どうして また まけちゃったの?$"
 
 Route103_Text_LivRematchNotEnoughPokemon:
-	.string "{JPN}ルミあたしたちと たたかいたいなら\n"
+	.string "{JPN}ルミ『あたしたちと たたかいたいなら\n"
 	.string "{JPN}ポケモンを 2ひき つれてないと ダメよ!\l"
 	.string "{JPN}じゃないと しょうぶに ならないんだから!$"
 
@@ -246,36 +246,36 @@ Route103_Text_MarcosPostBattle:
 	.string "{JPN}ぷ プロを めざして みるか!$"
 
 Route104_Text_GinaIntro:
-	.string "{JPN}ナオよーし!\n"
+	.string "{JPN}ナオ『よーし!\n"
 	.string "{JPN}あたしたちの ポケモンと たたかうです!$"
 
 Route104_Text_GinaDefeat:
-	.string "{JPN}ナオまけて すごく くやしいです$"
+	.string "{JPN}ナオ『まけて すごく くやしいです$"
 
 Route104_Text_GinaPostBattle:
-	.string "{JPN}ナオうわー {STR_VAR_1} つよいです!\n"
+	.string "{JPN}ナオ『うわー {STR_VAR_1} つよいです!\n"
 	.string "{JPN}あたしたち もっと しゅぎょう するです$"
 
 Route104_Text_GinaNotEnoughMons:
-	.string "{JPN}ナオあら? ポケモン 1ひき だけですか!\n"
+	.string "{JPN}ナオ『あら? ポケモン 1ひき だけですか!\n"
 	.string "{JPN}じゃあ あたしたち たたかわない です!\p"
 	.string "{JPN}だって ポケモン 1ひき だけだと\n"
 	.string "{JPN}ポケモンが さびしそうで かわいそう です!$"
 
 Route104_Text_MiaIntro:
-	.string "{JPN}ミオあたしたち ふたご だから\n"
+	.string "{JPN}ミオ『あたしたち ふたご だから\n"
 	.string "{JPN}ポケモンしょうぶも いっしょに するです!$"
 
 Route104_Text_MiaDefeat:
-	.string "{JPN}ミオふたりで しょうぶ したのに\n"
+	.string "{JPN}ミオ『ふたりで しょうぶ したのに\n"
 	.string "{JPN}まけちゃったです……$"
 
 Route104_Text_MiaPostBattle:
-	.string "{JPN}ミオもっと ポケモン そだてて\n"
+	.string "{JPN}ミオ『もっと ポケモン そだてて\n"
 	.string "{JPN}{STR_VAR_1} みたいに つよく なるです!$"
 
 Route104_Text_MiaNotEnoughMons:
-	.string "{JPN}ミオあたしたちと たたかうですか?\p"
+	.string "{JPN}ミオ『あたしたちと たたかうですか?\p"
 	.string "{JPN}じゃあ ポケモンを\n"
 	.string "{JPN}2ひき つれてないと ダメですよ!\l"
 	.string "{JPN}だって あたしたち つよいもん!$"
@@ -658,39 +658,39 @@ Route107_Text_BethPostBattle:
 	.string "{JPN}わたしも がんばろうっと!$"
 
 Route107_Text_LisaIntro:
-	.string "{JPN}ユミあたしたち きょうだい ふたりで\n"
+	.string "{JPN}ユミ『あたしたち きょうだい ふたりで\n"
 	.string "{JPN}しょうぶを させてもらうわ!$"
 
 Route107_Text_LisaDefeated:
-	.string "{JPN}ユミすごいわ\n"
+	.string "{JPN}ユミ『すごいわ\n"
 	.string "{JPN}つよさの レベルが ちがうのね$"
 
 Route107_Text_LisaPostBattle:
-	.string "{JPN}ユミあなたは いっしょに\n"
+	.string "{JPN}ユミ『あなたは いっしょに\n"
 	.string "{JPN}うみに あそびに いくような\l"
 	.string "{JPN}おともだち いるのかしら?$"
 
 Route107_Text_LisaNotEnoughPokemon:
-	.string "{JPN}ユミアタシたちと たたかうなら\n"
+	.string "{JPN}ユミ『アタシたちと たたかうなら\n"
 	.string "{JPN}ポケモン もっと つれてきなさいな$"
 
 Route107_Text_RayIntro:
-	.string "{JPN}シンいつも きょうだいで\n"
+	.string "{JPN}シン『いつも きょうだいで\n"
 	.string "{JPN}ポケモンしょうぶ してるんだ!\p"
 	.string "{JPN}……いっつも おれが まけるけど\n"
 	.string "{JPN}2たい2なら きみに かてるよ!$"
 
 Route107_Text_RayDefeated:
-	.string "{JPN}シンひゃー\n"
+	.string "{JPN}シン『ひゃー\n"
 	.string "{JPN}つよさの レベルが ちがいすぎるや$"
 
 Route107_Text_RayPostBattle:
-	.string "{JPN}シンおれの ポケモン\n"
+	.string "{JPN}シン『おれの ポケモン\n"
 	.string "{JPN}ねえちゃんから もらって そだてた\l"
 	.string "{JPN}だいじな あいぼう なんだぜ!$"
 
 Route107_Text_RayNotEnoughPokemon:
-	.string "{JPN}シンオレらと たたかうなら\n"
+	.string "{JPN}シン『オレらと たたかうなら\n"
 	.string "{JPN}もっと ポケモン つれてきてよ!$"
 
 Route107_Text_CamronIntro:
@@ -926,38 +926,38 @@ Route109_Text_CarterPostBattle:
 	.string "{JPN}いや きっと おおものに なるぞ!$"
 
 Route109_Text_PaulIntro:
-	.string "{JPN}リキやあ こまったなあ\p"
+	.string "{JPN}リキ『やあ こまったなあ\p"
 	.string "{JPN}ふたりっきりの じかん\n"
 	.string "{JPN}じゃま して ほしくないなあ$"
 
 Route109_Text_PaulDefeated:
-	.string "{JPN}リキやあ まいったな……$"
+	.string "{JPN}リキ『やあ まいったな……$"
 
 Route109_Text_PaulPostBattle:
-	.string "{JPN}リキやあ ぼくたちが ここに いること\n"
+	.string "{JPN}リキ『やあ ぼくたちが ここに いること\n"
 	.string "{JPN}だれにも いわないで くれよ!\l"
 	.string "{JPN}ふたりっきりの せかい なんだからさ!$"
 
 Route109_Text_PaulNotEnoughPokemon:
-	.string "{JPN}リキぼくたち ラブラブ だからね\n"
+	.string "{JPN}リキ『ぼくたち ラブラブ だからね\n"
 	.string "{JPN}ぼくたちの ポケモンも\l"
 	.string "{JPN}2ひき いっしょに たたかわせるんだ!$"
 
 Route109_Text_MelIntro:
-	.string "{JPN}シキあたしたちが ラブラブだから\n"
+	.string "{JPN}シキ『あたしたちが ラブラブだから\n"
 	.string "{JPN}ホウエンは あっついのよお!$"
 
 Route109_Text_MelDefeated:
-	.string "{JPN}シキあたしの せいで まけたんだわ……\n"
+	.string "{JPN}シキ『あたしの せいで まけたんだわ……\n"
 	.string "{JPN}こんなんじゃ リキに きらわれちゃう!$"
 
 Route109_Text_MelPostBattle:
-	.string "{JPN}シキねえ リキ\n"
+	.string "{JPN}シキ『ねえ リキ\n"
 	.string "{JPN}あたしのこと おこってない?\l"
 	.string "{JPN}おこっちゃ いやよ$"
 
 Route109_Text_MelNotEnoughPokemon:
-	.string "{JPN}シキあたしたち ラブラブ だからね\n"
+	.string "{JPN}シキ『あたしたち ラブラブ だからね\n"
 	.string "{JPN}あたしたちの ポケモンも\l"
 	.string "{JPN}2ひき いっしょに たたかわせるんだ!$"
 

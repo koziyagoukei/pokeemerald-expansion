@@ -20426,7 +20426,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     },
     [MOVE_PULVERIZING_PANCAKE] =
     {
-        .name = COMPOUND_STRING("{JPN}ほんきをだすこうげき"),
+        .name = COMPOUND_STRING("{JPN}ほんきをだす　こうげき"),
         .description = COMPOUND_STRING("{JPN}ギガインパクト からでたZわざ さわらない"),
         .effect = EFFECT_HIT,
         .power = 210,

@@ -83,10 +83,10 @@ GraniteCave_StevensRoom_Text_ImStevenLetterForMe:
 	.string "{JPN}ボクの なまえは ダイゴ\pめずらしい いしに きょうみが あって\nあちこち たび してるんだよ\pえっ?\nボクに てがみ……?$"
 
 GraniteCave_StevensRoom_Text_ThankYouTakeThis:
-	.string "{JPN}ダイゴ うん ありがとう\pわざわざ とどけて くれたんだ\nなにか おれいを させてもらうよ\pそうだね\nこの わざマシンを あげよう\pはがねのつばさ といって\nボクの おきにいりの わざ だから$"
+	.string "{JPN}ダイゴ『うん ありがとう\pわざわざ とどけて くれたんだ\nなにか おれいを させてもらうよ\pそうだね\nこの わざマシンを あげよう\pはがねのつばさ といって\nボクの おきにいりの わざ だから$"
 
 GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister:
-	.string "{JPN}ダイゴ きみの ポケモン\nなかなか いい かんじ だね\pしゅぎょうを つづければ\nいつかは ポケモンリーグの\lチャンピオンに だって なれる\lボクは そう おもうな\pそうだ!\nせっかく きみと しりあえたんだ\lおたがい ポケナビに\lなまえを とうろく しておこう!\p…… …… ……$"
+	.string "{JPN}ダイゴ『きみの ポケモン\nなかなか いい かんじ だね\pしゅぎょうを つづければ\nいつかは ポケモンリーグの\lチャンピオンに だって なれる\lボクは そう おもうな\pそうだ!\nせっかく きみと しりあえたんだ\lおたがい ポケナビに\lなまえを とうろく しておこう!\p…… …… ……$"
 
 GraniteCave_StevensRoom_Text_RegisteredSteven:
 	.string "{JPN}ダイゴを\nポケナビに とうろく した!$"

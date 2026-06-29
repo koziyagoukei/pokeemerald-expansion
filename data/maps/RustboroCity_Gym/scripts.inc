@@ -237,7 +237,7 @@ RustboroCity_Gym_Text_GymStatueCertified:
 	.string "$"
 
 RustboroCity_Gym_Text_RoxanneRegisterCall:
-	.string "{JPN}…… …… ……\n…… …… …… ピッ!\pツツジあっ {PLAYER}さん ですか?\nわたくし カナズミの ツツジです!\pトウキさんから ききましたよぉ\nあなた すごい いきおいで\lかちすすんで いるらしい ですね!\pこちらも まけっぱなしでは いられません\nもういちど ジムを きたえなおして\lいつかまた ちょうせんを うけますよ!\pそのひが くるのを\nどうぞ まっていて くださいね!\p…… …… ……\n…… …… …… ツー"
+	.string "{JPN}…… …… ……\n…… …… …… ピッ!\pツツジ『あっ {PLAYER}さん ですか?\nわたくし カナズミの ツツジです!\pトウキさんから ききましたよぉ\nあなた すごい いきおいで\lかちすすんで いるらしい ですね!\pこちらも まけっぱなしでは いられません\nもういちど ジムを きたえなおして\lいつかまた ちょうせんを うけますよ!\pそのひが くるのを\nどうぞ まっていて くださいね!\p…… …… ……\n…… …… …… ツー"
 	.string ""
 	.string ""
 	.string ""
@@ -257,7 +257,7 @@ RustboroCity_Gym_Text_RegisteredRoxanne:
 	.string "$"
 
 RustboroCity_Gym_Text_RoxannePreRematch:
-	.string "{JPN}ツツジまた おめにかかれましたね\nジムリーダーの ツツジ です\pあれから おたがいに\nいくつもの しょうぶを けいけんし\lどれほど つよく なれたのか……\pさあ おてあわせ ねがいます!"
+	.string "{JPN}ツツジ『また おめにかかれましたね\nジムリーダーの ツツジ です\pあれから おたがいに\nいくつもの しょうぶを けいけんし\lどれほど つよく なれたのか……\pさあ おてあわせ ねがいます!"
 	.string ""
 	.string ""
 	.string ""
@@ -269,13 +269,13 @@ RustboroCity_Gym_Text_RoxanneRematchDefeat:
 	.string "$"
 
 RustboroCity_Gym_Text_RoxannePostRematch:
-	.string "{JPN}ツツジまだまだ ポケモン しょうぶは\nまなぶことが たくさん あるのですね\pわたくし…… ポケモン しょうぶが\nますます すきに なりましたよ!"
+	.string "{JPN}ツツジ『まだまだ ポケモン しょうぶは\nまなぶことが たくさん あるのですね\pわたくし…… ポケモン しょうぶが\nますます すきに なりましたよ!"
 	.string ""
 	.string ""
 	.string "$"
 
 RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons:
-	.string "{JPN}ツツジまた おめにかかれましたね\nジムリーダーの ツツジ です\pあれから おたがいに\nいくつもの しょうぶを けいけんし\lどれほど つよく なれたのか……\p……あら? たたかえる ポケモンを\n1ひきしか もっていませんね\pどうぞ 2ひき いじょうの\nポケモンを もって きてください"
+	.string "{JPN}ツツジ『また おめにかかれましたね\nジムリーダーの ツツジ です\pあれから おたがいに\nいくつもの しょうぶを けいけんし\lどれほど つよく なれたのか……\p……あら? たたかえる ポケモンを\n1ひきしか もっていませんね\pどうぞ 2ひき いじょうの\nポケモンを もって きてください"
 	.string ""
 	.string ""
 	.string ""

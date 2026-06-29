@@ -287,7 +287,7 @@ Route103_EventScript_Isabelle::
 	end
 
 Route103_Text_MayRoute103Pokemon:
-	.string "{JPN}ハルカえーと 103ばん どうろに いる\n"
+	.string "{JPN}ハルカ『えーと 103ばん どうろに いる\n"
 	.string "{JPN}ポケモンは あれと あれね……$"
 
 Route103_Text_MayLetsBattle:
@@ -304,7 +304,7 @@ Route103_Text_MayDefeated:
 	.string "{JPN}{PLAYER}{KUN} つよい じゃない$"
 
 Route103_Text_MayTimeToHeadBack:
-	.string "{JPN}ハルカあたし おとうさんが\n"
+	.string "{JPN}ハルカ『あたし おとうさんが\n"
 	.string "{JPN}あなたの ことを ちゅうもく するのも\l"
 	.string "{JPN}わかるような きが する!\p"
 	.string "{JPN}だって もらって すぐの ポケモンが\n"
@@ -315,7 +315,7 @@ Route103_Text_MayTimeToHeadBack:
 	.string "{JPN}けんきゅうじょに かえろっか!$"
 
 Route103_Text_BrendanRoute103Pokemon:
-	.string "{JPN}ユウキそうか あいつと あいつが\n"
+	.string "{JPN}ユウキ『そうか あいつと あいつが\n"
 	.string "{JPN}103ばん どうろに いる ポケモンか……$"
 
 Route103_Text_BrendanLetsBattle:
@@ -332,7 +332,7 @@ Route103_Text_BrendanDefeated:
 	.string "{JPN}{PLAYER}って つよいんだね$"
 
 Route103_Text_BrendanTimeToHeadBack:
-	.string "{JPN}ユウキとうさんが\n"
+	.string "{JPN}ユウキ『とうさんが\n"
 	.string "{JPN}{PLAYER}の ことを ちゅうもく するのも\l"
 	.string "{JPN}わかったような きが する……\p"
 	.string "{JPN}もらって すぐの ポケモンが\n"

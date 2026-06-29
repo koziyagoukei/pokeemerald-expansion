@@ -6,9 +6,9 @@ Text_BookShelf:
 
 Text_PokemonCenterBookShelf:
 	.string "{JPN}ポケモンざっしが ならんでる!\p"
-	.string "{JPN}……ポケモンのとも\n"
-	.string "{JPN}……ポケモン てちょう\l"
-	.string "{JPN}……かわいい ポケモン$"
+	.string "{JPN}……「ポケモンのとも」\n"
+	.string "{JPN}……「ポケモン てちょう」\l"
+	.string "{JPN}……「かわいい ポケモン」$"
 
 Text_Vase:
 	.string "{JPN}たかそうな つぼが ある!\n"

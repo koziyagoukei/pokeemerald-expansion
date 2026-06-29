@@ -324,7 +324,7 @@ RivalsHouse_1F_Text_OhYoureTheNewNeighbor:
 	.string "{JPN}ひっこしてきた {PLAYER}{KUN} ね!\p"
 	.string "{JPN}うちにも あなたと おなじ としごろの\n"
 	.string "{JPN}{STR_VAR_1}が いるのよ!\p"
-	.string "{JPN}あたらしい おともだちが できる!\n"
+	.string "{JPN}「あたらしい おともだちが できる!」\n"
 	.string "{JPN}なんて いって\l"
 	.string "{JPN}とっても たのしみに してたの!$"
 

@@ -375,7 +375,7 @@ RivalsHouse_2F_Text_ItsRivalsPokeBall:
 	.string "{JPN}このままに しておこう……$"
 
 RivalsHouse_2F_Text_MayJustCheckingMyPokedex:
-	.string "{JPN}ハルカ{PLAYER}{KUN}!\p"
+	.string "{JPN}ハルカ『{PLAYER}{KUN}!\p"
 	.string "{JPN}あたし いまね\n"
 	.string "{JPN}ポケモンずかんを ながめていたの\p"
 	.string "{JPN}みつけた だけで\n"
@@ -386,13 +386,13 @@ RivalsHouse_2F_Text_MayJustCheckingMyPokedex:
 	.string "{JPN}ポケモン つかまえに いこうかな?$"
 
 RivalsHouse_2F_Text_MayWhereShouldIGoNext:
-	.string "{JPN}ハルカこんどは どこに\n"
+	.string "{JPN}ハルカ『こんどは どこに\n"
 	.string "{JPN}ポケモン つかまえに いこうかな?\p"
 	.string "{JPN}いった さきで また\n"
 	.string "{JPN}{PLAYER}{KUN}と であったりして!?$"
 
 RivalsHouse_2F_Text_BrendanJustCheckingMyPokedex:
-	.string "{JPN}ユウキ{PLAYER}か\p"
+	.string "{JPN}ユウキ『{PLAYER}か\p"
 	.string "{JPN}いま ポケモンずかんを\n"
 	.string "{JPN}チェック してたんだ\p"
 	.string "{JPN}まだまだ つかまえていない\n"
@@ -402,7 +402,7 @@ RivalsHouse_2F_Text_BrendanJustCheckingMyPokedex:
 	.string "{JPN}また ぼうけんに いきたくなるな$"
 
 RivalsHouse_2F_Text_BrendanWhereShouldIGoNext:
-	.string "{JPN}ユウキこんどは どこで\n"
+	.string "{JPN}ユウキ『こんどは どこで\n"
 	.string "{JPN}ポケモン つかまえるか なやむな……\p"
 	.string "{JPN}もし ポケモン つかまえているとき\n"
 	.string "{JPN}{PLAYER}と であったら\l"

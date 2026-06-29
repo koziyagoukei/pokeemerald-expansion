@@ -7,7 +7,7 @@ EventTicket_Text_OldSeaMapTooFar:
 	.string "{JPN}わりいが ほかを あたったほうが……$"
 
 EventTicket_Text_BrineyHoldOnASecond:
-	.string "{JPN}ハギこら! わしの おんじんの\n"
+	.string "{JPN}ハギ『こら! わしの おんじんの\n"
 	.string "{JPN}ねがいを ことわるとは なにごとだ!$"
 
 EventTicket_Text_BrineyLetsSail:

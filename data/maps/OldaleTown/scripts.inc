@@ -379,12 +379,12 @@ OldaleTown_Text_FinishedSketchingFootprints:
 	.string "{JPN}よくみたら じぶんの あしあと だったよ……$"
 
 OldaleTown_Text_MayLetsGoBack:
-	.string "{JPN}ハルカ{PLAYER}{KUN}!\n"
+	.string "{JPN}ハルカ『{PLAYER}{KUN}!\n"
 	.string "{JPN}こっち こっち!\l"
 	.string "{JPN}はやく かえろうよ!$"
 
 OldaleTown_Text_BrendanLetsGoBack:
-	.string "{JPN}ユウキオレ さきに\n"
+	.string "{JPN}ユウキ『オレ さきに\n"
 	.string "{JPN}けんきゅうじょに もどるから\l"
 	.string "{JPN}{PLAYER}も はやく こいよな$"
 

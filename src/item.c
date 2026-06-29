@@ -31,8 +31,6 @@
 
 static bool32 CheckPyramidBagHasItem(enum Item itemId, u16 count);
 static bool32 CheckPyramidBagHasSpace(enum Item itemId, u16 count);
-static const u8 *GetItemPluralName(enum Item);
-static bool32 DoesItemHavePluralName(enum Item);
 static void NONNULL BagPocket_CompactItems(struct BagPocket *pocket);
 static u16 SanitizeItemId(enum Item itemId);
 static u16 SanitizeBagItemId(enum Item itemId);
@@ -174,19 +172,7 @@ const u8 sText_s[] =_("s");
 
 u8 *CopyItemNameHandlePlural(enum Item itemId, u8 *dst, u32 quantity)
 {
-    if (quantity == 1)
-    {
-        return StringCopy(dst, GetItemName(itemId));
-    }
-    else if (DoesItemHavePluralName(itemId))
-    {
-        return StringCopy(dst, GetItemPluralName(itemId));
-    }
-    else
-    {
-        u8 *end = StringCopy(dst, GetItemName(itemId));
-        return StringCopy(end, sText_s);
-    }
+    return CopyItemName(itemId, dst);
 }
 
 bool32 IsBagPocketNonEmpty(enum Pocket pocketId)
@@ -820,16 +806,6 @@ const u8 *GetItemName(enum Item itemId)
 u32 GetItemPrice(enum Item itemId)
 {
     return gItemsInfo[SanitizeItemId(itemId)].price;
-}
-
-static bool32 DoesItemHavePluralName(enum Item itemId)
-{
-    return gItemsInfo[SanitizeItemId(itemId)].pluralName != NULL;
-}
-
-static const u8 *GetItemPluralName(enum Item itemId)
-{
-    return gItemsInfo[SanitizeItemId(itemId)].pluralName;
 }
 
 const u8 *GetItemEffect(enum Item itemId)

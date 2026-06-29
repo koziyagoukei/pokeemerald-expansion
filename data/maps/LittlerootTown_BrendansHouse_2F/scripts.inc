@@ -274,7 +274,7 @@ PlayersHouse_2F_Text_ClockIsStopped:
 	.string "{JPN}じかんを あわせて おかなくちゃ!$"
 
 PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
-	.string "{JPN}ママ{PLAYER}\n"
+	.string "{JPN}ママ『{PLAYER}\n"
 	.string "{JPN}どう あたらしい へやは?\p"
 	.string "{JPN}うん! きれいに かたづいてるわね!\n"
 	.string "{JPN}したも もう かたづいたわ\l"

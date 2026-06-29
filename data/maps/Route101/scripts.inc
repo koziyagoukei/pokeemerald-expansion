@@ -270,7 +270,7 @@ Route101_Text_DontLeaveMe:
 	.string "{JPN}わたしを みすてないで おくれーっ!$"
 
 Route101_Text_YouSavedMe:
-	.string "{JPN}オダマキはあ はあ……\p"
+	.string "{JPN}オダマキ『はあ はあ……\p"
 	.string "{JPN}やせいの ポケモンを ちょうさ しようと\n"
 	.string "{JPN}くさむらに はいったら\l"
 	.string "{JPN}とつぜん ポケモンに おそわれて……\p"

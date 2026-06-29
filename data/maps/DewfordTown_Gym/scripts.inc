@@ -433,7 +433,7 @@ DewfordTown_Gym_Text_GymStatueCertified:
 	.string "{JPN}{PLAYER}$"
 
 DewfordTown_Gym_Text_BrawlyPreRematch:
-	.string "{JPN}トウキなみというのは いちど ひいても\n"
+	.string "{JPN}トウキ『なみというのは いちど ひいても\n"
 	.string "{JPN}いつか かならず はまべに もどってくる\p"
 	.string "{JPN}キミほどの ビッグウェーブだ\n"
 	.string "{JPN}きっと また くると おもっていたよ!\p"
@@ -445,12 +445,12 @@ DewfordTown_Gym_Text_BrawlyRematchDefeat:
 	.string "{JPN}キミに のみこまれそうだ!$"
 
 DewfordTown_Gym_Text_BrawlyPostRematch:
-	.string "{JPN}トウキやっぱり ポケモン しょうぶは\n"
+	.string "{JPN}トウキ『やっぱり ポケモン しょうぶは\n"
 	.string "{JPN}そこが みえないほど ふかく ひろい!\l"
 	.string "{JPN}まるで ホウエンの うみの ようだね!$"
 
 DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons:
-	.string "{JPN}トウキなみというのは いちど ひいても\n"
+	.string "{JPN}トウキ『なみというのは いちど ひいても\n"
 	.string "{JPN}いつか かならず はまべに もどってくる\p"
 	.string "{JPN}キミほどの ビッグウェーブだ\n"
 	.string "{JPN}きっと また くると おもっていたよ!\p"

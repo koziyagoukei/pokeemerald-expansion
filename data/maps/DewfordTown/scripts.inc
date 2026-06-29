@@ -637,34 +637,34 @@ DewfordTown_Text_GymSign:
 	.string "{JPN}ムロ タウン ポケモンジム\nリーダー トウキ\lかくとう ビッグウェーブ!$"
 
 DewfordTown_Text_HallSign:
-	.string "{JPN}ムロの しゅうかいじょ\nみんなの じょうほう こうかんの ばしょ$"
+	.string "{JPN}「ムロの しゅうかいじょ」\nみんなの じょうほう こうかんの ばしょ$"
 
 Route104_Text_LandedInDewfordDeliverLetter:
-	.string "{JPN}ハギほい! ムロに とうちゃく!\pたしか ダイゴとやらに\nてがみを とどけるんだったな!$"
+	.string "{JPN}ハギ『ほい! ムロに とうちゃく!\pたしか ダイゴとやらに\nてがみを とどけるんだったな!$"
 
 DewfordTown_Text_SetSailBackToPetalburg:
-	.string "{JPN}ハギてがみは とどけたのかい?\pそれとも トウカに もどるのかね?$"
+	.string "{JPN}ハギ『てがみは とどけたのかい?\pそれとも トウカに もどるのかね?$"
 
 DewfordTown_Text_PetalburgWereSettingSail2:
-	.string "{JPN}ハギでは トウカに もどると しよう!\pよっしゃ! いくぞ ピーコちゃん!$"
+	.string "{JPN}ハギ『では トウカに もどると しよう!\pよっしゃ! いくぞ ピーコちゃん!$"
 
 DewfordTown_Text_GoDeliverIllBeWaiting:
-	.string "{JPN}ハギでは てがみを とどけておいで\nわしは ここで まっておるから$"
+	.string "{JPN}ハギ『では てがみを とどけておいで\nわしは ここで まっておるから$"
 
 DewfordTown_Text_BrineyLandedInDewford:
-	.string "{JPN}ハギほい! ムロタウンに とうちゃく!\pふねに のりたくなったら\nまた わしに こえを かけておくれ!$"
+	.string "{JPN}ハギ『ほい! ムロタウンに とうちゃく!\pふねに のりたくなったら\nまた わしに こえを かけておくれ!$"
 
 DewfordTown_Text_WhereAreWeBound:
-	.string "{JPN}ハギやあ! きみのため なら\nいつでも ふねを だそう!\pきみが いきたいのは どこ かな?$"
+	.string "{JPN}ハギ『やあ! きみのため なら\nいつでも ふねを だそう!\pきみが いきたいのは どこ かな?$"
 
 DewfordTown_Text_PetalburgWereSettingSail:
-	.string "{JPN}ハギトウカシティ か\pよっしゃ! いくぞ ピーコちゃん!$"
+	.string "{JPN}ハギ『トウカシティ か\pよっしゃ! いくぞ ピーコちゃん!$"
 
 DewfordTown_Text_SlateportWereSettingSail:
-	.string "{JPN}ハギカイナシティ か\pよっしゃ! いくぞ ピーコちゃん!$"
+	.string "{JPN}ハギ『カイナシティ か\pよっしゃ! いくぞ ピーコちゃん!$"
 
 DewfordTown_Text_JustTellMeWhenYouNeedToSetSail:
-	.string "{JPN}ハギふねに のる ひつようが あるときは\nいつでも こえを かけておくれ$"
+	.string "{JPN}ハギ『ふねに のる ひつようが あるときは\nいつでも こえを かけておくれ$"
 
 DewfordTown_Text_GettingItchToFish:
 	.string "{JPN}このへんは つりの めいしょ なんだ\nきみも つりが したくなった?$"
@@ -688,19 +688,19 @@ DewfordTown_Text_FishingAdvice:
 	.string "{JPN}なんだよ ガッカリ しないでよ!\nつりの コツを おしえて あげるから!\pまずは すいめんに むかって\nつりざおを つかう!\pそして きもちを しゅうちゅう させ……\nひいてる ひいてる!! となったら\lすばやく つりざおを ひくんだ!\pすぐに ひきあげられる ときも あるけど\nおおものは なんども タイミングを\lあわせる ひつようが あるんだよ!$"
 
 DewfordTown_Text_XIsTheBiggestHappeningThingRight:
-	.string "{JPN}ぼく はやってる ものが すきで\nいつも チェック してるんだ\pねぇ {STR_VAR_1}って\nしってるかい?\pもちろん しってるよね!\pだって いま\n{STR_VAR_1}が\lだいりゅうこう してるからね!\pきみの まわりでも\n{STR_VAR_1}が\lはやってる だろ?$"
+	.string "{JPN}ぼく はやってる ものが すきで\nいつも チェック してるんだ\pねぇ 『{STR_VAR_1}』って\nしってるかい?\pもちろん しってるよね!\pだって いま\n『{STR_VAR_1}』が\lだいりゅうこう してるからね!\pきみの まわりでも\n『{STR_VAR_1}』が\lはやってる だろ?$"
 
 DewfordTown_Text_TellMeWhatsNewAndIn:
 	.string "{JPN}え?\nはやって ないの!?\pじゃあ いま なにが はやってるか\nきかせてよ!$"
 
 DewfordTown_Text_OfCourseIKnowAboutThat:
-	.string "{JPN}え? {STR_VAR_2}?\p……\p…あ! あぁ!\nしってる しってるよ!\pもっ もちろん しってるさ!\n{STR_VAR_2} だろ?\pいいよね!\n{STR_VAR_2} って!\pいま すごく はやってる よね\nぼくが しらないはず ないじゃ ないか!\p{STR_VAR_1} なんて\nもう じだいおくれ\pいまは {STR_VAR_2}の\nじだい だね!$"
+	.string "{JPN}え? 『{STR_VAR_2}』?\p……\p…あ! あぁ!\nしってる しってるよ!\pもっ もちろん しってるさ!\n『{STR_VAR_2}』 だろ?\pいいよね!\n『{STR_VAR_2}』 って!\pいま すごく はやってる よね\nぼくが しらないはず ないじゃ ないか!\p『{STR_VAR_1}』 なんて\nもう じだいおくれ\pいまは 『{STR_VAR_2}』の\nじだい だね!$"
 
 DewfordTown_Text_XHuhIThinkYIsCool:
-	.string "{JPN}ふーん\n{STR_VAR_2} か…\pでも ぼくは\n{STR_VAR_1} のほうが\lいいと おもうけどね$"
+	.string "{JPN}ふーん\n『{STR_VAR_2}』 か…\pでも ぼくは\n『{STR_VAR_1}』 のほうが\lいいと おもうけどね$"
 
 DewfordTown_Text_HearOfAnyTrendsComeShareWithMe:
 	.string "{JPN}じゃあ あたらしい りゅうこうが あったら\nまた きかせて くれよ!$"
 
 DewfordTown_Text_YeahDefinitionOfInRightNow:
-	.string "{JPN}そうだろ!\pやっぱり いまは\n{STR_VAR_1} だよね!$"
+	.string "{JPN}そうだろ!\pやっぱり いまは\n『{STR_VAR_1}』 だよね!$"

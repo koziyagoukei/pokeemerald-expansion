@@ -1,5 +1,5 @@
 PetalburgCity_Gym_Text_GiveEnigmaBerry:
-	.string "{JPN}パパやあ {PLAYER}!\p"
+	.string "{JPN}パパ『やあ {PLAYER}!\p"
 	.string "{JPN}めずらしい きのみを てに いれたから\n"
 	.string "{JPN}プレゼント するよ!$"
 
