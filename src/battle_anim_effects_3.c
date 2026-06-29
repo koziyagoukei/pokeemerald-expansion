@@ -2351,13 +2351,20 @@ void AnimTask_HideSwapSprite(u8 taskId)
             gTasks[taskId].data[0]++;
             break;
         case 1:
+        {
+            u8 oldSpriteId = spriteId;
+
+            ContestCutawayApplyPendingFormForAnim();
+            spriteId = gBattlerSpriteIds[gBattleAnimAttacker];
             if (spriteId < MAX_SPRITES && gSprites[spriteId].inUse)
             {
-                gSprites[spriteId].x = gTasks[taskId].data[11];
+                if (spriteId == oldSpriteId)
+                    gSprites[spriteId].x = gTasks[taskId].data[11];
                 gSprites[spriteId].invisible = FALSE;
             }
             DestroyAnimVisualTask(taskId);
             break;
+        }
         }
         return;
     }

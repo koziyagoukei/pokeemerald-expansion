@@ -159,6 +159,7 @@ static bool32 ContestGimmickShouldPlayIntro(u8 contestant);
 static u8 GetContestGimmickIntroAnimCount(u8 contestant);
 static u16 GetContestGimmickIntroAnimId(u8 contestant, u8 step);
 static void LaunchContestGimmickIntroAnim(u8 contestant, u8 step);
+static void ApplyContestCutawayPendingFormInternal(u8 contestant, bool8 targetSelf);
 static void ApplyContestCutawayPendingForm(u8 contestant);
 static void SetupContestCutawayAnimContext(u8 contestant, enum Move effectMove, bool8 targetSelf);
 static void ContestCutawaySyncAnimState(u8 contestant, bool8 targetSelf);
@@ -1315,6 +1316,7 @@ static enum Species GetContestGimmickFormTarget(u8 contestant, enum FormChanges 
         .currentSpecies = gContestMons[contestant].species,
         .heldItem = gimmick->heldItem,
         .gmaxFactor = gimmick->gmaxFactor,
+        .teraType = gimmick->teraType,
     };
 
     for (i = 0; i < MAX_MON_MOVES; i++)
@@ -1638,6 +1640,13 @@ static void ActivateSelectedContestGimmick(u8 contestant)
         gimmick->teraActive = TRUE;
         gimmick->usedGimmick = CONTEST_GIMMICK_TERA;
         gimmick->selected = CONTEST_GIMMICK_NONE;
+        targetSpecies = GetContestGimmickFormTarget(contestant, FORM_CHANGE_BATTLE_TERASTALLIZATION);
+        if (targetSpecies != gContestMons[contestant].species)
+        {
+            sContestPendingGimmickSpecies[contestant] = targetSpecies;
+            sContestPendingGimmickSpeciesValid[contestant] = TRUE;
+            SetContestCutawayPendingAttackerSpecies(targetSpecies);
+        }
         break;
     case CONTEST_GIMMICK_DYNAMAX:
         gimmick->dynamaxTurns = 3;
@@ -2435,7 +2444,7 @@ static void RecreateContestCutawayAttackerSprite(u8 contestant, enum Species spe
     CreateContestCutawayAttackerSprite(contestant, species);
 }
 
-static void ApplyContestCutawayPendingForm(u8 contestant)
+static void ApplyContestCutawayPendingFormInternal(u8 contestant, bool8 targetSelf)
 {
     enum Species species;
 
@@ -2459,13 +2468,32 @@ static void ApplyContestCutawayPendingForm(u8 contestant)
             gBattleAnimAttacker = gBattlerAttacker;
             gBattleAnimTarget = gBattlerTarget;
             gAnimBattlerSpecies[gBattlerAttacker] = species;
-            ContestCutawaySyncAnimState(contestant, FALSE);
+            ContestCutawaySyncAnimState(contestant, targetSelf);
         }
     }
 
     sContestPendingGimmickSpecies[contestant] = SPECIES_NONE;
     sContestPendingGimmickSpeciesValid[contestant] = FALSE;
     SetContestCutawayPendingAttackerSpecies(SPECIES_NONE);
+}
+
+static void ApplyContestCutawayPendingForm(u8 contestant)
+{
+    ApplyContestCutawayPendingFormInternal(contestant, FALSE);
+}
+
+void ContestCutawayApplyPendingFormForAnim(void)
+{
+    u8 contestant;
+
+    if (!gContestMoveAnimInCutaway || gContestResources == NULL || gContestResources->moveAnim == NULL)
+        return;
+
+    contestant = gContestResources->moveAnim->contestant;
+    if (contestant >= CONTESTANT_COUNT)
+        return;
+
+    ApplyContestCutawayPendingFormInternal(contestant, TRUE);
 }
 
 static void SetupContestCutawayAnimContext(u8 contestant, enum Move effectMove, bool8 targetSelf)
