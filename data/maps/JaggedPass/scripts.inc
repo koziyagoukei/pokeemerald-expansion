@@ -188,7 +188,7 @@ JaggedPass_Text_DianaRematchDefeat:
 	.string "$"
 
 JaggedPass_Text_DianaPostRematch:
-	.string "{JPN}まけたことは さっさと わすれて\nこの デコボコみちを たのしんじゃお!\n"
+	.string "{JPN}まけたことは さっさと わすれて\nこの デコボコみちを たのしんじゃお!"
 	.string "$"
 
 JaggedPass_Text_EthanIntro:
