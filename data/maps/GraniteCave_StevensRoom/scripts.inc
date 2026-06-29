@@ -89,7 +89,7 @@ GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister:
 	.string "{JPN}ダイゴ『きみの ポケモン\nなかなか いい かんじ だね\pしゅぎょうを つづければ\nいつかは ポケモンリーグの\lチャンピオンに だって なれる\lボクは そう おもうな\pそうだ!\nせっかく きみと しりあえたんだ\lおたがい ポケナビに\lなまえを とうろく しておこう!\p…… …… ……$"
 
 GraniteCave_StevensRoom_Text_RegisteredSteven:
-	.string "{JPN}ダイゴを\n"ポケナビに とうろく した!$"
+	.string "{JPN}ダイゴを\nポケナビに とうろく した!$"
 
 GraniteCave_StevensRoom_Text_IveGotToHurryAlong:
 	.string "{JPN}……じゃあ\nボクは さきを いそぐから$"
