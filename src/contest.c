@@ -2261,19 +2261,34 @@ static bool8 ContestCutawayAttackerSpriteNeedsRecreate(void)
 static void NormalizeContestCutawayAttackerSprite(u8 contestant, enum Species species)
 {
     u8 spriteId = sContestCutawayAttackerSpriteId;
+    bool8 isShiny = gContestMons[contestant].isShiny;
+    u32 personality = gContestMons[contestant].personality;
 
     if (spriteId == SPRITE_NONE || spriteId >= MAX_SPRITES || !gSprites[spriteId].inUse)
         return;
 
     species = SanitizeSpecies(species);
+    HandleLoadSpecialPokePic(TRUE, gMonSpritesGfxPtr->spritesGfx[B_POSITION_OPPONENT_LEFT], species, personality);
+    DmaCopy32(3,
+              gMonSpritesGfxPtr->spritesGfx[B_POSITION_OPPONENT_LEFT],
+              (void *)(OBJ_VRAM0 + gSprites[spriteId].oam.tileNum * TILE_SIZE_4BPP),
+              MON_PIC_SIZE);
+    LoadPalette(GetMonSpritePalFromSpeciesAndPersonality(species, isShiny, personality), OBJ_PLTT_ID(gBattlerAttacker), PLTT_SIZE_4BPP);
     gSprites[spriteId].x = GetBattlerSpriteCoord(gBattlerAttacker, BATTLER_COORD_X);
     gSprites[spriteId].y = GetBattlerSpriteFinal_Y(gBattlerAttacker, species, TRUE);
     gSprites[spriteId].x2 = 0;
     gSprites[spriteId].y2 = 0;
     gSprites[spriteId].invisible = FALSE;
+    gSprites[spriteId].animPaused = FALSE;
+    gSprites[spriteId].affineAnimPaused = FALSE;
+    gSprites[spriteId].oam.objMode = ST_OAM_OBJ_NORMAL;
+    gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
+    gSprites[spriteId].oam.mosaic = FALSE;
     gSprites[spriteId].oam.paletteNum = gBattlerAttacker;
     gSprites[spriteId].oam.priority = 2;
     gSprites[spriteId].subpriority = GetBattlerSpriteSubpriority(gBattlerAttacker);
+    gSprites[spriteId].affineAnims = gAffineAnims_BattleSpriteOpponentSide;
+    StartSpriteAffineAnim(&gSprites[spriteId], BATTLER_AFFINE_NORMAL);
     gSprites[spriteId].callback = SpriteCallbackDummy;
     gSprites[spriteId].data[0] = gBattlerAttacker;
     gSprites[spriteId].data[1] = 0;

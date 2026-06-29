@@ -1261,6 +1261,12 @@ static void Cmd_monbg(void)
     sBattleAnimScriptPtr++;
 
     animBattler = sBattleAnimScriptPtr[0];
+    if (BattleAnim_IsContestCutawayActive())
+    {
+        sBattleAnimScriptPtr++;
+        return;
+    }
+
     if (animBattler & ANIM_TARGET)
         battler = gBattleAnimTarget;
     else
@@ -1549,6 +1555,11 @@ static void Cmd_clearmonbg(void)
 
     sBattleAnimScriptPtr++;
     animBattlerId = sBattleAnimScriptPtr[0];
+    if (BattleAnim_IsContestCutawayActive())
+    {
+        sBattleAnimScriptPtr++;
+        return;
+    }
 
     if (animBattlerId == ANIM_ATTACKER)
         animBattlerId = ANIM_ATK_PARTNER;
@@ -1620,6 +1631,11 @@ static void Cmd_monbg_static(void)
     sBattleAnimScriptPtr++;
 
     animBattlerId = sBattleAnimScriptPtr[0];
+    if (BattleAnim_IsContestCutawayActive())
+    {
+        sBattleAnimScriptPtr++;
+        return;
+    }
 
     if (animBattlerId == ANIM_ATTACKER)
         animBattlerId = ANIM_ATK_PARTNER;
@@ -1665,6 +1681,11 @@ static void Cmd_clearmonbg_static(void)
 
     sBattleAnimScriptPtr++;
     animBattlerId = sBattleAnimScriptPtr[0];
+    if (BattleAnim_IsContestCutawayActive())
+    {
+        sBattleAnimScriptPtr++;
+        return;
+    }
 
     if (animBattlerId == ANIM_ATTACKER)
         animBattlerId = ANIM_ATK_PARTNER;

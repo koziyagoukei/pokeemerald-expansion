@@ -1411,8 +1411,11 @@ u32 GetBattlePalettesMask(bool8 battleBackground, bool8 attacker, bool8 target, 
     }
     if (target)
     {
-        shift = gBattleAnimTarget + 16;
-        selectedPalettes |= 1 << shift;
+        if (!(BattleAnimMons_IsContestCutaway() && gBattleAnimTarget == gBattleAnimAttacker))
+        {
+            shift = gBattleAnimTarget + 16;
+            selectedPalettes |= 1 << shift;
+        }
     }
     if (attackerPartner)
     {
