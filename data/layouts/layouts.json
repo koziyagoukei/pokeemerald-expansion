@@ -9327,8 +9327,8 @@
     {
       "id": "LAYOUT_ULTRA_FRONTIE_HUB",
       "name": "ultra_frontie_hub_Layout",
-      "width": 27,
-      "height": 22,
+      "width": 28,
+      "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/ultra_frontie_hub/border.bin",
