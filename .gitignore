@@ -64,6 +64,14 @@ tools/compresSmol/compresSmol
 tools/compresSmol/compresSmolTilemap
 tools/aif2pcm/aif2pcm
 Workspace/
+!workspace/
+workspace/*
+!workspace/frontier-web/
+!workspace/frontier-web/**
+workspace/frontier-web/node_modules/
+workspace/frontier-web/dist/
+workspace/frontier-web/coverage/
+workspace/frontier-web/.vite/
 *.Identifier
 *.smol
 *.fastSmol
