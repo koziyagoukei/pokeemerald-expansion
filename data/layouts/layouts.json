@@ -9323,6 +9323,18 @@
       "border_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/map.bin",
       "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_ULTRA_FRONTIE_HUB",
+      "name": "ultra_frontie_hub_Layout",
+      "width": 27,
+      "height": 22,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/ultra_frontie_hub/border.bin",
+      "blockdata_filepath": "data/layouts/ultra_frontie_hub/map.bin"
     }
   ]
 }

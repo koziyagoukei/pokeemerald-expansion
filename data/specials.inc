@@ -639,3 +639,6 @@ gSpecials::
 	def_special UpdateTrainerCardPhotoIcons
 	def_special StickerManGetBragFlags
 	def_special CheckAddCoins
+	def_special Special_SpawnPartyRoamerMons
+	def_special Special_RefreshPartyRoamerMons
+	def_special Special_BufferPartyRoamerMessage

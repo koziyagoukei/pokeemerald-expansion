@@ -47,6 +47,7 @@
 #include "overworld.h"
 #include "palette.h"
 #include "party_menu.h"
+#include "party_roamer_park.h"
 #include "player_pc.h"
 #include "pokemon.h"
 #include "pokemon_icon.h"
@@ -76,6 +77,7 @@
 #include "constants/form_change_types.h"
 #include "constants/item_effects.h"
 #include "constants/items.h"
+#include "constants/map_groups.h"
 #include "constants/moves.h"
 #include "constants/party_menu.h"
 #include "constants/rgb.h"
@@ -299,6 +301,7 @@ static void HandleChooseMonCancel(u8, s8 *);
 static void HandleChooseMonSelection(u8, s8 *);
 static u16 PartyMenuButtonHandler(s8 *);
 static s8 *GetCurrentPartySlotPtr(void);
+static bool8 CanEnterPartyRoamerParkFromPartyMenu(void);
 static bool8 IsSelectedMonNotEgg(u8 *);
 static bool8 DoesSelectedMonKnowHM(u8 *);
 static void PartyMenuRemoveWindow(u8 *);
@@ -1476,6 +1479,16 @@ void Task_HandleChooseMonInput(u8 taskId)
     {
         s8 *slotPtr = GetCurrentPartySlotPtr();
 
+        if (CanEnterPartyRoamerParkFromPartyMenu() && JOY_NEW(SELECT_BUTTON))
+        {
+            PlaySE(SE_SELECT);
+            gFieldCallback2 = FieldCallback_PrepareEnterPartyRoamerPark;
+            gPostMenuFieldCallback = NULL;
+            gPartyMenu.exitCallback = CB2_ReturnToField;
+            Task_ClosePartyMenu(taskId);
+            return;
+        }
+
         switch (PartyMenuButtonHandler(slotPtr))
         {
         case A_BUTTON: // Selected mon
@@ -1509,6 +1522,15 @@ void Task_HandleChooseMonInput(u8 taskId)
             break;
         }
     }
+}
+
+static bool8 CanEnterPartyRoamerParkFromPartyMenu(void)
+{
+    return gPartyMenu.menuType == PARTY_MENU_TYPE_FIELD
+        && gPartyMenu.layout == PARTY_LAYOUT_SINGLE
+        && gPartyMenu.action == PARTY_ACTION_CHOOSE_MON
+        && (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(MAP_PARTY_ROAMER_PARK)
+         || gSaveBlock1Ptr->location.mapNum != MAP_NUM(MAP_PARTY_ROAMER_PARK));
 }
 
 static s8 *GetCurrentPartySlotPtr(void)
