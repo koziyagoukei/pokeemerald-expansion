@@ -22,57 +22,56 @@ MagmaHideout_2F_2R_EventScript_Grunt8::
 	end
 
 MagmaHideout_2F_2R_Text_Grunt15Intro:
-	.string "I don't have a bone to pick with you.\n"
-	.string "I'm just following orders!$"
+	.string "{JPN}あなたに うらみは ないけど\nこれも めいれい だからね!"
+	.string "$"
 
 MagmaHideout_2F_2R_Text_Grunt15Defeat:
-	.string "I may have lost, but...$"
+	.string "{JPN}わたしは まけたけど……$"
 
 MagmaHideout_2F_2R_Text_Grunt15PostBattle:
-	.string "We dug up something beyond belief!\n"
-	.string "And, we got the BLUE ORB!\p"
-	.string "All that's left is for our leader to...\n"
-	.string "Fufufu... Fwahahaha!$"
+	.string "{JPN}とんでもないものを ほりだした!\nあいいろのたまも てにいれた!\pあとは リーダーが……\nふふふ…… ふはははは!"
+	.string ""
+	.string ""
+	.string "$"
 
 MagmaHideout_2F_2R_Text_Grunt6Intro:
-	.string "I can't stand heat. Maybe I should've\n"
-	.string "joined TEAM AQUA instead...$"
+	.string "{JPN}オレって あつがり なんだよ\nもしかして アクアだんに はいったほうが\lよかったのかな?"
+	.string "$"
 
 MagmaHideout_2F_2R_Text_Grunt6Defeat:
-	.string "Yeah, I really may not be right for\n"
-	.string "TEAM MAGMA...$"
+	.string "{JPN}やっぱり オレ\nマグマだんには むいてないかも……"
+	.string "$"
 
 MagmaHideout_2F_2R_Text_Grunt6PostBattle:
-	.string "Don't you get lonely for the sea\n"
-	.string "being in a place like this?$"
+	.string "{JPN}こんなところに いると\nうみが こいしく なったり しないか?"
+	.string "$"
 
 MagmaHideout_2F_2R_Text_Grunt7Intro:
-	.string "You can hear tremors here sometimes.\p"
-	.string "Could it be the volcano rattling?\n"
-	.string "Or is it GROU...\p"
-	.string "Whoops!\n"
-	.string "No, no, never mind!$"
+	.string "{JPN}ときどき じひびきが きこえるんだよ\pそれって かざんの しんどう かな?\nそれとも グラ……\pおっとっと なんでもないよ!"
+	.string ""
+	.string ""
+	.string ""
+	.string "$"
 
 MagmaHideout_2F_2R_Text_Grunt7Defeat:
-	.string "You're a fiery battler.\n"
-	.string "Just like a volcano!$"
+	.string "{JPN}うーむ\nかざんのように あついな きみは!"
+	.string "$"
 
 MagmaHideout_2F_2R_Text_Grunt7PostBattle:
-	.string "You just happened to win this time,\n"
-	.string "but that doesn't matter.\p"
-	.string "TEAM MAGMA's goal is about to be\n"
-	.string "reached!$"
+	.string "{JPN}オレは たまたま おまえに まけたが\nマグマだんの もくてきは\lまもなく たっせい されるのさ!"
+	.string ""
+	.string ""
+	.string "$"
 
 MagmaHideout_2F_2R_Text_Grunt8Intro:
-	.string "One of our guys was freaking out that\n"
-	.string "he lost his MAGMA EMBLEM...\p"
-	.string "Wait a minute!\n"
-	.string "Was it you who found it?$"
+	.string "{JPN}マグマのしるしを どこかに おとした\nって おおさわぎ してるやつが いたけど\p……あ! もしかして\nそれ ひろったの おまえ?"
+	.string ""
+	.string ""
+	.string "$"
 
 MagmaHideout_2F_2R_Text_Grunt8Defeat:
-	.string "I'm having trouble believing this...$"
+	.string "{JPN}うーん なんて やつだ……$"
 
 MagmaHideout_2F_2R_Text_Grunt8PostBattle:
-	.string "I'm getting this feeling that our plan\n"
-	.string "is going to end in failure...$"
-
+	.string "{JPN}なんか…… オレたちの けいかく\nしっぱい するような きが してきたよ"
+	.string "$"
