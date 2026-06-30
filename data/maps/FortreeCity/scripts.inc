@@ -88,69 +88,68 @@ FortreeCity_Movement_KecleonFlee:
 	step_end
 
 FortreeCity_Text_SawGiganticPokemonInSky:
-	.string "No one believes me, but I saw this\n"
-	.string "gigantic POKEMON in the sky.\p"
-	.string "It seemed to squirm as it flew toward\n"
-	.string "ROUTE 131.\p"
-	.string "By the way... Sniff...\n"
-	.string "Um... You, uh...smell singed.\p"
-	.string "Were you at a volcano or something?$"
+	.string "{JPN}だれも しんじて くれないけど\nおおきな ポケモンが からだを くねらせ\lそらを とんでいるのを みたんだ……\pそいつは 131ばん すいどうの ほうへ\nとんでいったよ……\p……ところで\nなんか きみ コゲくさいね\pかざんに でも いってきた?"
+	.string ""
+	.string ""
+	.string ""
+	.string ""
+	.string ""
+	.string "$"
 
 FortreeCity_Text_SomethingBlockingGym:
-	.string "I want to go to the POKEMON GYM,\n"
-	.string "but something's blocking the way.\p"
-	.string "After all the bother I went through\n"
-	.string "training on ROUTE 120...$"
+	.string "{JPN}ポケモンジムに いきたいのに\nなにかが みちを ふさいでいるのよ!\pせっかく 120ばん どうろで\nポケモン そだてて きたのに!"
+	.string ""
+	.string ""
+	.string "$"
 
 FortreeCity_Text_ThisTimeIllBeatWinona:
-	.string "I've got my pride-and-joy POKEMON\n"
-	.string "with me. This time, I'll beat WINONA.$"
+	.string "{JPN}あたしの じまんの ポケモンで\nこんどこそ ナギさんに かってみせるわ!"
+	.string "$"
 
 FortreeCity_Text_TreesGrowByDrinkingRainwater:
-	.string "The ground absorbs rainwater, and\n"
-	.string "trees grow by drinking that water...\p"
-	.string "Our FORTREE CITY exists because\n"
-	.string "there's both water and soil.$"
+	.string "{JPN}あめが じめんに すいこまれて\nその みずを すって きがそだつ……\pみずと つちが りょうほう あるから\nこの ヒワマキシティも あるのよね"
+	.string ""
+	.string ""
+	.string "$"
 
 FortreeCity_Text_EveryoneHealthyAndLively:
-	.string "The CITY consists of homes built on\n"
-	.string "trees.\p"
-	.string "Perhaps because of that lifestyle,\n"
-	.string "everyone is healthy and lively.\p"
-	.string "Why, even myself--I feel as if I've\n"
-	.string "grown thirty years younger.$"
+	.string "{JPN}このまちは きのうえに\nいえを たてて くらしている……\pそのせいか みんな げんきで\nイキイキと している のですよ\pわしも このまちに きてから\n30ねんほど わかがえった きぶんです"
+	.string ""
+	.string ""
+	.string ""
+	.string ""
+	.string "$"
 
 FortreeCity_Text_BugPokemonComeThroughWindow:
-	.string "Living on top of trees is okay.\p"
-	.string "But sometimes BUG POKEMON come in\n"
-	.string "through windows.\l"
-	.string "It can be really startling.$"
+	.string "{JPN}きのうえで くらすのは いいんだけど\pときどき まどの そとから\nむしポケモンが はいって きたりして\lびっくり しちゃうんだよね"
+	.string ""
+	.string ""
+	.string "$"
 
 FortreeCity_Text_PokemonThatEvolveWhenTraded:
-	.string "There are POKEMON that evolve when\n"
-	.string "you trade them! That's what I heard.$"
+	.string "{JPN}ともだちと こうかんを すると\nしんか する ポケモンが いるんだって!"
+	.string "$"
 
 FortreeCity_Text_SomethingUnseeable:
-	.string "Something unseeable is in the way.$"
+	.string "{JPN}みえない なにかが いるようだ$"
 
 FortreeCity_Text_UnseeableUseDevonScope:
-	.string "Something unseeable is in the way.\p"
-	.string "Want to use the DEVON SCOPE?$"
+	.string "{JPN}みえない なにかが いるようだ\pデボンスコープを つかいますか?"
+	.string "$"
 
 FortreeCity_Text_UsedDevonScopePokemonFled:
-	.string "{PLAYER} used the DEVON SCOPE.\p"
-	.string "An invisible POKEMON became completely\n"
-	.string "visible!\p"
-	.string "The startled POKEMON fled!$"
+	.string "{JPN}{PLAYER}は\nデボンスコープを つかった!\pとうめいに なっていた\nポケモンの すがたが まるわかりだ!\pポケモンは\nおどろいて にげだした!"
+	.string ""
+	.string ""
+	.string "$"
 
 FortreeCity_Text_CitySign:
-	.string "FORTREE CITY\n"
-	.string "The treetop city that frolics with\l"
-	.string "nature.$"
+	.string "{JPN}ここは ヒワマキ シティ\nきの うえで しぜんと たわむれる まち"
+	.string ""
+	.string "$"
 
 FortreeCity_Text_GymSign:
-	.string "FORTREE CITY POKEMON GYM\n"
-	.string "LEADER: WINONA\p"
-	.string "The bird user taking flight into\n"
-	.string "the world.$"
-
+	.string "{JPN}ヒワマキ シティ ポケモンジム\nリーダー ナギ\lせかいに はばたく とりつかい!"
+	.string ""
+	.string ""
+	.string "$"
