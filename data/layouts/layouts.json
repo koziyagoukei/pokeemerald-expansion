@@ -9332,7 +9332,9 @@
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/ultra_frontie_hub/border.bin",
-      "blockdata_filepath": "data/layouts/ultra_frontie_hub/map.bin"
+      "blockdata_filepath": "data/layouts/ultra_frontie_hub/map.bin",
+      "border_height": 2,
+      "border_width": 2
     }
   ]
 }

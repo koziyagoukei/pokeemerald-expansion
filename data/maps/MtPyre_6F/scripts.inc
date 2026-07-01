@@ -28,42 +28,41 @@ MtPyre_6F_EventScript_Cedric::
 	end
 
 MtPyre_6F_Text_ValerieIntro:
-	.string "When I'm here...\n"
-	.string "A curious power flows into me...$"
+	.string "{JPN}ここに いると……\nなにかの ちからが はいってくるの……"
+	.string "$"
 
 MtPyre_6F_Text_ValerieDefeat:
-	.string "The power is ebbing away...$"
+	.string "{JPN}ちからが ぬけていく……$"
 
 MtPyre_6F_Text_ValeriePostBattle:
-	.string "Perhaps the power is from the spirits\n"
-	.string "of POKEMON in fitful sleep here...$"
+	.string "{JPN}ここに ねむっている ポケモンたちの\nちからが はいって くるのかもよ……?"
+	.string "$"
 
 MtPyre_6F_Text_ValerieRegister:
-	.string "Fufufu... I lost the match, but...\n"
-	.string "I have this little ability...\p"
-	.string "Without ever laying my hands on\n"
-	.string "your POKeNAV... Hiyah!$"
+	.string "{JPN}ふふふふ しょうぶには まけたけど\nわたし…… こんな ことが できるの……\pあなたの ポケナビに いっさい てを\nふれなくても…… きえーいっ……!"
+	.string ""
+	.string ""
+	.string "$"
 
 MtPyre_6F_Text_ValerieRematchIntro:
-	.string "Behind you...\n"
-	.string "What is it...$"
+	.string "{JPN}あなたの うしろ……\nなにが いるの……?"
+	.string "$"
 
 MtPyre_6F_Text_ValerieRematchDefeat:
-	.string "Something faded away...$"
+	.string "{JPN}なにかが きえたわ……$"
 
 MtPyre_6F_Text_ValeriePostRematch:
-	.string "The POKEMON at rest here...\n"
-	.string "Sometimes, they play...$"
+	.string "{JPN}ここに ねむっている ポケモンたち……\nときどき あそんでいる みたいなの……"
+	.string "$"
 
 MtPyre_6F_Text_CedricIntro:
-	.string "Have you lost your bearings?\n"
-	.string "Have no fear for I am here!$"
+	.string "{JPN}きみ まいごなのか?\nおれが きた からには あんしんだ!"
+	.string "$"
 
 MtPyre_6F_Text_CedricDefeat:
-	.string "Weren't you lost?$"
+	.string "{JPN}まいご じゃ なかったか?$"
 
 MtPyre_6F_Text_CedricPostBattle:
-	.string "I had this feeling that a lost TRAINER\n"
-	.string "would be panicked and easy to beat.\p"
-	.string "It's dirty and I won't try it again...$"
-
+	.string "{JPN}まいごの トレーナーは あわてて いるから\nかてる きが するんだよな\pずるいから もう やめとくよ……"
+	.string ""
+	.string "$"

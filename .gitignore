@@ -76,3 +76,7 @@ __pycache__
 *.bak
 *.bak.*
 .expansionstudio/
+Flips
+libagbsyscall
+migration_scripts
+patches
