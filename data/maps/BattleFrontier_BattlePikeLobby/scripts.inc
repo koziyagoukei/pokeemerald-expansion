@@ -1,395 +1,288 @@
-BattleFrontier_BattlePalaceLobby_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_BattlePalaceLobby_OnFrame
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, BattleFrontier_BattlePalaceLobby_OnWarp
+BattleFrontier_BattlePikeLobby_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_BattlePikeLobby_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, BattleFrontier_BattlePikeLobby_OnWarp
 	.byte 0
 
-BattleFrontier_BattlePalaceLobby_OnWarp:
-	map_script_2 VAR_TEMP_1, 0, BattleFrontier_BattlePalaceLobby_EventScript_TurnPlayerNorth
+BattleFrontier_BattlePikeLobby_OnFrame:
+	map_script_2 VAR_TEMP_CHALLENGE_STATUS, 0, BattleFrontier_BattlePikeLobby_EventScript_GetChallengeStatus
+	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_SAVING, BattleFrontier_BattlePikeLobby_EventScript_QuitWithoutSaving
+	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_WON, BattleFrontier_BattlePikeLobby_EventScript_WonChallenge
+	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_LOST, BattleFrontier_BattlePikeLobby_EventScript_LostChallenge
 	.2byte 0
 
-BattleFrontier_BattlePalaceLobby_EventScript_TurnPlayerNorth::
+BattleFrontier_BattlePikeLobby_OnWarp:
+	map_script_2 VAR_TEMP_1, 0, BattleFrontier_BattlePikeLobby_EventScript_TurnPlayerNorth
+	.2byte 0
+
+BattleFrontier_BattlePikeLobby_EventScript_TurnPlayerNorth::
 	setvar VAR_TEMP_1, 1
 	turnobject LOCALID_PLAYER, DIR_NORTH
 	end
 
-BattleFrontier_BattlePalaceLobby_OnFrame:
-	map_script_2 VAR_TEMP_CHALLENGE_STATUS, 0, BattleFrontier_BattlePalaceLobby_EventScript_GetChallengeStatus
-	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_SAVING, BattleFrontier_BattlePalaceLobby_EventScript_QuitWithoutSaving
-	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_PAUSED, BattleFrontier_BattlePalaceLobby_EventScript_ResumeChallenge
-	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_WON, BattleFrontier_BattlePalaceLobby_EventScript_WonChallenge
-	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_LOST, BattleFrontier_BattlePalaceLobby_EventScript_LostChallenge
-	.2byte 0
-
-BattleFrontier_BattlePalaceLobby_EventScript_GetChallengeStatus::
+BattleFrontier_BattlePikeLobby_EventScript_GetChallengeStatus::
 	frontier_getstatus
 	end
 
-BattleFrontier_BattlePalaceLobby_EventScript_QuitWithoutSaving::
+BattleFrontier_BattlePikeLobby_EventScript_QuitWithoutSaving::
+	special HealPlayerParty
+	pike_resethelditems
 	lockall
-	msgbox BattleFrontier_BattlePalaceLobby_Text_FailedToSaveBeforeEndingChallenge, MSGBOX_DEFAULT
+	msgbox BattleFrontier_BattlePikeLobby_Text_FailedToSaveBeforeQuitting, MSGBOX_DEFAULT
 	closemessage
-	palace_set PALACE_DATA_WIN_STREAK, 0
-	palace_set PALACE_DATA_WIN_STREAK_ACTIVE, FALSE
+	pike_set PIKE_DATA_WIN_STREAK, 0
+	pike_set PIKE_DATA_WIN_STREAK_ACTIVE, FALSE
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, 0
 	setvar VAR_TEMP_CHALLENGE_STATUS, 255
 	releaseall
 	end
 
-BattleFrontier_BattlePalaceLobby_EventScript_WonChallenge::
+BattleFrontier_BattlePikeLobby_EventScript_WonChallenge::
 	lockall
 	frontier_isbrain
-	goto_if_eq VAR_RESULT, TRUE, BattleFrontier_BattlePalaceLobby_EventScript_DefeatedMaven
-	msgbox BattleFrontier_BattlePalaceLobby_Text_FirmTrueBondsFor7WinStreak, MSGBOX_DEFAULT
-	goto BattleFrontier_BattlePalaceLobby_EventScript_GiveBattlePoints
+	goto_if_eq VAR_RESULT, TRUE, BattleFrontier_BattlePikeLobby_EventScript_DefeatedQueen
+	msgbox BattleFrontier_BattlePikeLobby_Text_PossessLuckInAbundance, MSGBOX_DEFAULT
+	waitmessage
+	goto BattleFrontier_BattlePikeLobby_EventScript_GiveBattlePoints
 
-BattleFrontier_BattlePalaceLobby_EventScript_DefeatedMaven::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ToDefeatMavenAnd7Trainers, MSGBOX_DEFAULT
-BattleFrontier_BattlePalaceLobby_EventScript_GiveBattlePoints::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_PresentYouWithBattlePoints, MSGBOX_DEFAULT
+BattleFrontier_BattlePikeLobby_EventScript_DefeatedQueen::
+	msgbox BattleFrontier_BattlePikeLobby_Text_SnatchedVictoryFromQueen, MSGBOX_DEFAULT
+	waitmessage
+BattleFrontier_BattlePikeLobby_EventScript_GiveBattlePoints::
+	msgbox BattleFrontier_BattlePikeLobby_Text_AwardYouTheseBattlePoints, MSGBOX_DEFAULT
 	frontier_givepoints
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_GETPOINTS
-	message BattleFrontier_BattlePalaceLobby_Text_FeatWillBeRecorded
-	waitmessage
-	call BattleFrontier_BattlePalaceLobby_EventScript_SaveAfterChallenge
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ReturnWhenFortified, MSGBOX_DEFAULT
-	closemessage
-	setvar VAR_TEMP_CHALLENGE_STATUS, 255
-	releaseall
-	end
-
-BattleFrontier_BattlePalaceLobby_EventScript_LostChallenge::
-	lockall
-	message BattleFrontier_BattlePalaceLobby_Text_ResultsWillBeRecorded
-	waitmessage
-	palace_set PALACE_DATA_WIN_STREAK_ACTIVE, FALSE
-	call BattleFrontier_BattlePalaceLobby_EventScript_SaveAfterChallenge
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ReturnWhenFortified, MSGBOX_DEFAULT
-	closemessage
-	setvar VAR_TEMP_CHALLENGE_STATUS, 255
-	releaseall
-	end
-
-BattleFrontier_BattlePalaceLobby_EventScript_SaveAfterChallenge::
 	frontier_checkairshow
+	pike_get PIKE_DATA_TOTAL_STREAKS
+	addvar VAR_RESULT, 1
+	pike_set PIKE_DATA_TOTAL_STREAKS, VAR_RESULT
 	special LoadPlayerParty
 	special HealPlayerParty
 	callnative UpdateFollowingPokemon
-	palace_save 0
+	pike_resethelditems
+	message BattleFrontier_BattlePikeLobby_Text_ShallRecordResults
+	waitmessage
+	pike_save 0
 	playse SE_SAVE
 	waitse
-	call BattleFrontier_EventScript_GetCantRecordBattle
-	goto_if_eq VAR_RESULT, TRUE, BattleFrontier_BattlePalaceLobby_EventScript_EndSaveAfterChallenge
-	message BattleFrontier_BattlePalaceLobby_Text_LikeToRecordMatch
-	waitmessage
-	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
-	switch VAR_RESULT
-	case 1, BattleFrontier_BattlePalaceLobby_EventScript_EndSaveAfterChallenge
-	case 0, BattleFrontier_BattlePalaceLobby_EventScript_RecordMatch
-	case MULTI_B_PRESSED, BattleFrontier_BattlePalaceLobby_EventScript_EndSaveAfterChallenge
-
-BattleFrontier_BattlePalaceLobby_EventScript_RecordMatch::
-	call BattleFrontier_EventScript_SaveBattle
-BattleFrontier_BattlePalaceLobby_EventScript_EndSaveAfterChallenge::
-	return
-
-BattleFrontier_BattlePalaceLobby_EventScript_ResumeChallenge::
-	lockall
-	msgbox BattleFrontier_BattlePalaceLobby_Text_WeHaveBeenWaiting, MSGBOX_DEFAULT
-	message BattleFrontier_BattlePalaceLobby_Text_MustSaveBeforeChallenge
-	waitmessage
-	palace_save CHALLENGE_STATUS_SAVING
-	playse SE_SAVE
-	waitse
-	frontier_set FRONTIER_DATA_PAUSED, FALSE
+	msgbox BattleFrontier_BattlePikeLobby_Text_LookForwardToSeeingYou, MSGBOX_DEFAULT
+	closemessage
 	setvar VAR_TEMP_CHALLENGE_STATUS, 255
-	goto BattleFrontier_BattlePalaceLobby_EventScript_EnterChallenge
+	releaseall
+	end
 
-BattleFrontier_BattlePalaceLobby_EventScript_SinglesAttendant::
+BattleFrontier_BattlePikeLobby_EventScript_LostChallenge::
+	lockall
+	message BattleFrontier_BattlePikeLobby_Text_ChallengeEndedRecordResults
+	waitmessage
+	frontier_checkairshow
+	frontier_set FRONTIER_DATA_BATTLE_NUM, 0
+	pike_set PIKE_DATA_WIN_STREAK_ACTIVE, FALSE
+	special LoadPlayerParty
+	special HealPlayerParty
+	callnative UpdateFollowingPokemon
+	pike_resethelditems
+	pike_save 0
+	playse SE_SAVE
+	waitse
+	msgbox BattleFrontier_BattlePikeLobby_Text_LookForwardToSeeingYou, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_TEMP_CHALLENGE_STATUS, 255
+	releaseall
+	end
+
+BattleFrontier_BattlePikeLobby_EventScript_Attendant::
 	lock
 	faceplayer
-	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_PALACE
+	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_PIKE
 	setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES
-	goto BattleFrontier_BattlePalaceLobby_EventScript_Attendant
-	end
-
-BattleFrontier_BattlePalaceLobby_EventScript_DoublesAttendant::
-	lock
-	faceplayer
-	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_PALACE
-	setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES
-	goto BattleFrontier_BattlePalaceLobby_EventScript_Attendant
-	end
-
-BattleFrontier_BattlePalaceLobby_EventScript_Attendant::
-	palace_get PALACE_DATA_PRIZE
-	goto_if_ne VAR_RESULT, ITEM_NONE, BattleFrontier_BattlePalaceLobby_EventScript_WonChallenge
 	special SavePlayerParty
-	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES, BattleFrontier_BattlePalaceLobby_EventScript_WelcomeForSingleBattle
-	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES, BattleFrontier_BattlePalaceLobby_EventScript_WelcomeForDoubleBattle
-BattleFrontier_BattlePalaceLobby_EventScript_AskTakeChallenge::
-	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES, BattleFrontier_BattlePalaceLobby_EventScript_AskTakeSingleBattleChallenge
-	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES, BattleFrontier_BattlePalaceLobby_EventScript_AskTakeDoubleBattleChallenge
+	msgbox BattleFrontier_BattlePikeLobby_Text_WelcomeToBattlePike, MSGBOX_DEFAULT
+BattleFrontier_BattlePikeLobby_EventScript_AskTakeChallenge::
+	message BattleFrontier_BattlePikeLobby_Text_TakeChallenge
 	waitmessage
 	multichoice 17, 6, MULTI_CHALLENGEINFO, FALSE
 	switch VAR_RESULT
-	case 0, BattleFrontier_BattlePalaceLobby_EventScript_TryEnterChallenge
-	case 1, BattleFrontier_BattlePalaceLobby_EventScript_ExplainChallenge
-	case 2, BattleFrontier_BattlePalaceLobby_EventScript_CancelChallenge
-	case MULTI_B_PRESSED, BattleFrontier_BattlePalaceLobby_EventScript_CancelChallenge
+	case 0, BattleFrontier_BattlePikeLobby_EventScript_TryEnterChallenge
+	case 1, BattleFrontier_BattlePikeLobby_EventScript_ExplainChallenge
+	case 2, BattleFrontier_BattlePikeLobby_EventScript_CancelChallenge
+	case MULTI_B_PRESSED, BattleFrontier_BattlePikeLobby_EventScript_CancelChallenge
 
-BattleFrontier_BattlePalaceLobby_EventScript_TryEnterChallenge::
-	message BattleFrontier_BattlePalaceLobby_Text_WhichChallenge
+BattleFrontier_BattlePikeLobby_EventScript_TryEnterChallenge::
+	message BattleFrontier_BattlePikeLobby_Text_WhichChallengeMode
 	waitmessage
 	multichoice 17, 6, MULTI_LEVEL_MODE, FALSE
 	switch VAR_RESULT
-	case FRONTIER_LVL_TENT, BattleFrontier_BattlePalaceLobby_EventScript_CancelChallenge
-	case MULTI_B_PRESSED, BattleFrontier_BattlePalaceLobby_EventScript_CancelChallenge
+	case FRONTIER_LVL_TENT, BattleFrontier_BattlePikeLobby_EventScript_CancelChallenge
+	case MULTI_B_PRESSED, BattleFrontier_BattlePikeLobby_EventScript_CancelChallenge
 	frontier_checkineligible
-	goto_if_eq VAR_0x8004, TRUE, BattleFrontier_BattlePalaceLobby_EventScript_NotEnoughValidMons
+	goto_if_eq VAR_0x8004, TRUE, BattleFrontier_BattlePikeLobby_EventScript_NotEnoughValidMons
 	frontier_set FRONTIER_DATA_LVL_MODE, VAR_RESULT
-	msgbox BattleFrontier_BattlePalaceLobby_Text_NowSelectThreeMons, MSGBOX_DEFAULT
+	msgbox BattleFrontier_BattlePikeLobby_Text_PleaseChooseThreeMons, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	callnative RemoveFollowingPokemon
 	call BattleFrontier_EventScript_GetLvlMode
 	copyvar VAR_0x8004, VAR_RESULT
 	setvar VAR_0x8005, FRONTIER_PARTY_SIZE
 	special ChoosePartyForBattleFrontier
-	goto_if_eq VAR_RESULT, 0, BattleFrontier_BattlePalaceLobby_EventScript_LoadPartyAndCancelChallenge
-	msgbox BattleFrontier_BattlePalaceLobby_Text_MustSaveBeforeChallenge2, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, 0, BattleFrontier_BattlePikeLobby_EventScript_LoadPartyAndCancelChallenge
+	msgbox BattleFrontier_BattlePikeLobby_Text_SaveBeforeChallenge, MSGBOX_YESNO
 	switch VAR_RESULT
-	case NO, BattleFrontier_BattlePalaceLobby_EventScript_LoadPartyAndCancelChallenge
-	case YES, BattleFrontier_BattlePalaceLobby_EventScript_SaveBeforeChallenge
-	case MULTI_B_PRESSED, BattleFrontier_BattlePalaceLobby_EventScript_LoadPartyAndCancelChallenge
+	case NO, BattleFrontier_BattlePikeLobby_EventScript_LoadPartyAndCancelChallenge
+	case YES, BattleFrontier_BattlePikeLobby_EventScript_SaveBeforeChallenge
+	case MULTI_B_PRESSED, BattleFrontier_BattlePikeLobby_EventScript_LoadPartyAndCancelChallenge
 
-BattleFrontier_BattlePalaceLobby_EventScript_SaveBeforeChallenge::
+BattleFrontier_BattlePikeLobby_EventScript_SaveBeforeChallenge::
 	setvar VAR_TEMP_CHALLENGE_STATUS, 0
+	setvar VAR_TEMP_1, 0
 	frontier_set FRONTIER_DATA_SELECTED_MON_ORDER
-	palace_init
-	palace_set PALACE_DATA_WIN_STREAK_ACTIVE, TRUE
+	pike_init
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, CHALLENGE_STATUS_SAVING
+	pike_set PIKE_DATA_WIN_STREAK_ACTIVE, TRUE
+	pike_savehelditems
 	frontier_set FRONTIER_DATA_PAUSED, FALSE
 	special LoadPlayerParty
 	closemessage
 	delay 2
 	call Common_EventScript_SaveGame
 	setvar VAR_TEMP_CHALLENGE_STATUS, 255
-	goto_if_eq VAR_RESULT, 0, BattleFrontier_BattlePalaceLobby_EventScript_CancelChallengeSaveFailed
-BattleFrontier_BattlePalaceLobby_EventScript_EnterChallenge::
+	pike_savehelditems
+	goto_if_eq VAR_RESULT, 0, BattleFrontier_BattlePikeLobby_EventScript_CancelChallengeSaveFailed
 	special SavePlayerParty
 	frontier_setpartyorder FRONTIER_PARTY_SIZE
-	msgbox BattleFrontier_BattlePalaceLobby_Text_FollowMe, MSGBOX_DEFAULT
+	msgbox BattleFrontier_BattlePikeLobby_Text_StepThisWay, MSGBOX_DEFAULT
 	closemessage
-	call BattleFrontier_BattlePalaceLobby_EventScript_WalkToDoor
-	warp MAP_BATTLE_FRONTIER_BATTLE_PALACE_CORRIDOR, 8, 13
+	frontier_settrainers
+	call BattleFrontier_BattlePikeLobby_EventScript_WalkToCorridor
+	special HealPlayerParty
+	call BattleFrontier_BattlePike_EventScript_CloseCurtain
+	warpsilent MAP_BATTLE_FRONTIER_BATTLE_PIKE_CORRIDOR, 6, 7
 	setvar VAR_TEMP_CHALLENGE_STATUS, 0
 	waitstate
 	end
 
-BattleFrontier_BattlePalaceLobby_EventScript_ExplainChallenge::
-	goto_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES, BattleFrontier_BattlePalaceLobby_EventScript_ExplainDoublesChallenge
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ExplainSingleBattleChallenge, MSGBOX_DEFAULT
-	goto BattleFrontier_BattlePalaceLobby_EventScript_AskTakeChallenge
+BattleFrontier_BattlePikeLobby_EventScript_ExplainChallenge::
+	msgbox BattleFrontier_BattlePikeLobby_Text_ExplainBattlePike, MSGBOX_DEFAULT
+	goto BattleFrontier_BattlePikeLobby_EventScript_AskTakeChallenge
 
-BattleFrontier_BattlePalaceLobby_EventScript_ExplainDoublesChallenge::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ExplainDoubleBattleChallenge, MSGBOX_DEFAULT
-	goto BattleFrontier_BattlePalaceLobby_EventScript_AskTakeChallenge
-
-BattleFrontier_BattlePalaceLobby_EventScript_NotEnoughValidMons::
+BattleFrontier_BattlePikeLobby_EventScript_NotEnoughValidMons::
 	switch VAR_RESULT
-	case FRONTIER_LVL_50, BattleFrontier_BattlePalaceLobby_EventScript_NotEnoughValidMonsLv50
-	case FRONTIER_LVL_OPEN, BattleFrontier_BattlePalaceLobby_EventScript_NotEnoughValidMonsLvOpen
+	case FRONTIER_LVL_50, BattleFrontier_BattlePikeLobby_EventScript_NotEnoughValidMonsLv50
+	case FRONTIER_LVL_OPEN, BattleFrontier_BattlePikeLobby_EventScript_NotEnoughValidMonsLvOpen
 
-BattleFrontier_BattlePalaceLobby_EventScript_NotEnoughValidMonsLv50::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsLv50, MSGBOX_DEFAULT
+BattleFrontier_BattlePikeLobby_EventScript_NotEnoughValidMonsLv50::
+	msgbox BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLv50, MSGBOX_DEFAULT
 	call BattleFrontier_ShowCaughtBannedSpecies
-	msgbox BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsEnd, MSGBOX_DEFAULT
-	goto BattleFrontier_BattlePalaceLobby_EventScript_EndCancelChallenge
+	msgbox BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsEnd, MSGBOX_DEFAULT
+	goto BattleFrontier_BattlePikeLobby_EventScript_EndCancelChallenge
 
-BattleFrontier_BattlePalaceLobby_EventScript_NotEnoughValidMonsLvOpen::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsLvOpen, MSGBOX_DEFAULT
+BattleFrontier_BattlePikeLobby_EventScript_NotEnoughValidMonsLvOpen::
+	msgbox BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLvOpen, MSGBOX_DEFAULT
 	call BattleFrontier_ShowCaughtBannedSpecies
-	msgbox BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsEnd, MSGBOX_DEFAULT
-	goto BattleFrontier_BattlePalaceLobby_EventScript_EndCancelChallenge
+	msgbox BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsEnd, MSGBOX_DEFAULT
+	goto BattleFrontier_BattlePikeLobby_EventScript_EndCancelChallenge
 
-BattleFrontier_BattlePalaceLobby_EventScript_CancelChallengeSaveFailed::
+BattleFrontier_BattlePikeLobby_EventScript_CancelChallengeSaveFailed::
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, 0
-	goto BattleFrontier_BattlePalaceLobby_EventScript_CancelChallenge
+	goto BattleFrontier_BattlePikeLobby_EventScript_CancelChallenge
 
-BattleFrontier_BattlePalaceLobby_EventScript_LoadPartyAndCancelChallenge::
+BattleFrontier_BattlePikeLobby_EventScript_LoadPartyAndCancelChallenge::
 	special LoadPlayerParty
-	callnative LoadPlayerParty
-BattleFrontier_BattlePalaceLobby_EventScript_CancelChallenge::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ReturnWhenFortified, MSGBOX_DEFAULT
-BattleFrontier_BattlePalaceLobby_EventScript_EndCancelChallenge::
+	callnative UpdateFollowingPokemon
+BattleFrontier_BattlePikeLobby_EventScript_CancelChallenge::
+	msgbox BattleFrontier_BattlePikeLobby_Text_LookForwardToSeeingYou, MSGBOX_DEFAULT
+BattleFrontier_BattlePikeLobby_EventScript_EndCancelChallenge::
 	release
 	end
 
-BattleFrontier_BattlePalaceLobby_EventScript_WelcomeForSingleBattle::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_WelcomeForSingleBattle, MSGBOX_DEFAULT
-	return
-
-BattleFrontier_BattlePalaceLobby_EventScript_WelcomeForDoubleBattle::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_WelcomeForDoubleBattle, MSGBOX_DEFAULT
-	return
-
-BattleFrontier_BattlePalaceLobby_EventScript_AskTakeSingleBattleChallenge::
-	message BattleFrontier_BattlePalaceLobby_Text_TakeSingleBattleChallenge
-	return
-
-BattleFrontier_BattlePalaceLobby_EventScript_AskTakeDoubleBattleChallenge::
-	message BattleFrontier_BattlePalaceLobby_Text_TakeDoubleBattleChallenge
-	return
-
-BattleFrontier_BattlePalaceLobby_EventScript_WalkToDoor::
-	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES, BattleFrontier_BattlePalaceLobby_EventScript_TalkedToSinglesAttendant
-	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES, BattleFrontier_BattlePalaceLobby_EventScript_TalkedToDoublesAttendant
-	applymovement VAR_LAST_TALKED, BattleFrontier_BattlePalaceLobby_Movement_WalkToDoor
-	applymovement LOCALID_PLAYER, BattleFrontier_BattlePalaceLobby_Movement_WalkToDoor
-	waitmovement 0
-	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES, BattleFrontier_BattlePalaceLobby_EventScript_OpenSinglesHallDoor
-	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES, BattleFrontier_BattlePalaceLobby_EventScript_OpenDoublesHallDoor
-	waitdooranim
-	applymovement VAR_LAST_TALKED, BattleFrontier_BattlePalaceLobby_Movement_AttendantEnterDoor
-	applymovement LOCALID_PLAYER, BattleFrontier_BattlePalaceLobby_Movement_PlayerEnterDoor
-	waitmovement 0
-	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES, BattleFrontier_BattlePalaceLobby_EventScript_CloseSinglesHallDoor
-	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES, BattleFrontier_BattlePalaceLobby_EventScript_CloseDoublesHallDoor
-	waitdooranim
-	return
-
-BattleFrontier_BattlePalaceLobby_EventScript_TalkedToSinglesAttendant::
-	setvar VAR_LAST_TALKED, LOCALID_PALACE_ATTENDANT_SINGLES
-	return
-
-BattleFrontier_BattlePalaceLobby_EventScript_TalkedToDoublesAttendant::
-	setvar VAR_LAST_TALKED, LOCALID_PALACE_ATTENDANT_DOUBLES
-	return
-
-BattleFrontier_BattlePalaceLobby_EventScript_OpenSinglesHallDoor::
-	opendoor 5, 4
-	return
-
-BattleFrontier_BattlePalaceLobby_EventScript_OpenDoublesHallDoor::
-	opendoor 19, 4
-	return
-
-BattleFrontier_BattlePalaceLobby_EventScript_CloseSinglesHallDoor::
-	closedoor 5, 4
-	return
-
-BattleFrontier_BattlePalaceLobby_EventScript_CloseDoublesHallDoor::
-	closedoor 19, 4
-	return
-
-BattleFrontier_BattlePalaceLobby_Movement_WalkToDoor:
-	walk_up
-	step_end
-
-BattleFrontier_BattlePalaceLobby_Movement_AttendantEnterDoor:
-	walk_up
-	set_invisible
-	step_end
-
-BattleFrontier_BattlePalaceLobby_Movement_PlayerEnterDoor:
-	walk_up
-	walk_up
-	set_invisible
-	step_end
-
-BattleFrontier_BattlePalaceLobby_EventScript_ShowSinglesResults::
+BattleFrontier_BattlePikeLobby_EventScript_ShowResults::
 	lockall
-	frontier_results FRONTIER_FACILITY_PALACE, FRONTIER_MODE_SINGLES
+	frontier_results FRONTIER_FACILITY_PIKE
 	waitbuttonpress
 	special RemoveRecordsWindow
 	releaseall
 	end
 
-BattleFrontier_BattlePalaceLobby_EventScript_ShowDoublesResults::
+BattleFrontier_BattlePikeLobby_EventScript_WalkToCorridor::
+	applymovement LOCALID_PIKE_LOBBY_ATTENDANT, BattleFrontier_BattlePikeLobby_Movement_AttendantWalkToCorridor
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePikeLobby_Movement_PlayerWalkToCorridor
+	waitmovement 0
+	return
+
+BattleFrontier_BattlePikeLobby_Movement_PlayerWalkToCorridor:
+	walk_up
+BattleFrontier_BattlePikeLobby_Movement_AttendantWalkToCorridor:
+	walk_up
+	walk_up
+	set_invisible
+	step_end
+
+BattleFrontier_BattlePikeLobby_EventScript_Hiker::
+	msgbox BattleFrontier_BattlePikeLobby_Text_OneRoomAwayFromGoal, MSGBOX_NPC
+	end
+
+BattleFrontier_BattlePikeLobby_EventScript_Twin::
+	msgbox BattleFrontier_BattlePikeLobby_Text_NeverHadToBattleTrainer, MSGBOX_NPC
+	end
+
+BattleFrontier_BattlePikeLobby_EventScript_Beauty::
+	msgbox BattleFrontier_BattlePikeLobby_Text_ThinkAbilitiesUsefulHere, MSGBOX_NPC
+	end
+
+BattleFrontier_BattlePikeLobby_EventScript_RulesBoard::
 	lockall
-	frontier_results FRONTIER_FACILITY_PALACE, FRONTIER_MODE_DOUBLES
-	waitbuttonpress
-	special RemoveRecordsWindow
-	releaseall
+	msgbox BattleFrontier_BattlePikeLobby_Text_RulesAreListed, MSGBOX_DEFAULT
+	goto BattleFrontier_BattlePikeLobby_EventScript_ReadRulesBoard
 	end
 
-BattleFrontier_BattlePalaceLobby_EventScript_BlackBelt::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_LadyCanTellWhatMonsThink, MSGBOX_NPC
-	end
-
-BattleFrontier_BattlePalaceLobby_EventScript_Man::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_NatureAndMovesKeyHere, MSGBOX_NPC
-	end
-
-BattleFrontier_BattlePalaceLobby_EventScript_Beauty::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_MonDocileButTransforms, MSGBOX_NPC
-	end
-
-BattleFrontier_BattlePalaceLobby_EventScript_Maniac::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_WhatNatureFavorsChippingAway, MSGBOX_NPC
-	end
-
-BattleFrontier_BattlePalaceLobby_EventScript_RulesBoard::
-	lockall
-	msgbox BattleFrontier_BattlePalaceLobby_Text_RulesAreListed, MSGBOX_DEFAULT
-	goto BattleFrontier_BattlePalaceLobby_EventScript_ReadRulesBoard
-	end
-
-BattleFrontier_BattlePalaceLobby_EventScript_ReadRulesBoard::
-	message BattleFrontier_BattlePalaceLobby_Text_ReadWhichHeading
+BattleFrontier_BattlePikeLobby_EventScript_ReadRulesBoard::
+	message BattleFrontier_BattlePikeLobby_Text_ReadWhichHeading
 	waitmessage
-	multichoice 16, 0, MULTI_BATTLE_PALACE_RULES, FALSE
+	multichoice 16, 4, MULTI_BATTLE_PIKE_RULES, FALSE
 	switch VAR_RESULT
-	case 0, BattleFrontier_BattlePalaceLobby_EventScript_RulesBasics
-	case 1, BattleFrontier_BattlePalaceLobby_EventScript_RulesNature
-	case 2, BattleFrontier_BattlePalaceLobby_EventScript_RulesMoves
-	case 3, BattleFrontier_BattlePalaceLobby_EventScript_RulesUnderpowered
-	case 4, BattleFrontier_BattlePalaceLobby_EventScript_RulesWhenInDanger
-	case 5, BattleFrontier_BattlePalaceLobby_EventScript_ExitRules
-	case MULTI_B_PRESSED, BattleFrontier_BattlePalaceLobby_EventScript_ExitRules
+	case 0, BattleFrontier_BattlePikeLobby_EventScript_RulesPokenavBag
+	case 1, BattleFrontier_BattlePikeLobby_EventScript_RulesHeldItems
+	case 2, BattleFrontier_BattlePikeLobby_EventScript_RulesMonOrder
+	case 3, BattleFrontier_BattlePikeLobby_EventScript_ExitRules
+	case MULTI_B_PRESSED, BattleFrontier_BattlePikeLobby_EventScript_ExitRules
 	end
 
-BattleFrontier_BattlePalaceLobby_EventScript_RulesBasics::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ExplainRulesBasics, MSGBOX_DEFAULT
-	goto BattleFrontier_BattlePalaceLobby_EventScript_ReadRulesBoard
+BattleFrontier_BattlePikeLobby_EventScript_RulesPokenavBag::
+	msgbox BattleFrontier_BattlePikeLobby_Text_ExplainPokenavBagRules, MSGBOX_DEFAULT
+	goto BattleFrontier_BattlePikeLobby_EventScript_ReadRulesBoard
 	end
 
-BattleFrontier_BattlePalaceLobby_EventScript_RulesNature::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ExplainRulesNature, MSGBOX_DEFAULT
-	goto BattleFrontier_BattlePalaceLobby_EventScript_ReadRulesBoard
+BattleFrontier_BattlePikeLobby_EventScript_RulesHeldItems::
+	msgbox BattleFrontier_BattlePikeLobby_Text_ExplainHeldItemRules, MSGBOX_DEFAULT
+	goto BattleFrontier_BattlePikeLobby_EventScript_ReadRulesBoard
 	end
 
-BattleFrontier_BattlePalaceLobby_EventScript_RulesMoves::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ExplainRulesMoves, MSGBOX_DEFAULT
-	goto BattleFrontier_BattlePalaceLobby_EventScript_ReadRulesBoard
+BattleFrontier_BattlePikeLobby_EventScript_RulesMonOrder::
+	msgbox BattleFrontier_BattlePikeLobby_Text_ExplainMonOrderRules, MSGBOX_DEFAULT
+	goto BattleFrontier_BattlePikeLobby_EventScript_ReadRulesBoard
 	end
 
-BattleFrontier_BattlePalaceLobby_EventScript_RulesUnderpowered::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ExplainRulesUnderpowered, MSGBOX_DEFAULT
-	goto BattleFrontier_BattlePalaceLobby_EventScript_ReadRulesBoard
-	end
-
-BattleFrontier_BattlePalaceLobby_EventScript_RulesWhenInDanger::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ExplainRulesWhenInDanger, MSGBOX_DEFAULT
-	goto BattleFrontier_BattlePalaceLobby_EventScript_ReadRulesBoard
-	end
-
-BattleFrontier_BattlePalaceLobby_EventScript_ExitRules::
+BattleFrontier_BattlePikeLobby_EventScript_ExitRules::
 	releaseall
 	end
 
-BattleFrontier_BattlePalaceLobby_Text_WelcomeForSingleBattle:
-	.string "{JPN}トレーナーの こころを ためす ばしょ\nバトルパレスへ ようこそ\pここでは シングル バトルホールへの\nちょうせんを うけつけて おる……"
-	.string ""
+BattleFrontier_BattlePike_EventScript_CloseCurtain::
+	playse SE_PIKE_CURTAIN_CLOSE
+	special CloseBattlePikeCurtain
+	waitse
+	return
+
+BattleFrontier_BattlePikeLobby_Text_WelcomeToBattlePike:
+	.string "{JPN}トレーナーの うんを ためす ばしょ……\nバトルチューブへ ようこそ……\pバトルゲームへの ごあんないは\nこちらで ございます……"
 	.string ""
 	.string ""
 	.string "$"
 
-BattleFrontier_BattlePalaceLobby_Text_TakeSingleBattleChallenge:
-	.string "{JPN}シングル バトルホールに\nちょうせん するか?"
+BattleFrontier_BattlePikeLobby_Text_TakeChallenge:
+	.string "{JPN}バトルゲームに\nちょうせん されますか……?"
 	.string "$"
 
-BattleFrontier_BattlePalaceLobby_Text_ExplainSingleBattleChallenge:
-	.string "{JPN}ここには シングル バトルホールと\nよばれる シングルバトルの ための\lひろまを いくつか ようい しておる\pここでの たたかいには\nまもらなければ ならない\lひとつの おきてが ある\pここでは ポケモンは\nいれかえ しか できない!\pそれいがいの めいれいは\nいっさい きんし して おるのだ!\pポケモンには せいかくの ままに\nかんがえ こうどう して もらう!\pおぬしは じぶんの\nポケモンたちを しんじて\lたたかいを みまもって やれ\pみごと 7にんの トレーナーを\nうちやぶることが できれば\lバトルポイントを さしあげよう\pまた とちゅうで ちょうせんを\nちゅうだん したい ときは\lきちんと レポートを かかないと\lつづけて ちょうせん できんからな\lきを つけてくれ……"
+BattleFrontier_BattlePikeLobby_Text_ExplainBattlePike:
+	.string "{JPN}こちらでは バトルゲームと いう\nもよおしを かいさいして おります\pバトルゲームの ルールは かんたん……\p3つの みちを えらびながら\nバトルチューブの いちばん おくに ある\lゴールの へやを めざして\lすすんで いく だけで よいのです\p…… ただし えらんだ みちの さきで\nなにが おこるかは おきゃくさまの\lうん しだい ですが……\pもしも ゴールに つくことが できたなら\nバトルポイントを さしあげましょう\pなお ゲームの ちょうせんを\nちゅうだんしたい ばあいは\lおおべやに たいき している スタッフに\lおもうしつけ ください……\pレポートを かかないと\nゲームの さいかいが できません……\pくれぐれも ごちゅうい ください……"
 	.string ""
 	.string ""
 	.string ""
@@ -397,31 +290,6 @@ BattleFrontier_BattlePalaceLobby_Text_ExplainSingleBattleChallenge:
 	.string ""
 	.string ""
 	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_ReturnWhenFortified:
-	.string "{JPN}おのれの こころと ポケモンを きたえたら\nまた くるがよい……"
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_WhichChallenge:
-	.string "{JPN}レベル50のへや オープンレベルのへやが\nあるが どちらに ちょうせん するのだ?"
-	.string ""
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsLv50:
-	.string "{JPN}おぬし……\pちょうせん できる ポケモンが\n3ひき おらんぞ!\pちょうせん するには レベルが 50いかで\nすべて ちがう しゅるいの ポケモンを\p3ひき ようい してくれ\pまた もたせる どうぐも\nすべて ちがう もので なければ いかん\pそして タマゴ{STR_VAR_1}ちょうせん させる ことは できん!"
 	.string ""
 	.string ""
 	.string ""
@@ -432,220 +300,136 @@ BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsLv50:
 	.string ""
 	.string "$"
 
-BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsEnd:
-	.string "{JPN}じゅんびを ととのえてから また きなさい"
+BattleFrontier_BattlePikeLobby_Text_LookForwardToSeeingYou:
+	.string "{JPN}では またの きかいを\nおまちして おります……"
 	.string "$"
 
-BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsLvOpen:
-	.string "{JPN}おぬし……\pちょうせん できる ポケモンが\n3ひき おらんぞ!\pちょうせん するには\nすべて ちがう しゅるいの ポケモンを\p3ひき ようい してくれ\pまた もたせる どうぐも\nすべて ちがう もので なければ いかん\pそして タマゴ{STR_VAR_1}ちょうせん させる ことは できん!"
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
+BattleFrontier_BattlePikeLobby_Text_WhichChallengeMode:
+	.string "{JPN}レベル50と オープンレベルの ゲーム\nどちらに ちょうせん しますか?"
 	.string ""
 	.string "$"
 
-BattleFrontier_BattlePalaceLobby_Text_NowSelectThreeMons:
-	.string "{JPN}では ちょうせんする ポケモンを\n3ひき えらんでくれ"
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_MustSaveBeforeChallenge2:
-	.string "{JPN}バトルホールへ むかうまえに\nレポートを かくが よろしいか?"
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_FollowMe:
-	.string "{JPN}それでは\nわしに ついてこい……"
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_ResultsWillBeRecorded:
-	.string "{JPN}よいものを みせて もらった\pそれでは せいせきを レポートに かくぞ\nしばし またれよ……"
+BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLv50:
+	.string "{JPN}…… おきゃくさま\pバトルゲームに さんかできる\nポケモンが 3ひき おりません……\pさんかには レベルが 50いかで\nすべて ちがう しゅるいの ポケモンを\l3ひき ごようい ください\pまた もたせる どうぐも すべて\nちがうもので なければ いけません……\pなお タマゴ{STR_VAR_1}さんか させる ことは できません"
+	.string ""
+	.string ""
+	.string ""
+	.string ""
 	.string ""
 	.string ""
 	.string "$"
 
-BattleFrontier_BattlePalaceLobby_Text_FirmTrueBondsFor7WinStreak:
-	.string "{JPN}7にんぬき たっせい とは……\pおぬしと ポケモンの こころの きずなは\nまことの ようじゃな……"
+BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsEnd:
+	.string "{JPN}じゅんびが ととのいましたら\nまた おこしください……"
+	.string "$"
+
+BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLvOpen:
+	.string "{JPN}…… おきゃくさま\pバトルゲームに さんかできる\nポケモンが 3ひき おりません……\pさんかには すべて ちがう しゅるいの\nポケモンを 3ひき ごようい ください\pまた もたせる どうぐも すべて\nちがうもので なければ いけません……\pなお タマゴ{STR_VAR_1}さんか させる ことは できません"
+	.string ""
+	.string ""
+	.string ""
+	.string ""
+	.string ""
 	.string ""
 	.string "$"
 
-BattleFrontier_BattlePalaceLobby_Text_FeatWillBeRecorded:
-	.string "{JPN}せいせきを レポートに かくぞ\nしばし またれよ……"
+BattleFrontier_BattlePikeLobby_Text_PleaseChooseThreeMons:
+	.string "{JPN}それでは ゲームに ちょうせんする\nポケモンを 3ひき おえらび ください……"
+	.string "$"
+
+BattleFrontier_BattlePikeLobby_Text_SaveBeforeChallenge:
+	.string "{JPN}バトルゲームを かいしする まえに\nレポートを かきます…… よろしいですか?"
+	.string ""
+	.string "$"
+
+BattleFrontier_BattlePikeLobby_Text_StepThisWay:
+	.string "{JPN}では こちらに どうぞ……$"
+
+BattleFrontier_BattlePikeLobby_Text_ChallengeEndedRecordResults:
+	.string "{JPN}ゲーム しゅうりょう ですね……\pせいせきを レポートに かきましょう……\nしょうしょう おまちください……"
+	.string ""
+	.string "$"
+
+BattleFrontier_BattlePikeLobby_Text_PossessLuckInAbundance:
+	.string "{JPN}ゲーム クリア ですね……\pおきゃくさま…… なかなかの うんを\nおもちの ようですね……"
+	.string ""
+	.string "$"
+
+BattleFrontier_BattlePikeLobby_Text_ShallRecordResults:
+	.string "{JPN}せいせきを レポートに かきましょう……\nしばらく おまちください……"
 	.string "$"
 
 @ Unused
-BattleFrontier_BattlePalaceLobby_Text_BattlePointsFor7WinStreak:
-	.string "{JPN}7にんぬきの あかしに\nバトルポイントを さしあげよう……"
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_NoSpaceForPrize:
-	.string "{JPN}どうぐが いっぱいの ようだな……\pどうぐを せいりしてから\nまた くるがよい……"
-	.string ""
-	.string ""
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_WeHaveBeenWaiting:
-	.string "{JPN}まっておったぞ……$"
-
-BattleFrontier_BattlePalaceLobby_Text_MustSaveBeforeChallenge:
-	.string "{JPN}バトルホールへ むかうまえに\nレポートを かくが よろしいか?"
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_FailedToSaveBeforeEndingChallenge:
-	.string "{JPN}おぬし……\pぜんかい ちゃんと レポートを かいて\nしゅうりょう しなかったな?\pざんねんだが そのばあい\nちょうせんは むこうと なる……"
-	.string ""
-	.string ""
+BattleFrontier_BattlePikeLobby_Text_AwardYouTheseBattlePoints2:
+	.string "{JPN}ゲーム クリアを きねんして\nバトルポイントを しんてい します……\pどうぞ おおさめ ください……"
 	.string ""
 	.string "$"
 
 @ Unused
-BattleFrontier_BattlePalaceLobby_Text_ReceivedPrize:
-	.string "{JPN}{PLAYER}は\n{STR_VAR_1}を もらった!"
+BattleFrontier_BattlePikeLobby_Text_ReachedBattlePointLimit:
+	.string "{JPN}ポイントが いっぱいの ようですね……\pポイントを せいりしてから\nまた おこしください……"
+	.string ""
+	.string ""
 	.string "$"
 
-BattleFrontier_BattlePalaceLobby_Text_LadyCanTellWhatMonsThink:
-	.string "{JPN}ウス! ウス! がんばりやの わしには\nがんばりやの ポケモンが ぴったりっス!\pこうげき こそ さいだいの ぼうぎょ!\nガンガン せめまくって さいこうっス!\pところで きいて くださいッスよー\pときどき ここに とっても\nかわいい おじょうちゃんが\lあそびに くるッスけど\lそのこったら ポケモンの きもちが\lわかるとか いうんスよー\pいやー ほんと かわいいッスよねー……\p…… ん なんスか? そのめは?"
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
+BattleFrontier_BattlePikeLobby_Text_FailedToSaveBeforeQuitting:
+	.string "{JPN}おきゃくさま……\pぜんかい きちんと レポートを かかずに\nしゅうりょう されましたね……\pもうしわけ ありませんが ちょうせんは\nむこうと させて いただきます……"
 	.string ""
 	.string ""
 	.string ""
 	.string "$"
 
-BattleFrontier_BattlePalaceLobby_Text_NatureAndMovesKeyHere:
-	.string "{JPN}うーん……\pどうやら ここでは ポケモンの せいかくと\nおぼえさせている わざとの あいしょうが\lたたかいの カギを にぎってる ようだ\pそう…… もし きみの ポケモンが\nじぶんの ちからが はっき できなくて\lこまっている ようす だったら\lおぼえさせている わざから\lかんがえ なおす ひつようが あるかもな"
+BattleFrontier_BattlePikeLobby_Text_SnatchedVictoryFromQueen:
+	.string "{JPN}…… おめでとう ございます……\nチューブクイーンに しょうりし\lゲームを クリア されましたね……"
+	.string ""
+	.string "$"
+
+BattleFrontier_BattlePikeLobby_Text_AwardYouTheseBattlePoints:
+	.string "{JPN}おきゃくさまの つよき うんを たたえ\nバトルポイントを さしあげます……"
+	.string "$"
+
+BattleFrontier_BattlePikeLobby_Text_OneRoomAwayFromGoal:
+	.string "{JPN}んんー! ちくしょー!!\nあと 1へやで ゴールだったのによー!\pおまえ! ここでは どくや こおりには\nちゅうい したほうが いいぞ!"
 	.string ""
 	.string ""
+	.string "$"
+
+BattleFrontier_BattlePikeLobby_Text_NeverHadToBattleTrainer:
+	.string "{JPN}あたし 10かいは クリアしたけど\nいっかいも トレーナーと\lたたかった こと ないんだよぅ!"
+	.string ""
+	.string "$"
+
+BattleFrontier_BattlePikeLobby_Text_ThinkAbilitiesUsefulHere:
+	.string "{JPN}ねえ! ねえ!\pここって ポケモンの とくせいが\nかつやく すると おもわない?"
 	.string ""
 	.string ""
-	.string ""
-	.string ""
+	.string "$"
+
+@ Unused
+BattleFrontier_BattlePikeLobby_Text_TrainersWhicheverPathIChoose:
+	.string "{JPN}なんだよ ここ! いみ わかんないよー!\pなんかい チャレンジ しても\nどの みち えらんでも\lトレーナーしか でてこない じゃないかー!"
 	.string ""
 	.string ""
 	.string ""
 	.string "$"
 
-BattleFrontier_BattlePalaceLobby_Text_MonDocileButTransforms:
-	.string "{JPN}あたしの ポケモン\nふだんは とーっても おとなしいのよ\pだけど バトルホールで たたかってると\nときどき めつきが\lガラッと かわっちゃうの!\pすっごい はくりょくで びっくりしちゃう!"
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string "$"
+BattleFrontier_BattlePikeLobby_Text_RulesAreListed:
+	.string "{JPN}バトルゲームの ルールが かかれている!$"
 
-BattleFrontier_BattlePalaceLobby_Text_WhatNatureFavorsChippingAway:
-	.string "{JPN}あいてを よわらせたり……\nじわじわ せめて くれるのは\lどんな せいかくかな……\p…… いがいに のうてんき とか?\p…… まさかねぇ……"
-	.string ""
-	.string ""
-	.string ""
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_WelcomeForDoubleBattle:
-	.string "{JPN}トレーナーの こころを ためす ばしょ\nバトルパレスへ ようこそ\pここでは ダブル バトルホールへの\nちょうせんを うけつけておる……"
-	.string ""
-	.string ""
-	.string ""
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_TakeDoubleBattleChallenge:
-	.string "{JPN}ダブル バトルホールに\nちょうせん するか?"
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_ExplainDoubleBattleChallenge:
-	.string "{JPN}ここには ダブル バトルホールと\nよばれる ダブルバトルの ための\lひろまを いくつか ようい しておる\pここでの たたかいには\nまもらなければ ならない\lひとつの おきてが ある\pここでは ポケモンは\nいれかえ しか できない!\pそれいがいの めいれいは\nいっさい きんし して おるのだ!\pポケモンには せいかくの ままに\nかんがえ こうどう して もらう!\pおぬしは じぶんの\nポケモンたちを しんじて\lたたかいを みまもって やれ\pみごと 7にんの トレーナーを\nうちやぶることが できれば\lバトルポイントを さしあげよう\pまた とちゅうで ちょうせんを\nちゅうだん したい ときは\lきちんと レポートを かかないと\lつづけて ちょうせん できんからな\lきを つけてくれ……"
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_ToDefeatMavenAnd7Trainers:
-	.string "{JPN}パレスガーディアンを たおし\n7にんぬきを たっせいするとは……"
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_PresentYouWithBattlePoints:
-	.string "{JPN}おぬしと ポケモンの きずなを たたえ\nバトルポイントを おくろう……"
-	.string ""
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_LikeToRecordMatch:
-	.string "{JPN}バトルパレスで\nさいごに おこなった たたかいを\lフロンティアパスに きろく するか?"
-	.string ""
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_RulesAreListed:
-	.string "{JPN}バトルホールの ルールが かかれている!$"
-
-BattleFrontier_BattlePalaceLobby_Text_ReadWhichHeading:
+BattleFrontier_BattlePikeLobby_Text_ReadWhichHeading:
 	.string "{JPN}どの せつめいを よみますか?$"
 
-BattleFrontier_BattlePalaceLobby_Text_ExplainRulesBasics:
-	.string "{JPN}ここでは ポケモンたちが\nじぶんで かんがえ たたかいます\pじゅんすいな やせいの ときとは ちがって\nひとと くらしている ポケモンは\lせいかくに よって どんな こうどうを\lするかが かわるのです"
-	.string ""
-	.string ""
+BattleFrontier_BattlePikeLobby_Text_ExplainPokenavBagRules:
+	.string "{JPN}バトルゲームの あいだは\nバッグと ポケナビの しようは\lきんし されています"
+	.string "$"
+
+BattleFrontier_BattlePikeLobby_Text_ExplainHeldItemRules:
+	.string "{JPN}バトルゲームでは\nポケモンに もたせた きのみや ハーブは\lいちどしか こうかを はっき しません"
 	.string ""
 	.string "$"
 
-BattleFrontier_BattlePalaceLobby_Text_ExplainRulesNature:
-	.string "{JPN}とにかく こうげきが\nすきな せいかく\pじぶんの からだを まもる ことが\nすきな せいかく\pあいてを こまらせたり かわった ことを\nするのが すきな せいかく\pポケモンは せいかくに よって\nすきで とくいな わざと\lきらいで にがてな わざが ちがいます"
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_ExplainRulesMoves:
-	.string "{JPN}あいてに むかって じぶんから\nちょくせつ ダメージを あたえる\lこうげきの わざ\pたたかいの じゅんびや キズついた からだの\nかいふくを する ぼうぎょの わざ\pあいての のうりょくを さげたり\nどくや まひに したり などの\lすこし かわった ことを する わざ\pポケモンは すべての わざを\nおおきく 3つの しゅるいに わけて\lどんな わざを だすか かんがえて います"
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_ExplainRulesUnderpowered:
-	.string "{JPN}トレーナーの めいれいを うけて いない\nポケモンは うまく わざを\lだせない ことが あります\pポケモンは きらいな わざを\nつかうのは とくいでは ありません\pせいかくに あわない わざ ばかりを\nおぼえさせて いると たたかいで\lポケモンが じぶんの ちからを はっき\lできない ことが おおく なります"
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string ""
-	.string "$"
-
-BattleFrontier_BattlePalaceLobby_Text_ExplainRulesWhenInDanger:
-	.string "{JPN}ポケモンの せいかくの なかには\nピンチに なることで もともとの\lせいかくとは ちがう タイプの\lわざを つかう ように\lなるものが あります\pピンチに なって すこし かわった\nこうどうを はじめた ポケモンには\lじゅうぶん ちゅうい しましょう"
+BattleFrontier_BattlePikeLobby_Text_ExplainMonOrderRules:
+	.string "{JPN}バトルゲームの あいだは\nちょうせんする ときに きめた\lポケモンの じゅんばんを\lいれかえる ことは できません"
 	.string ""
 	.string ""
 	.string ""
